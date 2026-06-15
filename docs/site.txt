@@ -1,0 +1,35 @@
+Objectif : Créer un site vitrine professionnel, artisanal et réactif pour une entreprise de vitrerie située à Francheville (69340), intervenant sur Lyon et ses alentours.
+Le souhait est de vouloir héberger le site sur Vercel donc en Next.js
+
+1. Identité et Contact
+Nom de l'entreprise : PUILLET VITRERIE.
+Slogan : Artisan spécialisé dans le remplacement à l’identique de tous types de vitrages.
+Localisation : Francheville (69340), intervention sur Lyon et toute l’agglomération lyonnaise.
+Contact : 06 50 44 06 73 | puilletvitrerie@gmail.com.
+Disponibilité : Intervention en moins de 2 heures pour les urgences, 24h/24 et 7j/7.
+Certification : Mentionner "AGRÉÉ ASSURANCE" de manière visible.
+
+2. Design et Inspiration
+Éléments visuels clés : Photos du camion de l'entreprise, photos de l'artisan en train de poser une vitre, et galeries "Avant/Après" pour chaque service.
+Photos: Utiliser des photos libre de droit pour le moment
+
+3. Structure des Pages et Services
+Page d'Accueil
+Présentation de l'aspect artisanal et traditionnel (pose au mastic, découpe sur place).
+Mise en avant de la réactivité : Stock permanent dans le camion pour une intervention immédiate.
+Section dédiée aux Régies immobilières pour la gestion locative.
+
+Services Spécifiques
+Remplacement de vitrage à l'identique : Vitres simples, imprimées, armées, isolantes, etc.
+Miroiterie sur mesure : Pose de miroirs pour salles de bain, cuisines, halls d'entrée et ascenseurs.
+Vitrine de magasin : Remplacement rapide après sinistre sous 2 heures après validation assurance.
+Crédence de cuisine et salle de bain : Large choix de couleurs et épaisseurs (4 mm à 6 mm).
+Verre de cheminée : Remplacement sur mesure pour une utilisation en toute sécurité.
+
+Catalogue des Vitrages (avec descriptions et photos)
+Verre simple (3mm, 4mm), Verre armé (petites/grosses mailles), Verre feuilleté, Verre imprimé (77, 200, 2004), Verre martelé, Delta mat, Vitrage isolant, Miroir.
+
+4. Valeurs et Savoir-faire
+Travail en totale autonomie.
+Respect du cachet de l'ancien (menuiseries anciennes, mastic traditionnel).
+Pas de menuiserie : spécialisation exclusive dans le verre pour garantir une haute qualité.
