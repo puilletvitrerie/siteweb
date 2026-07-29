@@ -84,11 +84,11 @@ const HeroCTAs = () => (
 const HeroStats = () => (
   <div
     style={{
-      display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12,
+      display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 12,
       paddingTop: 22, borderTop: `1px solid ${C.line}`,
     }}
   >
-    {[["10+", "années terrain"], ["< 2h", "intervention"], ["4,9/5", "87 avis Google"]].map(([n, l]) => (
+    {[["0€", "frais de déplacement"], ["< 2h", "intervention"]].map(([n, l]) => (
       <div key={l}>
         <div style={{ fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 800, letterSpacing: "-0.02em", color: C.ink }}>{n}</div>
         <div style={{ fontSize: 12, color: C.inkSoft, marginTop: 2 }}>{l}</div>
@@ -167,7 +167,7 @@ function Hero() {
                   justifyContent: "center", fontWeight: 800, fontSize: 12, flexShrink: 0,
                 }}
               >
-                RP
+                PV
               </div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 13 }}>Léo Puillet</div>
@@ -206,8 +206,8 @@ function Hero() {
 
 // ─── Services ────────────────────────────────────────────────────────────────
 const SERVICES = [
-  { n: "01", t: "Remplacement de vitrage", d: "Simple ou double vitrage, sur-mesure, posé dans la journée pour les urgences.", tag: "le + demandé" },
-  { n: "02", t: "Vitrage feuilleté & sécurité", d: "Anti-effraction, retardateur d'effraction certifié SP10 et SP10A.", tag: "sécurité" },
+  { n: "01", t: "Remplacement de vitrage", d: "Vitrage simple recoupé et posé le jour même pour les urgences. Double vitrage sur-mesure sous 24 à 48h.", tag: "le + demandé" },
+  { n: "02", t: "Vitrage feuilleté & sécurité", d: "Anti-effraction, retardateur d'effraction certifié 44.2, 33.2, SP10 et SP10A.", tag: "sécurité" },
   { n: "03", t: "Double vitrage isolant", d: "Argon, faible émissivité — confort thermique et facture d'énergie qui baisse.", tag: "isolation" },
   { n: "04", t: "Miroiterie sur mesure", d: "Miroirs salle de bain, dressing, mural, biseauté, anti-buée — coupés à vos cotes.", tag: "sur mesure" },
   { n: "05", t: "Portes d'entrée vitrées", d: "Réparation, pose neuve, vitrage de porte d'immeuble et copropriété.", tag: "copros" },
@@ -304,7 +304,7 @@ function Services() {
 
 // ─── Réalisations ────────────────────────────────────────────────────────────
 const REALISATIONS = [
-  { before: "/assets/porte-bois-avant.jpeg", after: "/assets/porte-bois-apres.jpeg", title: "Porte d'entrée d'immeuble · Lyon 6", meta: "Vitrage cathédrale · Remplacement 3 carreaux · 1 journée", tag: "Copropriété" },
+  { before: "/assets/porte-bois-avant.jpeg", after: "/assets/porte-bois-apres.jpeg", title: "Porte d'entrée d'immeuble · Lyon 6", meta: "Vitrage martelé · Remplacement 3 carreaux · 1 journée", tag: "Copropriété" },
   { before: "/assets/vitre-avant.jpeg", after: "/assets/vitre-apres.jpeg", title: "Vitre cassée · Appartement haussmannien · Lyon 2", meta: "Sécurisation puis remplacement · Pose en 4h", tag: "Dépannage" },
   { before: "/assets/porte-alu-avant.jpeg", after: "/assets/porte-alu-apres.jpeg", title: "Porte vitrée résidence · Villeurbanne", meta: "Vitrage feuilleté 44.2 · Sécurité anti-effraction", tag: "Sécurité" },
 ];
@@ -397,13 +397,31 @@ function Realisations() {
 }
 
 // ─── À propos ────────────────────────────────────────────────────────────────
+const ABOUT_FEATURES = [
+  {
+    t: "Travail propre",
+    d: "Bâches, aspirateur, je laisse comme j'ai trouvé.",
+    detail: "Avant toute dépose de vitrage ou de miroir, je pose une bâche de protection pour éviter rayures ou impacts sur le sol — un dégât qui n'est pas rattrapable. Je balaie systématiquement après chaque intervention.",
+  },
+  {
+    t: "Prix annoncé",
+    d: "Le devis est ce que vous payez. Pas de surprise.",
+    detail: "Devis clair avec description détaillée de l'intervention, montants HT, TTC et TVA. Tous les devis et factures sont réalisés sur Pennylane, un logiciel de facturation électronique conforme à la réglementation en vigueur.",
+  },
+  {
+    t: "Garantie 2 ans",
+    d: "Pose et fournitures garanties, sans condition.",
+    detail: "Le double vitrage est garanti contre la formation de buée/condensation entre les vitres. Cette garantie ne couvre pas la casse : choc, fissure liée à un impact, un défaut de menuiserie qui force sur le vitrage, ou une casse thermique due au non-respect des conditions d'usage.",
+  },
+  {
+    t: "Assurances",
+    d: "Agréé MAIF, Macif, MAAF, Groupama et autres.",
+    detail: "Agréé assurance décennale, je peux vous fournir un justificatif sur demande et travailler en lien direct avec votre assureur pour la prise en charge de votre sinistre.",
+  },
+];
+
 function About() {
-  const features = [
-    ["Travail propre", "Bâches, aspirateur, je laisse comme j'ai trouvé."],
-    ["Prix annoncé", "Le devis est ce que vous payez. Pas de surprise."],
-    ["Garantie 2 ans", "Pose et fournitures garanties, sans condition."],
-    ["Assurances", "Agréé MAIF, Macif, MAAF, Groupama et autres."],
-  ] as const;
+  const [open, setOpen] = useState(-1);
 
   return (
     <section className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.ink, color: "#fff" }}>
@@ -421,19 +439,32 @@ function About() {
             <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400, color: "#ff8d72" }}>et la parole donnée.</span>
           </h2>
           <p style={{ fontSize: "clamp(14px, 1.4vw, 18px)", lineHeight: 1.6, color: "#d6d1c7", maxWidth: 540, marginBottom: 14 }}>
-            J&rsquo;ai monté Puillet Vitrerie en 2018 après dix ans à apprendre le métier en entreprise. Aujourd&rsquo;hui je travaille seul, à Lyon et dans la métropole. Pas d&rsquo;intermédiaire, pas de devis bidon. Je prends le téléphone, je viens mesurer, je fabrique, je pose.
+            J&rsquo;ai appris le métier pendant deux ans en entreprise avant de monter Puillet Vitrerie en solo. Aujourd&rsquo;hui je travaille seul, à Lyon et dans la métropole. Pas d&rsquo;intermédiaire, pas de devis bidon. Je prends le téléphone, je viens mesurer, je fabrique, je pose.
           </p>
           <p style={{ fontSize: "clamp(14px, 1.4vw, 18px)", lineHeight: 1.6, color: "#d6d1c7", maxWidth: 540, marginBottom: 28 }}>
             La plupart de mes clients reviennent — ou m&rsquo;envoient leur voisin. Ça me va très bien comme ça.
           </p>
 
           <div className="grid grid-cols-2 gap-4" style={{ maxWidth: 540 }}>
-            {features.map(([t, d]) => (
-              <div key={t} style={{ paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.12)" }}>
-                <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 5 }}>{t}</div>
-                <div style={{ fontSize: 13, color: "#a8a39a", lineHeight: 1.5 }}>{d}</div>
-              </div>
-            ))}
+            {ABOUT_FEATURES.map((f, i) => {
+              const isOpen = open === i;
+              return (
+                <div
+                  key={f.t}
+                  onClick={() => setOpen(isOpen ? -1 : i)}
+                  style={{ paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.12)", cursor: "pointer" }}
+                >
+                  <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 5, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+                    {f.t}
+                    <span style={{ fontSize: 12, color: "#a8a39a", transform: isOpen ? "rotate(45deg)" : "rotate(0)", transition: "transform .2s" }}>+</span>
+                  </div>
+                  <div style={{ fontSize: 13, color: "#a8a39a", lineHeight: 1.5 }}>{f.d}</div>
+                  {isOpen && (
+                    <div style={{ fontSize: 13, color: "#d6d1c7", lineHeight: 1.5, marginTop: 8 }}>{f.detail}</div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -452,11 +483,14 @@ function Testimonials() {
   return (
     <section id="temoignages" className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bg }}>
       <MonoLabel>Ils m&rsquo;ont fait confiance</MonoLabel>
-      <h2 style={{ fontSize: "clamp(26px, 4vw, 56px)", lineHeight: 1.02, letterSpacing: "-0.025em", margin: "14px 0 36px", fontWeight: 800, color: C.ink }}>
+      <h2 style={{ fontSize: "clamp(26px, 4vw, 56px)", lineHeight: 1.02, letterSpacing: "-0.025em", margin: "14px 0 16px", fontWeight: 800, color: C.ink }}>
         4,9 sur 5 —{" "}
         <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>et 87 voisins</span>{" "}
         qui le disent mieux que moi.
       </h2>
+      <p style={{ fontSize: 15, color: C.inkSoft, maxWidth: 560, margin: "0 0 36px" }}>
+        C&rsquo;est grâce à vous que je peux exercer ce métier avec autant de plaisir — merci pour votre confiance.
+      </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {TESTIMONIALS.map((t) => (
@@ -512,7 +546,7 @@ function Zones() {
             la métropole.
           </h2>
           <p style={{ fontSize: "clamp(14px, 1.4vw, 17px)", lineHeight: 1.6, color: C.inkSoft, maxWidth: 440, marginBottom: 20 }}>
-            Je me déplace dans un rayon d&rsquo;environ 25 km autour de Lyon, sans facturer de déplacement. Pour les urgences hors zone, appelez-moi : on trouvera une solution.
+            Je me déplace dans un rayon d&rsquo;environ 40 km autour de Lyon, sans facturer de déplacement. Pour les urgences hors zone, appelez-moi : on trouvera une solution.
           </p>
           {/* Tags visible on desktop inside the left column */}
           <div className="hidden md:block">
@@ -550,7 +584,7 @@ function Zones() {
             ))}
           </svg>
           <div style={{ position: "absolute", bottom: 14, left: 14, fontFamily: F.mono, fontSize: 10, color: "rgba(255,255,255,.6)", letterSpacing: "0.14em", textTransform: "uppercase" }}>
-            Rayon ~25 km · sans frais de déplacement
+            Rayon ~40 km · sans frais de déplacement
           </div>
         </div>
       </div>
@@ -691,8 +725,10 @@ function Contact() {
               </div>
             ))}
           </div>
-          <div style={{ marginTop: "auto", paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.12)", fontSize: 12, color: "#a8a39a" }}>
-            SIRET 995 238 169 00016 · Assurance décennale MAAF n° 158203/AB
+          <div style={{ marginTop: "auto", paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.12)", fontSize: 12, color: "#a8a39a", lineHeight: 1.6 }}>
+            SARL · SIRET 995 238 169 00016 · TVA FR05995238169 · APE 4334Z
+            <br />
+            Assurance décennale MAAF n° 158203/AB
           </div>
         </div>
 

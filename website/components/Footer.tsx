@@ -117,7 +117,7 @@ export default function Footer() {
           }}
           className="md:flex-row md:justify-between"
         >
-          <div>© 2026 Puillet Vitrerie · SIRET 821 384 922 00018</div>
+          <div>© 2026 Puillet Vitrerie · SIRET 995 238 169 00016</div>
           <div>Mentions légales · Politique de confidentialité</div>
         </div>
       </div>

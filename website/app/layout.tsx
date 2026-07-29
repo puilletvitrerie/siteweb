@@ -57,7 +57,12 @@ export default function RootLayout({
       className={`${manrope.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-screen flex flex-col">
-        <Header />
+        <div style={{ position: "sticky", top: 0, zIndex: 60 }}>
+          <div className="w-full bg-yellow-400 text-black text-center text-sm font-semibold py-2 px-4">
+            🚧 Site en construction — certaines informations peuvent être incomplètes 🚧
+          </div>
+          <Header />
+        </div>
         <main className="flex-1">{children}</main>
         <Footer />
         <MobileStickyCTA />
