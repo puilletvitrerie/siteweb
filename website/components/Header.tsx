@@ -22,7 +22,7 @@ export default function Header() {
   ];
 
   return (
-    <header style={{ position: "sticky", top: 0, zIndex: 50 }}>
+    <header>
       {/* Urgency strip */}
       <div
         style={{

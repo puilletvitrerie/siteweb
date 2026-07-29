@@ -37,7 +37,7 @@ export default function AProposPage() {
     {
       icon: MapPin,
       title: "Proximité",
-      description: "Basé à Francheville, intervention sur Lyon et toute l'agglomération lyonnaise.",
+      description: "Basé à Francheville (69340), intervention sur Lyon et toute l'agglomération lyonnaise.",
     },
   ];
 
@@ -141,7 +141,7 @@ export default function AProposPage() {
                     <p className="text-sm text-gray-300">Pour toutes vos urgences vitrerie</p>
                     <p className="text-sm mt-4 text-gray-300">
                       <span className="font-semibold text-white">Zone d'intervention :</span><br />
-                      Francheville, Lyon et toute l'agglomération lyonnaise
+                      Francheville (69340), Lyon et toute l'agglomération lyonnaise
                     </p>
                   </div>
                 </div>
