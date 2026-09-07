@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const RED = "#c8221e";
+const RED = "#3B8FD4";
 const INK = "#1f1d1b";
 const INK_SOFT = "#5a5550";
 const LINE = "#e3ddd1";
@@ -111,7 +111,7 @@ export default function Header() {
                 color: INK,
                 fontFamily: "var(--font-manrope), system-ui, sans-serif",
               }}
-              className="hover:text-[#c8221e] transition-colors"
+              className="hover:text-[#3B8FD4] transition-colors"
             >
               {link.label}
             </Link>
