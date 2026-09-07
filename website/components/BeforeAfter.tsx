@@ -17,7 +17,7 @@ export default function BeforeAfter({
   height = 520,
   beforeLabel = "Avant",
   afterLabel = "Après",
-  accent = "#c8221e",
+  accent = "#3B8FD4",
 }: BeforeAfterProps) {
   const [pos, setPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);

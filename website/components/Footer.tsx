@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const RED = "#c8221e";
+const RED = "#3B8FD4";
 
 export default function Footer() {
   const columns = [
