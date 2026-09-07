@@ -62,7 +62,7 @@ const HeroCTAs = () => (
         background: C.red, color: "#fff", padding: "16px 26px", borderRadius: 999,
         fontWeight: 700, fontSize: 16, display: "flex", alignItems: "center",
         justifyContent: "center", gap: 10,
-        boxShadow: "0 6px 24px rgba(200,34,30,.28)",
+        boxShadow: "0 6px 24px rgba(59,143,212,.28)",
       }}
     >
       <PhoneIcon />
