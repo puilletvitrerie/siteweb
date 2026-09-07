@@ -1,6 +1,6 @@
 "use client";
 
-const RED = "#c8221e";
+const RED = "#3B8FD4";
 const F_SANS = "var(--font-manrope), system-ui, sans-serif";
 
 export default function MobileStickyCTA() {

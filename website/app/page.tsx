@@ -12,7 +12,7 @@ const C = {
   ink: "#1f1d1b",
   inkSoft: "#5a5550",
   line: "#e3ddd1",
-  red: "#c8221e",
+  red: "#3B8FD4",
 } as const;
 
 const F = {
