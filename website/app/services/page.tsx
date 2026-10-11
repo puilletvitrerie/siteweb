@@ -297,12 +297,30 @@ export default function ServicesPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">Notre Approche Artisanale</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gray-900 text-white p-8 rounded-3xl">
+              <div className="bg-gray-900 text-white p-8 rounded-3xl md:col-span-2">
                 <h3 className="text-xl font-bold mb-3">Pose au mastic traditionnel</h3>
-                <p className="text-gray-300">
+                <p className="text-gray-300 mb-6">
                   Technique artisanale respectueuse du cachet ancien de vos menuiseries. 
                   Idéal pour les bâtiments historiques et les rénovations patrimoniales.
                 </p>
+                <div className="grid sm:grid-cols-2 gap-6 items-start">
+                  <figure>
+                    <img src="/assets/services/mastic-atelier.jpg" alt="Préparation d'un châssis avant la pose au mastic" className="w-full rounded-2xl" />
+                    <figcaption className="text-sm text-gray-400 mt-3 text-center">Préparation du châssis avant la pose</figcaption>
+                  </figure>
+                  <div className="[&_figcaption]:text-gray-400 [&_button]:border-white [&_span]:text-gray-400">
+                    <BeforeAfterGallery
+                      items={[
+                        {
+                          before: "/assets/services/mastic-avant.jpg",
+                          after: "/assets/services/mastic-apres.jpg",
+                          ratio: 1100 / 1183,
+                          caption: "Vitre fendue remplacée et posée au mastic",
+                        },
+                      ]}
+                    />
+                  </div>
+                </div>
               </div>
               <div className="bg-gray-900 text-white p-8 rounded-3xl">
                 <h3 className="text-xl font-bold mb-3">Découpe sur place</h3>
