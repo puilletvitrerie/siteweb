@@ -123,7 +123,6 @@ export default function ServicesPage() {
       icon: Flame,
       title: "Verre de cheminée",
       description: "Remplacement sur mesure de vitres de cheminée pour une utilisation en toute sécurité.",
-      image: "/assets/services/vitre-cheminee.jpg",
       details: [
         "Verre haute température",
         "Découpe aux dimensions exactes",
@@ -162,6 +161,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div key={index} className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Image */}
+                {("image" in service || "beforeAfter" in service) && (
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   {"beforeAfter" in service && service.beforeAfter ? (
                     <BeforeAfterGallery items={service.beforeAfter} />
@@ -175,9 +175,10 @@ export default function ServicesPage() {
                     </div>
                   )}
                 </div>
+                )}
 
                 {/* Content */}
-                <div className={index % 2 === 1 ? "lg:order-1" : ""}>
+                <div className={!("image" in service || "beforeAfter" in service) ? "lg:col-span-2 max-w-3xl" : index % 2 === 1 ? "lg:order-1" : ""}>
                   <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-6">
                     <service.icon className="h-6 w-6 text-white" />
                   </div>
