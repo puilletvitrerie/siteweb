@@ -424,7 +424,7 @@ const ABOUT_FEATURES = [
   {
     t: "Assurances",
     d: "Devis et facture détaillés pour votre dossier d'assurance.",
-    detail: "Je vous fournis un devis et une facture détaillés à transmettre à votre assureur pour la prise en charge de votre sinistre. Je suis couvert par une assurance décennale, justificatif sur demande.",
+    detail: "Je vous fournis un devis et une facture détaillés à transmettre à votre assureur pour la prise en charge de votre sinistre. Je suis assuré en responsabilité civile professionnelle et décennale auprès de la MAAF, attestation sur demande.",
   },
 ];
 
@@ -736,7 +736,7 @@ function Contact() {
           <div style={{ marginTop: "auto", paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.12)", fontSize: 12, color: "#a8a39a", lineHeight: 1.6 }}>
             SARL · SIRET 995 238 169 00016 · TVA FR05995238169 · APE 4334Z
             <br />
-            Assurance décennale MAAF n° 158203/AB
+            Assurance responsabilité civile professionnelle et décennale MAAF · Attestation sur demande
           </div>
         </div>
 
