@@ -594,10 +594,10 @@ function Zones() {
             <circle cx="240" cy="200" r="14" fill="none" stroke={C.red} strokeWidth="2" />
             <text x="240" y="226" textAnchor="middle" fill="#fff" fontFamily="JetBrains Mono, monospace" fontSize="12" fontWeight="600">LYON</text>
             {[
-              [253, 153, "Caluire", "r"], [288, 183, "Villeurbanne", "r"], [184, 195, "Tassin", "l"],
-              [221, 249, "Oullins", "l"], [275, 255, "Vénissieux", "l"], [301, 248, "Saint-Priest", "r"],
-              [325, 194, "Meyzieu", "u"], [323, 218, "Genas", "r"], [360, 202, "Pont-de-Chéruy", "r"],
-              [372, 215, "Crémieu", "d"], [328, 268, "Heyrieux", "l"],
+              [253, 153, "Caluire", "r"], [288, 183, "Villeurbanne", "u"], [184, 195, "Tassin", "l"],
+              [221, 249, "Oullins", "l"], [275, 255, "Vénissieux", "d"], [301, 248, "Saint-Priest", "r"],
+              [325, 194, "Meyzieu", "d"], [323, 218, "Genas", "l"], [360, 202, "Pont-de-Chéruy", "r"],
+              [372, 215, "Crémieu", "d"], [328, 268, "Heyrieux", "d"],
               [368, 270, "Bourgoin-Jallieu", "r"],
             ].map(([x, y, name, side], i) => (
               <g key={i}>
