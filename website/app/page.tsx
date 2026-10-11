@@ -540,6 +540,9 @@ const VILLES = [
   "Mions", "Corbas", "Saint-Bonnet-de-Mure", "Saint-Laurent-de-Mure",
   "Pont-de-Chéruy", "Crémieu", "Heyrieux", "Saint-Quentin-Fallavier",
   "Villefontaine", "L'Isle-d'Abeau", "Bourgoin-Jallieu",
+  "Neuville-sur-Saône", "Trévoux", "Villefranche-sur-Saône", "Montluel",
+  "L'Arbresle", "Craponne", "Vaugneray", "Brignais", "Mornant",
+  "Givors", "Vienne",
 ];
 
 function Zones() {
@@ -594,10 +597,10 @@ function Zones() {
             <circle cx="240" cy="200" r="14" fill="none" stroke={C.red} strokeWidth="2" />
             <text x="240" y="226" textAnchor="middle" fill="#fff" fontFamily="JetBrains Mono, monospace" fontSize="12" fontWeight="600">LYON</text>
             {[
-              [253, 153, "Caluire", "r"], [288, 183, "Villeurbanne", "u"], [184, 195, "Tassin", "l"],
-              [221, 249, "Oullins", "l"], [275, 255, "Vénissieux", "d"], [301, 248, "Saint-Priest", "r"],
-              [325, 194, "Meyzieu", "d"], [323, 218, "Genas", "l"], [360, 202, "Pont-de-Chéruy", "r"],
-              [372, 215, "Crémieu", "d"], [328, 268, "Heyrieux", "d"],
+              [201, 85, "Villefranche-sur-Saône", "r"], [244, 116, "Neuville-sur-Saône", "r"], [150, 154, "L'Arbresle", "l"],
+              [189, 223, "Francheville", "d"], [155, 214, "Vaugneray", "l"], [198, 265, "Brignais", "l"],
+              [214, 299, "Givors", "l"], [255, 318, "Vienne", "r"], [288, 183, "Villeurbanne", "u"],
+              [275, 255, "Vénissieux", "r"], [325, 194, "Meyzieu", "r"], [330, 147, "Montluel", "r"],
               [368, 270, "Bourgoin-Jallieu", "r"],
             ].map(([x, y, name, side], i) => (
               <g key={i}>
