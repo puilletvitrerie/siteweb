@@ -1,7 +1,7 @@
 import { Phone, Home, Sparkles, Building2, Flame, Droplets, Layers, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import BeforeAfter from "@/components/BeforeAfter";
+import BeforeAfterGallery from "@/components/BeforeAfterGallery";
 
 export const metadata = {
   title: "Nos Services - Puillet Vitrerie",
@@ -15,12 +15,20 @@ export default function ServicesPage() {
       title: "Remplacement de vitrage à l'identique",
       description: "Spécialiste du remplacement de tous types de vitrages : vitres simples, imprimées, armées, isolantes, etc.",
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-      beforeAfter: {
-        before: "/assets/services/feuillete-imprime-200-avant.jpg",
-        after: "/assets/services/feuillete-imprime-200-apres.jpg",
-        ratio: 1100 / 1282,
-        caption: "Avant / après : vitrage feuilleté imprimé 200 sur une porte d'immeuble",
-      },
+      beforeAfter: [
+        {
+          before: "/assets/services/feuillete-44-2-avant.jpg",
+          after: "/assets/services/feuillete-44-2-apres.jpg",
+          ratio: 870 / 1300,
+          caption: "Remise aux normes : vitrage de 8 mm remplacé par un feuilleté 44.2",
+        },
+        {
+          before: "/assets/services/feuillete-imprime-200-avant.jpg",
+          after: "/assets/services/feuillete-imprime-200-apres.jpg",
+          ratio: 1100 / 1282,
+          caption: "Avant / après : vitrage feuilleté imprimé 200 sur une porte d'immeuble",
+        },
+      ],
       details: [
         "Vitres simples (3mm, 4mm)",
         "Verre armé (petites et grosses mailles)",
@@ -116,12 +124,7 @@ export default function ServicesPage() {
                 {/* Image */}
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   {"beforeAfter" in service && service.beforeAfter ? (
-                    <figure className="mx-auto" style={{ maxWidth: 480 }}>
-                      <div className="rounded-3xl overflow-hidden">
-                        <BeforeAfter before={service.beforeAfter.before} after={service.beforeAfter.after} ratio={service.beforeAfter.ratio} initialPos={98} />
-                      </div>
-                      <figcaption className="text-sm text-gray-600 mt-3 text-center">{service.beforeAfter.caption}</figcaption>
-                    </figure>
+                    <BeforeAfterGallery items={service.beforeAfter} />
                   ) : (
                     <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                       <img 
