@@ -439,10 +439,10 @@ function About() {
             <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400, color: "#ff8d72" }}>et la parole donnée.</span>
           </h2>
           <p style={{ fontSize: "clamp(14px, 1.4vw, 18px)", lineHeight: 1.6, color: "#d6d1c7", maxWidth: 540, marginBottom: 14 }}>
-            J&rsquo;ai appris le métier pendant deux ans en entreprise avant de monter Puillet Vitrerie en solo. Aujourd&rsquo;hui je travaille seul, à Lyon et dans la métropole. Pas d&rsquo;intermédiaire, pas de devis bidon. Je prends le téléphone, je viens mesurer, je fabrique, je pose.
+            J&rsquo;ai fondé Puillet Vitrerie afin d&rsquo;offrir un service de proximité, à Lyon et dans toute la métropole. Je suis votre unique interlocuteur, du premier appel jusqu&rsquo;à la pose : prise de mesures, fabrication et installation. Sans intermédiaire, avec des devis clairs et détaillés.
           </p>
           <p style={{ fontSize: "clamp(14px, 1.4vw, 18px)", lineHeight: 1.6, color: "#d6d1c7", maxWidth: 540, marginBottom: 28 }}>
-            La plupart de mes clients reviennent — ou m&rsquo;envoient leur voisin. Ça me va très bien comme ça.
+            La fidélité de mes clients et leurs recommandations sont ma plus belle reconnaissance.
           </p>
 
           <div className="grid grid-cols-2 gap-4" style={{ maxWidth: 540 }}>
