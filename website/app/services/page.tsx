@@ -322,12 +322,17 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-900 text-white p-8 rounded-3xl">
+              <div className="bg-gray-900 text-white p-8 rounded-3xl md:col-span-2">
                 <h3 className="text-xl font-bold mb-3">Découpe sur place</h3>
-                <p className="text-gray-300">
+                <p className="text-gray-300 mb-6">
                   Stock permanent dans le camion permettant une découpe et une pose immédiate. 
                   Intervention rapide sans délai d'attente.
                 </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {["/assets/services/decoupe-1.jpg", "/assets/services/decoupe-2.jpg", "/assets/services/decoupe-3.jpg"].map((src) => (
+                    <img key={src} src={src} alt="Découpe du verre sur place" className="w-full aspect-[3/4] object-cover rounded-2xl" loading="lazy" />
+                  ))}
+                </div>
               </div>
               <div className="bg-gray-900 text-white p-8 rounded-3xl">
                 <h3 className="text-xl font-bold mb-3">Travail en autonomie</h3>
