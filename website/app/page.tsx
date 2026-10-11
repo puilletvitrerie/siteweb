@@ -120,7 +120,7 @@ function Hero() {
           </h1>
           <p style={{ fontSize: "clamp(15px, 1.5vw, 19px)", lineHeight: 1.55, color: C.inkSoft, maxWidth: 520, margin: "0 0 28px" }}>
             Je suis Léo Puillet, vitrier indépendant à Lyon. Remplacement de
-            vitrage, double vitrage, miroirs sur mesure, portes vitrées, chez
+            vitrages, doubles vitrages, miroirs sur mesure, portes vitrées, chez
             les particuliers comme dans les copropriétés. Devis clair,
             intervention rapide, travail propre.
           </p>

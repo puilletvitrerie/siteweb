@@ -33,7 +33,7 @@ export const viewport = {
 export const metadata: Metadata = {
   title: "Puillet Vitrerie · Artisan Vitrier à Lyon",
   description:
-    "Vitrier indépendant à Lyon. Remplacement de vitrage, double vitrage, miroirs sur mesure, portes vitrées. Devis gratuit, intervention rapide, travail propre.",
+    "Vitrier indépendant à Lyon. Remplacement de vitrages, doubles vitrages, miroirs sur mesure, portes vitrées. Devis gratuit, intervention rapide, travail propre.",
   keywords: [
     "vitrier",
     "vitrerie",
