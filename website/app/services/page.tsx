@@ -28,6 +28,12 @@ export default function ServicesPage() {
           ratio: 1100 / 1282,
           caption: "Avant / après : vitrage feuilleté imprimé 200 sur une porte d'immeuble",
         },
+        {
+          before: "/assets/services/martele-parclose-bois-avant.jpg",
+          after: "/assets/services/martele-parclose-bois-apres.jpg",
+          ratio: 1100 / 891,
+          caption: "Remplacement à l'identique d'un vitrage martelé avec parclose en bois sur porte de copropriété",
+        },
       ],
       details: [
         "Vitres simples (3mm, 4mm)",
