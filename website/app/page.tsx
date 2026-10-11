@@ -417,9 +417,9 @@ const ABOUT_FEATURES = [
     detail: "Devis clair avec description détaillée de l'intervention, montants HT, TTC et TVA. Tous les devis et factures sont réalisés sur Pennylane, un logiciel de facturation électronique conforme à la réglementation en vigueur.",
   },
   {
-    t: "Garantie 2 ans",
-    d: "Pose et fournitures garanties, sans condition.",
-    detail: "Le double vitrage est garanti contre la formation de buée/condensation entre les vitres. Cette garantie ne couvre pas la casse : choc, fissure liée à un impact, un défaut de menuiserie qui force sur le vitrage, ou une casse thermique due au non-respect des conditions d'usage.",
+    t: "Devis gratuit",
+    d: "Déplacement et devis offerts, sans engagement.",
+    detail: "Je me déplace pour prendre les mesures et vous remets un devis clair et détaillé, gratuitement et sans engagement. Vous décidez ensuite en toute tranquillité.",
   },
   {
     t: "Assurances",

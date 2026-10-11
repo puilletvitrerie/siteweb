@@ -76,7 +76,7 @@ export default function ServicesPage() {
         "Respect des normes de sécurité",
         "Installation rapide",
         "Conseils personnalisés",
-        "Garantie qualité",
+        "Devis gratuit",
       ],
     },
   ];
@@ -170,11 +170,8 @@ export default function ServicesPage() {
               <p className="text-gray-300 mb-3">
                 Pas d&apos;inquiétude : appelez votre assurance pour déclarer un sinistre : seule la franchise reste à votre charge, le reste est pris en charge. Une fois votre assurance contactée, appelez-moi au 06 50 44 06 73 pour organiser l&apos;intervention.
               </p>
-              <p className="text-gray-300 mb-3">
-                Après réalisation du devis, je vous l&apos;envoie afin que vous puissiez le transmettre à votre assurance. Une fois le devis accepté, j&apos;interviens sous 24h si aucune main d&apos;œuvre supplémentaire n&apos;est nécessaire.
-              </p>
               <p className="text-gray-300">
-                Le double vitrage posé est garanti contre la formation de buée/condensation entre les vitres. Cette garantie ne couvre pas la casse : choc, fissure liée à un impact, défaut de menuiserie qui force sur le vitrage, ou casse thermique due au non-respect des conditions d&apos;usage.
+                Après réalisation du devis, je vous l&apos;envoie afin que vous puissiez le transmettre à votre assurance. Une fois le devis accepté, j&apos;interviens sous 24h si aucune main d&apos;œuvre supplémentaire n&apos;est nécessaire.
               </p>
             </div>
           </div>
