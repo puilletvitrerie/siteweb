@@ -408,7 +408,7 @@ function Realisations() {
 const ABOUT_FEATURES = [
   {
     t: "Travail propre",
-    d: "Bâches, aspirateur, je laisse comme j'ai trouvé.",
+    d: "Bâche de protection et coup de balai : je laisse les lieux propres.",
     detail: "Avant toute dépose de vitrage ou de miroir, je pose une bâche de protection pour éviter rayures ou impacts sur le sol, un dégât qui n'est pas rattrapable. Je balaie systématiquement après chaque intervention.",
   },
   {
