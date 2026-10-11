@@ -51,16 +51,16 @@ export default function ServicesPage() {
       image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
       beforeAfter: [
         {
-          before: "/assets/services/miroir-convexe-avant.jpg",
-          after: "/assets/services/miroir-convexe-apres.jpg",
-          ratio: 1000 / 1150,
-          caption: "Remplacement d'un miroir convexe à l'identique",
-        },
-        {
           before: "/assets/services/miroir-hall-avant.jpg",
           after: "/assets/services/miroir-hall-apres.jpg",
           ratio: 661 / 1300,
           caption: "Remplacement d'un miroir à l'identique dans un hall d'entrée de copropriété",
+        },
+        {
+          before: "/assets/services/miroir-convexe-avant.jpg",
+          after: "/assets/services/miroir-convexe-apres.jpg",
+          ratio: 1000 / 1150,
+          caption: "Remplacement d'un miroir convexe à l'identique",
         },
       ],
       details: [
