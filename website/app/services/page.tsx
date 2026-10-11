@@ -168,7 +168,7 @@ export default function ServicesPage() {
             <div className="bg-gray-900 text-white p-8 rounded-3xl">
               <h3 className="text-xl font-bold mb-3">Votre double vitrage est fissuré ?</h3>
               <p className="text-gray-300 mb-3">
-                Pas d&apos;inquiétude : appelez votre assurance pour déclarer un sinistre : seule la franchise reste à votre charge, le reste est pris en charge. Une fois votre assurance contactée, appelez-moi au 06 50 44 06 73 pour organiser l&apos;intervention.
+                Pas d&apos;inquiétude : appelez votre assurance pour déclarer un sinistre. Selon votre contrat, seule la franchise reste généralement à votre charge. Une fois votre assurance contactée, appelez-moi au 06 50 44 06 73 pour organiser l&apos;intervention.
               </p>
               <p className="text-gray-300">
                 Après réalisation du devis, je vous l&apos;envoie afin que vous puissiez le transmettre à votre assurance. Une fois le devis accepté, j&apos;interviens sous 24h si aucune main d&apos;œuvre supplémentaire n&apos;est nécessaire.

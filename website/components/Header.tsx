@@ -57,7 +57,7 @@ export default function Header() {
           style={{ color: "#bdb6a8" }}
           className="hidden sm:block"
         >
-          Agréé toutes assurances · Devis gratuit
+          Devis gratuit · Dossier assurance facilité
         </span>
       </div>
 

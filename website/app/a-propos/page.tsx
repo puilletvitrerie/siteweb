@@ -16,8 +16,8 @@ export default function AProposPage() {
     },
     {
       icon: Shield,
-      title: "Agréé Assurance",
-      description: "Prise en charge directe par votre assurance pour tous vos sinistres.",
+      title: "Dossier assurance",
+      description: "Devis et facture détaillés à transmettre à votre assurance en cas de sinistre.",
     },
     {
       icon: Clock,
@@ -57,7 +57,7 @@ export default function AProposPage() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-block px-4 py-2 bg-gray-100 text-gray-900 rounded-full font-bold text-sm mb-6">
-              AGRÉÉ ASSURANCE
+              DEVIS GRATUIT
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">À Propos</h1>
             <p className="text-xl text-gray-600">

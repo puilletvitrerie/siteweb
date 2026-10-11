@@ -423,8 +423,8 @@ const ABOUT_FEATURES = [
   },
   {
     t: "Assurances",
-    d: "Agréé MAIF, Macif, MAAF, Groupama et autres.",
-    detail: "Agréé assurance décennale, je peux vous fournir un justificatif sur demande et travailler en lien direct avec votre assureur pour la prise en charge de votre sinistre.",
+    d: "Devis et facture détaillés pour votre dossier d'assurance.",
+    detail: "Je vous fournis un devis et une facture détaillés à transmettre à votre assureur pour la prise en charge de votre sinistre. Je suis couvert par une assurance décennale, justificatif sur demande.",
   },
 ];
 
@@ -612,7 +612,7 @@ function Zones() {
 // ─── FAQ ─────────────────────────────────────────────────────────────────────
 const FAQ_ITEMS = [
   { q: "Quels sont vos délais pour un dépannage urgent ?", a: "Pour une vitre cassée sur Lyon ou la métropole, j'interviens en moins de 2h en journée, et dans la journée pour le sur-mesure. Sécurisation immédiate, puis remplacement définitif sous 24 à 72h selon le vitrage." },
-  { q: "Travaillez-vous avec les assurances ?", a: "Oui, je suis agréé par la plupart des grandes compagnies (MAIF, Macif, MAAF, Groupama, AXA…). Je peux vous aider à monter le dossier et facturer directement votre assureur dans la majorité des cas." },
+  { q: "Travaillez-vous avec les assurances ?", a: "Oui. Je vous remets un devis détaillé à transmettre à votre assureur, puis la facture une fois l'intervention terminée. La prise en charge dépend de votre contrat : le plus souvent, seule la franchise reste à votre charge." },
   { q: "Combien coûte un remplacement de double vitrage ?", a: "Cela dépend des dimensions, de l'épaisseur et du type de vitrage (isolant, feuilleté, dépoli). Un devis gratuit et clair vous est remis avant toute intervention, généralement sous 24h." },
   { q: "Intervenez-vous le week-end ?", a: "Oui, le service de dépannage urgent fonctionne 7j/7, y compris le week-end et les jours fériés, pour la sécurisation d'une ouverture." },
   { q: "Faites-vous des miroirs sur mesure ?", a: "Bien sûr : miroirs muraux, salle de bain anti-buée, dressing, biseautés, percés. Mesure sur place, fabrication à l'atelier, pose à domicile." },
