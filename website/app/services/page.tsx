@@ -59,7 +59,7 @@ export default function ServicesPage() {
         {
           before: "/assets/services/miroir-convexe-avant.jpg",
           after: "/assets/services/miroir-convexe-apres.jpg",
-          ratio: 1000 / 1150,
+          ratio: 960 / 1150,
           caption: "Remplacement d'un miroir convexe à l'identique",
         },
       ],
