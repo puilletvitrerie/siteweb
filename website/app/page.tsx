@@ -440,11 +440,11 @@ function About() {
           <img loading="lazy" src="/assets/camion-paysage.jpeg" alt="Camion Puillet Vitrerie" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
         <div>
-          <MonoLabel color="#ff8d72">À propos</MonoLabel>
+          <MonoLabel color="#7DB9EA">À propos</MonoLabel>
           <h2 style={{ fontSize: "clamp(32px, 5vw, 64px)", lineHeight: 1, letterSpacing: "-0.025em", margin: "16px 0 20px", fontWeight: 800 }}>
             Un artisan, un camion,
             <br />
-            <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400, color: "#ff8d72" }}>et la parole donnée.</span>
+            <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400, color: "#7DB9EA" }}>et la parole donnée.</span>
           </h2>
           <p style={{ fontSize: "clamp(14px, 1.4vw, 18px)", lineHeight: 1.6, color: "#d6d1c7", maxWidth: 540, marginBottom: 14 }}>
             J&rsquo;ai fondé Puillet Vitrerie afin d&rsquo;offrir un service de proximité, à Lyon et dans toute la métropole. Je suis votre unique interlocuteur, du premier appel jusqu&rsquo;à la pose : prise de mesures, fabrication et installation. Sans intermédiaire, avec des devis clairs et détaillés.
