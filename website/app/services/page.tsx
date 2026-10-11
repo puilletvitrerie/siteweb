@@ -305,8 +305,8 @@ export default function ServicesPage() {
                 </p>
                 <div className="grid sm:grid-cols-2 gap-6 items-start">
                   <figure>
-                    <img src="/assets/services/mastic-atelier.jpg" alt="Préparation d'un châssis avant la pose au mastic" className="w-full rounded-2xl" />
-                    <figcaption className="text-sm text-gray-400 mt-3 text-center">Préparation du châssis avant la pose</figcaption>
+                    <img src="/assets/services/mastic-atelier.jpg" alt="Application du mastic traditionnel" className="w-full rounded-2xl" />
+                    <figcaption className="text-sm text-gray-400 mt-3 text-center">Application du mastic traditionnel</figcaption>
                   </figure>
                   <div className="[&_figcaption]:text-gray-400 [&_button]:border-white [&_span]:text-gray-400">
                     <BeforeAfterGallery
@@ -315,7 +315,7 @@ export default function ServicesPage() {
                           before: "/assets/services/mastic-avant.jpg",
                           after: "/assets/services/mastic-apres.jpg",
                           ratio: 1100 / 1183,
-                          caption: "Vitre fendue remplacée et posée au mastic",
+                          caption: "Vitre fendue remplacée et posée au mastic traditionnel",
                         },
                       ]}
                     />
