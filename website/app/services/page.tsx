@@ -224,6 +224,18 @@ export default function ServicesPage() {
                 </div>
               ))}
             </div>
+            <div className="mb-10">
+              <BeforeAfterGallery
+                items={[
+                  {
+                    before: "/assets/realisations/08-avant.jpg",
+                    after: "/assets/realisations/08-apres.jpg",
+                    ratio: 1100 / 1099,
+                    caption: "Remplacement d'un double vitrage cassé sur une fenêtre PVC",
+                  },
+                ]}
+              />
+            </div>
             <div className="bg-gray-900 text-white p-8 rounded-3xl">
               <h3 className="text-xl font-bold mb-3">Votre double vitrage est fissuré ?</h3>
               <p className="text-gray-300 mb-3">
