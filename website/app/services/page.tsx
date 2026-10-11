@@ -56,6 +56,12 @@ export default function ServicesPage() {
           ratio: 1000 / 1150,
           caption: "Remplacement d'un miroir convexe à l'identique",
         },
+        {
+          before: "/assets/services/miroir-hall-avant.jpg",
+          after: "/assets/services/miroir-hall-apres.jpg",
+          ratio: 661 / 1300,
+          caption: "Remplacement d'un miroir à l'identique dans un hall d'entrée de copropriété",
+        },
       ],
       details: [
         "Miroirs de salles de bain",
