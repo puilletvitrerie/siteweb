@@ -632,7 +632,7 @@ const FAQ_ITEMS = [
   { q: "Quels sont vos délais pour un dépannage urgent ?", a: "Pour un simple vitrage cassé, j'interviens en urgence en moins de 2h. Pour le verre feuilleté, le double vitrage et les miroirs, le remplacement est réalisé sous 24 à 72h. En attendant, je peux sécuriser l'ouverture le jour même avec une plaque OSB." },
   { q: "Le devis est-il payant ?", a: "Non, le devis est gratuit et sans engagement. Je me déplace pour prendre les mesures, puis je vous envoie un devis clair et détaillé. Le prix indiqué sur le devis est celui que vous payez." },
   { q: "Combien coûte un remplacement de vitrage ?", a: "Le prix dépend de plusieurs éléments : les dimensions et l'épaisseur du verre, le type de vitrage (simple, double vitrage, feuilleté, dépoli, imprimé…), l'accès au chantier et la main d'œuvre nécessaire. Un grand vitrage lourd peut demander deux ou trois poseurs, voire un équipement à ventouses. Un devis gratuit et clair vous est remis avant toute intervention, généralement sous 24h." },
-  { q: "Intervenez-vous le week-end ?", a: "Oui, le service de dépannage urgent fonctionne 7j/7, y compris le week-end et les jours fériés, pour la sécurisation d'une ouverture." },
+  { q: "Intervenez-vous le week-end ?", a: "Oui, le dépannage fonctionne 7j/7, y compris le week-end et les jours fériés. Les fournisseurs de verre étant fermés le week-end, je sécurise l'ouverture le jour même (plaque OSB) en attendant la commande du vitrage, puis je reviens le poser dès sa réception." },
   { q: "Faites-vous des miroirs sur mesure ?", a: "Bien sûr : miroirs muraux, salle de bain anti-buée, dressing, biseautés, percés. Mesure sur place, fabrication à l'atelier, pose à domicile." },
 ];
 
