@@ -481,10 +481,12 @@ function About() {
 }
 
 // ─── Témoignages ─────────────────────────────────────────────────────────────
+const GOOGLE_REVIEWS_URL = "https://maps.google.com/?cid=4036198005292784636";
+
 const TESTIMONIALS = [
-  { name: "Claire M.", loc: "Lyon 3", rating: 5, text: "Vitre cassée un dimanche soir, Léo est passé le lundi à 8h. Travail impeccable, prix tenu. Je le recommande à toute la copro." },
-  { name: "Jean-Marc L.", loc: "Caluire-et-Cuire", rating: 5, text: "On a fait poser un double vitrage sur trois fenêtres. Conseil honnête, pose nickel, et un vrai gain de confort en hiver." },
-  { name: "Sophie B.", loc: "Villeurbanne", rating: 5, text: "Miroir sur mesure pour la salle de bain, parfaitement posé. Très ponctuel, très propre, et il prend le temps d'expliquer." },
+  { name: "Nawelle C.", loc: "Avis Google · avril 2026", rating: 5, text: "En tant qu’employé en gestion de copropriété, c’est un réel plaisir de travailler avec un prestataire d’un tel professionnalisme ! Sa réactivité est tout simplement impressionnante : demande de devis envoyée à 15h, reçu en 1h ! Devis validé à 9h, vitre changée à 11h !" },
+  { name: "Anna M.", loc: "Avis Google · juillet 2026", rating: 5, text: "Nous sommes très satisfaits du travail réalisé par cet artisan. Contacté pour un remplacement d'une vitre intérieure, il s'est montré réactif, agréable et efficace." },
+  { name: "Florian R.", loc: "Avis Google · avril 2026", rating: 5, text: "Service impeccable ! Intervention ultra rapide et travail très soigné. En plus d’être ponctuel, il a laissé les lieux propres après son passage. Je recommande sans hésitation !" },
 ] as const;
 
 function Testimonials() {
@@ -492,9 +494,9 @@ function Testimonials() {
     <section id="temoignages" className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bg }}>
       <MonoLabel>Ils m&rsquo;ont fait confiance</MonoLabel>
       <h2 style={{ fontSize: "clamp(26px, 4vw, 56px)", lineHeight: 1.02, letterSpacing: "-0.025em", margin: "14px 0 16px", fontWeight: 800, color: C.ink }}>
-        4,9 sur 5,{" "}
-        <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>et 87 voisins</span>{" "}
-        qui le disent mieux que moi.
+        4,9 sur 5{" "}
+        <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>sur Google</span>,{" "}
+        avec 29 avis clients.
       </h2>
       <p style={{ fontSize: 15, color: C.inkSoft, maxWidth: 560, margin: "0 0 36px" }}>
         C&rsquo;est grâce à vous que je peux exercer ce métier avec autant de plaisir. Merci pour votre confiance.
@@ -520,6 +522,9 @@ function Testimonials() {
           </div>
         ))}
       </div>
+      <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 24, fontSize: 14, fontWeight: 600, color: C.ink, borderBottom: `1.5px solid ${C.ink}`, paddingBottom: 2 }}>
+        Voir tous les avis sur Google →
+      </a>
     </section>
   );
 }
