@@ -533,9 +533,13 @@ function Testimonials() {
 const VILLES = [
   "Lyon 1er", "Lyon 2e", "Lyon 3e", "Lyon 4e", "Lyon 5e", "Lyon 6e",
   "Lyon 7e", "Lyon 8e", "Lyon 9e", "Villeurbanne", "Caluire-et-Cuire",
-  "Bron", "Vénissieux", "Saint-Priest", "Écully", "Tassin",
-  "Sainte-Foy-lès-Lyon", "Oullins", "Pierre-Bénite", "Vaulx-en-Velin",
-  "Décines", "Meyzieu", "Rillieux-la-Pape", "Champagne-au-Mont-d'Or",
+  "Francheville", "Tassin", "Écully", "Sainte-Foy-lès-Lyon", "Oullins",
+  "Pierre-Bénite", "Champagne-au-Mont-d'Or", "Rillieux-la-Pape",
+  "Vaulx-en-Velin", "Bron", "Vénissieux", "Saint-Fons", "Saint-Priest",
+  "Chassieu", "Décines", "Meyzieu", "Genas", "Jonage", "Pusignan",
+  "Mions", "Corbas", "Saint-Bonnet-de-Mure", "Saint-Laurent-de-Mure",
+  "Pont-de-Chéruy", "Crémieu", "Heyrieux", "Saint-Quentin-Fallavier",
+  "Villefontaine", "L'Isle-d'Abeau", "Bourgoin-Jallieu",
 ];
 
 function Zones() {
@@ -554,12 +558,12 @@ function Zones() {
         <div>
           <MonoLabel>Zones d&rsquo;intervention</MonoLabel>
           <h2 style={{ fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1.02, letterSpacing: "-0.025em", margin: "14px 0 16px", fontWeight: 800, color: C.ink }}>
-            Lyon et toute
+            Lyon, la métropole
             <br />
-            la métropole.
+            et l&rsquo;Est lyonnais.
           </h2>
           <p style={{ fontSize: "clamp(14px, 1.4vw, 17px)", lineHeight: 1.6, color: C.inkSoft, maxWidth: 440, marginBottom: 20 }}>
-            Je me déplace dans un rayon d&rsquo;environ 40 km autour de Lyon, sans facturer de déplacement. Pour les urgences hors zone, appelez-moi : on trouvera une solution.
+            Je me déplace dans un rayon d&rsquo;environ 60 km autour de Lyon, notamment dans tout l&rsquo;Est lyonnais, sans facturer de déplacement. Pour les urgences hors zone, appelez-moi : on trouvera une solution.
           </p>
           {/* Tags visible on desktop inside the left column */}
           <div className="hidden md:block">
@@ -576,28 +580,34 @@ function Zones() {
               </pattern>
             </defs>
             <rect width="500" height="400" fill="url(#mapGrid)" />
-            <path d="M 80 0 C 120 80 90 180 150 240 S 200 360 180 400" stroke="rgba(120,160,200,.5)" strokeWidth="3" fill="none" />
-            <path d="M 220 0 C 200 60 240 140 220 220 S 260 340 230 400" stroke="rgba(120,160,200,.5)" strokeWidth="3" fill="none" />
-            <circle cx="240" cy="200" r="60" fill={C.red} fillOpacity="0.15" stroke={C.red} strokeOpacity="0.5" strokeDasharray="4 4" />
-            <circle cx="240" cy="200" r="120" fill={C.red} fillOpacity="0.06" stroke={C.red} strokeOpacity="0.3" strokeDasharray="4 4" />
-            <circle cx="240" cy="200" r="170" fill="none" stroke={C.red} strokeOpacity="0.2" strokeDasharray="4 4" />
+            {/* Saône et Rhône (tracé simplifié) */}
+            <path d="M 226 0 C 230 70 238 140 238 196" stroke="rgba(120,160,200,.5)" strokeWidth="3" fill="none" />
+            <path d="M 500 120 C 420 125 320 150 262 182 C 246 190 240 205 243 250 C 246 310 236 350 238 400" stroke="rgba(120,160,200,.5)" strokeWidth="3" fill="none" />
+            {/* Cercles : 20, 40 et 60 km (échelle resserrée vers l'extérieur, directions réelles) */}
+            <circle cx="240" cy="200" r="104" fill={C.red} fillOpacity="0.15" stroke={C.red} strokeOpacity="0.5" strokeDasharray="4 4" />
+            <circle cx="240" cy="200" r="147" fill={C.red} fillOpacity="0.06" stroke={C.red} strokeOpacity="0.3" strokeDasharray="4 4" />
+            <circle cx="240" cy="200" r="180" fill={C.red} fillOpacity="0.03" stroke={C.red} strokeOpacity="0.25" strokeDasharray="4 4" />
+            {[[104, "20 km"], [147, "40 km"], [180, "60 km"]].map(([r, t]) => (
+              <text key={t as string} x="240" y={200 - (r as number) - 5} textAnchor="middle" fill="rgba(255,255,255,.4)" fontFamily="JetBrains Mono, monospace" fontSize="9">{t as string}</text>
+            ))}
             <circle cx="240" cy="200" r="8" fill={C.red} />
             <circle cx="240" cy="200" r="14" fill="none" stroke={C.red} strokeWidth="2" />
-            <text x="252" y="196" fill="#fff" fontFamily="JetBrains Mono, monospace" fontSize="12" fontWeight="600">LYON</text>
-            <text x="252" y="212" fill="rgba(255,255,255,.5)" fontFamily="JetBrains Mono, monospace" fontSize="10">45.75°N · 4.84°E</text>
+            <text x="240" y="226" textAnchor="middle" fill="#fff" fontFamily="JetBrains Mono, monospace" fontSize="12" fontWeight="600">LYON</text>
             {[
-              [180, 130, "Caluire"], [310, 170, "Villeurbanne"], [320, 250, "Bron"],
-              [280, 310, "Vénissieux"], [170, 270, "Oullins"], [120, 200, "Tassin"],
-              [380, 220, "Saint-Priest"], [400, 130, "Décines"],
-            ].map(([x, y, name], i) => (
+              [253, 153, "Caluire", "r"], [288, 183, "Villeurbanne", "r"], [184, 195, "Tassin", "l"],
+              [221, 249, "Oullins", "l"], [275, 255, "Vénissieux", "l"], [301, 248, "Saint-Priest", "r"],
+              [325, 194, "Meyzieu", "u"], [323, 218, "Genas", "r"], [360, 202, "Pont-de-Chéruy", "r"],
+              [372, 215, "Crémieu", "d"], [328, 268, "Heyrieux", "l"],
+              [368, 270, "Bourgoin-Jallieu", "r"],
+            ].map(([x, y, name, side], i) => (
               <g key={i}>
                 <circle cx={x as number} cy={y as number} r="3" fill="#fff" />
-                <text x={(x as number) + 8} y={(y as number) + 4} fill="rgba(255,255,255,.7)" fontFamily="JetBrains Mono, monospace" fontSize="10">{name as string}</text>
+                <text x={(x as number) + (side === "l" ? -7 : side === "r" ? 7 : 0)} y={(y as number) + (side === "u" ? -8 : side === "d" ? 15 : 4)} textAnchor={side === "l" ? "end" : side === "r" ? "start" : "middle"} fill="rgba(255,255,255,.7)" fontFamily="JetBrains Mono, monospace" fontSize="10">{name as string}</text>
               </g>
             ))}
           </svg>
           <div style={{ position: "absolute", bottom: 14, left: 14, fontFamily: F.mono, fontSize: 10, color: "rgba(255,255,255,.6)", letterSpacing: "0.14em", textTransform: "uppercase" }}>
-            Rayon ~40 km · sans frais de déplacement
+            Rayon ~60 km · sans frais de déplacement
           </div>
         </div>
       </div>
