@@ -57,7 +57,7 @@ export default function Header() {
           style={{ color: "#bdb6a8" }}
           className="hidden sm:block"
         >
-          Devis gratuit · Dossier assurance facilité
+          Devis gratuit · Travail soigné
         </span>
       </div>
 

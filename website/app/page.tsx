@@ -239,7 +239,7 @@ function Services() {
           </h2>
         </div>
         <div style={{ fontSize: 14, color: C.inkSoft, maxWidth: 280 }} className="hidden md:block">
-          Particuliers, syndics de copropriété, agences immobilières, assureurs.
+          Particuliers, syndics de copropriété, agences immobilières.
         </div>
       </div>
 
@@ -422,9 +422,9 @@ const ABOUT_FEATURES = [
     detail: "Je me déplace pour prendre les mesures et vous remets un devis clair et détaillé, gratuitement et sans engagement. Vous décidez ensuite en toute tranquillité.",
   },
   {
-    t: "Assurances",
-    d: "Devis et facture détaillés pour votre dossier d'assurance.",
-    detail: "Je vous fournis un devis et une facture détaillés à transmettre à votre assureur pour la prise en charge de votre sinistre. Je suis assuré en responsabilité civile professionnelle et décennale auprès de la MAAF, attestation sur demande.",
+    t: "Artisan assuré",
+    d: "Responsabilité civile et décennale MAAF.",
+    detail: "Je suis assuré en responsabilité civile professionnelle et décennale auprès de la MAAF. Mon attestation d'assurance est disponible sur simple demande.",
   },
 ];
 
@@ -630,7 +630,7 @@ function Zones() {
 // ─── FAQ ─────────────────────────────────────────────────────────────────────
 const FAQ_ITEMS = [
   { q: "Quels sont vos délais pour un dépannage urgent ?", a: "Pour un simple vitrage cassé, j'interviens en urgence en moins de 2h. Pour le verre feuilleté, le double vitrage et les miroirs, le remplacement est réalisé sous 24 à 72h. En attendant, je peux sécuriser l'ouverture le jour même avec une plaque OSB." },
-  { q: "Travaillez-vous avec les assurances ?", a: "Oui. Je vous remets un devis détaillé à transmettre à votre assureur, puis la facture une fois l'intervention terminée. La prise en charge dépend de votre contrat : le plus souvent, seule la franchise reste à votre charge." },
+  { q: "Le devis est-il payant ?", a: "Non, le devis est gratuit et sans engagement. Je me déplace pour prendre les mesures, puis je vous envoie un devis clair et détaillé. Le prix indiqué sur le devis est celui que vous payez." },
   { q: "Combien coûte un remplacement de double vitrage ?", a: "Cela dépend des dimensions, de l'épaisseur et du type de vitrage (isolant, feuilleté, dépoli). Un devis gratuit et clair vous est remis avant toute intervention, généralement sous 24h." },
   { q: "Intervenez-vous le week-end ?", a: "Oui, le service de dépannage urgent fonctionne 7j/7, y compris le week-end et les jours fériés, pour la sécurisation d'une ouverture." },
   { q: "Faites-vous des miroirs sur mesure ?", a: "Bien sûr : miroirs muraux, salle de bain anti-buée, dressing, biseautés, percés. Mesure sur place, fabrication à l'atelier, pose à domicile." },

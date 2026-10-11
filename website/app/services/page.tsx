@@ -45,7 +45,6 @@ export default function ServicesPage() {
       details: [
         "Sécurisation d'urgence < 2h",
         "Pose complète selon disponibilité des moyens",
-        "Prise en charge assurance",
         "Vitrages de grande dimension",
         "Respect des normes commerciales",
         "Disponible 24h/24 et 7j/7",
@@ -168,10 +167,10 @@ export default function ServicesPage() {
             <div className="bg-gray-900 text-white p-8 rounded-3xl">
               <h3 className="text-xl font-bold mb-3">Votre double vitrage est fissuré ?</h3>
               <p className="text-gray-300 mb-3">
-                Pas d&apos;inquiétude : appelez votre assurance pour déclarer un sinistre. Selon votre contrat, seule la franchise reste généralement à votre charge. Une fois votre assurance contactée, appelez-moi au 06 50 44 06 73 pour organiser l&apos;intervention.
+                Appelez-moi au 06 50 44 06 73 : je viens prendre les mesures et je vous envoie un devis gratuit et détaillé.
               </p>
               <p className="text-gray-300">
-                Après réalisation du devis, je vous l&apos;envoie afin que vous puissiez le transmettre à votre assurance. Une fois le devis accepté, j&apos;interviens sous 24h si aucune main d&apos;œuvre supplémentaire n&apos;est nécessaire.
+                Une fois le devis accepté, le remplacement est réalisé sous 24 à 72h selon le vitrage. En attendant, je peux sécuriser l&apos;ouverture le jour même avec une plaque OSB.
               </p>
             </div>
           </div>

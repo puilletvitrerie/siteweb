@@ -16,8 +16,8 @@ export default function AProposPage() {
     },
     {
       icon: Shield,
-      title: "Dossier assurance",
-      description: "Devis et facture détaillés à transmettre à votre assurance en cas de sinistre.",
+      title: "Artisan assuré",
+      description: "Responsabilité civile professionnelle et décennale MAAF, attestation sur demande.",
     },
     {
       icon: Clock,
