@@ -591,7 +591,7 @@ function Zones() {
             <circle cx="240" cy="200" r="147" fill={C.red} fillOpacity="0.06" stroke={C.red} strokeOpacity="0.3" strokeDasharray="4 4" />
             <circle cx="240" cy="200" r="180" fill={C.red} fillOpacity="0.03" stroke={C.red} strokeOpacity="0.25" strokeDasharray="4 4" />
             {[[104, "20 km"], [147, "40 km"], [180, "60 km"]].map(([r, t]) => (
-              <text key={t as string} x="240" y={200 - (r as number) - 5} textAnchor="middle" fill="rgba(255,255,255,.4)" fontFamily="JetBrains Mono, monospace" fontSize="9">{t as string}</text>
+              <text key={t as string} x={240 - (r as number) * 0.707 - 4} y={200 - (r as number) * 0.707 - 4} textAnchor="end" fill="rgba(255,255,255,.4)" fontFamily="JetBrains Mono, monospace" fontSize="9">{t as string}</text>
             ))}
             <circle cx="240" cy="200" r="8" fill={C.red} />
             <circle cx="240" cy="200" r="14" fill="none" stroke={C.red} strokeWidth="2" />
