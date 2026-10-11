@@ -334,12 +334,23 @@ export default function ServicesPage() {
                   ))}
                 </div>
               </div>
-              <div className="bg-gray-900 text-white p-8 rounded-3xl">
+              <div className="bg-gray-900 text-white p-8 rounded-3xl md:col-span-2">
                 <h3 className="text-xl font-bold mb-3">Travail en autonomie</h3>
-                <p className="text-gray-300">
+                <p className="text-gray-300 mb-6">
                   Intervention complète de A à Z par un artisan qualifié. 
                   Pas de sous-traitance, garantie d'un travail soigné et professionnel.
                 </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {[
+                    ["/assets/services/autonomie-1.jpg", "J'arrive sur place et je me présente à l'interphone."],
+                    ["/assets/services/autonomie-2.jpg", "Je prends moi-même les mesures du vitrage à remplacer."],
+                  ].map(([src, cap]) => (
+                    <figure key={src}>
+                      <img src={src} alt={cap} className="w-full aspect-[3/4] object-cover rounded-2xl" loading="lazy" />
+                      <figcaption className="text-sm text-gray-400 mt-3 text-center">{cap}</figcaption>
+                    </figure>
+                  ))}
+                </div>
               </div>
               <div className="bg-gray-900 text-white p-8 rounded-3xl">
                 <h3 className="text-xl font-bold mb-3">Spécialisation verre</h3>
