@@ -168,7 +168,7 @@ export default function ServicesPage() {
                   ) : (
                     <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                       <img 
-                        src={service.image} 
+                        src={"image" in service ? service.image : undefined} 
                         alt={service.title}
                         className="w-full h-full object-cover"
                       />
