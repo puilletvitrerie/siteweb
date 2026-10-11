@@ -71,6 +71,26 @@ export default function ServicesPage() {
       title: "Vitrines de magasin",
       description: "Sécurisation immédiate après sinistre, puis remplacement organisé selon les moyens nécessaires : plusieurs vitrages de grande dimension demandent plusieurs poseurs et/ou un équipement à ventouses.",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+      beforeAfter: [
+        {
+          before: "/assets/services/vitrine-facade-avant.jpg",
+          after: "/assets/services/vitrine-facade-apres.jpg",
+          ratio: 757 / 1300,
+          caption: "Vitrine de magasin : sécurisation en OSB, puis pose du nouveau vitrage",
+        },
+        {
+          before: "/assets/services/vitrine-interieur-avant.jpg",
+          after: "/assets/services/vitrine-interieur-apres.jpg",
+          ratio: 1071 / 1300,
+          caption: "La même vitrine vue de l'intérieur, avant et après la pose",
+        },
+        {
+          before: "/assets/realisations/11-avant.jpg",
+          after: "/assets/realisations/11-apres.jpg",
+          ratio: 1,
+          caption: "Remplacement d'un grand vitrage fixe de hall d'immeuble",
+        },
+      ],
       details: [
         "Sécurisation d'urgence < 2h",
         "Pose complète selon disponibilité des moyens",
