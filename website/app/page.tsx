@@ -304,15 +304,17 @@ function Services() {
 
 // ─── Réalisations ────────────────────────────────────────────────────────────
 const REALISATIONS = [
-  { title: "Garde-corps vitré de balcon", meta: "Remplacement du panneau en verre opale", tag: "Copropriété" },
-  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
-  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage après vandalisme", tag: "Dépannage" },
-  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
-  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
-  { title: "Porte d'entrée de résidence", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
-  { title: "Porte vitrée de hall", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
-  { title: "Fenêtre PVC", meta: "Remplacement du vitrage", tag: "Particulier" },
-  { title: "Fenêtre ancienne de cage d'escalier", meta: "Vitrage imprimé posé à l'identique", tag: "Copropriété" },
+  { title: "Garde-corps vitré de balcon", meta: "Remplacement du panneau en verre opale", tag: "Copropriété", ratio: 1100 / 852 },
+  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 708 / 1300 },
+  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage après vandalisme", tag: "Dépannage", ratio: 590 / 1300 },
+  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 890 / 1300 },
+  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 609 / 1300 },
+  { title: "Porte d'entrée de résidence", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 711 / 1300 },
+  { title: "Porte vitrée de hall", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 874 / 1300 },
+  { title: "Fenêtre PVC", meta: "Remplacement du vitrage", tag: "Particulier", ratio: 1100 / 1099 },
+  { title: "Fenêtre ancienne de cage d'escalier", meta: "Vitrage imprimé posé à l'identique", tag: "Copropriété", ratio: 1091 / 1300 },
+  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 1100 / 1109 },
+  { title: "Vitrine de hall d'immeuble", meta: "Remplacement du grand vitrage fixe", tag: "Copropriété", ratio: 1 },
 ].map((r, i) => {
   const n = String(i + 1).padStart(2, "0");
   return { ...r, before: `/assets/realisations/${n}-avant.jpg`, after: `/assets/realisations/${n}-apres.jpg` };
@@ -357,8 +359,8 @@ function Realisations() {
       </div>
 
       {/* Slider card */}
-      <div style={{ borderRadius: 20, overflow: "hidden", border: `1px solid ${C.line}`, background: "#fff", maxWidth: 520, margin: "0 auto" }}>
-        <BeforeAfter key={idx} before={cur.before} after={cur.after} height={560} initialPos={98} accent={C.red} />
+      <div style={{ borderRadius: 20, overflow: "hidden", border: `1px solid ${C.line}`, background: "#fff", width: `min(100%, calc(70vh * ${cur.ratio}), 640px)`, minWidth: "min(100%, 300px)", margin: "0 auto" }}>
+        <BeforeAfter key={idx} before={cur.before} after={cur.after} ratio={cur.ratio} initialPos={98} accent={C.red} />
         <div style={{ padding: "18px 20px 20px", background: "#fff" }}>
           <div style={{ fontFamily: F.mono, fontSize: 10, color: C.red, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>
             {cur.tag} · {String(idx + 1).padStart(2, "0")} / {String(REALISATIONS.length).padStart(2, "0")}

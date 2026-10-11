@@ -6,6 +6,7 @@ interface BeforeAfterProps {
   before: string;
   after: string;
   height?: number;
+  ratio?: number;
   beforeLabel?: string;
   afterLabel?: string;
   accent?: string;
@@ -16,6 +17,7 @@ export default function BeforeAfter({
   before,
   after,
   height = 520,
+  ratio,
   beforeLabel = "Avant",
   afterLabel = "Après",
   accent = "#3B8FD4",
@@ -64,7 +66,8 @@ export default function BeforeAfter({
       style={{
         position: "relative",
         width: "100%",
-        height,
+        height: ratio ? undefined : height,
+        aspectRatio: ratio,
         overflow: "hidden",
         cursor: "ew-resize",
         userSelect: "none",
