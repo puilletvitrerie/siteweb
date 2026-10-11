@@ -49,6 +49,14 @@ export default function ServicesPage() {
       title: "Miroiterie sur mesure",
       description: "Pose de miroirs pour tous types d'espaces, avec découpe et installation professionnelle.",
       image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
+      beforeAfter: [
+        {
+          before: "/assets/services/miroir-convexe-avant.jpg",
+          after: "/assets/services/miroir-convexe-apres.jpg",
+          ratio: 1000 / 1150,
+          caption: "Remplacement d'un miroir convexe à l'identique",
+        },
+      ],
       details: [
         "Miroirs de salles de bain",
         "Miroirs de cuisines",
