@@ -94,7 +94,7 @@ export default function Header() {
             }}
             className="hidden lg:block"
           >
-            — artisan vitrier · Lyon
+            artisan vitrier · Lyon
           </div>
         </Link>
 

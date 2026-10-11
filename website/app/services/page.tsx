@@ -40,7 +40,7 @@ export default function ServicesPage() {
     {
       icon: Building2,
       title: "Vitrines de magasin",
-      description: "Sécurisation immédiate après sinistre, puis remplacement organisé selon les moyens nécessaires — plusieurs vitrages de grande dimension demandent plusieurs poseurs et/ou un équipement à ventouses.",
+      description: "Sécurisation immédiate après sinistre, puis remplacement organisé selon les moyens nécessaires : plusieurs vitrages de grande dimension demandent plusieurs poseurs et/ou un équipement à ventouses.",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
       details: [
         "Sécurisation d'urgence < 2h",
@@ -149,7 +149,7 @@ export default function ServicesPage() {
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Double vitrage isolant</h2>
             <p className="text-lg text-gray-600 mb-6">
-              Argon, faible émissivité — confort thermique et facture d&apos;énergie qui baisse.
+              Argon, faible émissivité : confort thermique et facture d&apos;énergie qui baisse.
             </p>
             <p className="text-gray-600 mb-4">
               Un simple vitrage laisse passer le froid, le bruit et fait grimper vos factures de chauffage : c&apos;est une seule feuille de verre, aucune barrière contre les températures extérieures.
@@ -168,7 +168,7 @@ export default function ServicesPage() {
             <div className="bg-gray-900 text-white p-8 rounded-3xl">
               <h3 className="text-xl font-bold mb-3">Votre double vitrage est fissuré ?</h3>
               <p className="text-gray-300 mb-3">
-                Pas d&apos;inquiétude : appelez votre assurance pour déclarer un sinistre — seule la franchise reste à votre charge, le reste est pris en charge. Une fois votre assurance contactée, appelez-moi au 06 50 44 06 73 pour organiser l&apos;intervention.
+                Pas d&apos;inquiétude : appelez votre assurance pour déclarer un sinistre : seule la franchise reste à votre charge, le reste est pris en charge. Une fois votre assurance contactée, appelez-moi au 06 50 44 06 73 pour organiser l&apos;intervention.
               </p>
               <p className="text-gray-300 mb-3">
                 Après réalisation du devis, je vous l&apos;envoie afin que vous puissiez le transmettre à votre assurance. Une fois le devis accepté, j&apos;interviens sous 24h si aucune main d&apos;œuvre supplémentaire n&apos;est nécessaire.

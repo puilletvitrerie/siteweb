@@ -31,7 +31,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Puillet Vitrerie — Artisan Vitrier à Lyon",
+  title: "Puillet Vitrerie · Artisan Vitrier à Lyon",
   description:
     "Vitrier indépendant à Lyon. Remplacement de vitrage, double vitrage, miroirs sur mesure, portes vitrées. Devis gratuit, intervention rapide, travail propre. Agréé toutes assurances.",
   keywords: [
@@ -59,7 +59,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <div style={{ position: "sticky", top: 0, zIndex: 60 }}>
           <div className="w-full bg-yellow-400 text-black text-center text-sm font-semibold py-2 px-4">
-            🚧 Site en construction — certaines informations peuvent être incomplètes 🚧
+            🚧 Site en construction : certaines informations peuvent être incomplètes 🚧
           </div>
           <Header />
         </div>

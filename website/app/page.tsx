@@ -120,7 +120,7 @@ function Hero() {
           </h1>
           <p style={{ fontSize: "clamp(15px, 1.5vw, 19px)", lineHeight: 1.55, color: C.inkSoft, maxWidth: 520, margin: "0 0 28px" }}>
             Je suis Léo Puillet, vitrier indépendant à Lyon. Remplacement de
-            vitrage, double vitrage, miroirs sur mesure, portes vitrées — chez
+            vitrage, double vitrage, miroirs sur mesure, portes vitrées, chez
             les particuliers comme dans les copropriétés. Devis clair,
             intervention rapide, travail propre.
           </p>
@@ -208,10 +208,10 @@ function Hero() {
 const SERVICES = [
   { n: "01", t: "Remplacement de vitrage", d: "Vitrage simple recoupé et posé le jour même pour les urgences. Double vitrage sur-mesure sous 24 à 48h.", tag: "le + demandé" },
   { n: "02", t: "Vitrage feuilleté & sécurité", d: "Anti-effraction, retardateur d'effraction certifié 44.2, 33.2, SP10 et SP10A.", tag: "sécurité" },
-  { n: "03", t: "Double vitrage isolant", d: "Argon, faible émissivité — confort thermique et facture d'énergie qui baisse.", tag: "isolation" },
-  { n: "04", t: "Miroiterie sur mesure", d: "Miroirs salle de bain, dressing, mural, biseauté, anti-buée — coupés à vos cotes.", tag: "sur mesure" },
+  { n: "03", t: "Double vitrage isolant", d: "Argon, faible émissivité : confort thermique et facture d'énergie qui baisse.", tag: "isolation" },
+  { n: "04", t: "Miroiterie sur mesure", d: "Miroirs salle de bain, dressing, mural, biseauté, anti-buée, coupés à vos cotes.", tag: "sur mesure" },
   { n: "05", t: "Portes d'entrée vitrées", d: "Réparation, pose neuve, vitrage de porte d'immeuble et copropriété.", tag: "copros" },
-  { n: "06", t: "Dépannage 7j/7", d: "Vitre cassée, fenêtre fracturée — sécurisation immédiate puis remplacement.", tag: "24/7" },
+  { n: "06", t: "Dépannage 7j/7", d: "Vitre cassée, fenêtre fracturée : sécurisation immédiate puis remplacement.", tag: "24/7" },
 ];
 
 function Services() {
@@ -260,7 +260,7 @@ function Services() {
             }}
           >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <div style={{ fontFamily: F.mono, fontSize: 12, color: C.red, letterSpacing: "0.1em" }}>— {s.n}</div>
+              <div style={{ fontFamily: F.mono, fontSize: 12, color: C.red, letterSpacing: "0.1em" }}>{s.n}</div>
               <div
                 style={{
                   fontFamily: F.mono,
@@ -304,10 +304,19 @@ function Services() {
 
 // ─── Réalisations ────────────────────────────────────────────────────────────
 const REALISATIONS = [
-  { before: "/assets/porte-bois-avant.jpeg", after: "/assets/porte-bois-apres.jpeg", title: "Porte d'entrée d'immeuble · Lyon 6", meta: "Vitrage martelé · Remplacement 3 carreaux · 1 journée", tag: "Copropriété" },
-  { before: "/assets/vitre-avant.jpeg", after: "/assets/vitre-apres.jpeg", title: "Vitre cassée · Appartement haussmannien · Lyon 2", meta: "Sécurisation puis remplacement · Pose en 4h", tag: "Dépannage" },
-  { before: "/assets/porte-alu-avant.jpeg", after: "/assets/porte-alu-apres.jpeg", title: "Porte vitrée résidence · Villeurbanne", meta: "Vitrage feuilleté 44.2 · Sécurité anti-effraction", tag: "Sécurité" },
-];
+  { title: "Garde-corps vitré de balcon", meta: "Remplacement du panneau en verre opale", tag: "Copropriété" },
+  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
+  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage après vandalisme", tag: "Dépannage" },
+  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
+  { title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
+  { title: "Porte d'entrée de résidence", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
+  { title: "Porte vitrée de hall", meta: "Remplacement du vitrage de porte", tag: "Copropriété" },
+  { title: "Fenêtre PVC", meta: "Remplacement du vitrage", tag: "Particulier" },
+  { title: "Fenêtre ancienne de cage d'escalier", meta: "Vitrage imprimé posé à l'identique", tag: "Copropriété" },
+].map((r, i) => {
+  const n = String(i + 1).padStart(2, "0");
+  return { ...r, before: `/assets/realisations/${n}-avant.jpg`, after: `/assets/realisations/${n}-apres.jpg` };
+});
 
 function Realisations() {
   const [idx, setIdx] = useState(0);
@@ -348,8 +357,8 @@ function Realisations() {
       </div>
 
       {/* Slider card */}
-      <div style={{ borderRadius: 20, overflow: "hidden", border: `1px solid ${C.line}`, background: "#fff" }}>
-        <BeforeAfter before={cur.before} after={cur.after} height={420} accent={C.red} />
+      <div style={{ borderRadius: 20, overflow: "hidden", border: `1px solid ${C.line}`, background: "#fff", maxWidth: 520, margin: "0 auto" }}>
+        <BeforeAfter key={idx} before={cur.before} after={cur.after} height={560} initialPos={98} accent={C.red} />
         <div style={{ padding: "18px 20px 20px", background: "#fff" }}>
           <div style={{ fontFamily: F.mono, fontSize: 10, color: C.red, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>
             {cur.tag} · {String(idx + 1).padStart(2, "0")} / {String(REALISATIONS.length).padStart(2, "0")}
@@ -360,7 +369,7 @@ function Realisations() {
       </div>
 
       {/* Mobile nav: dots (left) + arrows (right) */}
-      <div className="flex justify-between items-center mt-4 md:hidden">
+      <div className="flex justify-between items-center mt-4 md:hidden" style={{ maxWidth: 520, margin: "16px auto 0" }}>
         <div style={{ display: "flex", gap: 5 }}>
           {REALISATIONS.map((_, i) => (
             <button
@@ -382,7 +391,7 @@ function Realisations() {
       </div>
 
       {/* Desktop dots */}
-      <div className="hidden md:flex gap-2 mt-4">
+      <div className="hidden md:flex gap-2 mt-4 justify-center">
         {REALISATIONS.map((_, i) => (
           <button
             key={i}
@@ -401,7 +410,7 @@ const ABOUT_FEATURES = [
   {
     t: "Travail propre",
     d: "Bâches, aspirateur, je laisse comme j'ai trouvé.",
-    detail: "Avant toute dépose de vitrage ou de miroir, je pose une bâche de protection pour éviter rayures ou impacts sur le sol — un dégât qui n'est pas rattrapable. Je balaie systématiquement après chaque intervention.",
+    detail: "Avant toute dépose de vitrage ou de miroir, je pose une bâche de protection pour éviter rayures ou impacts sur le sol, un dégât qui n'est pas rattrapable. Je balaie systématiquement après chaque intervention.",
   },
   {
     t: "Prix annoncé",
@@ -484,12 +493,12 @@ function Testimonials() {
     <section id="temoignages" className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bg }}>
       <MonoLabel>Ils m&rsquo;ont fait confiance</MonoLabel>
       <h2 style={{ fontSize: "clamp(26px, 4vw, 56px)", lineHeight: 1.02, letterSpacing: "-0.025em", margin: "14px 0 16px", fontWeight: 800, color: C.ink }}>
-        4,9 sur 5 —{" "}
+        4,9 sur 5,{" "}
         <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>et 87 voisins</span>{" "}
         qui le disent mieux que moi.
       </h2>
       <p style={{ fontSize: 15, color: C.inkSoft, maxWidth: 560, margin: "0 0 36px" }}>
-        C&rsquo;est grâce à vous que je peux exercer ce métier avec autant de plaisir — merci pour votre confiance.
+        C&rsquo;est grâce à vous que je peux exercer ce métier avec autant de plaisir. Merci pour votre confiance.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -605,9 +614,9 @@ function Zones() {
 const FAQ_ITEMS = [
   { q: "Quels sont vos délais pour un dépannage urgent ?", a: "Pour une vitre cassée sur Lyon ou la métropole, j'interviens en moins de 2h en journée, et dans la journée pour le sur-mesure. Sécurisation immédiate, puis remplacement définitif sous 24 à 72h selon le vitrage." },
   { q: "Travaillez-vous avec les assurances ?", a: "Oui, je suis agréé par la plupart des grandes compagnies (MAIF, Macif, MAAF, Groupama, AXA…). Je peux vous aider à monter le dossier et facturer directement votre assureur dans la majorité des cas." },
-  { q: "Combien coûte un remplacement de double vitrage ?", a: "Cela dépend des dimensions, de l'épaisseur et du type de vitrage (isolant, feuilleté, dépoli). Un devis gratuit et clair vous est remis avant toute intervention — généralement sous 24h." },
+  { q: "Combien coûte un remplacement de double vitrage ?", a: "Cela dépend des dimensions, de l'épaisseur et du type de vitrage (isolant, feuilleté, dépoli). Un devis gratuit et clair vous est remis avant toute intervention, généralement sous 24h." },
   { q: "Intervenez-vous le week-end ?", a: "Oui, le service de dépannage urgent fonctionne 7j/7, y compris le week-end et les jours fériés, pour la sécurisation d'une ouverture." },
-  { q: "Faites-vous des miroirs sur mesure ?", a: "Bien sûr — miroirs muraux, salle de bain anti-buée, dressing, biseautés, percés. Mesure sur place, fabrication à l'atelier, pose à domicile." },
+  { q: "Faites-vous des miroirs sur mesure ?", a: "Bien sûr : miroirs muraux, salle de bain anti-buée, dressing, biseautés, percés. Mesure sur place, fabrication à l'atelier, pose à domicile." },
 ];
 
 function FAQ() {
@@ -713,12 +722,12 @@ function Contact() {
           <a href="tel:0650440673" style={{ background: C.red, color: "#fff", padding: "22px 24px", borderRadius: 14, display: "flex", alignItems: "center", gap: 14 }}>
             <PhoneIcon size={28} />
             <div>
-              <div style={{ fontSize: 11, opacity: 0.85, letterSpacing: "0.12em", textTransform: "uppercase" }}>Léo Puillet — vitrier</div>
+              <div style={{ fontSize: 11, opacity: 0.85, letterSpacing: "0.12em", textTransform: "uppercase" }}>Léo Puillet · vitrier</div>
               <div style={{ fontSize: "clamp(22px, 2.5vw, 30px)", fontWeight: 800, letterSpacing: "-0.01em" }}>06 50 44 06 73</div>
             </div>
           </a>
           <div className="grid grid-cols-2 gap-4" style={{ paddingTop: 4 }}>
-            {[["E-mail", "puilletvitrerie@gmail.com"], ["Horaires", "Lun–Sam 7h–20h\nUrgence : 24/7"]].map(([title, val]) => (
+            {[["E-mail", "puilletvitrerie@gmail.com"], ["Horaires", "Lun au Sam · 7h à 20h\nUrgence : 24/7"]].map(([title, val]) => (
               <div key={title}>
                 <div style={{ fontFamily: F.mono, fontSize: 10, color: "#a8a39a", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>{title}</div>
                 <div style={{ fontSize: 14, whiteSpace: "pre-line" }}>{val}</div>
@@ -740,7 +749,7 @@ function Contact() {
             <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>besoin</span>.
           </h2>
           <p style={{ fontSize: 15, lineHeight: 1.55, color: C.inkSoft, maxWidth: 460, marginBottom: 22 }}>
-            Photo + dimensions, ou &ldquo;vitre cassée chambre + adresse&rdquo; — je rappelle dans l&rsquo;heure. Sans engagement.
+            Photo + dimensions, ou &ldquo;vitre cassée chambre + adresse&rdquo; : je rappelle dans l&rsquo;heure. Sans engagement.
           </p>
 
           <form
@@ -756,7 +765,7 @@ function Contact() {
               <ContactField label="Téléphone" placeholder="06 12 34 56 78" />
               <ContactField label="Code postal" placeholder="69003" />
             </div>
-            <ContactField label="Type de demande" select options={["Vitre cassée – dépannage urgent", "Devis double vitrage", "Miroir sur mesure", "Porte d'entrée vitrée", "Autre"]} />
+            <ContactField label="Type de demande" select options={["Vitre cassée, dépannage urgent", "Devis double vitrage", "Miroir sur mesure", "Porte d'entrée vitrée", "Autre"]} />
             <ContactField label="Décrivez" textarea placeholder="Un mot sur la situation, dimensions, photos, étage…" />
             <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mt-1">
               <div style={{ fontSize: 12, color: C.inkSoft }}>Réponse sous 1h en journée · 7j/7</div>

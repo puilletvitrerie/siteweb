@@ -9,6 +9,7 @@ interface BeforeAfterProps {
   beforeLabel?: string;
   afterLabel?: string;
   accent?: string;
+  initialPos?: number;
 }
 
 export default function BeforeAfter({
@@ -18,8 +19,9 @@ export default function BeforeAfter({
   beforeLabel = "Avant",
   afterLabel = "Après",
   accent = "#3B8FD4",
+  initialPos = 50,
 }: BeforeAfterProps) {
-  const [pos, setPos] = useState(50);
+  const [pos, setPos] = useState(initialPos);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
 
