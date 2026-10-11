@@ -206,7 +206,7 @@ function Hero() {
 
 // ─── Services ────────────────────────────────────────────────────────────────
 const SERVICES = [
-  { n: "01", t: "Remplacement de vitrage", d: "Vitrage simple recoupé et posé le jour même pour les urgences. Double vitrage sur-mesure sous 24 à 48h.", tag: "le + demandé" },
+  { n: "01", t: "Remplacement de vitrage", d: "Vitrage simple recoupé et posé le jour même pour les urgences. Feuilleté et double vitrage sur mesure sous 24 à 72h.", tag: "le + demandé" },
   { n: "02", t: "Vitrage feuilleté & sécurité", d: "Anti-effraction, retardateur d'effraction certifié 44.2, 33.2, SP10 et SP10A.", tag: "sécurité" },
   { n: "03", t: "Double vitrage isolant", d: "Argon, faible émissivité : confort thermique et facture d'énergie qui baisse.", tag: "isolation" },
   { n: "04", t: "Miroiterie sur mesure", d: "Miroirs salle de bain, dressing, mural, biseauté, anti-buée, coupés à vos cotes.", tag: "sur mesure" },
@@ -629,7 +629,7 @@ function Zones() {
 
 // ─── FAQ ─────────────────────────────────────────────────────────────────────
 const FAQ_ITEMS = [
-  { q: "Quels sont vos délais pour un dépannage urgent ?", a: "Pour une vitre cassée sur Lyon ou la métropole, j'interviens en moins de 2h en journée, et dans la journée pour le sur-mesure. Sécurisation immédiate, puis remplacement définitif sous 24 à 72h selon le vitrage." },
+  { q: "Quels sont vos délais pour un dépannage urgent ?", a: "Pour un simple vitrage cassé, j'interviens en urgence en moins de 2h. Pour le verre feuilleté, le double vitrage et les miroirs, le remplacement est réalisé sous 24 à 72h. En attendant, je peux sécuriser l'ouverture le jour même avec une plaque OSB." },
   { q: "Travaillez-vous avec les assurances ?", a: "Oui. Je vous remets un devis détaillé à transmettre à votre assureur, puis la facture une fois l'intervention terminée. La prise en charge dépend de votre contrat : le plus souvent, seule la franchise reste à votre charge." },
   { q: "Combien coûte un remplacement de double vitrage ?", a: "Cela dépend des dimensions, de l'épaisseur et du type de vitrage (isolant, feuilleté, dépoli). Un devis gratuit et clair vous est remis avant toute intervention, généralement sous 24h." },
   { q: "Intervenez-vous le week-end ?", a: "Oui, le service de dépannage urgent fonctionne 7j/7, y compris le week-end et les jours fériés, pour la sécurisation d'une ouverture." },
