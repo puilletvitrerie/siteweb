@@ -22,7 +22,7 @@ const post: Post = {
       "h2": "Je me rends sur place en autonomie"
     },
     {
-      "p": "Pas besoin de mobiliser le gardien : si personne n'est disponible, je sonne chez un copropriétaire pour me faire ouvrir. Je prends les mesures et le type de vitrage."
+      "p": "Je me rends sur place en toute autonomie : si personne n'est disponible pour m'accueillir, je sonne chez un copropriétaire pour me faire ouvrir. Je relève ensuite les dimensions et le type de vitrage."
     },
     {
       "h2": "Un devis clair, puis une intervention rapide"
