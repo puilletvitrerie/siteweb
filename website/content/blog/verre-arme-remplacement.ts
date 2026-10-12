@@ -6,8 +6,6 @@ const post: Post = {
   "description": "Le verre armé, avec son grillage métallique, équipe encore de nombreux immeubles anciens. Ce qu'il faut savoir avant de le remplacer et les alternatives possibles.",
   "date": "2027-03-30",
   "publie": false,
-  "image": "/assets/services/decoupe-3.jpg",
-  "imageAlt": "Découpe d'un vitrage sur tréteaux par l'artisan vitrier",
   "body": [
     {
       "p": "Vous l'avez sûrement déjà vu : un verre traversé par un fin grillage métallique. C'est le verre armé, très utilisé autrefois dans les cages d'escalier, les caves, les portes de service ou les verrières."
