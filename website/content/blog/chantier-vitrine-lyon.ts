@@ -31,9 +31,6 @@ const post: Post = {
       "p": "Le jour de la pose, les panneaux ont été retirés, le vitrage mis en place et calé. Le commerce a retrouvé une vitrine lumineuse, visible depuis la rue."
     },
     {
-      "p": "L'avant/après de ce chantier est visible sur la page Services, rubrique Vitrines de magasin."
-    },
-    {
       "h2": "Avant / après"
     },
     {

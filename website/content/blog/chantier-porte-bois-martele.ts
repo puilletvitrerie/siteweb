@@ -28,7 +28,7 @@ const post: Post = {
       "h2": "Le résultat"
     },
     {
-      "p": "La porte a retrouvé son aspect d'origine. On ne distingue pas le nouveau carreau des anciens. L'avant/après est visible sur la page Services du site."
+      "p": "La porte a retrouvé son aspect d'origine. On ne distingue pas le nouveau carreau des anciens."
     },
     {
       "h2": "Avant / après en image"

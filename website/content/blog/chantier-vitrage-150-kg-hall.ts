@@ -31,7 +31,7 @@ const post: Post = {
       "p": "Le nouveau vitrage a été mis en place, calé et fixé dans la menuiserie existante. Le hall a retrouvé sa transparence et sa sécurité."
     },
     {
-      "p": "Vous pouvez voir l'avant/après de ce chantier dans la section Réalisations du site, et la vidéo sur mon compte Instagram @puilletvitrerie."
+      "p": "Retrouvez aussi la vidéo de ce chantier sur mon compte Instagram @puilletvitrerie."
     },
     {
       "h2": "Avant / après en image"
