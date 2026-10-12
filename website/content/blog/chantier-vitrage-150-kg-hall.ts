@@ -10,7 +10,7 @@ const post: Post = {
   "imageAlt": "Grand vitrage fixe brisé dans un hall d'immeuble",
   "body": [
     {
-      "p": "Certains chantiers sortent de l'ordinaire. Celui-ci concernait le grand vitrage fixe d'un hall d'immeuble. Le verre avait été brisé : il fallait remplacer un vitrage d'environ 150 kg."
+      "p": "Ce chantier concernait le grand vitrage fixe d'un hall d'immeuble. Le verre ayant été brisé, il fallait remplacer un vitrage d'environ 150 kg, une intervention qui demande préparation et matériel adapté."
     },
     {
       "h2": "Le constat"
