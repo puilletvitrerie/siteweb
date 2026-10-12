@@ -22,7 +22,7 @@ const post: Post = {
       "h2": "2. Mesurer et proposer la bonne solution"
     },
     {
-      "p": "Je relève les dimensions et le type de vitrage. C'est souvent l'occasion de passer à un verre feuilleté 44.2, plus résistant et qui reste en place s'il est de nouveau frappé."
+      "p": "Je relève les dimensions et le type de vitrage pour le remplacer à l'identique. Sur les portes d'immeuble, il s'agit généralement d'un verre feuilleté 44.2, qui reste en place même lorsqu'il est frappé."
     },
     {
       "h2": "3. Remplacer"
