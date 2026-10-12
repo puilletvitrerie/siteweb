@@ -16,7 +16,7 @@ const post: Post = {
       "h2": "À quoi sert le grillage ?"
     },
     {
-      "p": "Le treillis métallique maintient les morceaux en place quand le verre casse. On le trouve en petites ou grosses mailles, souvent sur du verre imprimé."
+      "p": "Le treillis métallique maintient les morceaux en place quand le verre casse. On le trouve en petites ou grosses mailles."
     },
     {
       "h2": "Remplacer à l'identique"
