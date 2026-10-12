@@ -18,7 +18,8 @@ export default function Footer() {
       title: "Société",
       items: [
         { label: "À propos", href: "/a-propos" },
-        { label: "Réalisations", href: "/a-propos" },
+        { label: "Réalisations", href: "/#realisations" },
+        { label: "Blog", href: "/blog" },
         { label: "Témoignages", href: "/#temoignages" },
         { label: "Zones d'intervention", href: "/#zones" },
         { label: "FAQ", href: "/#faq" },

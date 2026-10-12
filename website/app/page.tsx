@@ -327,7 +327,7 @@ function Realisations() {
   const next = () => setIdx((idx + 1) % REALISATIONS.length);
 
   return (
-    <section className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bg }}>
+    <section id="realisations" className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bg }}>
       {/* Heading row */}
       <div className="flex justify-between items-end mb-6 gap-4">
         <div>
