@@ -18,7 +18,7 @@ export default function BeforeAfterGallery({ items }: { items: Item[] }) {
   return (
     <figure className="mx-auto" style={{ maxWidth: 480 }}>
       <div className="rounded-3xl overflow-hidden mx-auto" style={{ width: `min(100%, calc(70vh * ${cur.ratio}))` }}>
-        <BeforeAfter key={idx} before={cur.before} after={cur.after} ratio={cur.ratio} initialPos={98} />
+        <BeforeAfter key={idx} before={cur.before} after={cur.after} ratio={cur.ratio} initialPos={98} alt={cur.caption} />
       </div>
       <figcaption className="text-sm text-gray-600 mt-3 text-center">{cur.caption}</figcaption>
       {items.length > 1 && (

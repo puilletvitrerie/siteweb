@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export const metadata = {
-  title: "À Propos - Puillet Vitrerie",
+  title: "À propos · Léo Puillet, artisan vitrier à Francheville",
+  alternates: { canonical: "/a-propos" },
   description: "Découvrez Puillet Vitrerie, artisan vitrier à Francheville. Savoir-faire traditionnel, intervention rapide sur Lyon et agglomération.",
 };
 

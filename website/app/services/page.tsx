@@ -4,8 +4,9 @@ import Link from "next/link";
 import BeforeAfterGallery from "@/components/BeforeAfterGallery";
 
 export const metadata = {
-  title: "Nos Services - Puillet Vitrerie",
-  description: "Découvrez tous nos services de vitrerie : remplacement de vitrage, miroiterie, vitrines de magasin, crédences et verres de cheminée.",
+  title: "Services de vitrerie à Lyon · Vitrages, doubles vitrages, miroirs, vitrines",
+  description: "Remplacement de vitrages à l'identique (feuilleté, imprimé, martelé), doubles vitrages, miroirs, vitrines de magasin et verres de cheminée à Lyon. Photos avant/après, devis gratuit.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

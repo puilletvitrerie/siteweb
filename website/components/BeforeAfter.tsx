@@ -11,6 +11,7 @@ interface BeforeAfterProps {
   afterLabel?: string;
   accent?: string;
   initialPos?: number;
+  alt?: string;
 }
 
 export default function BeforeAfter({
@@ -22,6 +23,7 @@ export default function BeforeAfter({
   afterLabel = "Après",
   accent = "#3B8FD4",
   initialPos = 50,
+  alt = "",
 }: BeforeAfterProps) {
   const [pos, setPos] = useState(initialPos);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -78,7 +80,7 @@ export default function BeforeAfter({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={after}
-        alt=""
+        alt={alt ? `Après : ${alt}` : ""}
         draggable={false}
         style={{
           position: "absolute",
@@ -101,7 +103,7 @@ export default function BeforeAfter({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={before}
-          alt=""
+          alt={alt ? `Avant : ${alt}` : ""}
           draggable={false}
           style={{
             position: "absolute",

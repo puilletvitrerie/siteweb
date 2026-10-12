@@ -3,7 +3,8 @@ import { Phone, ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Catalogue des Vitrages et Miroirs - Puillet Vitrerie",
+  title: "Catalogue des vitrages et miroirs",
+  alternates: { canonical: "/catalogue" },
   description: "Découvrez notre catalogue complet de vitrages et de miroirs : verre simple, armé, feuilleté, imprimé, martelé, Delta, Listral, cathédrale, trempé, anti-effraction, et toute notre gamme de miroirs.",
 };
 

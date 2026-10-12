@@ -358,7 +358,7 @@ function Realisations() {
 
       {/* Slider card */}
       <div style={{ borderRadius: 20, overflow: "hidden", border: `1px solid ${C.line}`, background: "#fff", width: `min(100%, calc(70vh * ${cur.ratio}), 640px)`, minWidth: "min(100%, 300px)", margin: "0 auto" }}>
-        <BeforeAfter key={idx} before={cur.before} after={cur.after} ratio={cur.ratio} initialPos={98} accent={C.red} />
+        <BeforeAfter key={idx} before={cur.before} after={cur.after} ratio={cur.ratio} initialPos={98} accent={C.red} alt={`${cur.title}, ${cur.meta.toLowerCase()}, Lyon`} />
         <div style={{ padding: "18px 20px 20px", background: "#fff" }}>
           <div style={{ fontFamily: F.mono, fontSize: 10, color: C.red, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>
             {cur.tag} · {String(idx + 1).padStart(2, "0")} / {String(REALISATIONS.length).padStart(2, "0")}

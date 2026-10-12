@@ -31,19 +31,56 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Puillet Vitrerie · Artisan Vitrier à Lyon",
+  metadataBase: new URL("https://www.puilletvitrerie.fr"),
+  title: {
+    default: "Vitrier à Lyon · Remplacement de vitrage et double vitrage | Puillet Vitrerie",
+    template: "%s | Puillet Vitrerie",
+  },
   description:
-    "Vitrier indépendant à Lyon. Remplacement de vitrages, doubles vitrages, miroirs sur mesure, portes vitrées. Devis gratuit, intervention rapide, travail propre.",
-  keywords: [
-    "vitrier",
-    "vitrerie",
-    "Lyon",
-    "remplacement vitrage",
-    "miroiterie",
-    "urgence vitrerie",
-    "double vitrage",
-    "artisan vitrier",
+    "Vitrier indépendant à Lyon et dans l'Est lyonnais. Remplacement de vitrages, doubles vitrages, miroirs sur mesure, portes vitrées. Devis gratuit, dépannage 7j/7.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://www.puilletvitrerie.fr",
+    siteName: "Puillet Vitrerie",
+    title: "Vitrier à Lyon · Puillet Vitrerie",
+    description:
+      "Remplacement de vitrages, doubles vitrages et miroirs à Lyon et dans l'Est lyonnais. Devis gratuit, dépannage 7j/7.",
+  },
+};
+
+const LOCAL_BUSINESS = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.puilletvitrerie.fr/#entreprise",
+  name: "Puillet Vitrerie",
+  description:
+    "Artisan vitrier à Lyon : remplacement de vitrages, doubles vitrages, vitrages feuilletés, miroirs sur mesure, vitrines et portes vitrées. Dépannage 7j/7.",
+  url: "https://www.puilletvitrerie.fr",
+  telephone: "+33650440673",
+  email: "puilletvitrerie@gmail.com",
+  founder: { "@type": "Person", name: "Léo Puillet" },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "42 avenue du Chater",
+    addressLocality: "Francheville",
+    postalCode: "69340",
+    addressRegion: "Auvergne-Rhône-Alpes",
+    addressCountry: "FR",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: 45.7439321, longitude: 4.7706419 },
+  areaServed: [
+    "Lyon", "Villeurbanne", "Caluire-et-Cuire", "Francheville", "Tassin-la-Demi-Lune",
+    "Vénissieux", "Bron", "Saint-Priest", "Meyzieu", "Genas", "Décines-Charpieu",
+    "Villefranche-sur-Saône", "Vienne", "Bourgoin-Jallieu",
+  ].map((name) => ({ "@type": "City", name })),
+  sameAs: [
+    "https://www.instagram.com/puilletvitrerie",
+    "https://www.tiktok.com/@puilletvitrerie",
+    "https://www.linkedin.com/in/leo-puillet",
   ],
+  priceRange: "Devis gratuit",
 };
 
 export default function RootLayout({
@@ -57,6 +94,10 @@ export default function RootLayout({
       className={`${manrope.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-screen flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS) }}
+        />
         <div style={{ position: "sticky", top: 0, zIndex: 60 }}>
           <Header />
         </div>
