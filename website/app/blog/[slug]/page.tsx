@@ -31,7 +31,7 @@ function renderBlock(b: Block, i: number) {
     return (
       <figure key={i} style={{ margin: "24px 0" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={b.img} alt={b.alt} loading="lazy" className="w-full rounded-2xl" />
+        <img src={b.img} alt={b.alt} loading="lazy" className="rounded-2xl mx-auto" style={{ maxWidth: "100%", maxHeight: 620, width: "auto" }} />
         {b.caption && <figcaption style={{ fontSize: 14, color: "var(--color-ink-soft)", marginTop: 8, textAlign: "center" }}>{b.caption}</figcaption>}
       </figure>
     );
