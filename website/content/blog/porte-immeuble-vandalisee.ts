@@ -13,6 +13,9 @@ const post: Post = {
       "p": "Une porte d'immeuble vandalisée laisse l'entrée ouverte à tous. Pour les résidents comme pour le syndic, la priorité est de refermer vite, puis de réparer durablement."
     },
     {
+      "p": "Sur ce chantier, il s'agissait pourtant d'un vitrage feuilleté 44.2, mais il n'a pas résisté au vandalisme. J'ai vraiment été choqué en découvrant l'état du vitrage : passer à travers un feuilleté demande beaucoup de force et d'acharnement, et l'auteur s'est clairement acharné."
+    },
+    {
       "h2": "1. Sécuriser l'entrée"
     },
     {
@@ -22,7 +25,7 @@ const post: Post = {
       "h2": "2. Mesurer et proposer la bonne solution"
     },
     {
-      "p": "Je relève les dimensions et le type de vitrage pour le remplacer à l'identique. Sur les portes d'immeuble, il s'agit généralement d'un verre feuilleté 44.2, qui reste en place même lorsqu'il est frappé."
+      "p": "Je relève les dimensions et le type de vitrage pour le remplacer à l'identique. Sur les portes d'immeuble, il s'agit généralement d'un verre feuilleté 44.2 : il résiste à la grande majorité des chocs et reste en place quand il se fissure."
     },
     {
       "h2": "3. Remplacer"
