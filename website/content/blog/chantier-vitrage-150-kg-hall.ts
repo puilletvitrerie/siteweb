@@ -22,7 +22,7 @@ const post: Post = {
       "h2": "La préparation"
     },
     {
-      "p": "Un vitrage de cette taille ne se manipule pas seul. Il faut plusieurs poseurs, un équipement à ventouses et une organisation précise : accès, protection du sol, retrait de l'ancien vitrage en sécurité."
+      "p": "Un vitrage de cette taille ne se manipule pas seul. Il faut plusieurs poseurs, un équipement à ventouses et une organisation précise."
     },
     {
       "h2": "La pose"
