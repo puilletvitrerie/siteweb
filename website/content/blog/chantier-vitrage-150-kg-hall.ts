@@ -16,7 +16,7 @@ const post: Post = {
       "h2": "Le constat"
     },
     {
-      "p": "Suite à l'impact d'une pierre, le vitrage s'est fissuré. C'était un verre feuilleté : il est resté en place, mais il devait être remplacé. Après la prise de mesures, j'ai envoyé le devis au gestionnaire de l'immeuble."
+      "p": "Suite à l'impact d'une pierre, le vitrage s'est fissuré. C'était un verre feuilleté : il est resté en place, mais il devait être remplacé."
     },
     {
       "h2": "La préparation"
