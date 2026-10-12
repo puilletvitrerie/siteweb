@@ -7,8 +7,8 @@ const post: Post = {
     "De la buée apparaît à l'intérieur de votre double vitrage ? Ce que ça signifie, pourquoi on ne peut pas l'essuyer, et comment remplacer seulement le vitrage à Lyon.",
   date: "2026-11-10",
   publie: false,
-  image: "/assets/realisations/08-apres.jpg",
-  imageAlt: "Double vitrage neuf posé sur une fenêtre PVC",
+  image: "/assets/blog/buee-baie-coulissante.jpg",
+  imageAlt: "Baie vitrée coulissante dont le double vitrage est embué entre les deux vitres",
   body: [
     {
       p: "Avec le froid, beaucoup de gens remarquent de la buée sur leurs fenêtres. Sur la face intérieure de la vitre, côté pièce, c'est souvent une simple question d'humidité et d'aération. Mais quand la buée se forme entre les deux vitres, à un endroit où l'on ne peut pas passer la main, c'est autre chose.",
@@ -16,6 +16,11 @@ const post: Post = {
     { h2: "Pourquoi de la buée entre les deux vitres ?" },
     {
       p: "Un double vitrage est composé de deux vitres séparées par une lame d'air ou de gaz, le tout fermé de façon étanche sur les bords. Avec les années, les chocs ou les écarts de température, ce joint peut perdre son étanchéité. L'humidité entre alors entre les vitres et se condense dès qu'il fait froid.",
+    },
+    {
+      img: "/assets/blog/buee-fenetre-inclinee.jpg",
+      alt: "Double vitrage embué et taché entre les vitres sur une fenêtre de toit",
+      caption: "Avec le temps, la buée laisse des traces blanchâtres à l'intérieur du double vitrage.",
     },
     { h2: "Peut-on la faire partir ?" },
     {
