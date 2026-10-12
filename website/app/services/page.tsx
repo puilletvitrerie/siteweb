@@ -338,7 +338,7 @@ export default function ServicesPage() {
                 <h3 className="text-xl font-bold mb-3">Travail en autonomie</h3>
                 <p className="text-gray-300 mb-6">
                   Dès réception de votre demande de devis ou de remplacement, j&apos;interviens dans les meilleurs délais. 
-                  Pas besoin que le gardien soit présent : je sonne chez un copropriétaire pour me faire ouvrir, puis je prends les mesures. 
+                  Je me rends sur place en toute autonomie : si personne n&apos;est disponible pour m&apos;accueillir, je sonne chez un copropriétaire pour me faire ouvrir, puis je prends les mesures. 
                   Je m&apos;occupe de tout, de A à Z, sans sous-traitance.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
