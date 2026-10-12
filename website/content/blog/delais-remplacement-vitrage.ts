@@ -1,0 +1,45 @@
+import type { Post } from "@/lib/blog";
+
+const post: Post = {
+  "slug": "delais-remplacement-vitrage",
+  "title": "Combien de temps pour remplacer un vitrage ? Les délais expliqués",
+  "description": "Simple vitrage, double vitrage, feuilleté, miroir : les délais réels pour remplacer un vitrage à Lyon, et comment je sécurise en attendant.",
+  "date": "2027-03-02",
+  "publie": false,
+  "image": "/assets/services/decoupe-1.jpg",
+  "imageAlt": "Découpe d'un vitrage sur place par l'artisan vitrier",
+  "body": [
+    {
+      "p": "Quand une vitre casse, la première question est souvent : « Dans combien de temps c'est réparé ? » La réponse dépend du type de vitrage. Voici les délais sur lesquels je m'engage."
+    },
+    {
+      "h2": "Simple vitrage : en moins de 2 heures"
+    },
+    {
+      "p": "J'ai du verre en stock dans mon camion. Pour un simple vitrage, je peux le découper sur place et le poser en urgence, en moins de 2 heures sur Lyon et la métropole."
+    },
+    {
+      "h2": "Feuilleté, double vitrage, miroirs : 24 à 72 heures"
+    },
+    {
+      "p": "Ces vitrages sont fabriqués sur mesure par mon fournisseur. Je prends les mesures, je passe commande, puis je reviens poser le vitrage, en général sous 24 à 72 heures selon le modèle."
+    },
+    {
+      "h2": "Et en attendant ?"
+    },
+    {
+      "p": "Je sécurise l'ouverture le jour même avec une plaque OSB. Le week-end, quand les fournisseurs de verre sont fermés, c'est la solution pour protéger votre logement ou votre local jusqu'à la pose."
+    },
+    {
+      "h2": "Les grands vitrages"
+    },
+    {
+      "p": "Pour une vitrine ou un vitrage très lourd, il faut parfois prévoir plusieurs poseurs et un équipement à ventouses. Le délai de pose dépend alors aussi de l'organisation de ces moyens."
+    },
+    {
+      "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
+    }
+  ]
+};
+
+export default post;

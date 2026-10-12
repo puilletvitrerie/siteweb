@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getPublishedPosts, formatDate } from "@/lib/blog";
+import { getPublishedPosts, formatDate, SHOW_DRAFTS } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog · Conseils de vitrier à Lyon",
@@ -36,7 +36,12 @@ export default function BlogPage() {
                   <img src={p.image} alt={p.imageAlt ?? ""} loading="lazy" className="w-full aspect-[16/10] object-cover" />
                 )}
                 <div style={{ padding: "18px 20px 22px" }}>
-                  <div style={{ fontSize: 13, color: "var(--color-ink-soft)" }}>{formatDate(p.date)}</div>
+                  <div style={{ fontSize: 13, color: "var(--color-ink-soft)" }}>
+                    {SHOW_DRAFTS && !p.publie && (
+                      <span style={{ background: "#fff4d6", color: "#6b5200", border: "1px solid #f0d58a", borderRadius: 999, padding: "2px 8px", marginRight: 8, fontSize: 12 }}>Brouillon · prévu le</span>
+                    )}
+                    {formatDate(p.date)}
+                  </div>
                   <h2 style={{ fontSize: 20, fontWeight: 800, lineHeight: 1.25, margin: "6px 0 8px" }}>{p.title}</h2>
                   <p style={{ fontSize: 15, color: "var(--color-ink-soft)", lineHeight: 1.5 }}>{p.description}</p>
                   <div style={{ marginTop: 12, fontWeight: 700, fontSize: 14, color: "var(--color-red)" }}>Lire l&apos;article →</div>
