@@ -66,10 +66,10 @@ export default function ContactPage() {
                 <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-4">
                   <Clock className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">Disponibilité</h3>
-                <p className="font-semibold text-gray-900">24h/24 - 7j/7</p>
+                <h3 className="font-bold text-gray-900 mb-2">Horaires</h3>
+                <p className="font-semibold text-gray-900">Lundi au samedi · 7h à 20h</p>
                 <p className="text-sm text-gray-600 mt-2">
-                  Intervention en moins de 2 heures pour les urgences
+                  Dépannage d&apos;urgence 7j/7 : intervention en moins de 2 heures pour un simple vitrage
                 </p>
               </div>
             </div>

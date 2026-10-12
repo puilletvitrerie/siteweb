@@ -80,6 +80,14 @@ const LOCAL_BUSINESS = {
     "https://www.tiktok.com/@puilletvitrerie",
     "https://www.linkedin.com/in/leo-puillet",
   ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "07:00",
+      closes: "20:00",
+    },
+  ],
   priceRange: "Devis gratuit",
 };
 
