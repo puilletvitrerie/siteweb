@@ -34,6 +34,19 @@ const post: Post = {
       "p": "Vous pouvez voir l'avant/après de ce chantier dans la section Réalisations du site, et la vidéo sur mon compte Instagram @puilletvitrerie."
     },
     {
+      "h2": "Avant / après en image"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/11-avant.jpg",
+          "apres": "/assets/realisations/11-apres.jpg",
+          "ratio": 1,
+          "caption": "Grand vitrage fixe de hall d'immeuble remplacé."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

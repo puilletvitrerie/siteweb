@@ -37,6 +37,25 @@ const post: Post = {
       "p": "Laissez un double des clés et vos coordonnées à une personne de confiance à proximité. En cas de problème, tout peut être réglé rapidement."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/services/vitrine-interieur-avant.jpg",
+          "apres": "/assets/services/vitrine-interieur-apres.jpg",
+          "ratio": 0.8238,
+          "caption": "Vitrine vue de l'intérieur : de la plaque OSB au vitrage neuf."
+        },
+        {
+          "avant": "/assets/realisations/08-avant.jpg",
+          "apres": "/assets/realisations/08-apres.jpg",
+          "ratio": 1.0009,
+          "caption": "Fenêtre PVC : double vitrage cassé remplacé, sans changer la fenêtre."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

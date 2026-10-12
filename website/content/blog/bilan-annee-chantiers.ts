@@ -37,6 +37,49 @@ const post: Post = {
       "p": "Merci à mes clients, particuliers, syndics, régies et commerçants, pour leur confiance et leurs avis. Retrouvez tous mes chantiers en vidéo sur Instagram et TikTok @puilletvitrerie."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/11-avant.jpg",
+          "apres": "/assets/realisations/11-apres.jpg",
+          "ratio": 1,
+          "caption": "Grand vitrage fixe de hall d'immeuble remplacé."
+        },
+        {
+          "avant": "/assets/services/feuillete-44-2-avant.jpg",
+          "apres": "/assets/services/feuillete-44-2-apres.jpg",
+          "ratio": 0.6692,
+          "caption": "Remise aux normes : vitrage de 8 mm remplacé par un feuilleté 44.2."
+        },
+        {
+          "avant": "/assets/services/martele-parclose-bois-avant.jpg",
+          "apres": "/assets/services/martele-parclose-bois-apres.jpg",
+          "ratio": 1.2346,
+          "caption": "Vitrage martelé remplacé à l'identique, avec parcloses en bois."
+        },
+        {
+          "avant": "/assets/services/miroir-hall-avant.jpg",
+          "apres": "/assets/services/miroir-hall-apres.jpg",
+          "ratio": 0.5085,
+          "caption": "Miroir remplacé à l'identique dans un hall de copropriété."
+        },
+        {
+          "avant": "/assets/realisations/01-avant.jpg",
+          "apres": "/assets/realisations/01-apres.jpg",
+          "ratio": 1.2911,
+          "caption": "Garde-corps vitré de balcon : panneau en verre opale remplacé."
+        },
+        {
+          "avant": "/assets/services/vitrine-facade-avant.jpg",
+          "apres": "/assets/services/vitrine-facade-apres.jpg",
+          "ratio": 0.5823,
+          "caption": "Vitrine de commerce : sécurisation en OSB, puis nouveau vitrage."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

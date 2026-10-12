@@ -35,6 +35,25 @@ const post: Post = {
       "p": "Si la fenêtre ferme mal ou si les joints sont abîmés, même le meilleur vitrage ne suffira pas. Je regarde l'ensemble sur place et je vous dis franchement ce que le changement de vitrage peut vous apporter."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/08-avant.jpg",
+          "apres": "/assets/realisations/08-apres.jpg",
+          "ratio": 1.0009,
+          "caption": "Fenêtre PVC : double vitrage cassé remplacé, sans changer la fenêtre."
+        },
+        {
+          "avant": "/assets/realisations/01-avant.jpg",
+          "apres": "/assets/realisations/01-apres.jpg",
+          "ratio": 1.2911,
+          "caption": "Garde-corps vitré de balcon : panneau en verre opale remplacé."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

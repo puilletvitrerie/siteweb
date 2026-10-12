@@ -34,6 +34,25 @@ const post: Post = {
       "p": "L'avant/après de ce chantier est visible sur la page Services, rubrique Vitrines de magasin."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/services/vitrine-facade-avant.jpg",
+          "apres": "/assets/services/vitrine-facade-apres.jpg",
+          "ratio": 0.5823,
+          "caption": "Vitrine de commerce : sécurisation en OSB, puis nouveau vitrage."
+        },
+        {
+          "avant": "/assets/services/vitrine-interieur-avant.jpg",
+          "apres": "/assets/services/vitrine-interieur-apres.jpg",
+          "ratio": 0.8238,
+          "caption": "Vitrine vue de l'intérieur : de la plaque OSB au vitrage neuf."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

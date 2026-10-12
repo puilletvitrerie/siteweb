@@ -35,6 +35,25 @@ const post: Post = {
       ]
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/services/feuillete-44-2-avant.jpg",
+          "apres": "/assets/services/feuillete-44-2-apres.jpg",
+          "ratio": 0.6692,
+          "caption": "Remise aux normes : vitrage de 8 mm remplacé par un feuilleté 44.2."
+        },
+        {
+          "avant": "/assets/services/feuillete-imprime-200-avant.jpg",
+          "apres": "/assets/services/feuillete-imprime-200-apres.jpg",
+          "ratio": 0.858,
+          "caption": "Vitrage feuilleté imprimé 200 sur une porte d'immeuble."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

@@ -35,6 +35,31 @@ const post: Post = {
       "p": "Sur une porte ou une fenêtre en bois, je retire et je repose les parcloses avec soin, ou je refais le mastic à l'ancienne. Le nouveau vitrage s'intègre sans que l'on voie la différence avec les autres carreaux."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/services/martele-parclose-bois-avant.jpg",
+          "apres": "/assets/services/martele-parclose-bois-apres.jpg",
+          "ratio": 1.2346,
+          "caption": "Vitrage martelé remplacé à l'identique, avec parcloses en bois."
+        },
+        {
+          "avant": "/assets/services/feuillete-imprime-200-avant.jpg",
+          "apres": "/assets/services/feuillete-imprime-200-apres.jpg",
+          "ratio": 0.858,
+          "caption": "Vitrage feuilleté imprimé 200 sur une porte d'immeuble."
+        },
+        {
+          "avant": "/assets/realisations/09-avant.jpg",
+          "apres": "/assets/realisations/09-apres.jpg",
+          "ratio": 0.8392,
+          "caption": "Fenêtre ancienne de cage d'escalier : vitrage imprimé posé à l'identique."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

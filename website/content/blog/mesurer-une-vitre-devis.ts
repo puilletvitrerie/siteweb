@@ -39,6 +39,25 @@ const post: Post = {
       "p": "Indiquez l'adresse, l'étage et si l'accès est facile. Pour un immeuble, précisez s'il s'agit d'une partie commune. Vous pouvez tout envoyer depuis le formulaire de devis du site."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/04-avant.jpg",
+          "apres": "/assets/realisations/04-apres.jpg",
+          "ratio": 0.6846,
+          "caption": "Porte d'entrée d'immeuble : vitrage de porte remplacé."
+        },
+        {
+          "avant": "/assets/realisations/05-avant.jpg",
+          "apres": "/assets/realisations/05-apres.jpg",
+          "ratio": 0.4685,
+          "caption": "Porte d'entrée d'immeuble : vitrage de porte remplacé."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

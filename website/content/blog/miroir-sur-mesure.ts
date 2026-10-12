@@ -35,6 +35,25 @@ const post: Post = {
       "p": "Un miroir de hall cassé ou abîmé ? Je le remplace à l'identique pour retrouver l'harmonie de l'entrée, comme récemment dans un hall de copropriété entre deux poteaux en bois."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/services/miroir-hall-avant.jpg",
+          "apres": "/assets/services/miroir-hall-apres.jpg",
+          "ratio": 0.5085,
+          "caption": "Miroir remplacé à l'identique dans un hall de copropriété."
+        },
+        {
+          "avant": "/assets/services/miroir-convexe-avant.jpg",
+          "apres": "/assets/services/miroir-convexe-apres.jpg",
+          "ratio": 0.8348,
+          "caption": "Miroir convexe remplacé à l'identique."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

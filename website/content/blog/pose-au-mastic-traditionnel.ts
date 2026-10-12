@@ -36,6 +36,25 @@ const post: Post = {
       "p": "Le mastic met un certain temps à durcir en surface. Pendant cette période, mieux vaut éviter de le toucher. Ensuite, il peut être peint pour s'harmoniser avec la menuiserie."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/services/mastic-avant.jpg",
+          "apres": "/assets/services/mastic-apres.jpg",
+          "ratio": 0.9298,
+          "caption": "Vitre fendue remplacée et posée au mastic traditionnel."
+        },
+        {
+          "avant": "/assets/realisations/09-avant.jpg",
+          "apres": "/assets/realisations/09-apres.jpg",
+          "ratio": 0.8392,
+          "caption": "Fenêtre ancienne de cage d'escalier : vitrage imprimé posé à l'identique."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

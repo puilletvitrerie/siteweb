@@ -31,6 +31,19 @@ const post: Post = {
       "p": "La porte a retrouvé son aspect d'origine. On ne distingue pas le nouveau carreau des anciens. L'avant/après est visible sur la page Services du site."
     },
     {
+      "h2": "Avant / après en image"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/services/martele-parclose-bois-avant.jpg",
+          "apres": "/assets/services/martele-parclose-bois-apres.jpg",
+          "ratio": 1.2346,
+          "caption": "Vitrage martelé remplacé à l'identique, avec parcloses en bois."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

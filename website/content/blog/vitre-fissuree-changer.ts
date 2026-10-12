@@ -36,6 +36,25 @@ const post: Post = {
       "p": "Évitez d'ouvrir et de fermer brusquement la fenêtre ou la porte. Ne tentez pas de retirer vous-même un morceau. Envoyez-moi une photo : je vous dirai si le remplacement est urgent."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/services/mastic-avant.jpg",
+          "apres": "/assets/services/mastic-apres.jpg",
+          "ratio": 0.9298,
+          "caption": "Vitre fendue remplacée et posée au mastic traditionnel."
+        },
+        {
+          "avant": "/assets/services/feuillete-imprime-200-avant.jpg",
+          "apres": "/assets/services/feuillete-imprime-200-apres.jpg",
+          "ratio": 0.858,
+          "caption": "Vitrage feuilleté imprimé 200 sur une porte d'immeuble."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

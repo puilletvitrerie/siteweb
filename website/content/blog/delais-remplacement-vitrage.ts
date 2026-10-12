@@ -37,6 +37,31 @@ const post: Post = {
       "p": "Pour une vitrine ou un vitrage très lourd, il faut parfois prévoir plusieurs poseurs et un équipement à ventouses. Le délai de pose dépend alors aussi de l'organisation de ces moyens."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/09-avant.jpg",
+          "apres": "/assets/realisations/09-apres.jpg",
+          "ratio": 0.8392,
+          "caption": "Fenêtre ancienne de cage d'escalier : vitrage imprimé posé à l'identique."
+        },
+        {
+          "avant": "/assets/realisations/08-avant.jpg",
+          "apres": "/assets/realisations/08-apres.jpg",
+          "ratio": 1.0009,
+          "caption": "Fenêtre PVC : double vitrage cassé remplacé, sans changer la fenêtre."
+        },
+        {
+          "avant": "/assets/services/feuillete-44-2-avant.jpg",
+          "apres": "/assets/services/feuillete-44-2-apres.jpg",
+          "ratio": 0.6692,
+          "caption": "Remise aux normes : vitrage de 8 mm remplacé par un feuilleté 44.2."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

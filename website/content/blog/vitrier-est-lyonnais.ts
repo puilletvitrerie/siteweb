@@ -42,6 +42,31 @@ const post: Post = {
       "p": "J'interviens chez les particuliers, dans les copropriétés pour le compte des syndics et des régies, et dans les commerces. Je me déplace avec du stock dans mon camion pour intervenir vite."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/06-avant.jpg",
+          "apres": "/assets/realisations/06-apres.jpg",
+          "ratio": 0.5469,
+          "caption": "Porte d'entrée de résidence : vitrage de porte remplacé."
+        },
+        {
+          "avant": "/assets/realisations/02-avant.jpg",
+          "apres": "/assets/realisations/02-apres.jpg",
+          "ratio": 0.5446,
+          "caption": "Porte d'entrée d'immeuble : vitrage de porte remplacé."
+        },
+        {
+          "avant": "/assets/services/vitrine-facade-avant.jpg",
+          "apres": "/assets/services/vitrine-facade-apres.jpg",
+          "ratio": 0.5823,
+          "caption": "Vitrine de commerce : sécurisation en OSB, puis nouveau vitrage."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

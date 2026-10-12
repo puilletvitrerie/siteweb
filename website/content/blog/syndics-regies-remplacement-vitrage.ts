@@ -41,6 +41,31 @@ const post: Post = {
       "p": "Mes devis et factures sont édités sur un logiciel de facturation conforme. Je suis assuré en responsabilité civile professionnelle et décennale auprès de la MAAF, attestation sur demande."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/02-avant.jpg",
+          "apres": "/assets/realisations/02-apres.jpg",
+          "ratio": 0.5446,
+          "caption": "Porte d'entrée d'immeuble : vitrage de porte remplacé."
+        },
+        {
+          "avant": "/assets/realisations/07-avant.jpg",
+          "apres": "/assets/realisations/07-apres.jpg",
+          "ratio": 0.6723,
+          "caption": "Porte vitrée de hall : vitrage remplacé."
+        },
+        {
+          "avant": "/assets/realisations/06-avant.jpg",
+          "apres": "/assets/realisations/06-apres.jpg",
+          "ratio": 0.5469,
+          "caption": "Porte d'entrée de résidence : vitrage de porte remplacé."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

@@ -31,6 +31,25 @@ const post: Post = {
       "p": "Le grillage n'empêche pas les arêtes coupantes. Selon l'emplacement, je peux vous proposer un verre feuilleté, qui reste entier en cas de casse et protège mieux des blessures. Je vous explique les deux options sur place pour que vous choisissiez en connaissance de cause."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/05-avant.jpg",
+          "apres": "/assets/realisations/05-apres.jpg",
+          "ratio": 0.4685,
+          "caption": "Porte d'entrée d'immeuble : vitrage de porte remplacé."
+        },
+        {
+          "avant": "/assets/services/feuillete-44-2-avant.jpg",
+          "apres": "/assets/services/feuillete-44-2-apres.jpg",
+          "ratio": 0.6692,
+          "caption": "Remise aux normes : vitrage de 8 mm remplacé par un feuilleté 44.2."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

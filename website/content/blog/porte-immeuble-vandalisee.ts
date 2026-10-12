@@ -31,6 +31,31 @@ const post: Post = {
       "p": "Une fois le devis accepté, le vitrage est fabriqué sur mesure puis posé, en général sous 24 à 72 heures. Je retire la protection, je pose le verre et je laisse les lieux propres."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/03-avant.jpg",
+          "apres": "/assets/realisations/03-apres.jpg",
+          "ratio": 0.4538,
+          "caption": "Porte d'immeuble : vitrage remplacé après vandalisme."
+        },
+        {
+          "avant": "/assets/realisations/10-avant.jpg",
+          "apres": "/assets/realisations/10-apres.jpg",
+          "ratio": 0.9919,
+          "caption": "Porte d'entrée d'immeuble : vitrage remplacé."
+        },
+        {
+          "avant": "/assets/services/feuillete-44-2-avant.jpg",
+          "apres": "/assets/services/feuillete-44-2-apres.jpg",
+          "ratio": 0.6692,
+          "caption": "Remise aux normes : vitrage de 8 mm remplacé par un feuilleté 44.2."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]

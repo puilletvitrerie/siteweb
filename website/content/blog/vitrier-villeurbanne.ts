@@ -37,6 +37,25 @@ const post: Post = {
       "p": "Je travaille directement avec les habitants, les syndics et les régies qui gèrent les immeubles villeurbannais, et les commerçants. Toujours avec un devis clair avant toute intervention."
     },
     {
+      "h2": "Avant / après"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/realisations/07-avant.jpg",
+          "apres": "/assets/realisations/07-apres.jpg",
+          "ratio": 0.6723,
+          "caption": "Porte vitrée de hall : vitrage remplacé."
+        },
+        {
+          "avant": "/assets/realisations/10-avant.jpg",
+          "apres": "/assets/realisations/10-apres.jpg",
+          "ratio": 0.9919,
+          "caption": "Porte d'entrée d'immeuble : vitrage remplacé."
+        }
+      ]
+    },
+    {
       "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]
