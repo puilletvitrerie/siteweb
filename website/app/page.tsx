@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import BeforeAfter from "@/components/BeforeAfter";
 import QuoteForm from "@/components/QuoteForm";
+import InstagramVideos from "@/components/InstagramVideos";
 
 // ─── Design tokens ──────────────────────────────────────────────────────────
 const C = {
@@ -402,11 +403,20 @@ function Realisations() {
         ))}
       </div>
 
+      {/* Vidéos de chantier */}
+      <div style={{ marginTop: 40 }}>
+        <h3 style={{ fontSize: "clamp(22px, 2.6vw, 32px)", fontWeight: 800, letterSpacing: "-0.02em", color: C.ink, margin: "0 0 16px" }}>
+          Mes chantiers{" "}
+          <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>en vidéo</span>
+        </h3>
+        <InstagramVideos />
+      </div>
+
       {/* Réseaux sociaux : vidéos de chantier */}
-      <div style={{ marginTop: 32, padding: "22px 22px", borderRadius: 18, background: "#fff", border: `1px solid ${C.line}` }} className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div style={{ marginTop: 24, padding: "22px 22px", borderRadius: 18, background: "#fff", border: `1px solid ${C.line}` }} className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <div style={{ fontWeight: 800, fontSize: 18, color: C.ink }}>Mes chantiers en vidéo</div>
-          <div style={{ fontSize: 14, color: C.inkSoft, marginTop: 4 }}>Découvrez mes interventions au quotidien sur Instagram et TikTok.</div>
+          <div style={{ fontWeight: 800, fontSize: 18, color: C.ink }}>Encore plus de vidéos</div>
+          <div style={{ fontSize: 14, color: C.inkSoft, marginTop: 4 }}>Retrouvez toutes mes interventions sur Instagram et TikTok.</div>
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
           <a href="https://www.instagram.com/puilletvitrerie" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, padding: "12px 20px", borderRadius: 999, background: C.ink, color: "#fff", fontWeight: 700, fontSize: 14 }}>
