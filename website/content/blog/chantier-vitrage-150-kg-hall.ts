@@ -16,7 +16,7 @@ const post: Post = {
       "h2": "Le constat"
     },
     {
-      "p": "Le vitrage était fissuré sur une grande partie de sa surface. Même s'il restait en place, il n'assurait plus la sécurité du hall et pouvait céder à tout moment. Après la prise de mesures, j'ai transmis le devis au gestionnaire de l'immeuble."
+      "p": "Le vitrage était fissuré sur une grande partie de sa surface. Comme il s'agissait d'un verre feuilleté, les éclats sont restés collés au film intercalaire et le vitrage est resté en place : le hall restait fermé. Mais un feuilleté fissuré a perdu une partie de sa résistance et doit être remplacé. Après la prise de mesures, j'ai transmis le devis au gestionnaire de l'immeuble."
     },
     {
       "h2": "La préparation"
