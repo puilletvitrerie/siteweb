@@ -6,8 +6,8 @@ const post: Post = {
   "description": "Simple vitrage, double vitrage, feuilleté, miroir : les délais réels pour remplacer un vitrage à Lyon, et comment je sécurise en attendant.",
   "date": "2027-03-02",
   "publie": false,
-  "image": "/assets/services/decoupe-1.jpg",
-  "imageAlt": "Découpe d'un vitrage sur place par l'artisan vitrier",
+  "image": "/assets/blog/decoupe-simple-vitrage.jpg",
+  "imageAlt": "L'artisan vitrier recoupe un simple vitrage sur place pour une pose en moins de deux heures",
   "body": [
     {
       "p": "Quand une vitre casse, la première question est souvent : « Dans combien de temps c'est réparé ? » La réponse dépend du type de vitrage. Voici les délais sur lesquels je m'engage."
