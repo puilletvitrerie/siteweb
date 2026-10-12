@@ -5,6 +5,8 @@
 // Pour préparer un article à l'avance : publie: false, puis passer à true après validation.
 
 import vitreCasseeNuit from "@/content/blog/vitre-cassee-que-faire";
+import simpleOuDouble from "@/content/blog/simple-ou-double-vitrage-fenetre-ancienne";
+import bueeDoubleVitrage from "@/content/blog/buee-entre-les-vitres-double-vitrage";
 
 export type Block =
   | { h2: string }
@@ -23,7 +25,7 @@ export type Post = {
   body: Block[];
 };
 
-const POSTS: Post[] = [vitreCasseeNuit];
+const POSTS: Post[] = [vitreCasseeNuit, simpleOuDouble, bueeDoubleVitrage];
 
 // Sur la version d'essai (Vercel « preview »), les brouillons sont visibles pour relecture.
 // Sur le site public (« production »), seuls les articles validés et datés d'aujourd'hui ou avant apparaissent.
