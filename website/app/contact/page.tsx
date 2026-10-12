@@ -1,33 +1,10 @@
 "use client";
 
-import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import QuoteForm from "@/components/QuoteForm";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <div className="flex flex-col bg-gray-50">
       {/* Hero Section */}
@@ -102,112 +79,10 @@ export default function ContactPage() {
               <div className="bg-white p-8 rounded-3xl">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Demande de devis ou d'information</h2>
                 <p className="text-gray-600 mb-8">
-                  Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais
+                  Remplissez les 3 étapes ci-dessous : je vous rappelle rapidement. Devis gratuit et sans engagement.
                 </p>
                 
-                {isSubmitted ? (
-                  <div className="bg-green-50 border border-green-200 rounded-3xl p-8 text-center">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-green-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-green-900 mb-2">Message envoyé !</h3>
-                    <p className="text-green-700">Nous vous répondrons dans les plus brefs délais.</p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
-                          Nom complet *
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          required
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                          placeholder="Votre nom"
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
-                          Téléphone *
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          required
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                          placeholder="06 00 00 00 00"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                        placeholder="votre@email.com"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-900 mb-2">
-                        Objet de la demande *
-                      </label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        required
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                      >
-                        <option value="">Sélectionnez un objet</option>
-                        <option value="urgence">Urgence - Intervention rapide</option>
-                        <option value="devis">Demande de devis</option>
-                        <option value="vitrage">Remplacement de vitrage</option>
-                        <option value="miroiterie">Miroiterie</option>
-                        <option value="vitrine">Vitrine de magasin</option>
-                        <option value="credence">Crédence</option>
-                        <option value="autre">Autre demande</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
-                        Message *
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        required
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows={6}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                        placeholder="Décrivez votre besoin..."
-                      />
-                    </div>
-
-                    <Button type="submit" size="lg" className="w-full bg-black hover:bg-gray-800 text-white rounded-full h-14">
-                      Envoyer le message
-                    </Button>
-                  </form>
-                )}
+                <QuoteForm />
               </div>
             </div>
           </div>

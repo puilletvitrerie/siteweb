@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import BeforeAfter from "@/components/BeforeAfter";
+import QuoteForm from "@/components/QuoteForm";
 
 // ─── Design tokens ──────────────────────────────────────────────────────────
 const C = {
@@ -695,25 +696,6 @@ function FAQ() {
 }
 
 // ─── Contact ─────────────────────────────────────────────────────────────────
-function ContactField({ label, placeholder, textarea, select, options }: {
-  label: string; placeholder?: string; textarea?: boolean; select?: boolean; options?: string[];
-}) {
-  return (
-    <label style={{ display: "block" }}>
-      <div style={{ fontFamily: F.mono, fontSize: 10, color: C.inkSoft, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 7 }}>{label}</div>
-      {textarea ? (
-        <textarea placeholder={placeholder} rows={3} style={{ width: "100%", padding: "10px 13px", border: `1px solid ${C.line}`, borderRadius: 10, background: C.bg, fontFamily: F.sans, fontSize: 14, resize: "none", color: C.ink, outline: "none" }} />
-      ) : select && options ? (
-        <select style={{ width: "100%", padding: "10px 13px", border: `1px solid ${C.line}`, borderRadius: 10, background: C.bg, fontFamily: F.sans, fontSize: 14, color: C.inkSoft, outline: "none", appearance: "none" }}>
-          {options.map((o) => <option key={o}>{o}</option>)}
-        </select>
-      ) : (
-        <input placeholder={placeholder} style={{ width: "100%", padding: "10px 13px", border: `1px solid ${C.line}`, borderRadius: 10, background: C.bg, fontFamily: F.sans, fontSize: 14, color: C.ink, outline: "none" }} />
-      )}
-    </label>
-  );
-}
-
 function Contact() {
   return (
     <section style={{ paddingTop: 60, paddingBottom: 60, background: C.bgAlt, borderTop: `1px solid ${C.line}` }} className="px-5 md:px-14">
@@ -766,36 +748,10 @@ function Contact() {
             <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>besoin</span>.
           </h2>
           <p style={{ fontSize: 15, lineHeight: 1.55, color: C.inkSoft, maxWidth: 460, marginBottom: 22 }}>
-            Photo + dimensions, ou &ldquo;vitre cassée chambre + adresse&rdquo; : je rappelle dans l&rsquo;heure. Sans engagement.
+            Remplissez les 3 étapes ci-dessous : je vous rappelle rapidement. Devis gratuit et sans engagement.
           </p>
 
-          <form
-            style={{ background: "#fff", borderRadius: 18, padding: 22, border: `1px solid ${C.line}`, display: "grid", gap: 12 }}
-            onSubmit={(e) => e.preventDefault()}
-          >
-            {/* 2-col on sm+, 1-col on mobile */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <ContactField label="Prénom" placeholder="Marie" />
-              <ContactField label="Nom" placeholder="Dupont" />
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <ContactField label="Téléphone" placeholder="06 12 34 56 78" />
-              <ContactField label="Code postal" placeholder="69003" />
-            </div>
-            <ContactField label="Type de demande" select options={["Vitre cassée, dépannage urgent", "Devis double vitrage", "Miroir sur mesure", "Porte d'entrée vitrée", "Autre"]} />
-            <ContactField label="Décrivez" textarea placeholder="Un mot sur la situation, dimensions, photos, étage…" />
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-3 mt-1">
-              <div style={{ fontSize: 12, color: C.inkSoft }}>Réponse sous 1h en journée · 7j/7</div>
-              <button
-                type="submit"
-                style={{ background: C.red, color: "#fff", border: "none", padding: "13px 24px", borderRadius: 999, fontWeight: 700, fontSize: 14, cursor: "pointer", display: "flex", alignItems: "center", gap: 8, fontFamily: F.sans, width: "100%" }}
-                className="sm:w-auto justify-center"
-              >
-                Envoyer la demande
-                <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-              </button>
-            </div>
-          </form>
+          <QuoteForm />
         </div>
       </div>
     </section>
