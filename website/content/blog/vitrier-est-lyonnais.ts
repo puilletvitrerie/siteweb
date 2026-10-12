@@ -2,7 +2,7 @@ import type { Post } from "@/lib/blog";
 
 const post: Post = {
   "slug": "vitrier-est-lyonnais",
-  "title": "Vitrier dans l'Est lyonnais : Meyzieu, Genas, Saint-Priest, Bourgoin-Jallieu",
+  "title": "Vitrier dans l'Est lyonnais : j'interviens à Meyzieu, Genas, Saint-Priest, Bourgoin-Jallieu",
   "description": "Artisan vitrier intervenant dans l'Est lyonnais : Meyzieu, Genas, Décines, Saint-Priest, Pont-de-Chéruy, Bourgoin-Jallieu. Dépannage, double vitrage, miroirs, devis gratuit.",
   "date": "2027-03-16",
   "publie": false,
@@ -10,7 +10,7 @@ const post: Post = {
   "imageAlt": "Camion de l'artisan vitrier Puillet Vitrerie",
   "body": [
     {
-      "p": "Basé à Francheville, j'interviens dans tout l'Est lyonnais, dans un rayon d'environ 60 km autour de Lyon, sans facturer de déplacement."
+      "p": "J'interviens dans tout Lyon et sa métropole, et très souvent dans l'Est lyonnais : c'est là que j'ai le plus d'interventions pour des vitrages cassés. Je me déplace dans un rayon d'environ 60 km autour de Lyon, sans facturer de déplacement."
     },
     {
       "h2": "Les communes où j'interviens régulièrement"
