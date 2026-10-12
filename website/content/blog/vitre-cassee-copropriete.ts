@@ -6,8 +6,8 @@ const post: Post = {
   "description": "Porte de hall, vitre de cage d'escalier ou de local commun cassée ? Qui prévient qui, comment se passe l'intervention du vitrier et ce que je fais sur place.",
   "date": "2026-11-24",
   "publie": false,
-  "image": "/assets/realisations/02-apres.jpg",
-  "imageAlt": "Porte d'entrée d'immeuble avec vitrage neuf en copropriété",
+  "image": "/assets/services/feuillete-imprime-200-avant.jpg",
+  "imageAlt": "Vitrage feuilleté cassé sur une porte d'immeuble en copropriété, resté en place après l'impact",
   "body": [
     {
       "p": "Dans un immeuble, une vitre cassée dans les parties communes concerne tout le monde, mais personne ne sait toujours qui doit agir. Porte du hall, fenêtre de cage d'escalier, vitre de local vélo : voici comment les choses se passent en pratique."
