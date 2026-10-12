@@ -28,7 +28,7 @@ const post: Post = {
       "h2": "Et en attendant ?"
     },
     {
-      "p": "Je sécurise l'ouverture le jour même avec une plaque OSB. Le week-end, quand les fournisseurs de verre sont fermés, c'est la solution pour protéger votre logement ou votre local jusqu'à la pose."
+      "p": "Si vous le souhaitez, je peux poser un panneau OSB le jour même pour sécuriser l'ouverture. Le week-end, quand les fournisseurs de verre sont fermés, c'est la solution pour protéger votre logement ou votre local jusqu'à la pose du vitrage."
     },
     {
       "h2": "Les grands vitrages"
