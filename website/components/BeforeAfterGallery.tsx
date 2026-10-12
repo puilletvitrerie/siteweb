@@ -10,14 +10,14 @@ interface Item {
   caption: string;
 }
 
-export default function BeforeAfterGallery({ items }: { items: Item[] }) {
+export default function BeforeAfterGallery({ items, size = 70, maxWidth = 480 }: { items: Item[]; size?: number; maxWidth?: number }) {
   const [idx, setIdx] = useState(0);
   const cur = items[idx];
   const go = (d: number) => setIdx((idx + d + items.length) % items.length);
 
   return (
-    <figure className="mx-auto" style={{ maxWidth: 480 }}>
-      <div className="rounded-3xl overflow-hidden mx-auto" style={{ width: `min(100%, calc(70vh * ${cur.ratio}))` }}>
+    <figure className="mx-auto" style={{ maxWidth }}>
+      <div className="rounded-3xl overflow-hidden mx-auto" style={{ width: `min(100%, calc(${size}vh * ${cur.ratio}))` }}>
         <BeforeAfter key={idx} before={cur.before} after={cur.after} ratio={cur.ratio} initialPos={98} alt={cur.caption} />
       </div>
       <figcaption className="text-sm text-gray-600 mt-3 text-center">{cur.caption}</figcaption>

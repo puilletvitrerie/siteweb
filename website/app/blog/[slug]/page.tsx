@@ -31,13 +31,13 @@ function renderBlock(b: Block, i: number) {
   if ("galerie" in b)
     return (
       <div key={i} style={{ margin: "24px 0" }}>
-        <BeforeAfterGallery items={b.galerie.map((g) => ({ before: g.avant, after: g.apres, ratio: g.ratio, caption: g.caption }))} />
+        <BeforeAfterGallery size={85} maxWidth={640} items={b.galerie.map((g) => ({ before: g.avant, after: g.apres, ratio: g.ratio, caption: g.caption }))} />
       </div>
     );
   if ("avant" in b)
     return (
       <div key={i} style={{ margin: "24px 0" }}>
-        <BeforeAfterGallery items={[{ before: b.avant, after: b.apres, ratio: b.ratio, caption: b.caption }]} />
+        <BeforeAfterGallery size={85} maxWidth={640} items={[{ before: b.avant, after: b.apres, ratio: b.ratio, caption: b.caption }]} />
       </div>
     );
   if ("img" in b)
@@ -84,7 +84,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </div>
         {post.image && (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={post.image} alt={post.imageAlt ?? ""} className="w-full rounded-2xl mb-8 aspect-[16/10] object-cover" />
+          <img src={post.image} alt={post.imageAlt ?? ""} className="rounded-2xl mb-8 mx-auto block" style={{ maxWidth: "100%", maxHeight: 640, width: "auto" }} />
         )}
         <div style={{ fontSize: 17, lineHeight: 1.7 }}>{post.body.map(renderBlock)}</div>
 

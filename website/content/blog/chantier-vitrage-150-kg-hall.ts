@@ -7,10 +7,10 @@ const post: Post = {
   "date": "2027-02-16",
   "publie": false,
   "image": "/assets/realisations/11-avant.jpg",
-  "imageAlt": "Grand vitrage fixe brisé dans un hall d'immeuble avec une fresque murale",
+  "imageAlt": "Grand vitrage fixe brisé dans un hall d'immeuble",
   "body": [
     {
-      "p": "Certains chantiers sortent de l'ordinaire. Celui-ci concernait le grand vitrage fixe d'un hall d'immeuble, décoré d'une fresque murale représentant un lion. Le verre avait été brisé : il fallait remplacer un vitrage d'environ 150 kg."
+      "p": "Certains chantiers sortent de l'ordinaire. Celui-ci concernait le grand vitrage fixe d'un hall d'immeuble. Le verre avait été brisé : il fallait remplacer un vitrage d'environ 150 kg."
     },
     {
       "h2": "Le constat"
@@ -28,7 +28,7 @@ const post: Post = {
       "h2": "La pose"
     },
     {
-      "p": "Le nouveau vitrage a été mis en place, calé et fixé dans la menuiserie existante. Le hall a retrouvé sa transparence et la fresque est de nouveau visible depuis la rue."
+      "p": "Le nouveau vitrage a été mis en place, calé et fixé dans la menuiserie existante. Le hall a retrouvé sa transparence et sa sécurité."
     },
     {
       "p": "Vous pouvez voir l'avant/après de ce chantier dans la section Réalisations du site, et la vidéo sur mon compte Instagram @puilletvitrerie."

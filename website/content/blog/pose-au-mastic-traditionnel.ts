@@ -10,7 +10,7 @@ const post: Post = {
   "imageAlt": "Application du mastic traditionnel sur un châssis de fenêtre ancienne",
   "body": [
     {
-      "p": "Sur les fenêtres anciennes en bois, le verre n'est pas tenu par des parcloses vissées mais par un bourrelet de mastic. Quand une vitre casse, la remplacer correctement demande un savoir-faire particulier."
+      "p": "Sur les fenêtres anciennes en bois, le vitrage est maintenu par du mastic traditionnel. Lorsqu'une vitre casse, son remplacement demande un savoir-faire particulier pour respecter la menuiserie et son aspect d'origine."
     },
     {
       "h2": "Les étapes d'une pose au mastic"
