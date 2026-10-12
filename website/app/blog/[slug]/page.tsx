@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import BeforeAfterGallery from "@/components/BeforeAfterGallery";
 import { getPost, getPublishedPosts, formatDate, SHOW_DRAFTS, type Block } from "@/lib/blog";
 
 export function generateStaticParams() {
@@ -26,6 +27,12 @@ function renderBlock(b: Block, i: number) {
       <ul key={i} style={{ paddingLeft: 22, margin: "0 0 16px", listStyle: "disc" }}>
         {b.ul.map((li) => <li key={li} style={{ marginBottom: 8 }}>{li}</li>)}
       </ul>
+    );
+  if ("avant" in b)
+    return (
+      <div key={i} style={{ margin: "24px 0" }}>
+        <BeforeAfterGallery items={[{ before: b.avant, after: b.apres, ratio: b.ratio, caption: b.caption }]} />
+      </div>
     );
   if ("img" in b)
     return (
