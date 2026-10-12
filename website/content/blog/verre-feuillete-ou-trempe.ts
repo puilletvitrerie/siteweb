@@ -6,8 +6,8 @@ const post: Post = {
   "description": "Feuilleté ou trempé : deux verres de sécurité qui se comportent très différemment quand ils cassent. Lequel choisir pour une porte, une vitrine ou une table ?",
   "date": "2027-05-11",
   "publie": false,
-  "image": "/assets/services/feuillete-44-2-avant.jpg",
-  "imageAlt": "Vitrage de porte brisé avant remplacement par un verre feuilleté",
+  "image": "/assets/realisations/11-avant.jpg",
+  "imageAlt": "Vitrage feuilleté fissuré après un impact, resté en place dans son cadre",
   "body": [
     {
       "p": "On parle souvent de « verre de sécurité » sans préciser lequel. Pourtant, le verre feuilleté et le verre trempé fonctionnent de façon très différente."
