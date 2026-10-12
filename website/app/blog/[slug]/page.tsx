@@ -28,6 +28,12 @@ function renderBlock(b: Block, i: number) {
         {b.ul.map((li) => <li key={li} style={{ marginBottom: 8 }}>{li}</li>)}
       </ul>
     );
+  if ("galerie" in b)
+    return (
+      <div key={i} style={{ margin: "24px 0" }}>
+        <BeforeAfterGallery items={b.galerie.map((g) => ({ before: g.avant, after: g.apres, ratio: g.ratio, caption: g.caption }))} />
+      </div>
+    );
   if ("avant" in b)
     return (
       <div key={i} style={{ margin: "24px 0" }}>

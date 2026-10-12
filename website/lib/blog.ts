@@ -36,7 +36,8 @@ export type Block =
   | { p: string }
   | { ul: string[] }
   | { img: string; alt: string; caption?: string }
-  | { avant: string; apres: string; ratio: number; caption: string };
+  | { avant: string; apres: string; ratio: number; caption: string }
+  | { galerie: { avant: string; apres: string; ratio: number; caption: string }[] };
 
 export type Post = {
   slug: string;

@@ -31,6 +31,31 @@ const post: Post = {
       "p": "Un grand vitrage peut peser plusieurs dizaines, voire plus de cent kilos. Selon la taille, la pose demande deux ou trois poseurs et parfois un équipement à ventouses. J'organise l'intervention en conséquence, pour que tout se passe en sécurité, à un horaire qui gêne le moins possible votre activité."
     },
     {
+      "h2": "Avant / après : quelques vitrines remises en état"
+    },
+    {
+      "galerie": [
+        {
+          "avant": "/assets/services/vitrine-facade-avant.jpg",
+          "apres": "/assets/services/vitrine-facade-apres.jpg",
+          "ratio": 0.5823,
+          "caption": "Vitrine de commerce : sécurisation en OSB, puis pose du nouveau vitrage."
+        },
+        {
+          "avant": "/assets/services/vitrine-interieur-avant.jpg",
+          "apres": "/assets/services/vitrine-interieur-apres.jpg",
+          "ratio": 0.8238,
+          "caption": "La même vitrine vue de l'intérieur, avant et après la pose."
+        },
+        {
+          "avant": "/assets/realisations/11-avant.jpg",
+          "apres": "/assets/realisations/11-apres.jpg",
+          "ratio": 1,
+          "caption": "Grand vitrage fixe de hall d'immeuble remplacé."
+        }
+      ]
+    },
+    {
       "h2": "Les délais"
     },
     {
