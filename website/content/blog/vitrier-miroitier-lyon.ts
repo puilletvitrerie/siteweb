@@ -1,9 +1,9 @@
 import type { Post } from "@/lib/blog";
 
 const post: Post = {
-  "slug": "vitrier-est-lyonnais",
-  "title": "Vitrier dans l'Est lyonnais : j'interviens à Meyzieu, Genas, Saint-Priest, Bourgoin-Jallieu",
-  "description": "Artisan vitrier intervenant dans l'Est lyonnais : Meyzieu, Genas, Décines, Saint-Priest, Pont-de-Chéruy, Bourgoin-Jallieu. Dépannage, double vitrage, miroirs, devis gratuit.",
+  "slug": "vitrier-miroitier-lyon",
+  "title": "Vitrier miroitier à Lyon",
+  "description": "Vitrier miroitier à Lyon et dans toute la métropole, notamment l'Est lyonnais : vitres cassées, doubles vitrages, portes d'immeuble, vitrines, miroirs. Devis gratuit.",
   "date": "2027-03-16",
   "publie": false,
   "image": "/assets/camion-paysage.jpeg",

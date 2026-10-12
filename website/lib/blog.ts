@@ -27,7 +27,7 @@ import p_vitre_cassee_copropriete from "@/content/blog/vitre-cassee-copropriete"
 import p_vitre_cassee_que_faire from "@/content/blog/vitre-cassee-que-faire";
 import p_vitre_cassee_vacances from "@/content/blog/vitre-cassee-vacances";
 import p_vitre_fissuree_changer from "@/content/blog/vitre-fissuree-changer";
-import p_vitrier_est_lyonnais from "@/content/blog/vitrier-est-lyonnais";
+import p_vitrier_miroitier_lyon from "@/content/blog/vitrier-miroitier-lyon";
 import p_vitrier_villeurbanne from "@/content/blog/vitrier-villeurbanne";
 import p_vitrine_magasin_cassee from "@/content/blog/vitrine-magasin-cassee";
 
@@ -74,7 +74,7 @@ const POSTS: Post[] = [
   p_vitre_cassee_que_faire,
   p_vitre_cassee_vacances,
   p_vitre_fissuree_changer,
-  p_vitrier_est_lyonnais,
+  p_vitrier_miroitier_lyon,
   p_vitrier_villeurbanne,
   p_vitrine_magasin_cassee,
 ];

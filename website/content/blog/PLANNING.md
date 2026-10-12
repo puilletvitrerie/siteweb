@@ -24,7 +24,7 @@ Règles de rédaction :
 | 9 | 2027-02-02 | Miroir sur mesure : salle de bain, dressing, hall d'immeuble | Brouillon prêt |
 | 10 | 2027-02-16 | Chantier : remplacement d'un vitrage de 150 kg dans un hall d'immeuble | ville à confirmer |
 | 11 | 2027-03-02 | Combien de temps pour remplacer un vitrage ? Les délais expliqués | Brouillon prêt |
-| 12 | 2027-03-16 | Vitrier dans l'Est lyonnais : j'interviens à Meyzieu, Genas, Saint-Priest, Bourgoin-Jallieu | Brouillon prêt |
+| 12 | 2027-03-16 | Vitrier miroitier à Lyon | Brouillon prêt |
 | 13 | 2027-03-30 | Verre armé : où on le trouve encore et par quoi le remplacer | Brouillon prêt |
 | 14 | 2027-04-13 | Porte vitrée d'immeuble vandalisée : les étapes de la remise en état | Brouillon prêt |
 | 15 | 2027-04-27 | Remplacer un vitrage sans changer la fenêtre : c'est possible ? | Brouillon prêt |
