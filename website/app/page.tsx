@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import BeforeAfter from "@/components/BeforeAfter";
 import QuoteForm from "@/components/QuoteForm";
+import { VILLES } from "@/lib/villes";
 import InstagramVideos from "@/components/InstagramVideos";
 
 // ─── Design tokens ──────────────────────────────────────────────────────────
@@ -581,6 +582,13 @@ function Zones() {
           <p style={{ fontSize: "clamp(14px, 1.4vw, 17px)", lineHeight: 1.6, color: C.inkSoft, maxWidth: 440, marginBottom: 20 }}>
             J&rsquo;interviens dans un rayon d&rsquo;environ 60 km autour de Lyon, notamment dans tout l&rsquo;Est lyonnais. Pour les urgences hors zone, appelez-moi : on trouvera une solution.
           </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
+            {VILLES.filter((v) => v.publie).map((v) => (
+              <Link key={v.slug} href={`/vitrier/${v.slug}`} style={{ padding: "7px 13px", borderRadius: 999, background: "#fff", border: `1px solid ${C.line}`, fontSize: 13, color: C.ink }}>
+                Vitrier à {v.nom}
+              </Link>
+            ))}
+          </div>
         </div>
 
         {/* Right: SVG map */}
