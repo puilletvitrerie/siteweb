@@ -127,7 +127,58 @@ export const VILLES: Ville[] = [
     voisines: ["Caluire-et-Cuire", "Sathonay-Camp", "Vaulx-en-Velin", "Neuville-sur-Saône", "Montluel"],
     chantiers: [R(11, 1, "Rillieux-la-Pape : grand vitrage fixe de hall d'immeuble remplacé")],
   },
+  {
+    slug: "tassin-la-demi-lune",
+    nom: "Tassin-la-Demi-Lune",
+    cp: "69160",
+    publie: false,
+    intro:
+      "Tout proche de Francheville, Tassin-la-Demi-Lune fait partie de mon secteur d'intervention quotidien. J'y remplace les vitrages cassés des portes d'immeuble et des fenêtres, sans toucher à la menuiserie.",
+    voisines: ["Francheville", "Craponne", "Écully", "Charbonnières-les-Bains", "Lyon 5e", "Lyon 9e"],
+    chantiers: [R(4, 890 / 1300, "Tassin-la-Demi-Lune : vitrage de porte d'entrée d'immeuble remplacé")],
+  },
+  {
+    slug: "montluel",
+    nom: "Montluel",
+    cp: "01120",
+    publie: false,
+    intro:
+      "J'interviens jusqu'à Montluel, dans l'Ain, à l'est de Lyon. J'y remplace notamment des vitrages de portes de hall d'immeuble, avec prise de mesures sur place et devis gratuit.",
+    voisines: ["Dagneux", "La Boisse", "Beynost", "Miribel", "Niévroz"],
+    chantiers: [R(7, 874 / 1300, "Montluel : vitrage de porte vitrée de hall remplacé")],
+  },
+  {
+    slug: "saint-genis-les-ollieres",
+    nom: "Saint-Genis-les-Ollières",
+    cp: "69290",
+    publie: false,
+    intro:
+      "À Saint-Genis-les-Ollières, dans l'ouest lyonnais, je remplace les doubles vitrages cassés ou embués sans changer la fenêtre : la menuiserie reste en place, seul le vitrage est remplacé.",
+    voisines: ["Craponne", "Tassin-la-Demi-Lune", "Francheville", "Grézieu-la-Varenne", "Charbonnières-les-Bains"],
+    chantiers: [R(8, 1100 / 1099, "Saint-Genis-les-Ollières : double vitrage cassé remplacé sur une fenêtre PVC")],
+  },
+  {
+    slug: "craponne",
+    nom: "Craponne",
+    cp: "69290",
+    publie: false,
+    intro:
+      "J'interviens à Craponne pour les vitrages et les miroirs, y compris les miroirs convexes de sortie de parking ou de résidence, remplacés à l'identique pour retrouver une bonne visibilité.",
+    voisines: ["Francheville", "Tassin-la-Demi-Lune", "Saint-Genis-les-Ollières", "Brindas", "Grézieu-la-Varenne"],
+    chantiers: [S("miroir-convexe", 960 / 1150, "Craponne : miroir convexe remplacé à l'identique")],
+  },
+  {
+    slug: "francheville",
+    nom: "Francheville",
+    cp: "69340",
+    publie: false,
+    intro:
+      "Puillet Vitrerie est installée à Francheville : j'y interviens très rapidement. Je remplace tous types de vitrages, y compris sur les fenêtres anciennes en bois, avec une pose au mastic traditionnel.",
+    voisines: ["Tassin-la-Demi-Lune", "Craponne", "Sainte-Foy-lès-Lyon", "Chaponost", "Lyon 5e"],
+    chantiers: [S("mastic", 1100 / 1183, "Francheville : vitre fendue remplacée et posée au mastic traditionnel")],
+  },
 ];
+
 export const SHOW_DRAFTS_VILLES = process.env.VERCEL_ENV !== "production";
 
 export function villesVisibles() {
