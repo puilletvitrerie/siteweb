@@ -7,7 +7,7 @@ Règles de rédaction :
 - Uniquement des informations vraies sur l'activité (délais, zone, méthodes). Pas de prix inventés.
 - Pas d'agrément assurance, pas de garantie, pas de « travail avec les assurances ».
 - Délais : simple vitrage < 2 h en urgence ; feuilleté, double vitrage, miroirs : 24 à 72 h ; sécurisation OSB le jour même, 7j/7.
-- Zone : Lyon, la métropole et l'Est lyonnais, rayon ~60 km, déplacement pour le devis gratuit et sans engagement ; le déplacement du jour de l'intervention est facturé (indiqué sur le devis). Ne jamais laisser entendre que tout déplacement est gratuit.
+- Zone : Lyon, la métropole et l'Est lyonnais, rayon ~60 km, « le déplacement pour établir le devis est gratuit » (ne pas parler de la facturation de l'intervention, ne jamais dire que tout déplacement est gratuit).
 - Ton : « je », professionnel et simple. 600 à 900 mots. Une photo réelle de chantier quand c'est possible.
 - Toujours terminer par l'encart « Besoin d'un vitrier à Lyon ? » (automatique).
 

@@ -56,7 +56,7 @@ const post: Post = {
       ]
     },
     {
-      "p": "Je me déplace gratuitement pour établir le devis, sans engagement. Le déplacement du jour de l'intervention est indiqué sur le devis et facturé avec l'intervention. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
+      "p": "Le déplacement pour établir le devis est gratuit, et le devis est sans engagement. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]
 };
