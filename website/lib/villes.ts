@@ -26,7 +26,7 @@ export const VILLES: Ville[] = [
       avant: "/assets/realisations/11-avant.jpg",
       apres: "/assets/realisations/11-apres.jpg",
       ratio: 1,
-      caption: "Remplacement d'un grand vitrage fixe de hall d'immeuble",
+      caption: "Chantier à Meyzieu : remplacement d'un grand vitrage fixe de hall d'immeuble",
     },
   },
 ];
