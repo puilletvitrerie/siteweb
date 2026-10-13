@@ -87,15 +87,15 @@ const HeroCTAs = () => (
 const HeroStats = () => (
   <div
     style={{
-      display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 12,
+      display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12,
       paddingTop: 22, borderTop: `1px solid ${C.line}`,
     }}
   >
-    {[["0€", "déplacement pour le devis"], ["< 2h", "intervention"]].map(([n, l]) => (
-      <div key={l}>
+    {[["4,9 ★", "29 avis Google", "#temoignages"], ["0€", "déplacement pour le devis", ""], ["< 2h", "intervention", ""]].map(([n, l, href]) => (
+      <a key={l} href={href || undefined} style={{ display: "block", color: "inherit" }}>
         <div style={{ fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 800, letterSpacing: "-0.02em", color: C.ink }}>{n}</div>
         <div style={{ fontSize: 12, color: C.inkSoft, marginTop: 2 }}>{l}</div>
-      </div>
+      </a>
     ))}
   </div>
 );
