@@ -90,7 +90,7 @@ const HeroStats = () => (
       paddingTop: 22, borderTop: `1px solid ${C.line}`,
     }}
   >
-    {[["7j/7", "dépannage"], ["< 2h", "intervention"]].map(([n, l]) => (
+    {[["0€", "déplacement pour le devis"], ["< 2h", "intervention"]].map(([n, l]) => (
       <div key={l}>
         <div style={{ fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 800, letterSpacing: "-0.02em", color: C.ink }}>{n}</div>
         <div style={{ fontSize: 12, color: C.inkSoft, marginTop: 2 }}>{l}</div>
@@ -447,8 +447,8 @@ const ABOUT_FEATURES = [
   },
   {
     t: "Devis gratuit",
-    d: "Devis offert, sans engagement.",
-    detail: "Je prends les mesures et vous remets un devis clair et détaillé, gratuitement et sans engagement. Les frais de déplacement y sont indiqués et sont facturés avec l'intervention. Vous décidez ensuite en toute tranquillité.",
+    d: "Déplacement et devis offerts, sans engagement.",
+    detail: "Je me déplace gratuitement pour prendre les mesures et vous remets un devis clair et détaillé, sans engagement. Le déplacement du jour de l'intervention y est indiqué et facturé avec l'intervention. Vous décidez ensuite en toute tranquillité.",
   },
   {
     t: "Artisan assuré",
@@ -619,7 +619,7 @@ function Zones() {
             ))}
           </svg>
           <div style={{ position: "absolute", bottom: 14, left: 14, fontFamily: F.mono, fontSize: 10, color: "rgba(255,255,255,.6)", letterSpacing: "0.14em", textTransform: "uppercase" }}>
-            Rayon ~60 km · devis gratuit
+            Rayon ~60 km · déplacement gratuit pour le devis
           </div>
         </div>
       </div>
@@ -630,7 +630,7 @@ function Zones() {
 // ─── FAQ ─────────────────────────────────────────────────────────────────────
 const FAQ_ITEMS = [
   { q: "Quels sont vos délais pour un dépannage urgent ?", a: "Pour un simple vitrage cassé, j'interviens en urgence en moins de 2h. Pour le verre feuilleté, le double vitrage et les miroirs, le remplacement est réalisé sous 24 à 72h. En attendant, je peux sécuriser l'ouverture le jour même avec une plaque OSB." },
-  { q: "Le devis est-il payant ?", a: "Non, le devis est gratuit et sans engagement. Je me déplace pour prendre les mesures, puis je vous envoie un devis clair et détaillé. Les frais de déplacement y figurent et sont facturés avec l'intervention. Le prix indiqué sur le devis est celui que vous payez." },
+  { q: "Le devis est-il payant ?", a: "Non, le devis est gratuit et sans engagement. Je me déplace pour prendre les mesures, puis je vous envoie un devis clair et détaillé. Le déplacement pour établir le devis est gratuit ; celui du jour de l'intervention figure sur le devis et est facturé avec l'intervention. Le prix indiqué sur le devis est celui que vous payez." },
   { q: "Combien coûte un remplacement de vitrage ?", a: "Le prix dépend de plusieurs éléments : les dimensions et l'épaisseur du verre, le type de vitrage (simple, double vitrage, feuilleté, dépoli, imprimé…), l'accès au chantier et la main d'œuvre nécessaire. Un grand vitrage lourd peut demander deux ou trois poseurs, voire un équipement à ventouses. Un devis gratuit et clair vous est remis avant toute intervention, généralement sous 24h." },
   { q: "Intervenez-vous le week-end ?", a: "Oui, le dépannage fonctionne 7j/7, y compris le week-end et les jours fériés. Les fournisseurs de verre étant fermés le week-end, je sécurise l'ouverture le jour même (plaque OSB) en attendant la commande du vitrage, puis je reviens le poser dès sa réception." },
   { q: "Faites-vous des miroirs sur mesure ?", a: "Bien sûr : miroirs muraux, salle de bain anti-buée, dressing, biseautés, percés. Mesure sur place, fabrication à l'atelier, pose à domicile." },

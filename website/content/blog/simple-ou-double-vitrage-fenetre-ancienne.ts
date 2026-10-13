@@ -41,7 +41,7 @@ const post: Post = {
     },
     { h2: "Comment je vous conseille" },
     {
-      p: "Je viens sur place, je mesure la feuillure et j'examine l'état du cadre. Je vous dis honnêtement ce qui est possible, sans vous pousser vers la solution la plus chère. Le devis est gratuit et sans engagement. Les frais de déplacement sont indiqués sur le devis et facturés avec l'intervention.",
+      p: "Je viens sur place, je mesure la feuillure et j'examine l'état du cadre. Je vous dis honnêtement ce qui est possible, sans vous pousser vers la solution la plus chère. Je me déplace gratuitement pour établir le devis, sans engagement. Le déplacement du jour de l'intervention est indiqué sur le devis et facturé avec l'intervention.",
     },
   ],
 };

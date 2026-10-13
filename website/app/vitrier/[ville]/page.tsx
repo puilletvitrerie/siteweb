@@ -97,7 +97,8 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
             <div style={card}>
               <div style={{ fontWeight: 800, marginBottom: 6 }}>Infos pratiques</div>
               <div style={{ fontSize: 15, color: "var(--color-ink-soft)", lineHeight: 1.6 }}>
-                Devis gratuit et sans engagement<br />
+                Déplacement et devis gratuits, sans engagement<br />
+                Déplacement de l&apos;intervention indiqué sur le devis<br />
                 Lundi au samedi · 7h à 20h<br />
                 Dépannage 7j/7<br />
                 Assuré RC pro et décennale MAAF

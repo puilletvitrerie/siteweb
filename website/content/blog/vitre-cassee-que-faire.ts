@@ -39,7 +39,7 @@ const post: Post = {
     },
     { h2: "Un devis gratuit avant toute intervention" },
     {
-      p: "Le devis est gratuit et sans engagement. Les frais de déplacement sont indiqués sur le devis et facturés avec l'intervention. Le prix indiqué sur le devis est celui que vous payez.",
+      p: "Je me déplace gratuitement pour établir le devis, sans engagement. Le déplacement du jour de l'intervention est indiqué sur le devis et facturé avec l'intervention. Le prix indiqué sur le devis est celui que vous payez.",
     },
   ],
 };
