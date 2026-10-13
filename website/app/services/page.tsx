@@ -245,6 +245,9 @@ export default function ServicesPage() {
               <p className="text-gray-300">
                 Une fois le devis accepté, le remplacement est réalisé sous 24 à 72h selon le vitrage. En attendant, je peux sécuriser l&apos;ouverture le jour même avec une plaque OSB.
               </p>
+              <p className="text-gray-300 mt-3">
+                Vous êtes un particulier ? Si votre assurance habitation comprend la garantie bris de glace, seule la franchise reste généralement à votre charge. Appelez-moi, je vous indique les démarches à faire auprès de votre assurance.
+              </p>
             </div>
           </div>
         </div>

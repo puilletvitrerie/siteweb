@@ -105,6 +105,12 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
               </div>
             </div>
             <div style={card}>
+              <div style={{ fontWeight: 800, marginBottom: 6 }}>Particuliers : pensez à votre assurance</div>
+              <div style={{ fontSize: 15, color: "var(--color-ink-soft)", lineHeight: 1.6 }}>
+                Avec la garantie bris de glace de votre assurance habitation, seule la franchise reste généralement à votre charge. Appelez-moi, je vous indique les démarches.
+              </div>
+            </div>
+            <div style={card}>
               <div style={{ fontWeight: 800, marginBottom: 6 }}>J&apos;interviens aussi à proximité</div>
               <div style={{ fontSize: 15, color: "var(--color-ink-soft)", lineHeight: 1.6 }}>{v.voisines.join(" · ")}</div>
             </div>
