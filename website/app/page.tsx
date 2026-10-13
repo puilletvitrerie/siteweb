@@ -560,30 +560,8 @@ function Testimonials() {
 }
 
 // ─── Zones ───────────────────────────────────────────────────────────────────
-const VILLES = [
-  "Lyon 1er", "Lyon 2e", "Lyon 3e", "Lyon 4e", "Lyon 5e", "Lyon 6e",
-  "Lyon 7e", "Lyon 8e", "Lyon 9e", "Villeurbanne", "Caluire-et-Cuire",
-  "Francheville", "Tassin", "Écully", "Sainte-Foy-lès-Lyon", "Oullins",
-  "Pierre-Bénite", "Champagne-au-Mont-d'Or", "Rillieux-la-Pape",
-  "Vaulx-en-Velin", "Bron", "Vénissieux", "Saint-Fons", "Saint-Priest",
-  "Chassieu", "Décines", "Meyzieu", "Genas", "Jonage", "Pusignan",
-  "Mions", "Corbas", "Saint-Bonnet-de-Mure", "Saint-Laurent-de-Mure",
-  "Pont-de-Chéruy", "Crémieu", "Heyrieux", "Saint-Quentin-Fallavier",
-  "Villefontaine", "L'Isle-d'Abeau", "Bourgoin-Jallieu",
-  "Neuville-sur-Saône", "Trévoux", "Villefranche-sur-Saône", "Montluel",
-  "L'Arbresle", "Craponne", "Vaugneray", "Brignais", "Mornant",
-  "Givors", "Vienne",
-];
 
 function Zones() {
-  const CityTags = () => (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
-      {VILLES.map((v) => (
-        <span key={v} style={{ padding: "7px 13px", borderRadius: 999, background: "#fff", border: `1px solid ${C.line}`, fontSize: 13, color: C.ink }}>{v}</span>
-      ))}
-    </div>
-  );
-
   return (
     <section id="zones" className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bgAlt, borderTop: `1px solid ${C.line}` }}>
       <div className="grid grid-cols-1 md:grid-cols-[5fr_6fr] gap-10 md:gap-16 items-start">
@@ -598,27 +576,14 @@ function Zones() {
           <p style={{ fontSize: "clamp(14px, 1.4vw, 17px)", lineHeight: 1.6, color: C.inkSoft, maxWidth: 440, marginBottom: 20 }}>
             Je me déplace dans un rayon d&rsquo;environ 60 km autour de Lyon, notamment dans tout l&rsquo;Est lyonnais, sans facturer de déplacement. Pour les urgences hors zone, appelez-moi : on trouvera une solution.
           </p>
-          {/* Tags visible on desktop inside the left column */}
-          <div className="hidden md:block">
-            <CityTags />
-          </div>
         </div>
 
-        {/* Right: SVG map */}
+        {/* Right: carte réelle */}
         <div style={{ position: "relative", borderRadius: 20, overflow: "hidden", background: C.ink, aspectRatio: "5/4" }}>
           <ZoneMap />
           <div style={{ position: "absolute", top: 12, left: 56, zIndex: 500, pointerEvents: "none", fontFamily: F.mono, fontSize: 10, color: "#fff", background: "rgba(31,29,27,.85)", padding: "6px 10px", borderRadius: 8, letterSpacing: "0.14em", textTransform: "uppercase" }}>
             Rayon ~60 km · sans frais de déplacement
           </div>
-        </div>
-      </div>
-
-      {/* Tags on mobile — below the map */}
-      <div className="md:hidden mt-5">
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
-          {VILLES.map((v) => (
-            <span key={v} style={{ padding: "7px 12px", borderRadius: 999, background: "#fff", border: `1px solid ${C.line}`, fontSize: 12, color: C.ink }}>{v}</span>
-          ))}
         </div>
       </div>
     </section>
