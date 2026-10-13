@@ -103,6 +103,13 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
                 Assuré RC pro et décennale MAAF
               </div>
             </div>
+            <a href="https://www.instagram.com/puilletvitrerie" target="_blank" rel="noopener noreferrer" style={{ ...card, display: "flex", alignItems: "center", gap: 12, background: "var(--color-ink)", color: "#fff", border: "none" }}>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>
+              <div>
+                <div style={{ fontWeight: 800 }}>Mes chantiers en vidéo</div>
+                <div style={{ fontSize: 14, color: "#d6d1c7" }}>Instagram · @puilletvitrerie</div>
+              </div>
+            </a>
             <div style={card}>
               <div style={{ fontWeight: 800, marginBottom: 6 }}>J&apos;interviens aussi à proximité</div>
               <div style={{ fontSize: 15, color: "var(--color-ink-soft)", lineHeight: 1.6 }}>{v.voisines.join(" · ")}</div>
