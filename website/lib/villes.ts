@@ -9,7 +9,8 @@ export type Ville = {
   publie: boolean;
   intro: string;
   voisines: string[];
-  photo: { src: string; alt: string };
+  photo?: { src: string; alt: string };
+  avantApres?: { avant: string; apres: string; ratio: number; caption: string };
 };
 
 export const VILLES: Ville[] = [
@@ -21,7 +22,12 @@ export const VILLES: Ville[] = [
     intro:
       "J'interviens régulièrement à Meyzieu, comme dans tout l'Est lyonnais, pour remplacer des vitrages cassés chez les particuliers, dans les copropriétés et dans les commerces.",
     voisines: ["Décines-Charpieu", "Jonage", "Genas", "Chassieu", "Pusignan", "Vaulx-en-Velin"],
-    photo: { src: "/assets/services/feuillete-44-2-apres.jpg", alt: "Porte d'immeuble avec vitrage feuilleté 44.2 posé par un vitrier dans l'Est lyonnais" },
+    avantApres: {
+      avant: "/assets/realisations/11-avant.jpg",
+      apres: "/assets/realisations/11-apres.jpg",
+      ratio: 1,
+      caption: "Remplacement d'un grand vitrage fixe de hall d'immeuble",
+    },
   },
 ];
 

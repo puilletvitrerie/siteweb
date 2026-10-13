@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { villesVisibles, SHOW_DRAFTS_VILLES } from "@/lib/villes";
+import BeforeAfterGallery from "@/components/BeforeAfterGallery";
 
 function getVille(slug: string) {
   return villesVisibles().find((v) => v.slug === slug);
@@ -81,8 +82,13 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
             </p>
           </div>
           <div className="grid gap-4">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={v.photo.src} alt={v.photo.alt} className="w-full rounded-2xl" style={{ maxHeight: 460, objectFit: "cover" }} />
+            {v.avantApres && (
+              <BeforeAfterGallery items={[{ before: v.avantApres.avant, after: v.avantApres.apres, ratio: v.avantApres.ratio, caption: v.avantApres.caption }]} />
+            )}
+            {v.photo && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={v.photo.src} alt={v.photo.alt} className="w-full rounded-2xl" style={{ maxHeight: 460, objectFit: "cover" }} />
+            )}
             <div style={card}>
               <div style={{ fontWeight: 800, marginBottom: 6 }}>Infos pratiques</div>
               <div style={{ fontSize: 15, color: "var(--color-ink-soft)", lineHeight: 1.6 }}>
