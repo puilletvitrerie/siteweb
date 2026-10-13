@@ -43,14 +43,14 @@ export const VILLES: Ville[] = [
     cp: "69001 à 69009",
     publie: false,
     intro:
-      "J'interviens dans tous les arrondissements de Lyon pour remplacer des vitrages cassés : portes d'immeuble, fenêtres anciennes, vitrines de commerce, miroirs. Voici quelques chantiers réalisés à Lyon.",
+      "J'interviens dans tous les arrondissements de Lyon pour remplacer des vitrages cassés, sans changer la menuiserie : portes d'immeuble, fenêtres, vitrines de commerce, miroirs. Un simple vitrage est remplacé en moins de 2 heures en urgence ; un vitrage sur mesure (feuilleté, double vitrage, miroir) sous 24 à 72 heures. Voici quelques chantiers réalisés à Lyon.",
     voisines: ["Villeurbanne", "Caluire-et-Cuire", "Vénissieux", "Bron", "Oullins", "Tassin-la-Demi-Lune", "Sainte-Foy-lès-Lyon", "Écully"],
     chantiers: [
       S("vitrine-facade", 757 / 1300, "Lyon 7e : vitrine de commerce, sécurisation en OSB puis pose du nouveau vitrage"),
       R(3, 590 / 1300, "Lyon 7e : vitrage de porte d'immeuble remplacé après vandalisme"),
       R(10, 1100 / 1109, "Lyon 7e : vitrage de porte d'immeuble remplacé"),
       S("miroir-hall", 661 / 1300, "Lyon 7e : miroir remplacé à l'identique dans un hall de copropriété"),
-      R(9, 1091 / 1300, "Lyon 2e : fenêtre ancienne de cage d'escalier, verre imprimé posé à l'identique"),
+      R(9, 1091 / 1300, "Lyon 2e : remplacement du vitrage imprimé d'une fenêtre de cage d'escalier, à l'identique"),
     ],
   },
 ];
