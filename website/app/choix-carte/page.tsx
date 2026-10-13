@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import ZoneMap, { type MapStyle } from "@/components/ZoneMap";
 
 // Page temporaire de comparaison des cartes (à supprimer après le choix).
@@ -12,6 +13,7 @@ const STYLES: [MapStyle, string, string][] = [
 ];
 
 export default function ChoixCarte() {
+  if (process.env.VERCEL_ENV === "production") notFound();
   return (
     <div className="px-5 md:px-14 py-10" style={{ background: "var(--color-bg)" }}>
       <style>{`.zone-ville{background:#fff;border:1px solid #1f1d1b;border-radius:6px;padding:1px 6px;font-size:11px;font-weight:600;box-shadow:none}.zone-ville:before{display:none}`}</style>

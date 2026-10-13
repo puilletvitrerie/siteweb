@@ -13,7 +13,7 @@ Règles de rédaction :
 
 | # | Date | Sujet | État |
 |---|------|-------|------|
-| 1 | 2026-10-13 | Vitre cassée à Lyon : que faire en attendant le vitrier ? | Brouillon prêt |
+| 1 | 2026-10-13 | Vitre cassée à Lyon : que faire en attendant le vitrier ? | Publié |
 | 2 | 2026-10-27 | Simple ou double vitrage : que choisir pour une fenêtre ancienne ? | Brouillon prêt |
 | 3 | 2026-11-10 | Buée entre les vitres d'un double vitrage : pourquoi et que faire ? | Brouillon prêt |
 | 4 | 2026-11-24 | Vitre cassée en copropriété : qui appelle le vitrier, comment ça se passe ? | Brouillon prêt |

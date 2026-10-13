@@ -6,7 +6,7 @@ const post: Post = {
   description:
     "Vitre cassée chez vous ou dans votre immeuble ? Les bons réflexes pour vous protéger, sécuriser l'ouverture et faire remplacer le vitrage rapidement à Lyon.",
   date: "2026-10-13",
-  publie: false,
+  publie: true,
   image: "/assets/realisations/09-avant.jpg",
   imageAlt: "Simple vitrage imprimé cassé sur une fenêtre de cage d'escalier à Lyon",
   body: [

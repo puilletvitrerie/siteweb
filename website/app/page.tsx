@@ -5,7 +5,6 @@ import Link from "next/link";
 import BeforeAfter from "@/components/BeforeAfter";
 import QuoteForm from "@/components/QuoteForm";
 import InstagramVideos from "@/components/InstagramVideos";
-import ZoneMap from "@/components/ZoneMap";
 
 // ─── Design tokens ──────────────────────────────────────────────────────────
 const C = {
@@ -578,10 +577,42 @@ function Zones() {
           </p>
         </div>
 
-        {/* Right: carte réelle */}
+        {/* Right: SVG map */}
         <div style={{ position: "relative", borderRadius: 20, overflow: "hidden", background: C.ink, aspectRatio: "5/4" }}>
-          <ZoneMap />
-          <div style={{ position: "absolute", top: 12, left: 56, zIndex: 500, pointerEvents: "none", fontFamily: F.mono, fontSize: 10, color: "#fff", background: "rgba(31,29,27,.85)", padding: "6px 10px", borderRadius: 8, letterSpacing: "0.14em", textTransform: "uppercase" }}>
+          <svg viewBox="0 0 500 400" style={{ width: "100%", height: "100%", display: "block" }}>
+            <defs>
+              <pattern id="mapGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,.06)" strokeWidth="1" />
+              </pattern>
+            </defs>
+            <rect width="500" height="400" fill="url(#mapGrid)" />
+            {/* Saône et Rhône (tracé simplifié) */}
+            <path d="M 226 0 C 230 70 238 140 238 196" stroke="rgba(120,160,200,.5)" strokeWidth="3" fill="none" />
+            <path d="M 500 120 C 420 125 320 150 262 182 C 246 190 240 205 243 250 C 246 310 236 350 238 400" stroke="rgba(120,160,200,.5)" strokeWidth="3" fill="none" />
+            {/* Cercles : 20, 40 et 60 km (échelle resserrée vers l'extérieur, directions réelles) */}
+            <circle cx="240" cy="200" r="104" fill={C.red} fillOpacity="0.15" stroke={C.red} strokeOpacity="0.5" strokeDasharray="4 4" />
+            <circle cx="240" cy="200" r="147" fill={C.red} fillOpacity="0.06" stroke={C.red} strokeOpacity="0.3" strokeDasharray="4 4" />
+            <circle cx="240" cy="200" r="180" fill={C.red} fillOpacity="0.03" stroke={C.red} strokeOpacity="0.25" strokeDasharray="4 4" />
+            {[[104, "20 km"], [147, "40 km"], [180, "60 km"]].map(([r, t]) => (
+              <text key={t as string} x={240 - (r as number) * 0.707 - 4} y={200 - (r as number) * 0.707 - 4} textAnchor="end" fill="rgba(255,255,255,.4)" fontFamily="JetBrains Mono, monospace" fontSize="9">{t as string}</text>
+            ))}
+            <circle cx="240" cy="200" r="8" fill={C.red} />
+            <circle cx="240" cy="200" r="14" fill="none" stroke={C.red} strokeWidth="2" />
+            <text x="240" y="226" textAnchor="middle" fill="#fff" fontFamily="JetBrains Mono, monospace" fontSize="12" fontWeight="600">LYON</text>
+            {[
+              [201, 85, "Villefranche-sur-Saône", "r"], [244, 116, "Neuville-sur-Saône", "r"], [150, 154, "L'Arbresle", "l"],
+              [189, 223, "Francheville", "d"], [155, 214, "Vaugneray", "l"], [198, 265, "Brignais", "l"],
+              [214, 299, "Givors", "l"], [255, 318, "Vienne", "r"], [288, 183, "Villeurbanne", "u"],
+              [275, 255, "Vénissieux", "r"], [325, 194, "Meyzieu", "r"], [330, 147, "Montluel", "r"],
+              [368, 270, "Bourgoin-Jallieu", "r"],
+            ].map(([x, y, name, side], i) => (
+              <g key={i}>
+                <circle cx={x as number} cy={y as number} r="3" fill="#fff" />
+                <text x={(x as number) + (side === "l" ? -7 : side === "r" ? 7 : 0)} y={(y as number) + (side === "u" ? -8 : side === "d" ? 15 : 4)} textAnchor={side === "l" ? "end" : side === "r" ? "start" : "middle"} fill="rgba(255,255,255,.7)" fontFamily="JetBrains Mono, monospace" fontSize="10">{name as string}</text>
+              </g>
+            ))}
+          </svg>
+          <div style={{ position: "absolute", bottom: 14, left: 14, fontFamily: F.mono, fontSize: 10, color: "rgba(255,255,255,.6)", letterSpacing: "0.14em", textTransform: "uppercase" }}>
             Rayon ~60 km · sans frais de déplacement
           </div>
         </div>
