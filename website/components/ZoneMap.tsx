@@ -55,6 +55,7 @@ export default function ZoneMap() {
           zoomControl: true,
         });
         map = m;
+        (m as unknown as { setView: (c: [number, number], z: number) => void }).setView(LYON, 9);
         L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
           subdomains: "abcd",
@@ -72,7 +73,7 @@ export default function ZoneMap() {
         L.circleMarker(LYON, { radius: 8, color: "#fff", weight: 3, fillColor: ACCENT, fillOpacity: 1 })
           .addTo(m)
           .bindTooltip("Lyon", { permanent: true, direction: "right", offset: [10, 0] });
-        m.fitBounds(zone.getBounds(), { padding: [12, 12] });
+        m.fitBounds(zone.getBounds(), { padding: [12, 12], animate: false });
       })
       .catch(() => {
         if (ref.current) ref.current.textContent = "Carte indisponible : j'interviens dans un rayon d'environ 60 km autour de Lyon.";
