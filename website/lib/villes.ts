@@ -32,7 +32,7 @@ export const VILLES: Ville[] = [
     slug: "meyzieu",
     nom: "Meyzieu",
     cp: "69330",
-    publie: false,
+    publie: true,
     intro:
       "J'interviens régulièrement à Meyzieu, comme dans tout l'Est lyonnais, pour remplacer des vitrages cassés chez les particuliers, dans les copropriétés et dans les commerces.",
     voisines: ["Décines-Charpieu", "Jonage", "Genas", "Chassieu", "Pusignan", "Vaulx-en-Velin"],
@@ -49,7 +49,7 @@ export const VILLES: Ville[] = [
     slug: "lyon",
     nom: "Lyon",
     cp: "69001 à 69009",
-    publie: false,
+    publie: true,
     intro:
       "J'interviens dans tous les arrondissements de Lyon pour remplacer des vitrages cassés, sans changer la menuiserie : portes d'immeuble, fenêtres, vitrines de commerce, miroirs. Un simple vitrage est remplacé en moins de 2 heures en urgence ; un vitrage sur mesure (feuilleté, double vitrage, miroir) sous 24 à 72 heures. Voici quelques chantiers réalisés à Lyon.",
     voisines: ["Villeurbanne", "Caluire-et-Cuire", "Vénissieux", "Bron", "Oullins", "Tassin-la-Demi-Lune", "Sainte-Foy-lès-Lyon", "Écully"],
@@ -65,7 +65,7 @@ export const VILLES: Ville[] = [
     slug: "villeurbanne",
     nom: "Villeurbanne",
     cp: "69100",
-    publie: false,
+    publie: true,
     intro:
       "Juste à côté de Lyon, Villeurbanne fait partie des communes où j'interviens le plus souvent, notamment sur les portes vitrées d'immeuble. Je remplace le vitrage sans toucher à la menuiserie : en moins de 2 heures pour un simple vitrage en urgence, sous 24 à 72 heures pour un vitrage sur mesure.",
     voisines: ["Lyon 3e", "Lyon 6e", "Vaulx-en-Velin", "Bron", "Caluire-et-Cuire", "Décines-Charpieu"],
@@ -78,7 +78,7 @@ export const VILLES: Ville[] = [
     slug: "bourgoin-jallieu",
     nom: "Bourgoin-Jallieu",
     cp: "38300",
-    publie: false,
+    publie: true,
     intro:
       "J'interviens jusqu'à Bourgoin-Jallieu, dans le Nord-Isère. J'y remplace des vitrages de portes de résidence et d'immeubles, notamment en verre feuilleté, en conservant la menuiserie existante.",
     voisines: ["L'Isle-d'Abeau", "Villefontaine", "Saint-Quentin-Fallavier", "Heyrieux", "Crémieu"],
@@ -91,7 +91,7 @@ export const VILLES: Ville[] = [
     slug: "vaulx-en-velin",
     nom: "Vaulx-en-Velin",
     cp: "69120",
-    publie: false,
+    publie: true,
     intro:
       "J'interviens à Vaulx-en-Velin pour les particuliers et les copropriétés. Sur les portes d'immeuble, je remplace les vitrages cassés et je peux remettre aux normes les anciens vitrages en passant au feuilleté 44.2.",
     voisines: ["Villeurbanne", "Décines-Charpieu", "Bron", "Rillieux-la-Pape", "Meyzieu"],
@@ -101,7 +101,7 @@ export const VILLES: Ville[] = [
     slug: "decines-charpieu",
     nom: "Décines-Charpieu",
     cp: "69150",
-    publie: false,
+    publie: true,
     intro:
       "À Décines-Charpieu, j'interviens sur tous types de vitrages, y compris les verres décoratifs des portes anciennes. Je retrouve le même motif (martelé, imprimé) et je remplace le vitrage à l'identique, en respectant la menuiserie en bois.",
     voisines: ["Meyzieu", "Vaulx-en-Velin", "Chassieu", "Genas", "Villeurbanne"],
@@ -111,7 +111,7 @@ export const VILLES: Ville[] = [
     slug: "bron",
     nom: "Bron",
     cp: "69500",
-    publie: false,
+    publie: true,
     intro:
       "J'interviens à Bron chez les particuliers et dans les résidences : vitres cassées, doubles vitrages, portes vitrées, mais aussi garde-corps vitrés de balcon. Le vitrage est remplacé sans changer la structure existante.",
     voisines: ["Lyon 8e", "Vénissieux", "Saint-Priest", "Chassieu", "Villeurbanne"],
@@ -121,7 +121,7 @@ export const VILLES: Ville[] = [
     slug: "rillieux-la-pape",
     nom: "Rillieux-la-Pape",
     cp: "69140",
-    publie: false,
+    publie: true,
     intro:
       "Au nord de Lyon, j'interviens à Rillieux-la-Pape, y compris pour les grands vitrages qui demandent plusieurs poseurs et un équipement à ventouses, comme les vitrages fixes de hall d'immeuble.",
     voisines: ["Caluire-et-Cuire", "Sathonay-Camp", "Vaulx-en-Velin", "Neuville-sur-Saône", "Montluel"],
@@ -131,7 +131,7 @@ export const VILLES: Ville[] = [
     slug: "tassin-la-demi-lune",
     nom: "Tassin-la-Demi-Lune",
     cp: "69160",
-    publie: false,
+    publie: true,
     intro:
       "Tout proche de Francheville, Tassin-la-Demi-Lune fait partie de mon secteur d'intervention quotidien. J'y remplace les vitrages cassés des portes d'immeuble et des fenêtres, sans toucher à la menuiserie.",
     voisines: ["Francheville", "Craponne", "Écully", "Charbonnières-les-Bains", "Lyon 5e", "Lyon 9e"],
@@ -141,7 +141,7 @@ export const VILLES: Ville[] = [
     slug: "montluel",
     nom: "Montluel",
     cp: "01120",
-    publie: false,
+    publie: true,
     intro:
       "J'interviens jusqu'à Montluel, dans l'Ain, à l'est de Lyon. J'y remplace notamment des vitrages de portes de hall d'immeuble, avec prise de mesures sur place et devis gratuit.",
     voisines: ["Dagneux", "La Boisse", "Beynost", "Miribel", "Niévroz"],
@@ -151,7 +151,7 @@ export const VILLES: Ville[] = [
     slug: "saint-genis-les-ollieres",
     nom: "Saint-Genis-les-Ollières",
     cp: "69290",
-    publie: false,
+    publie: true,
     intro:
       "À Saint-Genis-les-Ollières, dans l'ouest lyonnais, je remplace les doubles vitrages cassés ou embués sans changer la fenêtre : la menuiserie reste en place, seul le vitrage est remplacé.",
     voisines: ["Craponne", "Tassin-la-Demi-Lune", "Francheville", "Grézieu-la-Varenne", "Charbonnières-les-Bains"],
@@ -161,7 +161,7 @@ export const VILLES: Ville[] = [
     slug: "craponne",
     nom: "Craponne",
     cp: "69290",
-    publie: false,
+    publie: true,
     intro:
       "J'interviens à Craponne pour les vitrages et les miroirs, y compris les miroirs convexes de sortie de parking ou de résidence, remplacés à l'identique pour retrouver une bonne visibilité.",
     voisines: ["Francheville", "Tassin-la-Demi-Lune", "Saint-Genis-les-Ollières", "Brindas", "Grézieu-la-Varenne"],
@@ -171,7 +171,7 @@ export const VILLES: Ville[] = [
     slug: "francheville",
     nom: "Francheville",
     cp: "69340",
-    publie: false,
+    publie: true,
     intro:
       "Puillet Vitrerie est installée à Francheville : j'y interviens très rapidement. Je remplace tous types de vitrages, y compris sur les fenêtres anciennes en bois, avec une pose au mastic traditionnel.",
     voisines: ["Tassin-la-Demi-Lune", "Craponne", "Sainte-Foy-lès-Lyon", "Chaponost", "Lyon 5e"],
