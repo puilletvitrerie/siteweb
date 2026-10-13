@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ ville: st
   const v = getVille((await params).ville);
   if (!v) return {};
   return {
-    title: `Vitrier à ${v.nom} (${v.cp.slice(0, 5)}) · Remplacement de vitrage et dépannage`,
+    title: `Vitrier à ${v.nom}${v.cp.length === 5 ? ` (${v.cp})` : ""} · Remplacement de vitrage et dépannage`,
     description: `Vitrier miroitier à ${v.nom} : vitre cassée, double vitrage, vitrage feuilleté, porte d'immeuble, vitrine, miroir. Simple vitrage en moins de 2 h, devis gratuit, 7j/7.`,
     alternates: { canonical: `/vitrier/${v.slug}` },
   };
