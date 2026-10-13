@@ -36,6 +36,14 @@ export const VILLES: Ville[] = [
     intro:
       "J'interviens régulièrement à Meyzieu, comme dans tout l'Est lyonnais, pour remplacer des vitrages cassés chez les particuliers, dans les copropriétés et dans les commerces.",
     voisines: ["Décines-Charpieu", "Jonage", "Genas", "Chassieu", "Pusignan", "Vaulx-en-Velin"],
+    chantiers: [
+      {
+        avant: "/assets/villes/meyzieu-avant.jpg",
+        apres: "/assets/villes/meyzieu-apres.jpg",
+        ratio: 1005 / 1300,
+        caption: "Meyzieu : vitrage de porte d'immeuble de 2,50 m × 90 cm remplacé en moins de 24 h",
+      },
+    ],
   },
   {
     slug: "lyon",
