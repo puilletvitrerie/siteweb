@@ -10,7 +10,7 @@ const post: Post = {
   "imageAlt": "Camion de l'artisan vitrier Puillet Vitrerie",
   "body": [
     {
-      "p": "J'interviens dans tout Lyon et sa métropole, et très souvent dans l'Est lyonnais : c'est là que j'ai le plus d'interventions pour des vitrages cassés. Je me déplace dans un rayon d'environ 60 km autour de Lyon, sans facturer de déplacement."
+      "p": "J'interviens dans tout Lyon et sa métropole, et très souvent dans l'Est lyonnais : c'est là que j'ai le plus d'interventions pour des vitrages cassés. J'interviens dans un rayon d'environ 60 km autour de Lyon."
     },
     {
       "h2": "Les communes où j'interviens régulièrement"
@@ -67,7 +67,7 @@ const post: Post = {
       ]
     },
     {
-      "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
+      "p": "Le devis est gratuit et sans engagement. Les frais de déplacement sont indiqués sur le devis et facturés avec l'intervention. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]
 };

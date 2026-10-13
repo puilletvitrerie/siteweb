@@ -72,7 +72,7 @@ export const VILLES: Ville[] = [
     cp: "38300",
     publie: false,
     intro:
-      "Je me déplace jusqu'à Bourgoin-Jallieu, dans le Nord-Isère, sans frais de déplacement. J'y remplace des vitrages de portes de résidence et d'immeubles, notamment en verre feuilleté, en conservant la menuiserie existante.",
+      "J'interviens jusqu'à Bourgoin-Jallieu, dans le Nord-Isère. J'y remplace des vitrages de portes de résidence et d'immeubles, notamment en verre feuilleté, en conservant la menuiserie existante.",
     voisines: ["L'Isle-d'Abeau", "Villefontaine", "Saint-Quentin-Fallavier", "Heyrieux", "Crémieu"],
     chantiers: [
       R(6, 711 / 1300, "Bourgoin-Jallieu : vitrage de porte d'entrée de résidence remplacé"),

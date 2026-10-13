@@ -41,7 +41,7 @@ const post: Post = {
     },
     { h2: "Comment je vous conseille" },
     {
-      p: "Je viens sur place, je mesure la feuillure et j'examine l'état du cadre. Je vous dis honnêtement ce qui est possible, sans vous pousser vers la solution la plus chère. Le déplacement et le devis sont gratuits, dans un rayon d'environ 60 km autour de Lyon.",
+      p: "Je viens sur place, je mesure la feuillure et j'examine l'état du cadre. Je vous dis honnêtement ce qui est possible, sans vous pousser vers la solution la plus chère. Le devis est gratuit et sans engagement. Les frais de déplacement sont indiqués sur le devis et facturés avec l'intervention.",
     },
   ],
 };

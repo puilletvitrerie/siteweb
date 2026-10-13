@@ -39,7 +39,7 @@ const post: Post = {
     },
     { h2: "Un devis gratuit avant toute intervention" },
     {
-      p: "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Le prix indiqué sur le devis est celui que vous payez.",
+      p: "Le devis est gratuit et sans engagement. Les frais de déplacement sont indiqués sur le devis et facturés avec l'intervention. Le prix indiqué sur le devis est celui que vous payez.",
     },
   ],
 };

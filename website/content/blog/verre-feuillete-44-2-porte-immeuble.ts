@@ -47,7 +47,7 @@ const post: Post = {
       "p": "Sur certaines portes anciennes, on trouve encore du verre simple de 6 ou 8 mm. Lors d'un remplacement, je propose de passer au feuilleté 44.2, plus sûr pour les occupants. C'est par exemple ce que j'ai fait récemment sur une porte de hall où un vitrage de 8 mm avait été brisé."
     },
     {
-      "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
+      "p": "Le devis est gratuit et sans engagement. Les frais de déplacement sont indiqués sur le devis et facturés avec l'intervention. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]
 };

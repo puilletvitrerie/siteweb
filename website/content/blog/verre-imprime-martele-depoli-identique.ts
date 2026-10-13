@@ -60,7 +60,7 @@ const post: Post = {
       ]
     },
     {
-      "p": "Le déplacement et le devis sont gratuits et sans engagement, dans un rayon d'environ 60 km autour de Lyon. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
+      "p": "Le devis est gratuit et sans engagement. Les frais de déplacement sont indiqués sur le devis et facturés avec l'intervention. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
     }
   ]
 };

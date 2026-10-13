@@ -90,7 +90,7 @@ const HeroStats = () => (
       paddingTop: 22, borderTop: `1px solid ${C.line}`,
     }}
   >
-    {[["0€", "frais de déplacement"], ["< 2h", "intervention"]].map(([n, l]) => (
+    {[["7j/7", "dépannage"], ["< 2h", "intervention"]].map(([n, l]) => (
       <div key={l}>
         <div style={{ fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 800, letterSpacing: "-0.02em", color: C.ink }}>{n}</div>
         <div style={{ fontSize: 12, color: C.inkSoft, marginTop: 2 }}>{l}</div>
@@ -447,8 +447,8 @@ const ABOUT_FEATURES = [
   },
   {
     t: "Devis gratuit",
-    d: "Déplacement et devis offerts, sans engagement.",
-    detail: "Je me déplace pour prendre les mesures et vous remets un devis clair et détaillé, gratuitement et sans engagement. Vous décidez ensuite en toute tranquillité.",
+    d: "Devis offert, sans engagement.",
+    detail: "Je prends les mesures et vous remets un devis clair et détaillé, gratuitement et sans engagement. Les frais de déplacement y sont indiqués et sont facturés avec l'intervention. Vous décidez ensuite en toute tranquillité.",
   },
   {
     t: "Artisan assuré",
@@ -579,7 +579,7 @@ function Zones() {
             et l&rsquo;Est lyonnais.
           </h2>
           <p style={{ fontSize: "clamp(14px, 1.4vw, 17px)", lineHeight: 1.6, color: C.inkSoft, maxWidth: 440, marginBottom: 20 }}>
-            Je me déplace dans un rayon d&rsquo;environ 60 km autour de Lyon, notamment dans tout l&rsquo;Est lyonnais, sans facturer de déplacement. Pour les urgences hors zone, appelez-moi : on trouvera une solution.
+            J&rsquo;interviens dans un rayon d&rsquo;environ 60 km autour de Lyon, notamment dans tout l&rsquo;Est lyonnais. Pour les urgences hors zone, appelez-moi : on trouvera une solution.
           </p>
         </div>
 
@@ -619,7 +619,7 @@ function Zones() {
             ))}
           </svg>
           <div style={{ position: "absolute", bottom: 14, left: 14, fontFamily: F.mono, fontSize: 10, color: "rgba(255,255,255,.6)", letterSpacing: "0.14em", textTransform: "uppercase" }}>
-            Rayon ~60 km · sans frais de déplacement
+            Rayon ~60 km · devis gratuit
           </div>
         </div>
       </div>
@@ -630,7 +630,7 @@ function Zones() {
 // ─── FAQ ─────────────────────────────────────────────────────────────────────
 const FAQ_ITEMS = [
   { q: "Quels sont vos délais pour un dépannage urgent ?", a: "Pour un simple vitrage cassé, j'interviens en urgence en moins de 2h. Pour le verre feuilleté, le double vitrage et les miroirs, le remplacement est réalisé sous 24 à 72h. En attendant, je peux sécuriser l'ouverture le jour même avec une plaque OSB." },
-  { q: "Le devis est-il payant ?", a: "Non, le devis est gratuit et sans engagement. Je me déplace pour prendre les mesures, puis je vous envoie un devis clair et détaillé. Le prix indiqué sur le devis est celui que vous payez." },
+  { q: "Le devis est-il payant ?", a: "Non, le devis est gratuit et sans engagement. Je me déplace pour prendre les mesures, puis je vous envoie un devis clair et détaillé. Les frais de déplacement y figurent et sont facturés avec l'intervention. Le prix indiqué sur le devis est celui que vous payez." },
   { q: "Combien coûte un remplacement de vitrage ?", a: "Le prix dépend de plusieurs éléments : les dimensions et l'épaisseur du verre, le type de vitrage (simple, double vitrage, feuilleté, dépoli, imprimé…), l'accès au chantier et la main d'œuvre nécessaire. Un grand vitrage lourd peut demander deux ou trois poseurs, voire un équipement à ventouses. Un devis gratuit et clair vous est remis avant toute intervention, généralement sous 24h." },
   { q: "Intervenez-vous le week-end ?", a: "Oui, le dépannage fonctionne 7j/7, y compris le week-end et les jours fériés. Les fournisseurs de verre étant fermés le week-end, je sécurise l'ouverture le jour même (plaque OSB) en attendant la commande du vitrage, puis je reviens le poser dès sa réception." },
   { q: "Faites-vous des miroirs sur mesure ?", a: "Bien sûr : miroirs muraux, salle de bain anti-buée, dressing, biseautés, percés. Mesure sur place, fabrication à l'atelier, pose à domicile." },
