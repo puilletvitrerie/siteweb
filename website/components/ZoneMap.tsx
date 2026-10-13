@@ -39,7 +39,39 @@ function loadLeaflet(): Promise<LeafletLike> {
   return w.__leafletLoading;
 }
 
-export default function ZoneMap() {
+export type MapStyle = "claire" | "sombre" | "satellite" | "villes";
+
+const TILES: Record<MapStyle, { url: string; attribution: string; subdomains?: string }> = {
+  claire: {
+    url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: "abcd",
+  },
+  sombre: {
+    url: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: "abcd",
+  },
+  satellite: {
+    url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    attribution: "Images &copy; Esri",
+  },
+  villes: {
+    url: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: "abcd",
+  },
+};
+
+const VILLES: [string, number, number][] = [
+  ["Villeurbanne", 45.7719, 4.8902], ["Caluire", 45.7953, 4.8467], ["Vénissieux", 45.6975, 4.8867],
+  ["Bron", 45.7386, 4.9131], ["Saint-Priest", 45.6956, 4.9439], ["Meyzieu", 45.7667, 5.0036],
+  ["Genas", 45.7317, 5.0019], ["Décines", 45.7686, 4.9586], ["Francheville", 45.7364, 4.7636],
+  ["Villefranche", 45.99, 4.718], ["Vienne", 45.525, 4.874], ["Bourgoin-Jallieu", 45.5869, 5.2794],
+  ["Pont-de-Chéruy", 45.7536, 5.1739], ["L'Arbresle", 45.836, 4.616], ["Givors", 45.59, 4.769],
+];
+
+export default function ZoneMap({ variant = "claire" }: { variant?: MapStyle }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -56,23 +88,27 @@ export default function ZoneMap() {
         });
         map = m;
         (m as unknown as { setView: (c: [number, number], z: number) => void }).setView(LYON, 9);
-        L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-          subdomains: "abcd",
-          maxZoom: 18,
-        }).addTo(m);
+        const t = TILES[variant];
+        L.tileLayer(t.url, { attribution: t.attribution, subdomains: t.subdomains ?? "abc", maxZoom: 18 }).addTo(m);
         const zone = L.circle(LYON, {
           radius: RAYON_KM * 1000,
           color: ACCENT,
-          weight: 2,
           fillColor: ACCENT,
-          fillOpacity: 0.12,
-          dashArray: "6 6",
+          fillOpacity: variant === "satellite" ? 0.18 : 0.12,
+          weight: variant === "sombre" ? 3 : 2,
+          dashArray: variant === "villes" ? undefined : "6 6",
         });
         zone.addTo(m);
         L.circleMarker(LYON, { radius: 8, color: "#fff", weight: 3, fillColor: ACCENT, fillOpacity: 1 })
           .addTo(m)
           .bindTooltip("Lyon", { permanent: true, direction: "right", offset: [10, 0] });
+        if (variant === "villes") {
+          VILLES.forEach(([nom, la, lo]) =>
+            L.circleMarker([la, lo], { radius: 4, color: "#1f1d1b", weight: 1, fillColor: "#fff", fillOpacity: 1 })
+              .addTo(m)
+              .bindTooltip(nom, { permanent: true, direction: "top", offset: [0, -4], className: "zone-ville" }),
+          );
+        }
         m.fitBounds(zone.getBounds(), { padding: [12, 12], animate: false });
       })
       .catch(() => {
@@ -82,7 +118,7 @@ export default function ZoneMap() {
       cancelled = true;
       map?.remove();
     };
-  }, []);
+  }, [variant]);
 
   return <div ref={ref} style={{ position: "absolute", inset: 0, zIndex: 0 }} aria-label="Carte de la zone d'intervention : rayon de 60 km autour de Lyon" role="img" />;
 }
