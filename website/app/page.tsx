@@ -511,6 +511,7 @@ function About() {
 
 // ─── Témoignages ─────────────────────────────────────────────────────────────
 const GOOGLE_REVIEWS_URL = "https://maps.google.com/?cid=4036198005292784636";
+const GOOGLE_WRITE_REVIEW_URL = "https://g.page/r/CfzbnXyzdAM4EBM/review";
 
 const TESTIMONIALS = [
   { name: "Nawelle C.", loc: "Avis Google · avril 2026", rating: 5, text: "En tant qu’employé en gestion de copropriété, c’est un réel plaisir de travailler avec un prestataire d’un tel professionnalisme ! Sa réactivité est tout simplement impressionnante : demande de devis envoyée à 15h, reçu en 1h ! Devis validé à 9h, vitre changée à 11h !" },
@@ -551,9 +552,14 @@ function Testimonials() {
           </div>
         ))}
       </div>
-      <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 24, fontSize: 14, fontWeight: 600, color: C.ink, borderBottom: `1.5px solid ${C.ink}`, paddingBottom: 2 }}>
+      <div className="flex flex-col sm:flex-row gap-5 sm:items-center" style={{ marginTop: 24 }}>
+      <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 600, color: C.ink, borderBottom: `1.5px solid ${C.ink}`, paddingBottom: 2 }}>
         Voir tous les avis sur Google →
       </a>
+        <a href={GOOGLE_WRITE_REVIEW_URL} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 700, color: "#fff", background: C.red, padding: "10px 18px", borderRadius: 999, alignSelf: "flex-start" }}>
+          Laisser un avis ★
+        </a>
+      </div>
     </section>
   );
 }
