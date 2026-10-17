@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import BeforeAfterGallery from "@/components/BeforeAfterGallery";
 import { getPost, getPublishedPosts, formatDate, SHOW_DRAFTS, type Block } from "@/lib/blog";
 
+// Revérifié toutes les heures : un article validé apparaît tout seul le jour de sa date.
+export const revalidate = 3600;
+
 export function generateStaticParams() {
   return getPublishedPosts().map((p) => ({ slug: p.slug }));
 }

@@ -2,7 +2,8 @@
 // ajouté à la liste POSTS ci-dessous.
 //
 // Sur le site public, un article n'apparaît que si `publie: true` ET que sa date est passée.
-// Pour préparer un article à l'avance : publie: false, puis passer à true après validation.
+// Pour préparer un article à l’avance : publie: false, puis passer à true après validation.
+// Un article validé à date future apparaît tout seul à sa date (pages revérifiées toutes les heures).
 
 import p_bilan_annee_chantiers from "@/content/blog/bilan-annee-chantiers";
 import p_bruit_de_la_rue_vitrage from "@/content/blog/bruit-de-la-rue-vitrage";

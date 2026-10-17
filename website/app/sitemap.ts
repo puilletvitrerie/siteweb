@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { getPublishedPosts } from "@/lib/blog";
 import { villesVisibles } from "@/lib/villes";
 
+// Revérifié toutes les heures : un article validé apparaît tout seul le jour de sa date.
+export const revalidate = 3600;
+
 const BASE = "https://www.puilletvitrerie.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {

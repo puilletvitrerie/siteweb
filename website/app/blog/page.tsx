@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getPublishedPosts, formatDate, SHOW_DRAFTS } from "@/lib/blog";
 
+// Revérifié toutes les heures : un article validé apparaît tout seul le jour de sa date.
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Blog · Conseils de vitrier à Lyon",
   description:

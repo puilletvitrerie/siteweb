@@ -6,7 +6,7 @@ const post: Post = {
   description:
     "Fenêtre ancienne en bois à Lyon : faut-il remettre un simple vitrage ou passer au double vitrage ? Les critères pour bien choisir, expliqués par un artisan vitrier.",
   date: "2026-10-27",
-  publie: false,
+  publie: true,
   image: "/assets/services/mastic-apres.jpg",
   imageAlt: "Fenêtre ancienne en bois avec vitrage neuf posé au mastic traditionnel",
   body: [
