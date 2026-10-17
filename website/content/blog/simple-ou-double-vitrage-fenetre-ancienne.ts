@@ -37,7 +37,7 @@ const post: Post = {
         "La largeur et la profondeur de la feuillure : il faut la place du vitrage, des cales et de la parclose.",
         "La solidité de l'ouvrant et des paumelles : un double vitrage pèse environ deux fois plus lourd qu'un simple vitrage. Un ouvrant trop fin finit par s'affaisser et frotter.",
         "L'état du bois : s'il est abîmé, fendu ou déformé, il ne tiendra pas le poids dans le temps.",
-        "La fixation : un double vitrage se pose avec des cales et une parclose. Le mastic à l'huile traditionnel abîme son joint et fait apparaître de la buée entre les vitres.",
+        "La fixation : un double vitrage se pose avec une parclose, la fenêtre doit le permettre.",
         "La fermeture : la fenêtre doit fermer sans forcer ni frotter.",
       ],
     },
