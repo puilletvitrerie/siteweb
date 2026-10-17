@@ -28,16 +28,25 @@ const post: Post = {
     {
       p: "Dans ces cas, je remplace le verre à l'identique et je le pose au mastic traditionnel, comme à l'origine. La fenêtre retrouve son aspect, sans travaux de menuiserie.",
     },
-    { h2: "Quand le double vitrage vaut le coup" },
+    { h2: "Une bonne feuillure ne suffit pas toujours" },
+    {
+      p: "Même quand la feuillure est assez grande, la menuiserie elle-même peut ne pas convenir. Avant de proposer un double vitrage sur une fenêtre ancienne, je vérifie :",
+    },
     {
       ul: [
-        "La menuiserie est en bon état et sa feuillure permet de loger un vitrage plus épais.",
-        "La pièce est chauffée et vous souffrez du froid, de la condensation ou du bruit de la rue.",
-        "La fenêtre est déjà prévue pour du double vitrage (menuiserie PVC, aluminium ou bois récent).",
+        "La largeur et la profondeur de la feuillure : il faut la place du vitrage, des cales et de la parclose.",
+        "La solidité de l'ouvrant et des paumelles : un double vitrage pèse environ deux fois plus lourd qu'un simple vitrage. Un ouvrant trop fin finit par s'affaisser et frotter.",
+        "L'état du bois : s'il est abîmé, fendu ou déformé, il ne tiendra pas le poids dans le temps.",
+        "La fixation : un double vitrage se pose avec des cales et une parclose. Le mastic à l'huile traditionnel abîme son joint et fait apparaître de la buée entre les vitres.",
+        "La fermeture : la fenêtre doit fermer sans forcer ni frotter.",
       ],
     },
     {
-      p: "Le double vitrage limite les pertes de chaleur et atténue les bruits extérieurs. Sur une fenêtre adaptée, c'est un vrai gain de confort.",
+      p: "Si l'un de ces points ne va pas, je vous le dis franchement : mieux vaut garder un simple vitrage posé à l'identique que fragiliser votre fenêtre.",
+    },
+    { h2: "Quand le double vitrage vaut le coup" },
+    {
+      p: "Sur une menuiserie solide et adaptée, dans une pièce chauffée, le double vitrage limite les pertes de chaleur, la condensation et atténue les bruits extérieurs. C'est alors un vrai gain de confort.",
     },
     { h2: "Comment je vous conseille" },
     {
