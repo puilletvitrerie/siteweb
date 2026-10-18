@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SeoPage from "@/components/SeoPage";
 
 export const metadata: Metadata = {
-  title: "Double vitrage à Lyon · remplacement sans changer la fenêtre",
+  title: "Remplacement de double vitrage à Lyon",
   description:
     "Double vitrage cassé, fissuré ou embué à Lyon : remplacé sur mesure sous 24 à 72h, sans changer la fenêtre. Devis gratuit sur photo. 06 50 44 06 73",
   alternates: { canonical: "/double-vitrage-lyon" },

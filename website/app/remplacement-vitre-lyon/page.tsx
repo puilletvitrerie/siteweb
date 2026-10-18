@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SeoPage from "@/components/SeoPage";
 
 export const metadata: Metadata = {
-  title: "Remplacement de vitre à Lyon · à l'identique, sans changer la fenêtre",
+  title: "Remplacement de vitre à Lyon",
   description:
     "Remplacement de vitre cassée à Lyon : simple vitrage, feuilleté 44.2, imprimé, martelé, vitrine, porte d'immeuble. Sans changer la menuiserie. 06 50 44 06 73",
   alternates: { canonical: "/remplacement-vitre-lyon" },

@@ -3,7 +3,7 @@ import RealisationsSlider from "@/components/RealisationsSlider";
 import InstagramVideos from "@/components/InstagramVideos";
 
 export const metadata: Metadata = {
-  title: "Réalisations · Vitrages remplacés à Lyon, avant / après",
+  title: "Réalisations de vitrier à Lyon, avant / après",
   description:
     "Avant / après de chantiers réels à Lyon et dans la métropole : portes d'immeuble, garde-corps, fenêtres, vitrines. Vidéos de chantier Puillet Vitrerie.",
   alternates: { canonical: "/realisations" },

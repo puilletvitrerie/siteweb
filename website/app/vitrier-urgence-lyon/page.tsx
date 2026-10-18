@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SeoPage from "@/components/SeoPage";
 
 export const metadata: Metadata = {
-  title: "Vitrier en urgence à Lyon · 7j/7, simple vitrage en moins de 2h",
+  title: "Vitrier en urgence à Lyon, 7j/7",
   description:
     "Vitre cassée à Lyon ? Vitrier en urgence 7j/7 : simple vitrage remplacé en moins de 2h, mise en sécurité le jour même. Devis gratuit. 06 50 44 06 73",
   alternates: { canonical: "/vitrier-urgence-lyon" },

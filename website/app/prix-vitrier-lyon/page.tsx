@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SeoPage from "@/components/SeoPage";
 
 export const metadata: Metadata = {
-  title: "Prix d'un vitrier à Lyon · comment est calculé le devis",
+  title: "Prix d'un vitrier à Lyon et devis gratuit",
   description:
     "Prix d'un remplacement de vitre à Lyon : ce qui fait varier le tarif, devis gratuit sur photo, prix du devis = prix final, éviter les arnaques. 06 50 44 06 73",
   alternates: { canonical: "/prix-vitrier-lyon" },
