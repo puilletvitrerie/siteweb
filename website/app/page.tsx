@@ -127,7 +127,7 @@ function HeroText() {
 
 function Hero() {
   return (
-    <section aria-label="Puillet Vitrerie, vitrier à Lyon" style={{ background: C.ink }}>
+    <section aria-label="Puillet Vitrerie, vitrier à Lyon" className="relative" style={{ background: C.ink }}>
       <div className="relative h-[300px] md:h-[680px]" style={{ width: "100%", overflow: "hidden" }}>
         <picture>
           <source media="(max-width: 767px)" srcSet="/assets/camion-paysage-900.webp" type="image/webp" />
@@ -151,16 +151,12 @@ function Hero() {
           <span style={{ width: 8, height: 8, borderRadius: 999, background: C.green }} />
           Disponible aujourd&rsquo;hui
         </div>
-        {/* Texte sur la photo : ordinateur */}
-        <div className="hidden md:flex" style={{ position: "absolute", inset: 0, alignItems: "flex-end" }}>
-          <div style={{ width: "100%", maxWidth: 1200, margin: "0 auto", padding: "0 40px 56px" }}>
-            <HeroText />
-          </div>
-        </div>
       </div>
-      {/* Texte sous la photo : mobile */}
-      <div className="md:hidden" style={{ padding: "28px 20px 36px" }}>
-        <HeroText />
+      {/* Mobile : sous la photo. Ordinateur : posé en bas de la photo. */}
+      <div className="md:absolute md:inset-x-0 md:bottom-0">
+        <div className="px-5 pt-7 pb-9 md:px-10 md:pt-0 md:pb-14" style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <HeroText />
+        </div>
       </div>
     </section>
   );

@@ -49,9 +49,9 @@ export default function Footer() {
           {/* Phone CTA visible on mobile */}
           <a
             href="tel:+33650440673"
-            className="md:hidden"
+            className="inline-flex md:hidden"
             style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
+              alignItems: "center", gap: 8,
               marginTop: 20, background: RED, color: "#fff",
               padding: "12px 20px", borderRadius: 999,
               fontWeight: 700, fontSize: 14,
