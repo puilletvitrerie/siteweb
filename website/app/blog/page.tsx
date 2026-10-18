@@ -18,7 +18,7 @@ export default function BlogPage() {
   return (
     <div style={{ background: "var(--color-bg)", color: "var(--color-ink)" }} className="px-5 md:px-14 py-14">
       <div className="max-w-4xl mx-auto">
-        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-red)" }}>
+        <div style={{ fontFamily: "var(--font-manrope), system-ui, sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-red)" }}>
           Blog
         </div>
         <h1 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 800, letterSpacing: "-0.025em", lineHeight: 1.05, margin: "12px 0 14px" }}>

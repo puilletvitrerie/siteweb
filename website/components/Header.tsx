@@ -15,12 +15,12 @@ export default function Header() {
 
   const navLinks = [
     { href: "/services", label: "Services" },
-    { href: "/#realisations", label: "Réalisations" },
-    { href: "/#temoignages", label: "Avis" },
+    { href: "/realisations", label: "Réalisations" },
+    { href: "/#avis", label: "Avis" },
     { href: "/a-propos", label: "À propos" },
     { href: "/blog", label: "Blog" },
     { href: "/#zones", label: "Zones" },
-    { href: "/#faq", label: "FAQ" },
+    { href: "/faq", label: "FAQ" },
   ];
 
   return (
@@ -30,7 +30,8 @@ export default function Header() {
         style={{
           background: INK,
           color: "#fff",
-          fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace",
+          fontFamily: "var(--font-manrope), system-ui, sans-serif",
+          fontWeight: 700,
           fontSize: 12,
           letterSpacing: "0.14em",
           textTransform: "uppercase",
@@ -52,14 +53,14 @@ export default function Header() {
             }}
           />
           {/* Short version on mobile, full on sm+ */}
-          <span className="sm:hidden">Disponible · &lt; 2h Lyon</span>
-          <span className="hidden sm:inline">Dépannage 7j/7 · Intervention &lt; 2h sur Lyon</span>
+          <span className="sm:hidden">Dépannage 7j/7 · sous 24h</span>
+          <span className="hidden sm:inline">Dépannage 7j/7 · Intervention sous 24h · urgence &lt; 2h sur Lyon</span>
         </span>
         <span
           style={{ color: "#bdb6a8" }}
           className="hidden sm:block"
         >
-          Devis gratuit · Travail soigné
+          Devis gratuit · travail soigné
         </span>
       </div>
 
@@ -75,7 +76,7 @@ export default function Header() {
         }}
       >
         {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "baseline", gap: 14 }}>
+        <Link href="/" style={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <div
             style={{
               fontFamily: "var(--font-manrope), system-ui, sans-serif",
@@ -89,14 +90,12 @@ export default function Header() {
           </div>
           <div
             style={{
-              fontFamily: "var(--font-instrument-serif), Georgia, serif",
-              fontStyle: "italic",
+              fontFamily: "var(--font-manrope), system-ui, sans-serif",
               color: INK_SOFT,
-              fontSize: 16,
+              fontSize: 13,
             }}
-            className="hidden lg:block"
           >
-            artisan vitrier · Lyon
+            artisan vitrier · Lyon &amp; métropole
           </div>
         </Link>
 
@@ -119,7 +118,7 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href="tel:0650440673"
+            href="tel:+33650440673"
             style={{
               background: RED,
               color: "#fff",
@@ -139,7 +138,29 @@ export default function Header() {
           </a>
         </nav>
 
-        {/* Mobile menu button */}
+        {/* Mobile: call button + menu button */}
+        <div className="flex lg:hidden" style={{ alignItems: "center", gap: 6 }}>
+        <a
+          href="tel:+33650440673"
+          aria-label="Appeler le 06 50 44 06 73"
+          style={{
+            background: RED,
+            color: "#fff",
+            minHeight: 44,
+            padding: "0 16px",
+            borderRadius: 999,
+            fontWeight: 700,
+            fontSize: 14,
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z" />
+          </svg>
+          Appeler
+        </a>
         <button
           className="lg:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -149,7 +170,7 @@ export default function Header() {
             cursor: "pointer",
             padding: 8,
           }}
-          aria-label="Toggle menu"
+          aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
         >
           {mobileMenuOpen ? (
             <X size={24} color={INK} />
@@ -157,6 +178,7 @@ export default function Header() {
             <Menu size={24} color={INK} />
           )}
         </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -180,7 +202,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="tel:0650440673"
+              href="tel:+33650440673"
               style={{
                 background: RED,
                 color: "#fff",

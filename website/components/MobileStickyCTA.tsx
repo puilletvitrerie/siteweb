@@ -28,9 +28,10 @@ export default function MobileStickyCTA() {
         }}
       >
         <a
-          href="tel:0650440673"
+          href="tel:+33650440673"
           style={{
-            flex: 1,
+            flex: 2,
+            minHeight: 48,
             background: RED,
             color: "#fff",
             padding: "14px 18px",
@@ -49,20 +50,27 @@ export default function MobileStickyCTA() {
           Appeler · 06 50 44 06 73
         </a>
         <a
-          href="/contact"
+          href="https://wa.me/33650440673"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Envoyer une photo de ma vitre sur WhatsApp"
           style={{
-            background: "rgba(255,255,255,.12)",
-            color: "#fff",
-            padding: "14px 20px",
+            flex: 1,
+            minHeight: 48,
+            background: "#fff",
+            color: "#1f1d1b",
+            padding: "14px 12px",
             borderRadius: 999,
-            fontWeight: 600,
+            fontWeight: 700,
             fontSize: 14,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            gap: 6,
           }}
         >
-          Devis
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx="12" cy="13" r="4" /></svg>
+          Photo
         </a>
       </div>
     </>

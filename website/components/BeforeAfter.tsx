@@ -128,7 +128,7 @@ export default function BeforeAfter({
           padding: "6px 12px",
           fontSize: 12,
           letterSpacing: "0.12em",
-          fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace",
+          fontFamily: "var(--font-manrope), system-ui, sans-serif", fontWeight: 700,
           textTransform: "uppercase",
           borderRadius: 0,
         }}
@@ -145,7 +145,7 @@ export default function BeforeAfter({
           padding: "6px 12px",
           fontSize: 12,
           letterSpacing: "0.12em",
-          fontFamily: "var(--font-jetbrains-mono), ui-monospace, monospace",
+          fontFamily: "var(--font-manrope), system-ui, sans-serif", fontWeight: 700,
           textTransform: "uppercase",
           borderRadius: 0,
         }}

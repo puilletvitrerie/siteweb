@@ -18,11 +18,11 @@ export default function Footer() {
       title: "Société",
       items: [
         { label: "À propos", href: "/a-propos" },
-        { label: "Réalisations", href: "/#realisations" },
+        { label: "Réalisations", href: "/realisations" },
         { label: "Blog", href: "/blog" },
-        { label: "Témoignages", href: "/#temoignages" },
+        { label: "Avis clients", href: "/#avis" },
         { label: "Zones d'intervention", href: "/#zones" },
-        { label: "FAQ", href: "/#faq" },
+        { label: "FAQ", href: "/faq" },
       ],
     },
   ];
@@ -48,7 +48,7 @@ export default function Footer() {
           </p>
           {/* Phone CTA visible on mobile */}
           <a
-            href="tel:0650440673"
+            href="tel:+33650440673"
             className="md:hidden"
             style={{
               display: "inline-flex", alignItems: "center", gap: 8,
@@ -93,7 +93,7 @@ export default function Footer() {
             </div>
             <div style={{ display: "grid", gap: 11, fontSize: 14 }}>
               {[
-                { label: "06 50 44 06 73", href: "tel:0650440673" },
+                { label: "06 50 44 06 73", href: "tel:+33650440673" },
                 { label: "puilletvitrerie@gmail.com", href: "mailto:puilletvitrerie@gmail.com" },
                 { label: "Lyon & métropole", href: "/#zones" },
                 { label: "Devis gratuit", href: "/contact" },
@@ -118,8 +118,10 @@ export default function Footer() {
           }}
           className="md:flex-row md:justify-between"
         >
-          <div>© 2026 Puillet Vitrerie · SIRET 995 238 169 00016</div>
-          <div>Mentions légales · Politique de confidentialité</div>
+          <div>Puillet Vitrerie · Lyon &amp; métropole (60 km) · Lun–Sam 7h–20h · urgences 7j/7 · SIRET 995 238 169 00016</div>
+          <Link href="/mentions-legales" style={{ color: "#a8a39a", textDecoration: "underline" }} className="hover:text-white">
+            Mentions légales
+          </Link>
         </div>
       </div>
     </footer>

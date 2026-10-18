@@ -1,766 +1,303 @@
-"use client";
-
-import { useState } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
-import BeforeAfter from "@/components/BeforeAfter";
-import QuoteForm from "@/components/QuoteForm";
+import VideoPresentation from "@/components/VideoPresentation";
 import { VILLES } from "@/lib/villes";
-import InstagramVideos from "@/components/InstagramVideos";
+
+export const metadata: Metadata = {
+  title: { absolute: "Vitrier à Lyon · Intervention sous 24h | Puillet Vitrerie" },
+  description:
+    "Vitrier à Lyon et métropole : intervention sous 24h, urgence simple vitrage en moins de 2h. Devis gratuit, prix du devis = prix final. 06 50 44 06 73",
+  alternates: { canonical: "/" },
+};
 
 // ─── Design tokens ──────────────────────────────────────────────────────────
 const C = {
-  bg: "#f6f3ec",
-  bgAlt: "#efeae0",
-  card: "#ffffff",
-  ink: "#1f1d1b",
-  inkSoft: "#5a5550",
-  line: "#e3ddd1",
-  red: "#3B8FD4",
+  bg: "#F6F3EC",
+  bgAlt: "#EFEAE0",
+  card: "#FFFFFF",
+  line: "#E3DDD1",
+  ink: "#1F1D1B",
+  inkSoft: "#5A5550",
+  muted: "#A8A39A",
+  blue: "#3B8FD4",
+  blueDark: "#2B6FA8",
+  blueLight: "#7DB9EA",
+  green: "#34C759",
 } as const;
 
 const F = {
   sans: "var(--font-manrope), system-ui, sans-serif",
   serif: "var(--font-instrument-serif), Georgia, serif",
-  mono: "var(--font-jetbrains-mono), ui-monospace, monospace",
 } as const;
 
+const TEL = "tel:+33650440673";
+const WHATSAPP = "https://wa.me/33650440673";
+const GOOGLE_REVIEWS_URL = "https://maps.google.com/?cid=4036198005292784636";
+
 // ─── Shared ──────────────────────────────────────────────────────────────────
-function MonoLabel({ children, color = C.red }: { children: React.ReactNode; color?: string }) {
+function Label({ children, color = C.blueDark }: { children: React.ReactNode; color?: string }) {
   return (
-    <div
-      style={{
-        fontFamily: F.mono,
-        fontSize: 11,
-        letterSpacing: "0.18em",
-        textTransform: "uppercase",
-        color,
-        display: "inline-flex",
-        alignItems: "center",
-        gap: 8,
-      }}
-    >
-      <span style={{ width: 14, height: 1, background: color, display: "inline-block" }} />
-      {children}
+    <div style={{ fontFamily: F.sans, fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color }}>
+      — {children}
     </div>
   );
 }
 
+function Serif({ children, color = C.blueDark }: { children: React.ReactNode; color?: string }) {
+  return <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400, color, letterSpacing: "-0.01em" }}>{children}</span>;
+}
+
+const h2Style: React.CSSProperties = {
+  fontFamily: F.sans,
+  fontWeight: 800,
+  fontSize: "clamp(30px, 4.5vw, 56px)",
+  letterSpacing: "-0.03em",
+  lineHeight: 1.05,
+  margin: "14px 0 16px",
+};
+
 const PhoneIcon = ({ size = 18 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z" />
   </svg>
 );
 
-// ─── Hero ────────────────────────────────────────────────────────────────────
-// Mobile order : label → h1 → p → photo → CTAs → stats
-// Desktop order: [label + h1 + p + CTAs + stats] | [photo]
-// Strategy: CTAs & stats are duplicated — one set inside the desktop left
-// column (hidden on mobile), one set after the grid (hidden on desktop).
+const CameraIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+    <circle cx="12" cy="13" r="4" />
+  </svg>
+);
 
-const HeroCTAs = () => (
-  <div className="flex flex-col sm:flex-row gap-3">
-    <a
-      href="tel:0650440673"
-      style={{
-        background: C.red, color: "#fff", padding: "16px 26px", borderRadius: 999,
-        fontWeight: 700, fontSize: 16, display: "flex", alignItems: "center",
-        justifyContent: "center", gap: 10,
-        boxShadow: "0 6px 24px rgba(59,143,212,.28)",
-      }}
-    >
+const pill: React.CSSProperties = {
+  minHeight: 56,
+  padding: "0 28px",
+  borderRadius: 999,
+  fontFamily: F.sans,
+  fontWeight: 700,
+  fontSize: 16,
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 10,
+};
+
+function CallButton({ label = "Appeler · 06 50 44 06 73" }: { label?: string }) {
+  return (
+    <a href={TEL} style={{ ...pill, background: C.blue, color: "#fff", boxShadow: "0 8px 24px rgba(59,143,212,.35)" }}>
       <PhoneIcon />
-      Appeler · 06 50 44 06 73
+      {label}
     </a>
-    <Link
-      href="/contact"
-      style={{
-        background: "transparent", color: C.ink, border: `1.5px solid ${C.ink}`,
-        padding: "14px 24px", borderRadius: 999, fontWeight: 600, fontSize: 16,
-        display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-      }}
-    >
-      Demander un devis →
-    </Link>
-  </div>
-);
+  );
+}
 
-const HeroStats = () => (
-  <div
-    style={{
-      display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12,
-      paddingTop: 22, borderTop: `1px solid ${C.line}`,
-    }}
-  >
-    {[["4,9 ★", "29 avis Google", "#temoignages"], ["0€", "déplacement pour le devis", ""], ["< 2h", "intervention", ""]].map(([n, l, href]) => (
-      <a key={l} href={href || undefined} style={{ display: "block", color: "inherit" }}>
-        <div style={{ fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: 800, letterSpacing: "-0.02em", color: C.ink }}>{n}</div>
-        <div style={{ fontSize: 12, color: C.inkSoft, marginTop: 2 }}>{l}</div>
-      </a>
-    ))}
-  </div>
-);
+// ─── 3. Bannière ─────────────────────────────────────────────────────────────
+function HeroText() {
+  return (
+    <>
+      <Label color="#fff">Vitrerie · Miroiterie · Lyon &amp; alentours</Label>
+      <h1
+        style={{
+          fontFamily: F.sans,
+          fontWeight: 800,
+          fontSize: "clamp(44px, 7vw, 88px)",
+          letterSpacing: "-0.03em",
+          lineHeight: 1.02,
+          margin: "16px 0 18px",
+          color: "#fff",
+        }}
+      >
+        Vitre cassée ?
+        <br />
+        <Serif color={C.blueLight}>Intervention sous 24h.</Serif>
+      </h1>
+      <p style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.55, color: "rgba(255,255,255,.88)", maxWidth: 560, margin: "0 0 26px" }}>
+        Intervention en moins de 24h, en moins de 2h pour une urgence simple vitrage. Devis gratuit, et le prix du devis est le prix final.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-3">
+        <CallButton />
+        <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" style={{ ...pill, background: "#fff", color: C.ink }}>
+          <CameraIcon />
+          Envoyer une photo de ma vitre
+        </a>
+      </div>
+    </>
+  );
+}
 
 function Hero() {
   return (
-    <section className="px-5 md:px-14" style={{ paddingTop: 40, paddingBottom: 52, background: C.bg }}>
-      <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-
-        {/* LEFT COL (desktop) / top text block (mobile) */}
-        <div>
-          <MonoLabel>Vitrerie · Miroiterie · Lyon &amp; alentours</MonoLabel>
-          <h1
-            style={{
-              fontFamily: F.sans, fontWeight: 800,
-              fontSize: "clamp(40px, 6vw, 78px)", lineHeight: 0.98,
-              letterSpacing: "-0.025em", margin: "18px 0 16px", color: C.ink,
-            }}
-          >
-            La vitre cassée ce matin,
-            <br />
-            <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400, color: C.red }}>
-              réparée avant ce soir.
-            </span>
-          </h1>
-          <p style={{ fontSize: "clamp(15px, 1.5vw, 19px)", lineHeight: 1.55, color: C.inkSoft, maxWidth: 520, margin: "0 0 28px" }}>
-            Je suis Léo Puillet, vitrier indépendant à Lyon. Remplacement de
-            vitrages, doubles vitrages, miroirs sur mesure, portes vitrées, chez
-            les particuliers comme dans les copropriétés. Devis clair,
-            intervention rapide, travail propre.
-          </p>
-
-          {/* CTAs + stats — desktop only inside the left column */}
-          <div className="hidden md:flex flex-col gap-7">
-            <HeroCTAs />
-            <HeroStats />
-          </div>
+    <section aria-label="Puillet Vitrerie, vitrier à Lyon" style={{ background: C.ink }}>
+      <div className="relative h-[300px] md:h-[680px]" style={{ width: "100%", overflow: "hidden" }}>
+        <picture>
+          <source media="(max-width: 767px)" srcSet="/assets/camion-paysage-900.webp" type="image/webp" />
+          <source srcSet="/assets/camion-paysage.webp" type="image/webp" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/camion-paysage.jpeg"
+            alt="Camion de Puillet Vitrerie, vitrier à Lyon"
+            fetchPriority="high"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 55%" }}
+          />
+        </picture>
+        <div
+          aria-hidden
+          className="hidden md:block"
+          style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(20,18,16,.88) 0%, rgba(20,18,16,.55) 45%, rgba(20,18,16,.25) 100%)" }}
+        />
+        <div
+          style={{ position: "absolute", top: 20, left: 20, display: "flex", alignItems: "center", gap: 8, background: "rgba(15,15,15,0.78)", color: "#fff", borderRadius: 999, padding: "9px 14px", fontSize: 13, fontWeight: 700 }}
+        >
+          <span style={{ width: 8, height: 8, borderRadius: 999, background: C.green }} />
+          Disponible aujourd&rsquo;hui
         </div>
-
-        {/* RIGHT COL (desktop) / second block (mobile) */}
-        <div style={{ position: "relative" }}>
-          <div
-            style={{
-              borderRadius: 20, overflow: "hidden",
-              boxShadow: "0 30px 80px -20px rgba(31,29,27,.4)",
-              aspectRatio: "4 / 5",
-            }}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              loading="lazy"
-              src="/assets/artisan-camion.jpeg"
-              alt="Romain Puillet, vitrier"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </div>
-
-          {/* Floating quote card — responsive position via CSS class */}
-          <div
-            className="hero-quote-card"
-            style={{
-              position: "absolute", background: "#fff",
-              padding: "14px 16px", borderRadius: 14,
-              boxShadow: "0 14px 30px -8px rgba(31,29,27,.25)",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 7 }}>
-              <div
-                style={{
-                  width: 36, height: 36, borderRadius: 999, background: C.red,
-                  color: "#fff", display: "flex", alignItems: "center",
-                  justifyContent: "center", fontWeight: 800, fontSize: 12, flexShrink: 0,
-                }}
-              >
-                PV
-              </div>
-              <div>
-                <div style={{ fontWeight: 700, fontSize: 13 }}>Léo Puillet</div>
-                <div style={{ fontSize: 11, color: C.inkSoft }}>Vitrier · Fondateur</div>
-              </div>
-            </div>
-            <div style={{ fontFamily: F.serif, fontStyle: "italic", fontSize: 14, lineHeight: 1.35, color: C.ink }}>
-              « Un coup de fil et je suis sur place. »
-            </div>
-          </div>
-
-          {/* Available badge — responsive position via CSS class */}
-          <div
-            className="hero-badge"
-            style={{
-              position: "absolute", background: C.ink, color: "#fff",
-              borderRadius: 999, padding: "9px 14px",
-              display: "flex", alignItems: "center", gap: 7,
-              fontSize: 12, fontWeight: 600,
-            }}
-          >
-            <span style={{ width: 7, height: 7, borderRadius: 999, background: "#34c759" }} />
-            Disponible aujourd&rsquo;hui
+        {/* Texte sur la photo : ordinateur */}
+        <div className="hidden md:flex" style={{ position: "absolute", inset: 0, alignItems: "flex-end" }}>
+          <div style={{ width: "100%", maxWidth: 1200, margin: "0 auto", padding: "0 40px 56px" }}>
+            <HeroText />
           </div>
         </div>
       </div>
-
-      {/* CTAs + stats — mobile only, rendered AFTER the photo */}
-      <div className="flex flex-col gap-6 mt-6 md:hidden">
-        <HeroCTAs />
-        <HeroStats />
+      {/* Texte sous la photo : mobile */}
+      <div className="md:hidden" style={{ padding: "28px 20px 36px" }}>
+        <HeroText />
       </div>
     </section>
   );
 }
 
-// ─── Services ────────────────────────────────────────────────────────────────
-const SERVICES = [
-  { n: "01", t: "Remplacement de vitrage", d: "Vitrage simple recoupé et posé le jour même pour les urgences. Feuilleté et double vitrage sur mesure sous 24 à 72h.", tag: "le + demandé" },
-  { n: "02", t: "Vitrage feuilleté & sécurité", d: "Anti-effraction, retardateur d'effraction certifié 44.2, 33.2, SP10 et SP10A.", tag: "sécurité" },
-  { n: "03", t: "Double vitrage isolant", d: "Argon, faible émissivité : confort thermique et facture d'énergie qui baisse.", tag: "isolation" },
-  { n: "04", t: "Miroiterie sur mesure", d: "Miroirs salle de bain, dressing, mural, biseauté, anti-buée, coupés à vos cotes.", tag: "sur mesure" },
-  { n: "05", t: "Portes d'entrée vitrées", d: "Réparation, pose neuve, vitrage de porte d'immeuble et copropriété.", tag: "copros" },
-  { n: "06", t: "Dépannage 7j/7", d: "Vitre cassée, fenêtre fracturée : sécurisation immédiate puis remplacement.", tag: "24/7" },
+// ─── 4. Vidéo de présentation ────────────────────────────────────────────────
+function Video() {
+  return (
+    <section className="px-5 md:px-10" style={{ background: C.bgAlt, paddingTop: 64, paddingBottom: 64 }}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center" style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div>
+          <Label>Qui vient chez vous</Label>
+          <h2 style={h2Style}>
+            Léo Puillet,
+            <br />
+            <Serif>votre vitrier, en 1 minute.</Serif>
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.6, color: C.inkSoft, maxWidth: 480, margin: "0 0 16px" }}>
+            Des interventions filmées, comment se passe la prise en charge par votre assurance, et son parcours d&rsquo;artisan indépendant.
+          </p>
+          <p style={{ fontSize: 14, fontWeight: 600, color: C.inkSoft, margin: 0 }}>RC Pro &amp; décennale MAAF · Vitrage sécurité SP10 / 44.2</p>
+        </div>
+        <VideoPresentation poster="/assets/camion-paysage-900.webp" title="Léo Puillet, votre vitrier à Lyon" />
+      </div>
+    </section>
+  );
+}
+
+// ─── 5. Avis Google ──────────────────────────────────────────────────────────
+const AVIS = [
+  { text: "Sa réactivité est tout simplement impressionnante : demande de devis envoyée à 15h, reçu en 1h !", name: "Nawelle C.", date: "avril 2026" },
+  { text: "Service impeccable ! Intervention ultra rapide et travail très soigné.", name: "Florian R.", date: "avril 2026" },
+  { text: "Nous sommes très satisfaits du travail réalisé par cet artisan.", name: "Anna M.", date: "juillet 2026" },
 ];
 
-function Services() {
+function Avis() {
   return (
-    <section
-      className="px-5 md:px-14"
-      style={{ paddingTop: 52, paddingBottom: 52, background: C.bgAlt, borderTop: `1px solid ${C.line}`, borderBottom: `1px solid ${C.line}` }}
-    >
-      <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-10">
-        <div>
-          <MonoLabel>Services</MonoLabel>
-          <h2
-            style={{
-              fontSize: "clamp(28px, 4.5vw, 56px)",
-              lineHeight: 1.02,
-              letterSpacing: "-0.025em",
-              margin: "14px 0 0",
-              fontWeight: 800,
-              color: C.ink,
-            }}
+    <section id="avis" className="px-5 md:px-10" style={{ background: C.bg, paddingTop: 64, paddingBottom: 64 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4" style={{ marginBottom: 28 }}>
+          <div>
+            <Label>Avis Google</Label>
+            <h2 style={{ ...h2Style, marginBottom: 0 }}>
+              4,9/5 <Serif>sur 29 avis.</Serif>
+            </h2>
+          </div>
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-flex", alignItems: "center", minHeight: 44, fontSize: 15, fontWeight: 700, color: C.ink, textDecoration: "underline", textUnderlineOffset: 4 }}
           >
-            Tout ce qui touche au verre,
-            <br />
-            <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>chez vous, par un seul artisan.</span>
-          </h2>
+            Voir tous les avis sur Google →
+          </a>
         </div>
-        <div style={{ fontSize: 14, color: C.inkSoft, maxWidth: 280 }} className="hidden md:block">
-          Particuliers, syndics de copropriété, agences immobilières.
-        </div>
-      </div>
-
-      {/* 1-col on mobile, 2-col sm, 3-col lg */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {SERVICES.map((s) => (
-          <div
-            key={s.n}
-            style={{
-              background: C.card,
-              borderRadius: 16,
-              padding: "20px 18px",
-              border: `1px solid ${C.line}`,
-              display: "flex",
-              flexDirection: "column",
-              gap: 10,
-              minHeight: 200,
-            }}
-          >
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <div style={{ fontFamily: F.mono, fontSize: 12, color: C.red, letterSpacing: "0.1em" }}>{s.n}</div>
-              <div
-                style={{
-                  fontFamily: F.mono,
-                  fontSize: 10,
-                  padding: "3px 9px",
-                  borderRadius: 999,
-                  background: C.bg,
-                  color: C.inkSoft,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                {s.tag}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {AVIS.map((a) => (
+            <figure key={a.name} style={{ margin: 0, background: C.card, border: `1px solid ${C.line}`, borderRadius: 18, padding: "24px 22px", display: "flex", flexDirection: "column", gap: 14 }}>
+              <div style={{ display: "flex", gap: 2, color: C.blue }} aria-label="5 étoiles sur 5" role="img">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg key={i} width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                    <path d="M12 2l2.9 6.9L22 10l-5.5 4.8L18 22l-6-3.7L6 22l1.5-7.2L2 10l7.1-1.1z" />
+                  </svg>
+                ))}
               </div>
-            </div>
-            <div style={{ fontSize: "clamp(16px, 1.8vw, 22px)", fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.015em", color: C.ink }}>{s.t}</div>
-            <div style={{ fontSize: 14, color: C.inkSoft, lineHeight: 1.5 }}>{s.d}</div>
-            <Link
-              href="/services"
-              style={{
-                marginTop: "auto",
-                fontSize: 13,
-                fontWeight: 600,
-                color: C.ink,
-                display: "flex",
-                alignItems: "center",
-                gap: 5,
-              }}
-            >
-              En savoir plus
-              <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke={C.ink} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-// ─── Réalisations ────────────────────────────────────────────────────────────
-const REALISATIONS = [
-  { n: "06", title: "Porte d'entrée de résidence", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 711 / 1300 },
-  { n: "01", title: "Garde-corps vitré de balcon", meta: "Remplacement du panneau en verre opale", tag: "Copropriété", ratio: 1100 / 852 },
-  { n: "02", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 708 / 1300 },
-  { n: "03", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage après vandalisme", tag: "Dépannage", ratio: 590 / 1300 },
-  { n: "04", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 890 / 1300 },
-  { n: "05", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 609 / 1300 },
-  { n: "07", title: "Porte vitrée de hall", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 874 / 1300 },
-  { n: "08", title: "Fenêtre PVC", meta: "Remplacement du vitrage", tag: "Particulier", ratio: 1100 / 1099 },
-  { n: "09", title: "Fenêtre ancienne de cage d'escalier", meta: "Vitrage imprimé posé à l'identique", tag: "Copropriété", ratio: 1091 / 1300 },
-  { n: "10", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 1100 / 1109 },
-  { n: "11", title: "Vitrine de hall d'immeuble", meta: "Remplacement du grand vitrage fixe", tag: "Copropriété", ratio: 1 },
-].map((r) => ({ ...r, before: `/assets/realisations/${r.n}-avant.jpg`, after: `/assets/realisations/${r.n}-apres.jpg` }));
-
-function Realisations() {
-  const [idx, setIdx] = useState(0);
-  const cur = REALISATIONS[idx];
-
-  const prev = () => setIdx((idx - 1 + REALISATIONS.length) % REALISATIONS.length);
-  const next = () => setIdx((idx + 1) % REALISATIONS.length);
-
-  return (
-    <section id="realisations" className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bg }}>
-      {/* Heading row */}
-      <div className="flex justify-between items-end mb-6 gap-4">
-        <div>
-          <MonoLabel>Réalisations récentes</MonoLabel>
-          <h2
-            style={{
-              fontSize: "clamp(26px, 4vw, 56px)",
-              lineHeight: 1.02,
-              letterSpacing: "-0.025em",
-              margin: "14px 0 0",
-              fontWeight: 800,
-              color: C.ink,
-            }}
-          >
-            Glissez pour voir{" "}
-            <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>la différence</span>.
-          </h2>
-        </div>
-        {/* Arrows — desktop only (on mobile they live below) */}
-        <div className="hidden md:flex gap-2 flex-shrink-0">
-          <button onClick={prev} style={{ width: 48, height: 48, borderRadius: 999, border: `1.5px solid ${C.ink}`, background: "transparent", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }} aria-label="Précédent">
-            <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke={C.ink} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </button>
-          <button onClick={next} style={{ width: 48, height: 48, borderRadius: 999, border: "none", background: C.ink, color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }} aria-label="Suivant">
-            <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </button>
-        </div>
-      </div>
-
-      {/* Slider card */}
-      <div style={{ borderRadius: 20, overflow: "hidden", border: `1px solid ${C.line}`, background: "#fff", width: `min(100%, calc(70vh * ${cur.ratio}), 640px)`, minWidth: "min(100%, 300px)", margin: "0 auto" }}>
-        <BeforeAfter key={idx} before={cur.before} after={cur.after} ratio={cur.ratio} initialPos={98} accent={C.red} alt={`${cur.title}, ${cur.meta.toLowerCase()}, Lyon`} />
-        <div style={{ padding: "18px 20px 20px", background: "#fff" }}>
-          <div style={{ fontFamily: F.mono, fontSize: 10, color: C.red, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>
-            {cur.tag} · {String(idx + 1).padStart(2, "0")} / {String(REALISATIONS.length).padStart(2, "0")}
-          </div>
-          <div style={{ fontSize: "clamp(16px, 1.8vw, 22px)", fontWeight: 700, letterSpacing: "-0.01em", color: C.ink }}>{cur.title}</div>
-          <div style={{ fontSize: 13, color: C.inkSoft, marginTop: 3 }}>{cur.meta}</div>
-        </div>
-      </div>
-
-      {/* Mobile nav: dots (left) + arrows (right) */}
-      <div className="flex justify-between items-center mt-4 md:hidden" style={{ maxWidth: 520, margin: "16px auto 0" }}>
-        <div style={{ display: "flex", gap: 5 }}>
-          {REALISATIONS.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIdx(i)}
-              aria-label={`Réalisation ${i + 1}`}
-              style={{ width: i === idx ? 24 : 7, height: 7, borderRadius: 999, background: i === idx ? C.red : C.line, cursor: "pointer", transition: "all .2s", border: "none", padding: 0 }}
-            />
+              <blockquote style={{ margin: 0, fontSize: 18, lineHeight: 1.45, color: C.ink, fontWeight: 500 }}>« {a.text} »</blockquote>
+              <figcaption style={{ marginTop: "auto", paddingTop: 14, borderTop: `1px solid ${C.line}`, fontSize: 14, color: C.inkSoft }}>
+                <strong style={{ color: C.ink }}>{a.name}</strong> · {a.date}
+              </figcaption>
+            </figure>
           ))}
         </div>
-        <div style={{ display: "flex", gap: 8 }}>
-          <button onClick={prev} style={{ width: 40, height: 40, borderRadius: 999, border: `1.5px solid ${C.ink}`, background: "transparent", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }} aria-label="Précédent">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke={C.ink} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </button>
-          <button onClick={next} style={{ width: 40, height: 40, borderRadius: 999, border: "none", background: C.ink, color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }} aria-label="Suivant">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </button>
-        </div>
-      </div>
-
-      {/* Desktop dots */}
-      <div className="hidden md:flex gap-2 mt-4 justify-center">
-        {REALISATIONS.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIdx(i)}
-            aria-label={`Réalisation ${i + 1}`}
-            style={{ width: i === idx ? 30 : 8, height: 8, borderRadius: 999, background: i === idx ? C.red : C.line, cursor: "pointer", transition: "all .2s", border: "none", padding: 0 }}
-          />
-        ))}
-      </div>
-
-      {/* Vidéos de chantier */}
-      <div style={{ marginTop: 40 }}>
-        <h3 style={{ fontSize: "clamp(22px, 2.6vw, 32px)", fontWeight: 800, letterSpacing: "-0.02em", color: C.ink, margin: "0 0 16px" }}>
-          Mes chantiers{" "}
-          <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>en vidéo</span>
-        </h3>
-        <InstagramVideos />
-      </div>
-
-      {/* Réseaux sociaux : vidéos de chantier */}
-      <div style={{ marginTop: 24, padding: "22px 22px", borderRadius: 18, background: "#fff", border: `1px solid ${C.line}` }} className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <div style={{ fontWeight: 800, fontSize: 18, color: C.ink }}>Encore plus de vidéos</div>
-          <div style={{ fontSize: 14, color: C.inkSoft, marginTop: 4 }}>Retrouvez toutes mes interventions sur Instagram et TikTok.</div>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <a href="https://www.instagram.com/puilletvitrerie" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, padding: "12px 20px", borderRadius: 999, background: C.ink, color: "#fff", fontWeight: 700, fontSize: 14 }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>
-            Instagram · @puilletvitrerie
-          </a>
-          <a href="https://www.tiktok.com/@puilletvitrerie" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, padding: "12px 20px", borderRadius: 999, background: C.ink, color: "#fff", fontWeight: 700, fontSize: 14 }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9.1a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6Z" /></svg>
-            TikTok · @puilletvitrerie
-          </a>
-        </div>
       </div>
     </section>
   );
 }
 
-// ─── À propos ────────────────────────────────────────────────────────────────
-const ABOUT_FEATURES = [
-  {
-    t: "Travail propre",
-    d: "Bâche de protection et coup de balai : je laisse les lieux propres.",
-    detail: "Avant toute dépose de vitrage ou de miroir, je pose une bâche de protection pour éviter rayures ou impacts sur le sol, un dégât qui n'est pas rattrapable. Je balaie systématiquement après chaque intervention.",
-  },
-  {
-    t: "Prix annoncé",
-    d: "Le devis est ce que vous payez. Pas de surprise.",
-    detail: "Devis clair avec description détaillée de l'intervention, montants HT, TTC et TVA. Tous les devis et factures sont réalisés sur Pennylane, un logiciel de facturation électronique conforme à la réglementation en vigueur.",
-  },
-  {
-    t: "Devis gratuit",
-    d: "Déplacement et devis offerts, sans engagement.",
-    detail: "Je me déplace gratuitement pour prendre les mesures et vous remets un devis clair et détaillé, sans engagement. Vous décidez ensuite en toute tranquillité.",
-  },
-  {
-    t: "Artisan assuré",
-    d: "Responsabilité civile et décennale MAAF.",
-    detail: "Je suis assuré en responsabilité civile professionnelle et décennale auprès de la MAAF. Mon attestation d'assurance est disponible sur simple demande.",
-  },
+// ─── 6. Zone d'intervention + services ───────────────────────────────────────
+const SERVICES = ["remplacement de vitrage", "double vitrage isolant", "vitrage feuilleté & sécurité", "miroiterie sur mesure", "portes d'entrée vitrées", "dépannage 7j/7"];
+const ARRONDISSEMENTS = ["Lyon 1er", "Lyon 2e", "Lyon 3e", "Lyon 4e", "Lyon 5e", "Lyon 6e", "Lyon 7e", "Lyon 8e", "Lyon 9e"];
+const COMMUNES = [
+  "Villeurbanne", "Vaulx-en-Velin", "Bron", "Décines-Charpieu", "Meyzieu", "Rillieux-la-Pape",
+  "Tassin-la-Demi-Lune", "Craponne", "Francheville", "Saint-Genis-les-Ollières", "Montluel", "Bourgoin-Jallieu",
 ];
-
-function About() {
-  const [open, setOpen] = useState(-1);
-
-  return (
-    <section className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.ink, color: "#fff" }}>
-      {/* 1-col on mobile, 2-col on desktop. Photo is first in DOM → appears on top on mobile */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
-        <div style={{ borderRadius: 20, overflow: "hidden", aspectRatio: "4/3 " }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img loading="lazy" src="/assets/camion-paysage.jpeg" alt="Camion Puillet Vitrerie" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-        </div>
-        <div>
-          <MonoLabel color="#7DB9EA">À propos</MonoLabel>
-          <h2 style={{ fontSize: "clamp(32px, 5vw, 64px)", lineHeight: 1, letterSpacing: "-0.025em", margin: "16px 0 20px", fontWeight: 800 }}>
-            Un artisan, un camion,
-            <br />
-            <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400, color: "#7DB9EA" }}>et la parole donnée.</span>
-          </h2>
-          <p style={{ fontSize: "clamp(14px, 1.4vw, 18px)", lineHeight: 1.6, color: "#d6d1c7", maxWidth: 540, marginBottom: 14 }}>
-            J&rsquo;ai fondé Puillet Vitrerie afin d&rsquo;offrir un service de proximité, à Lyon et dans toute la métropole. Je suis votre unique interlocuteur, du premier appel jusqu&rsquo;à la pose : prise de mesures, fabrication et installation. Sans intermédiaire, avec des devis clairs et détaillés.
-          </p>
-          <p style={{ fontSize: "clamp(14px, 1.4vw, 18px)", lineHeight: 1.6, color: "#d6d1c7", maxWidth: 540, marginBottom: 28 }}>
-            La fidélité de mes clients et leurs recommandations sont ma plus belle reconnaissance.
-          </p>
-
-          <div className="grid grid-cols-2 gap-4" style={{ maxWidth: 540 }}>
-            {ABOUT_FEATURES.map((f, i) => {
-              const isOpen = open === i;
-              return (
-                <div
-                  key={f.t}
-                  onClick={() => setOpen(isOpen ? -1 : i)}
-                  style={{ paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.12)", cursor: "pointer" }}
-                >
-                  <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 5, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-                    {f.t}
-                    <span style={{ fontSize: 12, color: "#a8a39a", transform: isOpen ? "rotate(45deg)" : "rotate(0)", transition: "transform .2s" }}>+</span>
-                  </div>
-                  <div style={{ fontSize: 13, color: "#a8a39a", lineHeight: 1.5 }}>{f.d}</div>
-                  {isOpen && (
-                    <div style={{ fontSize: 13, color: "#d6d1c7", lineHeight: 1.5, marginTop: 8 }}>{f.detail}</div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── Témoignages ─────────────────────────────────────────────────────────────
-const GOOGLE_REVIEWS_URL = "https://maps.google.com/?cid=4036198005292784636";
-const GOOGLE_WRITE_REVIEW_URL = "https://g.page/r/CfzbnXyzdAM4EBM/review";
-
-const TESTIMONIALS = [
-  { name: "Nawelle C.", loc: "Avis Google · avril 2026", rating: 5, text: "En tant qu’employé en gestion de copropriété, c’est un réel plaisir de travailler avec un prestataire d’un tel professionnalisme ! Sa réactivité est tout simplement impressionnante : demande de devis envoyée à 15h, reçu en 1h ! Devis validé à 9h, vitre changée à 11h !" },
-  { name: "Anna M.", loc: "Avis Google · juillet 2026", rating: 5, text: "Nous sommes très satisfaits du travail réalisé par cet artisan. Contacté pour un remplacement d'une vitre intérieure, il s'est montré réactif, agréable et efficace." },
-  { name: "Florian R.", loc: "Avis Google · avril 2026", rating: 5, text: "Service impeccable ! Intervention ultra rapide et travail très soigné. En plus d’être ponctuel, il a laissé les lieux propres après son passage. Je recommande sans hésitation !" },
-] as const;
-
-function Testimonials() {
-  return (
-    <section id="temoignages" className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bg }}>
-      <MonoLabel>Ils m&rsquo;ont fait confiance</MonoLabel>
-      <h2 style={{ fontSize: "clamp(26px, 4vw, 56px)", lineHeight: 1.02, letterSpacing: "-0.025em", margin: "14px 0 16px", fontWeight: 800, color: C.ink }}>
-        4,9 sur 5{" "}
-        <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>sur Google</span>,{" "}
-        avec 29 avis clients.
-      </h2>
-      <p style={{ fontSize: 15, color: C.inkSoft, maxWidth: 560, margin: "0 0 36px" }}>
-        C&rsquo;est grâce à vous que je peux exercer ce métier avec autant de plaisir. Merci pour votre confiance.
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {TESTIMONIALS.map((t) => (
-          <div key={t.name} style={{ background: "#fff", borderRadius: 16, padding: "24px 22px", border: `1px solid ${C.line}`, display: "flex", flexDirection: "column", gap: 14 }}>
-            <div style={{ display: "flex", gap: 2, color: C.red }}>
-              {Array.from({ length: t.rating }).map((_, i) => (
-                <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2l2.9 6.9L22 10l-5.5 4.8L18 22l-6-3.7L6 22l1.5-7.2L2 10l7.1-1.1z" />
-                </svg>
-              ))}
-            </div>
-            <div style={{ fontFamily: F.serif, fontSize: "clamp(16px, 1.6vw, 22px)", lineHeight: 1.35, color: C.ink }}>
-              « {t.text} »
-            </div>
-            <div style={{ paddingTop: 14, borderTop: `1px solid ${C.line}`, display: "flex", justifyContent: "space-between" }}>
-              <div style={{ fontSize: 13, fontWeight: 600, color: C.ink }}>{t.name}</div>
-              <div style={{ fontSize: 12, color: C.inkSoft }}>{t.loc}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="flex flex-col sm:flex-row gap-5 sm:items-center" style={{ marginTop: 24 }}>
-      <a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 600, color: C.ink, borderBottom: `1.5px solid ${C.ink}`, paddingBottom: 2 }}>
-        Voir tous les avis sur Google →
-      </a>
-        <a href={GOOGLE_WRITE_REVIEW_URL} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 700, color: "#fff", background: C.red, padding: "10px 18px", borderRadius: 999, alignSelf: "flex-start" }}>
-          Laisser un avis ★
-        </a>
-      </div>
-    </section>
-  );
-}
-
-// ─── Zones ───────────────────────────────────────────────────────────────────
+const villeHref = (nom: string) => {
+  const v = VILLES.find((x) => x.publie && x.nom === nom);
+  return v ? `/vitrier/${v.slug}` : undefined;
+};
 
 function Zones() {
+  const tag: React.CSSProperties = { display: "inline-flex", alignItems: "center", minHeight: 40, padding: "0 16px", borderRadius: 999, fontSize: 14, fontWeight: 600 };
   return (
-    <section id="zones" className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bgAlt, borderTop: `1px solid ${C.line}` }}>
-      <div className="grid grid-cols-1 md:grid-cols-[5fr_6fr] gap-10 md:gap-16 items-start">
-        {/* Left: text + tags on desktop */}
-        <div>
-          <MonoLabel>Zones d&rsquo;intervention</MonoLabel>
-          <h2 style={{ fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1.02, letterSpacing: "-0.025em", margin: "14px 0 16px", fontWeight: 800, color: C.ink }}>
-            Lyon, la métropole
-            <br />
-            et l&rsquo;Est lyonnais.
-          </h2>
-          <p style={{ fontSize: "clamp(14px, 1.4vw, 17px)", lineHeight: 1.6, color: C.inkSoft, maxWidth: 440, marginBottom: 20 }}>
-            J&rsquo;interviens dans un rayon d&rsquo;environ 60 km autour de Lyon, notamment dans tout l&rsquo;Est lyonnais. Pour les urgences hors zone, appelez-moi : on trouvera une solution.
-          </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
-            {VILLES.filter((v) => v.publie).map((v) => (
-              <Link key={v.slug} href={`/vitrier/${v.slug}`} style={{ padding: "7px 13px", borderRadius: 999, background: "#fff", border: `1px solid ${C.line}`, fontSize: 13, color: C.ink }}>
-                Vitrier à {v.nom}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Right: SVG map */}
-        <div style={{ position: "relative", borderRadius: 20, overflow: "hidden", background: C.ink, aspectRatio: "5/4" }}>
-          <svg viewBox="0 0 500 400" style={{ width: "100%", height: "100%", display: "block" }}>
-            <defs>
-              <pattern id="mapGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,.06)" strokeWidth="1" />
-              </pattern>
-            </defs>
-            <rect width="500" height="400" fill="url(#mapGrid)" />
-            {/* Saône et Rhône (tracé simplifié) */}
-            <path d="M 226 0 C 230 70 238 140 238 196" stroke="rgba(120,160,200,.5)" strokeWidth="3" fill="none" />
-            <path d="M 500 120 C 420 125 320 150 262 182 C 246 190 240 205 243 250 C 246 310 236 350 238 400" stroke="rgba(120,160,200,.5)" strokeWidth="3" fill="none" />
-            {/* Cercles : 20, 40 et 60 km (échelle resserrée vers l'extérieur, directions réelles) */}
-            <circle cx="240" cy="200" r="104" fill={C.red} fillOpacity="0.15" stroke={C.red} strokeOpacity="0.5" strokeDasharray="4 4" />
-            <circle cx="240" cy="200" r="147" fill={C.red} fillOpacity="0.06" stroke={C.red} strokeOpacity="0.3" strokeDasharray="4 4" />
-            <circle cx="240" cy="200" r="180" fill={C.red} fillOpacity="0.03" stroke={C.red} strokeOpacity="0.25" strokeDasharray="4 4" />
-            {[[104, "20 km"], [147, "40 km"], [180, "60 km"]].map(([r, t]) => (
-              <text key={t as string} x={240 - (r as number) * 0.707 - 4} y={200 - (r as number) * 0.707 - 4} textAnchor="end" fill="rgba(255,255,255,.4)" fontFamily="JetBrains Mono, monospace" fontSize="9">{t as string}</text>
-            ))}
-            <circle cx="240" cy="200" r="8" fill={C.red} />
-            <circle cx="240" cy="200" r="14" fill="none" stroke={C.red} strokeWidth="2" />
-            <text x="240" y="226" textAnchor="middle" fill="#fff" fontFamily="JetBrains Mono, monospace" fontSize="12" fontWeight="600">LYON</text>
-            {[
-              [201, 85, "Villefranche-sur-Saône", "r"], [244, 116, "Neuville-sur-Saône", "r"], [150, 154, "L'Arbresle", "l"],
-              [189, 223, "Francheville", "d"], [155, 214, "Vaugneray", "l"], [198, 265, "Brignais", "l"],
-              [214, 299, "Givors", "l"], [255, 318, "Vienne", "r"], [288, 183, "Villeurbanne", "u"],
-              [275, 255, "Vénissieux", "r"], [325, 194, "Meyzieu", "r"], [330, 147, "Montluel", "r"],
-              [368, 270, "Bourgoin-Jallieu", "r"],
-            ].map(([x, y, name, side], i) => (
-              <g key={i}>
-                <circle cx={x as number} cy={y as number} r="3" fill="#fff" />
-                <text x={(x as number) + (side === "l" ? -7 : side === "r" ? 7 : 0)} y={(y as number) + (side === "u" ? -8 : side === "d" ? 15 : 4)} textAnchor={side === "l" ? "end" : side === "r" ? "start" : "middle"} fill="rgba(255,255,255,.7)" fontFamily="JetBrains Mono, monospace" fontSize="10">{name as string}</text>
-              </g>
-            ))}
-          </svg>
-          <div style={{ position: "absolute", bottom: 14, left: 14, fontFamily: F.mono, fontSize: 10, color: "rgba(255,255,255,.6)", letterSpacing: "0.14em", textTransform: "uppercase" }}>
-            Rayon ~60 km · déplacement gratuit pour le devis
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── FAQ ─────────────────────────────────────────────────────────────────────
-const FAQ_ITEMS = [
-  { q: "Quels sont vos délais pour un dépannage urgent ?", a: "Pour un simple vitrage cassé, j'interviens en urgence en moins de 2h. Pour le verre feuilleté, le double vitrage et les miroirs, le remplacement est réalisé sous 24 à 72h. En attendant, je peux sécuriser l'ouverture le jour même avec une plaque OSB." },
-  { q: "Le devis est-il payant ?", a: "Non, le devis est gratuit et sans engagement. Je me déplace pour prendre les mesures, puis je vous envoie un devis clair et détaillé. Le déplacement pour établir le devis est gratuit. Le prix indiqué sur le devis est celui que vous payez." },
-  { q: "Mon assurance peut-elle prendre en charge ma vitre cassée ?", a: "Si votre contrat d'assurance habitation comprend la garantie bris de glace, le remplacement de votre vitrage peut être pris en charge : seule la franchise reste alors généralement à votre charge. N'hésitez pas à m'appeler au 06 50 44 06 73, je vous indique les démarches à faire auprès de votre assurance." },
-  { q: "Combien coûte un remplacement de vitrage ?", a: "Le prix dépend de plusieurs éléments : les dimensions et l'épaisseur du verre, le type de vitrage (simple, double vitrage, feuilleté, dépoli, imprimé…), l'accès au chantier et la main d'œuvre nécessaire. Un grand vitrage lourd peut demander deux ou trois poseurs, voire un équipement à ventouses. Un devis gratuit et clair vous est remis avant toute intervention, généralement sous 24h." },
-  { q: "Intervenez-vous le week-end ?", a: "Oui, le dépannage fonctionne 7j/7, y compris le week-end et les jours fériés. Les fournisseurs de verre étant fermés le week-end, je sécurise l'ouverture le jour même (plaque OSB) en attendant la commande du vitrage, puis je reviens le poser dès sa réception." },
-  { q: "Faites-vous des miroirs sur mesure ?", a: "Bien sûr : miroirs muraux, salle de bain anti-buée, dressing, biseautés, percés. Mesure sur place, fabrication à l'atelier, pose à domicile." },
-];
-
-function FAQ() {
-  const [open, setOpen] = useState(0);
-
-  return (
-    <section id="faq" className="px-5 md:px-14" style={{ paddingTop: 60, paddingBottom: 60, background: C.bg }}>
-      {/* 1-col on mobile (heading + accordion stacked), 2-col on desktop */}
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-20">
-        <div>
-          <MonoLabel>Questions fréquentes</MonoLabel>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 48px)", lineHeight: 1.02, letterSpacing: "-0.025em", margin: "14px 0 0", fontWeight: 800, color: C.ink }}>
-            Les questions
-            <br className="hidden md:block" />
-            {" "}que l&rsquo;on me{" "}
-            <br className="hidden md:block" />
-            <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>pose souvent.</span>
-          </h2>
-        </div>
-        <div>
-          {FAQ_ITEMS.map((item, i) => (
-            <div
-              key={i}
-              onClick={() => setOpen(open === i ? -1 : i)}
-              style={{ padding: "22px 4px", borderBottom: `1px solid ${C.line}`, cursor: "pointer" }}
-            >
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16 }}>
-                <div style={{ fontSize: "clamp(15px, 1.5vw, 19px)", fontWeight: 600, letterSpacing: "-0.01em", color: C.ink, lineHeight: 1.3 }}>{item.q}</div>
-                <div
-                  style={{
-                    width: 30,
-                    height: 30,
-                    borderRadius: 999,
-                    border: `1.5px solid ${C.ink}`,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    transform: open === i ? "rotate(45deg)" : "rotate(0)",
-                    transition: "transform .2s",
-                    flexShrink: 0,
-                  }}
-                >
-                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                    <path d="M6 1V11M1 6H11" stroke={C.ink} strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                </div>
-              </div>
-              {open === i && (
-                <div style={{ fontSize: "clamp(14px, 1.3vw, 16px)", lineHeight: 1.55, color: C.inkSoft, marginTop: 12, maxWidth: 640 }}>
-                  {item.a}
-                </div>
-              )}
-            </div>
+    <section id="zones" className="px-5 md:px-10" style={{ background: C.card, paddingTop: 64, paddingBottom: 64 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <Label>Zone d&rsquo;intervention</Label>
+        <h2 style={h2Style}>
+          Vitrier dans tout Lyon <Serif>et la métropole.</Serif>
+        </h2>
+        <p style={{ fontSize: 17, lineHeight: 1.6, color: C.inkSoft, maxWidth: 640, margin: "0 0 10px" }}>
+          Tous les arrondissements de Lyon et jusqu&rsquo;à 60 km autour, Est lyonnais compris.
+        </p>
+        <p style={{ fontSize: 15, lineHeight: 1.6, color: C.inkSoft, maxWidth: 760, margin: "0 0 26px" }}>
+          <Link href="/services" style={{ color: C.ink, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>Mes services</Link> : {SERVICES.join(" · ")}.
+        </p>
+        <ul style={{ display: "flex", flexWrap: "wrap", gap: 8, listStyle: "none", padding: 0, margin: "0 0 10px" }}>
+          {ARRONDISSEMENTS.map((a) => (
+            <li key={a}>
+              <Link href="/vitrier/lyon" style={{ ...tag, background: C.ink, color: "#fff" }}>{a}</Link>
+            </li>
           ))}
-        </div>
+        </ul>
+        <ul style={{ display: "flex", flexWrap: "wrap", gap: 8, listStyle: "none", padding: 0, margin: 0 }}>
+          {COMMUNES.map((c) => {
+            const href = villeHref(c);
+            const style = { ...tag, background: C.bgAlt, color: C.ink, border: `1px solid ${C.line}` };
+            return <li key={c}>{href ? <Link href={href} style={style}>{c}</Link> : <span style={style}>{c}</span>}</li>;
+          })}
+        </ul>
       </div>
     </section>
   );
 }
 
-// ─── Contact ─────────────────────────────────────────────────────────────────
-function Contact() {
+// ─── 7. Appel final ──────────────────────────────────────────────────────────
+function AppelFinal() {
   return (
-    <section style={{ paddingTop: 60, paddingBottom: 60, background: C.bgAlt, borderTop: `1px solid ${C.line}` }} className="px-5 md:px-14">
-      {/*
-        DOM order: emergency first, form second.
-        - Mobile: emergency on top (natural), form below
-        - Desktop: form on left (order-last md:order-first), emergency on right (order-first md:order-last)
-      */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-stretch">
-
-        {/* Emergency card — first in DOM → top on mobile, right on desktop */}
-        <div
-          className="order-first md:order-last"
-          style={{ background: C.ink, color: "#fff", borderRadius: 18, padding: "28px 26px", display: "flex", flexDirection: "column", gap: 20 }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <span style={{ width: 9, height: 9, borderRadius: 999, background: "#34c759", boxShadow: "0 0 0 4px rgba(52,199,89,.18)" }} />
-            <span style={{ fontFamily: F.mono, fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", color: "#a8a39a" }}>Urgence 24/7</span>
-          </div>
-          <div style={{ fontSize: "clamp(22px, 2.8vw, 34px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
-            Une vitre vient de céder ? Appelez tout de suite.
-          </div>
-          <a href="tel:0650440673" style={{ background: C.red, color: "#fff", padding: "22px 24px", borderRadius: 14, display: "flex", alignItems: "center", gap: 14 }}>
-            <PhoneIcon size={28} />
-            <div>
-              <div style={{ fontSize: 11, opacity: 0.85, letterSpacing: "0.12em", textTransform: "uppercase" }}>Léo Puillet · vitrier</div>
-              <div style={{ fontSize: "clamp(22px, 2.5vw, 30px)", fontWeight: 800, letterSpacing: "-0.01em" }}>06 50 44 06 73</div>
-            </div>
-          </a>
-          <div className="grid grid-cols-2 gap-4" style={{ paddingTop: 4 }}>
-            {[["E-mail", "puilletvitrerie@gmail.com"], ["Horaires", "Lun au Sam · 7h à 20h\nUrgence : 24/7"]].map(([title, val]) => (
-              <div key={title}>
-                <div style={{ fontFamily: F.mono, fontSize: 10, color: "#a8a39a", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 5 }}>{title}</div>
-                <div style={{ fontSize: 14, whiteSpace: "pre-line" }}>{val}</div>
-              </div>
-            ))}
-          </div>
-          <div style={{ marginTop: "auto", paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.12)", fontSize: 12, color: "#a8a39a", lineHeight: 1.6 }}>
-            SARL · SIRET 995 238 169 00016 · TVA FR05995238169 · APE 4334Z
-            <br />
-            Assurance responsabilité civile professionnelle et décennale MAAF · Attestation sur demande
-          </div>
-        </div>
-
-        {/* Form — second in DOM → bottom on mobile, left on desktop */}
-        <div className="order-last md:order-first">
-          <MonoLabel>Demande de devis</MonoLabel>
-          <h2 style={{ fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1.02, letterSpacing: "-0.025em", margin: "14px 0 14px", fontWeight: 800, color: C.ink }}>
-            Décrivez-moi votre{" "}
-            <span style={{ fontFamily: F.serif, fontStyle: "italic", fontWeight: 400 }}>besoin</span>.
-          </h2>
-          <p style={{ fontSize: 15, lineHeight: 1.55, color: C.inkSoft, maxWidth: 460, marginBottom: 22 }}>
-            Remplissez les 3 étapes ci-dessous : je vous rappelle rapidement. Devis gratuit et sans engagement.
-          </p>
-
-          <QuoteForm />
-        </div>
+    <section className="px-5 md:px-10" style={{ background: C.ink, color: "#fff", paddingTop: 72, paddingBottom: 72, borderBottom: "1px solid rgba(255,255,255,.08)" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
+        <h2 style={{ ...h2Style, color: "#fff", margin: "0 0 28px" }}>
+          Une vitre à changer ?
+          <br />
+          <Serif color={C.blueLight}>Appelez, Léo arrive.</Serif>
+        </h2>
+        <a href={TEL} style={{ ...pill, minHeight: 64, padding: "0 36px", fontSize: 22, background: C.blue, color: "#fff", boxShadow: "0 10px 30px rgba(59,143,212,.4)" }}>
+          <PhoneIcon size={22} />
+          06 50 44 06 73
+        </a>
       </div>
     </section>
   );
@@ -771,13 +308,10 @@ export default function Home() {
   return (
     <div style={{ background: C.bg, color: C.ink, fontFamily: F.sans, WebkitFontSmoothing: "antialiased" }}>
       <Hero />
-      <Services />
-      <Realisations />
-      <About />
-      <Testimonials />
+      <Video />
+      <Avis />
       <Zones />
-      <FAQ />
-      <Contact />
+      <AppelFinal />
     </div>
   );
 }

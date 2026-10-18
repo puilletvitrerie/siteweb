@@ -22,7 +22,7 @@ const C = {
   inkSoft: "var(--color-ink-soft)",
   accent: "var(--color-red)",
 };
-const MONO = "var(--font-jetbrains-mono), ui-monospace, monospace";
+const MONO = "var(--font-manrope), system-ui, sans-serif";
 
 type Data = {
   prenom: string;
@@ -70,7 +70,7 @@ function subject(d: Data) {
 function Field({ label, optional, children }: { label: string; optional?: boolean; children: React.ReactNode }) {
   return (
     <label style={{ display: "block" }}>
-      <div style={{ fontFamily: MONO, fontSize: 10, color: C.inkSoft, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 7 }}>
+      <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: 12, color: C.inkSoft, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 7 }}>
         {label}
         {optional && <span style={{ textTransform: "none", letterSpacing: 0, marginLeft: 6, opacity: 0.8 }}>(facultatif)</span>}
       </div>

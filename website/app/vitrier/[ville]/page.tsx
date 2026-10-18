@@ -45,7 +45,7 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
             Brouillon : visible uniquement sur la version d&apos;essai, en attente de validation.
           </div>
         )}
-        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-red)" }}>
+        <div style={{ fontFamily: "var(--font-manrope), system-ui, sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-red)" }}>
           {v.nom} · {v.cp}
         </div>
         <h1 style={{ fontSize: "clamp(30px, 5vw, 54px)", fontWeight: 800, letterSpacing: "-0.025em", lineHeight: 1.05, margin: "12px 0 16px" }}>

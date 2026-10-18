@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Manrope, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -19,11 +19,6 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
 
 export const viewport = {
   width: "device-width",
@@ -33,7 +28,7 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.puilletvitrerie.fr"),
   title: {
-    default: "Vitrier à Lyon · Remplacement de vitrage et double vitrage | Puillet Vitrerie",
+    default: "Vitrier à Lyon · Intervention sous 24h | Puillet Vitrerie",
     template: "%s | Puillet Vitrerie",
   },
   description:
@@ -71,9 +66,8 @@ const LOCAL_BUSINESS = {
   },
   geo: { "@type": "GeoCoordinates", latitude: 45.7439321, longitude: 4.7706419 },
   areaServed: [
-    "Lyon", "Villeurbanne", "Caluire-et-Cuire", "Francheville", "Tassin-la-Demi-Lune",
-    "Vénissieux", "Bron", "Saint-Priest", "Meyzieu", "Genas", "Décines-Charpieu",
-    "Villefranche-sur-Saône", "Vienne", "Bourgoin-Jallieu",
+    "Lyon", "Villeurbanne", "Vaulx-en-Velin", "Bron", "Décines-Charpieu", "Meyzieu", "Rillieux-la-Pape",
+    "Tassin-la-Demi-Lune", "Craponne", "Francheville", "Saint-Genis-les-Ollières", "Montluel", "Bourgoin-Jallieu",
   ].map((name) => ({ "@type": "City", name })),
   sameAs: [
     "https://www.instagram.com/puilletvitrerie",
@@ -99,7 +93,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${manrope.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
+      className={`${manrope.variable} ${instrumentSerif.variable}`}
     >
       <body className="min-h-screen flex flex-col">
         <script
