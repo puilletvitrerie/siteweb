@@ -17,13 +17,14 @@ export default function MentionsLegales() {
 
         <h2 style={h2}>Éditeur du site</h2>
         <p style={p}>
-          Puillet Vitrerie, SARL<br />
-          42 avenue du Chater, 69340 Francheville<br />
+          Puillet Vitrerie, SARL au capital de 1 000 €<br />
+          Siège : 42 avenue du Chater, bâtiment C, 69340 Francheville<br />
+          Immatriculée au Registre national des entreprises (RNE) le 22 janvier 2026 · SIREN 995 238 169<br />
           SIRET 995 238 169 00016 · TVA intracommunautaire FR05995238169 · Code APE 4334Z<br />
           Téléphone : <a href="tel:+33650440673" style={{ textDecoration: "underline" }}>06 50 44 06 73</a> · E-mail :{" "}
           <a href="mailto:puilletvitrerie@gmail.com" style={{ textDecoration: "underline" }}>puilletvitrerie@gmail.com</a>
         </p>
-        <p style={p}>Directeur de la publication : Léo Puillet.</p>
+        <p style={p}>Directeur de la publication : Léo Puillet, gérant.</p>
 
         <h2 style={h2}>Assurance</h2>
         <p style={p}>Responsabilité civile professionnelle et garantie décennale souscrites auprès de la MAAF. Attestation disponible sur demande.</p>
