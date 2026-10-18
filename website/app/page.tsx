@@ -235,7 +235,14 @@ function Avis() {
 }
 
 // ─── 6. Zone d'intervention + services ───────────────────────────────────────
-const SERVICES = ["remplacement de vitrage", "double vitrage isolant", "vitrage feuilleté & sécurité", "miroiterie sur mesure", "portes d'entrée vitrées", "dépannage 7j/7"];
+const SERVICES: [string, string][] = [
+  ["remplacement de vitrage", "/remplacement-vitre-lyon"],
+  ["double vitrage isolant", "/double-vitrage-lyon"],
+  ["vitrage feuilleté & sécurité", "/services"],
+  ["miroiterie sur mesure", "/services"],
+  ["portes d'entrée vitrées", "/remplacement-vitre-lyon"],
+  ["dépannage 7j/7", "/vitrier-urgence-lyon"],
+];
 const ARRONDISSEMENTS = ["Lyon 1er", "Lyon 2e", "Lyon 3e", "Lyon 4e", "Lyon 5e", "Lyon 6e", "Lyon 7e", "Lyon 8e", "Lyon 9e"];
 const COMMUNES = [
   "Villeurbanne", "Vaulx-en-Velin", "Bron", "Décines-Charpieu", "Meyzieu", "Rillieux-la-Pape",
@@ -259,7 +266,14 @@ function Zones() {
           Tous les arrondissements de Lyon et jusqu&rsquo;à 60 km autour, Est lyonnais compris.
         </p>
         <p style={{ fontSize: 15, lineHeight: 1.6, color: C.inkSoft, maxWidth: 760, margin: "0 0 26px" }}>
-          <Link href="/services" style={{ color: C.ink, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>Mes services</Link> : {SERVICES.join(" · ")}.
+          <Link href="/services" style={{ color: C.ink, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>Mes services</Link> :{" "}
+          {SERVICES.map(([label, href], i) => (
+            <span key={label}>
+              {i > 0 && " · "}
+              <Link href={href} style={{ color: C.inkSoft, textDecoration: "underline", textUnderlineOffset: 3 }}>{label}</Link>
+            </span>
+          ))}
+          .
         </p>
         <ul style={{ display: "flex", flexWrap: "wrap", gap: 8, listStyle: "none", padding: 0, margin: "0 0 10px" }}>
           {ARRONDISSEMENTS.map((a) => (

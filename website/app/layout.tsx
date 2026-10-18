@@ -70,7 +70,12 @@ const LOCAL_BUSINESS = {
     "Lyon", "Villeurbanne", "Vaulx-en-Velin", "Bron", "Décines-Charpieu", "Meyzieu", "Rillieux-la-Pape",
     "Tassin-la-Demi-Lune", "Craponne", "Francheville", "Saint-Genis-les-Ollières", "Montluel", "Bourgoin-Jallieu",
   ].map((name) => ({ "@type": "City", name })),
+  logo: "https://www.puilletvitrerie.fr/icon.svg",
+  image: "https://www.puilletvitrerie.fr/assets/camion-paysage.jpeg",
+  hasMap: "https://maps.google.com/?cid=4036198005292784636",
   sameAs: [
+    "https://maps.google.com/?cid=4036198005292784636",
+    "https://www.pagesjaunes.fr/pros/64775103",
     "https://www.instagram.com/puilletvitrerie",
     "https://www.tiktok.com/@puilletvitrerie",
     "https://www.linkedin.com/in/leo-puillet",

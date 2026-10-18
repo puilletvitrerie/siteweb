@@ -7,8 +7,10 @@ export default function Footer() {
     {
       title: "Services",
       items: [
-        { label: "Dépannage 7j/7", href: "/services" },
-        { label: "Double vitrage", href: "/services" },
+        { label: "Vitrier en urgence 7j/7", href: "/vitrier-urgence-lyon" },
+        { label: "Remplacement de vitre", href: "/remplacement-vitre-lyon" },
+        { label: "Double vitrage", href: "/double-vitrage-lyon" },
+        { label: "Prix et devis", href: "/prix-vitrier-lyon" },
         { label: "Vitrage feuilleté", href: "/services" },
         { label: "Miroiterie", href: "/services" },
         { label: "Portes vitrées", href: "/services" },
