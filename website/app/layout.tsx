@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
+import HideOnDevis from "@/components/HideOnDevis";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -100,12 +101,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS) }}
         />
-        <div style={{ position: "sticky", top: 0, zIndex: 60 }}>
-          <Header />
-        </div>
+        <HideOnDevis>
+          <div style={{ position: "sticky", top: 0, zIndex: 60 }}>
+            <Header />
+          </div>
+        </HideOnDevis>
         <main className="flex-1">{children}</main>
-        <Footer />
-        <MobileStickyCTA />
+        <HideOnDevis>
+          <Footer />
+          <MobileStickyCTA />
+        </HideOnDevis>
       </body>
     </html>
   );

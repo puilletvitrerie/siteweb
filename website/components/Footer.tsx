@@ -122,6 +122,9 @@ export default function Footer() {
           <Link href="/mentions-legales" style={{ color: "#a8a39a", textDecoration: "underline" }} className="hover:text-white">
             Mentions légales
           </Link>
+          <Link href="/confidentialite" style={{ color: "#a8a39a", textDecoration: "underline" }} className="hover:text-white">
+            Confidentialité
+          </Link>
         </div>
       </div>
     </footer>

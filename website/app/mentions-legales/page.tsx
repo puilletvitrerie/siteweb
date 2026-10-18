@@ -33,9 +33,8 @@ export default function MentionsLegales() {
 
         <h2 style={h2}>Données personnelles</h2>
         <p style={p}>
-          Ce site ne collecte aucune donnée personnelle de façon automatique et n&rsquo;utilise pas de cookies de suivi. Les informations que vous envoyez par
-          téléphone, SMS, WhatsApp ou e-mail servent uniquement à répondre à votre demande et à établir votre devis. Vous pouvez demander leur suppression à
-          tout moment par e-mail.
+          Ce site n&rsquo;utilise pas de cookies de suivi. Les informations envoyées pour une demande de devis sont traitées comme expliqué dans la{" "}
+          <a href="/confidentialite" style={{ textDecoration: "underline" }}>politique de confidentialité</a>.
         </p>
 
         <h2 style={h2}>Propriété intellectuelle</h2>
