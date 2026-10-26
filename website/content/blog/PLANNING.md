@@ -19,7 +19,7 @@ Règles de rédaction :
 | 4 | 2026-11-24 | Vitre cassée en copropriété : qui appelle le vitrier, comment ça se passe ? | Validé (en ligne le 24/11) |
 | 5 | 2026-12-08 | Verre feuilleté 44.2 : pourquoi on l'utilise sur les portes d'immeuble | Validé (en ligne le 08/12) |
 | 6 | 2026-12-22 | Vitrine de magasin cassée : sécuriser et rouvrir rapidement | Validé (en ligne le 22/12) |
-| 7 | 2027-01-05 | Verre imprimé, martelé, dépoli : remplacer un vitrage à l'identique | Brouillon prêt |
+| 7 | 2027-01-05 | Verre imprimé, martelé, dépoli : remplacer un vitrage à l'identique | Validé (en ligne le 05/01) |
 | 8 | 2027-01-19 | La pose au mastic traditionnel sur les fenêtres anciennes | Brouillon prêt |
 | 9 | 2027-02-02 | Miroir sur mesure : salle de bain, dressing, hall d'immeuble | Brouillon prêt |
 | 10 | 2027-02-16 | Chantier : remplacement d'un vitrage de 150 kg dans un hall d'immeuble | ville à confirmer |
