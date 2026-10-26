@@ -8,7 +8,7 @@ const post: Post = {
   date: "2026-10-13",
   publie: true,
   image: "/assets/realisations/09-avant.jpg",
-  imageAlt: "Simple vitrage imprimé cassé sur une fenêtre de cage d'escalier à Lyon",
+  imageAlt: "Simple vitrage martelé cassé sur une fenêtre de cage d'escalier à Lyon",
   body: [
     {
       p: "Une vitre qui cède, c'est toujours un moment stressant : des éclats partout, une ouverture sur l'extérieur, et parfois un logement ou un hall d'immeuble qui n'est plus sécurisé. Voici les bons réflexes à avoir dans les premières minutes, puis ce qui se passe quand j'interviens.",

@@ -50,7 +50,7 @@ const post: Post = {
           "avant": "/assets/realisations/09-avant.jpg",
           "apres": "/assets/realisations/09-apres.jpg",
           "ratio": 0.8392,
-          "caption": "Fenêtre ancienne de cage d'escalier : vitrage imprimé posé à l'identique."
+          "caption": "Fenêtre ancienne de cage d'escalier : vitrage martelé posé à l'identique."
         }
       ]
     },
