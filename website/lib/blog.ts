@@ -48,6 +48,8 @@ export type Post = {
   publie: boolean;
   image?: string;
   imageAlt?: string;
+  // Photo avant/après affichée en haut de l'article à la place de `image` (qui reste utilisée pour la liste et Google).
+  avantApresEnHaut?: { avant: string; apres: string; ratio: number; caption: string };
   body: Block[];
 };
 

@@ -8,6 +8,12 @@ const post: Post = {
   "publie": false,
   "image": "/assets/services/feuillete-44-2-apres.jpg",
   "imageAlt": "Porte vitrée d'immeuble équipée d'un vitrage feuilleté 44.2 après remise aux normes",
+  "avantApresEnHaut": {
+    "avant": "/assets/services/feuillete-44-2-avant.jpg",
+    "apres": "/assets/services/feuillete-44-2-apres.jpg",
+    "ratio": 0.6692,
+    "caption": "Avant : un verre simple de 8 mm, brisé. Après : remplacé aux normes par un feuilleté 44.2."
+  },
   "body": [
     {
       "p": "Sur beaucoup de portes d'immeuble, quand je remplace un vitrage, je pose du verre feuilleté 44.2. Ce nom un peu technique cache une idée simple : un vitrage qui reste en place même quand il casse."
@@ -38,13 +44,7 @@ const post: Post = {
       "h2": "Remise aux normes"
     },
     {
-      "avant": "/assets/services/feuillete-44-2-avant.jpg",
-      "apres": "/assets/services/feuillete-44-2-apres.jpg",
-      "ratio": 0.6692,
-      "caption": "Avant : un verre simple de 8 mm, brisé. Après : remplacé aux normes par un feuilleté 44.2."
-    },
-    {
-      "p": "Sur cette porte de hall, il y avait un verre simple de 8 mm, qui a été brisé. Je l'ai remplacé aux normes par un verre feuilleté 44.2, plus sûr pour les occupants."
+      "p": "Sur la porte de hall en photo en haut de l'article, il y avait un verre simple de 8 mm, qui a été brisé. Je l'ai remplacé aux normes par un verre feuilleté 44.2, plus sûr pour les occupants."
     },
     {
       "p": "Sur certaines portes anciennes, on trouve encore du verre simple de 6 ou 8 mm. Lors d'un remplacement, je propose de passer au feuilleté 44.2."

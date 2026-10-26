@@ -85,7 +85,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <div style={{ fontSize: 14, color: "var(--color-ink-soft)", marginBottom: 24 }}>
           Par Léo Puillet, artisan vitrier · {formatDate(post.date)}
         </div>
-        {post.image && (
+        {post.avantApresEnHaut ? (
+          <div className="mb-8">
+            <BeforeAfterGallery
+              size={85}
+              maxWidth={640}
+              items={[{ before: post.avantApresEnHaut.avant, after: post.avantApresEnHaut.apres, ratio: post.avantApresEnHaut.ratio, caption: post.avantApresEnHaut.caption }]}
+            />
+          </div>
+        ) : post.image && (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={post.image} alt={post.imageAlt ?? ""} className="rounded-2xl mb-8 mx-auto block" style={{ maxWidth: "100%", maxHeight: 640, width: "auto" }} />
         )}
