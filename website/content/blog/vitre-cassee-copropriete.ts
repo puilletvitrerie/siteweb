@@ -5,7 +5,7 @@ const post: Post = {
   "title": "Vitre cassée en copropriété : qui appelle le vitrier et comment ça se passe ?",
   "description": "Porte de hall, vitre de cage d'escalier ou de local commun cassée ? Qui prévient qui, comment se passe l'intervention du vitrier et ce que je fais sur place.",
   "date": "2026-11-24",
-  "publie": false,
+  "publie": true,
   "image": "/assets/services/feuillete-imprime-200-avant.jpg",
   "imageAlt": "Vitrage feuilleté imprimé 200 cassé sur une porte de hall d'immeuble, resté en place après l'impact",
   "body": [
