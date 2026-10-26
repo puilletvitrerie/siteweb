@@ -45,7 +45,7 @@ const post: Post = {
       "h2": "Et si la porte du hall ne ferme plus ?"
     },
     {
-      "p": "Une porte d'immeuble ouverte, c'est un problème de sécurité pour tous les résidents. Si le vitrage est sorti de son cadre, je peux sécuriser l'ouverture le jour même avec une plaque OSB, en attendant la validation du devis et la fabrication du vitrage."
+      "p": "Une porte d'immeuble ouverte, c'est un problème de sécurité pour tous les résidents. S'il n'y a plus de vitrage, je peux sécuriser l'ouverture le jour même avec une plaque OSB, en attendant la validation du devis et la fabrication du vitrage."
     },
     {
       "p": "Le déplacement pour établir le devis est gratuit, et le devis est sans engagement. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
