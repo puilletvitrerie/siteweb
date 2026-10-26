@@ -41,10 +41,13 @@ const post: Post = {
       "avant": "/assets/services/feuillete-44-2-avant.jpg",
       "apres": "/assets/services/feuillete-44-2-apres.jpg",
       "ratio": 0.6692,
-      "caption": "Avant : vitrage de 8 mm brisé. Après : vitrage feuilleté 44.2."
+      "caption": "Avant : un verre simple de 8 mm, brisé. Après : remplacé aux normes par un feuilleté 44.2."
     },
     {
-      "p": "Sur certaines portes anciennes, on trouve encore du verre simple de 6 ou 8 mm. Lors d'un remplacement, je propose de passer au feuilleté 44.2, plus sûr pour les occupants. C'est par exemple ce que j'ai fait récemment sur une porte de hall où un vitrage de 8 mm avait été brisé."
+      "p": "Sur cette porte de hall, il y avait un verre simple de 8 mm, qui a été brisé. Je l'ai remplacé aux normes par un verre feuilleté 44.2, plus sûr pour les occupants."
+    },
+    {
+      "p": "Sur certaines portes anciennes, on trouve encore du verre simple de 6 ou 8 mm. Lors d'un remplacement, je propose de passer au feuilleté 44.2."
     },
     {
       "p": "Le déplacement pour établir le devis est gratuit, et le devis est sans engagement. Appelez-moi au 06 50 44 06 73 ou envoyez votre demande depuis le site, avec une photo si possible."
