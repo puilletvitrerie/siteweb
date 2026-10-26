@@ -28,7 +28,7 @@ const post: Post = {
       "h2": "Les parties privatives : l'occupant"
     },
     {
-      "p": "La fenêtre de votre appartement, la porte-fenêtre de votre balcon ou le garde-corps vitré de votre terrasse peuvent relever de vos parties privatives selon le règlement de copropriété. En cas de doute, le syndic saura vous répondre."
+      "p": "La fenêtre de votre appartement, la porte-fenêtre de votre balcon ou le garde-corps vitré de votre terrasse peuvent relever de vos parties privatives selon le règlement de copropriété. En cas de doute, le syndic saura vous répondre. Dans les deux cas, parties communes ou privatives, je peux intervenir."
     },
     {
       "h2": "Comment j'interviens dans un immeuble"
