@@ -7,10 +7,13 @@ const post: Post = {
   "date": "2026-11-24",
   "publie": false,
   "image": "/assets/services/feuillete-imprime-200-avant.jpg",
-  "imageAlt": "Vitrage feuilleté cassé sur une porte d'immeuble en copropriété, resté en place après l'impact",
+  "imageAlt": "Vitrage feuilleté imprimé 200 cassé sur une porte de hall d'immeuble, resté en place après l'impact",
   "body": [
     {
       "p": "Dans un immeuble, une vitre cassée dans les parties communes concerne tout le monde, mais personne ne sait toujours qui doit agir. Porte du hall, fenêtre de cage d'escalier, vitre de local vélo : voici comment les choses se passent en pratique."
+    },
+    {
+      "p": "Sur la photo, une porte de hall en feuilleté imprimé 200 : ce verre empêche de voir à l'intérieur du hall depuis la rue. En cas de casse, je le remplace à l'identique."
     },
     {
       "h2": "Les parties communes : le syndic ou la régie"
