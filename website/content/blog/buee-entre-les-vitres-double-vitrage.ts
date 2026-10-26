@@ -6,7 +6,7 @@ const post: Post = {
   description:
     "De la buée apparaît à l'intérieur de votre double vitrage ? Ce que ça signifie, pourquoi on ne peut pas l'essuyer, et comment remplacer seulement le vitrage à Lyon.",
   date: "2026-11-10",
-  publie: false,
+  publie: true,
   image: "/assets/blog/buee-baie-coulissante.jpg",
   imageAlt: "Baie vitrée coulissante dont le double vitrage est embué entre les deux vitres",
   body: [
