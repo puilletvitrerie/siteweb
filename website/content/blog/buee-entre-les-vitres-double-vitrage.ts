@@ -15,7 +15,7 @@ const post: Post = {
     },
     { h2: "Pourquoi de la buée entre les deux vitres ?" },
     {
-      p: "Un double vitrage est composé de deux vitres séparées par une lame d'air sec ou, le plus souvent aujourd'hui, de gaz argon, le tout fermé de façon étanche sur les bords. Avec les années, les fenêtres qui claquent ou les écarts de température, ce joint peut perdre son étanchéité. L'humidité entre alors entre les vitres et se condense dès qu'il fait froid.",
+      p: "Un double vitrage est composé de deux vitres séparées par une lame d'air sec ou, le plus souvent aujourd'hui, de gaz argon, le tout fermé de façon étanche sur les bords. Avec les années, ce joint peut perdre son étanchéité. L'humidité entre alors entre les vitres et se condense dès qu'il fait froid.",
     },
     {
       p: "C'est surtout le cas des anciens doubles vitrages : avec le temps, leurs joints s'usent, et c'est sur eux que je rencontre le plus souvent ce problème.",
