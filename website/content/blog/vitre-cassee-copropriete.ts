@@ -38,7 +38,7 @@ const post: Post = {
         "Dès réception de la demande, je me rends sur place dans les meilleurs délais.",
         "Je suis autonome pour accéder à l'immeuble : si personne n'est disponible pour m'accueillir, je sonne chez un copropriétaire pour me faire ouvrir.",
         "Je prends les mesures et je relève le type de vitrage (feuilleté, imprimé, armé…), pour remplacer à l'identique.",
-        "J'envoie un devis clair et détaillé au syndic ou à la régie."
+        "J'envoie un devis clair et détaillé à la régie."
       ]
     },
     {
