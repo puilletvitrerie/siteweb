@@ -19,7 +19,10 @@ const post: Post = {
       "h2": "Les parties communes : le syndic ou la régie"
     },
     {
-      "p": "Les vitrages des parties communes relèvent de la copropriété. C'est donc le syndic ou la régie qui commande la réparation. Si vous êtes résident, le bon réflexe est de les prévenir rapidement, avec une photo si possible. Le gardien, quand il y en a un, peut aussi faire remonter l'information."
+      "p": "Les vitrages des parties communes relèvent de la copropriété. Ce sont les copropriétaires qui préviennent le syndic ou la régie, avec une photo si possible. Le gestionnaire de copropriété me mandate ensuite pour un devis ou une intervention."
+    },
+    {
+      "p": "Vous êtes copropriétaire ? Vous pouvez me recommander auprès de votre gestionnaire de copropriété."
     },
     {
       "h2": "Les parties privatives : l'occupant"
