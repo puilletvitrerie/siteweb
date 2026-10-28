@@ -108,7 +108,7 @@ function HeroText() {
       >
         {/* Même style que l'étiquette des autres sections, mais dans le titre pour que Google lise « Vitrier à Lyon ». */}
         <span style={{ display: "block", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", lineHeight: 1.4, textTransform: "uppercase", marginBottom: 16 }}>
-          — Vitrier à Lyon · Vitrerie · Miroiterie
+          — Vitrier à Lyon &amp; alentours · Vitrerie · Miroiterie
         </span>
         Vitre cassée ?
         <br />
