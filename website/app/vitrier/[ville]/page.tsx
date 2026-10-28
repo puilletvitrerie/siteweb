@@ -27,6 +27,7 @@ const card: React.CSSProperties = { background: "#fff", border: "1px solid var(-
 export default async function VillePage({ params }: { params: Promise<{ ville: string }> }) {
   const v = getVille((await params).ville);
   if (!v) notFound();
+  const autres = villesVisibles().filter((x) => x.slug !== v.slug);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -112,8 +113,30 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
             </div>
             <div style={card}>
               <div style={{ fontWeight: 800, marginBottom: 6 }}>J&apos;interviens aussi à proximité</div>
-              <div style={{ fontSize: 15, color: "var(--color-ink-soft)", lineHeight: 1.6 }}>{v.voisines.join(" · ")}</div>
+              <div style={{ fontSize: 15, color: "var(--color-ink-soft)", lineHeight: 1.6 }}>
+                {v.voisines.map((nom, i) => {
+                  const page = autres.find((a) => a.nom === nom);
+                  return (
+                    <span key={nom}>
+                      {i > 0 && " · "}
+                      {page ? <Link href={`/vitrier/${page.slug}`} style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>{nom}</Link> : nom}
+                    </span>
+                  );
+                })}
+              </div>
             </div>
+          </div>
+        </div>
+
+        {/* Liens vers toutes les autres pages de villes : aide Google à les découvrir et à les relier entre elles. */}
+        <div style={{ ...card, marginTop: 32 }}>
+          <h2 style={{ fontSize: 20, fontWeight: 800, margin: "0 0 12px" }}>Vitrier dans les autres villes où j&apos;interviens</h2>
+          <div className="flex flex-wrap gap-2">
+            {autres.map((a) => (
+              <Link key={a.slug} href={`/vitrier/${a.slug}`} style={{ border: "1px solid var(--color-line)", borderRadius: 999, padding: "8px 14px", fontSize: 14, fontWeight: 600, color: "var(--color-ink)" }}>
+                Vitrier à {a.nom}
+              </Link>
+            ))}
           </div>
         </div>
 
