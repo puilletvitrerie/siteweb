@@ -262,7 +262,8 @@ export default function ServicesPage() {
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 text-center">Régies immobilières & syndics</h2>
             <p className="text-lg text-gray-600 mb-12 text-center max-w-2xl mx-auto">
-              Je travaille actuellement avec de nombreuses régies immobilières. Dès réception d&apos;une demande, j&apos;interviens rapidement pour remplacer vos vitrages, en autonomie complète.
+              Je travaille actuellement avec de nombreuses régies immobilières. Dès réception d&apos;une demande, j&apos;interviens rapidement pour remplacer vos vitrages, en autonomie complète.{" "}
+              <Link href="/vitrier-syndic-regie-lyon" className="font-semibold text-gray-900 underline underline-offset-4">Comment je travaille avec les syndics et les régies</Link>
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gray-900 text-white p-8 rounded-3xl">

@@ -41,6 +41,7 @@ Lyon 1er à 9e, Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, 
 - [Remplacement de vitre à Lyon](https://www.puilletvitrerie.fr/remplacement-vitre-lyon)
 - [Double vitrage à Lyon](https://www.puilletvitrerie.fr/double-vitrage-lyon)
 - [Prix et devis](https://www.puilletvitrerie.fr/prix-vitrier-lyon)
+- [Syndics et régies : vitrier pour les copropriétés](https://www.puilletvitrerie.fr/vitrier-syndic-regie-lyon)
 - [Services](https://www.puilletvitrerie.fr/services)
 - [Réalisations avant / après](https://www.puilletvitrerie.fr/realisations)
 - [Questions fréquentes](https://www.puilletvitrerie.fr/faq)

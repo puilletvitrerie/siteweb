@@ -95,7 +95,6 @@ function CallButton({ label = "Appeler · 06 50 44 06 73" }: { label?: string })
 function HeroText() {
   return (
     <>
-      <Label color="#fff">Vitrerie · Miroiterie · Lyon &amp; alentours</Label>
       <h1
         style={{
           fontFamily: F.sans,
@@ -103,10 +102,14 @@ function HeroText() {
           fontSize: "clamp(44px, 7vw, 88px)",
           letterSpacing: "-0.03em",
           lineHeight: 1.02,
-          margin: "16px 0 18px",
+          margin: "0 0 18px",
           color: "#fff",
         }}
       >
+        {/* Même style que l'étiquette des autres sections, mais dans le titre pour que Google lise « Vitrier à Lyon ». */}
+        <span style={{ display: "block", fontWeight: 700, fontSize: 12, letterSpacing: "0.14em", lineHeight: 1.4, textTransform: "uppercase", marginBottom: 16 }}>
+          — Vitrier à Lyon · Vitrerie · Miroiterie
+        </span>
         Vitre cassée ?
         <br />
         <Serif color={C.blueLight}>Intervention sous 24h.</Serif>

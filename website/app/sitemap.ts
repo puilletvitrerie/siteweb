@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/remplacement-vitre-lyon`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/double-vitrage-lyon`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/prix-vitrier-lyon`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/vitrier-syndic-regie-lyon`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/realisations`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/faq`, changeFrequency: "yearly", priority: 0.6 },
     { url: `${BASE}/contact`, changeFrequency: "yearly", priority: 0.8 },
