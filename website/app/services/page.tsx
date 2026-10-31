@@ -124,7 +124,14 @@ export default function ServicesPage() {
       icon: Flame,
       title: "Verre de cheminée",
       description: "Remplacement sur mesure de vitres de cheminée pour une utilisation en toute sécurité.",
-      image: "/assets/services/verre-cheminee.jpg",
+      beforeAfter: [
+        {
+          before: "/assets/realisations/12-avant.jpg",
+          after: "/assets/realisations/12-apres.jpg",
+          ratio: 1,
+          caption: "Poêle à bois à la Croix-Rousse : pose du nouveau verre de cheminée",
+        },
+      ],
       details: [
         "Verre haute température",
         "Découpe aux dimensions exactes",
