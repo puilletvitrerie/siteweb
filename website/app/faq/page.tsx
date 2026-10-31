@@ -5,7 +5,7 @@ import { FAQ_ITEMS } from "@/lib/contenu-accueil";
 export const metadata: Metadata = {
   title: "FAQ vitrier à Lyon : urgence en moins de 2h, devis, assurance",
   description:
-    "Vitre cassée à Lyon : intervention en moins de 2h pour un simple vitrage, devis gratuit sur photo, prise en charge par l'assurance, villes desservies : les réponses de votre vitrier.",
+    "Vitre cassée à Lyon : intervention en moins de 2h pour un simple vitrage, devis gratuit (sur photo pour un simple vitrage), prise en charge par l'assurance, villes desservies : les réponses de votre vitrier.",
   alternates: { canonical: "/faq" },
 };
 
