@@ -3,9 +3,9 @@ import FaqList from "@/components/FaqList";
 import { FAQ_ITEMS } from "@/lib/contenu-accueil";
 
 export const metadata: Metadata = {
-  title: "FAQ vitrier à Lyon : délais, devis, assurance",
+  title: "FAQ vitrier à Lyon : urgence en moins de 2h, devis, assurance",
   description:
-    "Délais d'intervention, devis gratuit, prise en charge par l'assurance, prix d'un remplacement de vitrage : les réponses de votre vitrier à Lyon.",
+    "Vitre cassée à Lyon : intervention en moins de 2h pour un simple vitrage, devis gratuit sur photo, prise en charge par l'assurance, villes desservies : les réponses de votre vitrier.",
   alternates: { canonical: "/faq" },
 };
 
