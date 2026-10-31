@@ -124,6 +124,7 @@ export default function ServicesPage() {
       icon: Flame,
       title: "Verre de cheminée",
       description: "Remplacement sur mesure de vitres de cheminée pour une utilisation en toute sécurité.",
+      image: "/assets/services/verre-cheminee.jpg",
       details: [
         "Verre haute température",
         "Découpe aux dimensions exactes",
