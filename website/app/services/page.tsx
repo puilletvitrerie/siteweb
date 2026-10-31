@@ -35,6 +35,12 @@ export default function ServicesPage() {
           ratio: 1100 / 891,
           caption: "Remplacement à l'identique d'un vitrage martelé avec parclose en bois sur porte de copropriété",
         },
+        {
+          before: "/assets/realisations/13-avant.jpg",
+          after: "/assets/realisations/13-apres.jpg",
+          ratio: 980 / 1000,
+          caption: "Remplacement d'un vitrage armé sur une porte d'immeuble à Vaulx-en-Velin",
+        },
       ],
       details: [
         "Vitres simples (3mm, 4mm)",
