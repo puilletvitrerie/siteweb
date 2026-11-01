@@ -33,7 +33,7 @@ const TEXT = `# Puillet Vitrerie
 Pas de prix fixe : le prix dépend du type de verre, de l'épaisseur, des dimensions et de l'accès. Devis gratuit sur photo et dimensions (WhatsApp) ou après un déplacement gratuit pour les mesures. Le prix du devis est le prix final. Garantie bris de glace de l'assurance habitation : seule la franchise reste généralement à la charge du client.
 
 ## Zone d'intervention
-Lyon 1er à 9e, Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, Rillieux-la-Pape, Tassin-la-Demi-Lune, Craponne, Francheville, Saint-Genis-les-Ollières, Montluel, Bourgoin-Jallieu et communes voisines.
+Lyon 1er à 9e, Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, Rillieux-la-Pape, Caluire-et-Cuire, Tassin-la-Demi-Lune, Craponne, Francheville, Saint-Genis-les-Ollières, Montluel, Bourgoin-Jallieu et communes voisines.
 
 ## Pages principales
 - [Accueil](https://www.puilletvitrerie.fr/)

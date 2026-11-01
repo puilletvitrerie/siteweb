@@ -59,6 +59,7 @@ export const VILLES: Ville[] = [
       R(10, 1100 / 1109, "Lyon 7e : vitrage de porte d'immeuble remplacé"),
       S("miroir-hall", 661 / 1300, "Lyon 7e : miroir remplacé à l'identique dans un hall de copropriété"),
       R(9, 1091 / 1300, "Lyon 2e : remplacement du vitrage imprimé d'une fenêtre de cage d'escalier, à l'identique"),
+      R(12, 1, "Lyon 4e (Croix-Rousse) : verre de poêle à bois remplacé sur mesure"),
     ],
   },
   {
@@ -95,7 +96,10 @@ export const VILLES: Ville[] = [
     intro:
       "J'interviens à Vaulx-en-Velin pour les particuliers et les copropriétés. Sur les portes d'immeuble, je remplace les vitrages cassés et je peux remettre aux normes les anciens vitrages en passant au feuilleté 44.2.",
     voisines: ["Villeurbanne", "Décines-Charpieu", "Bron", "Rillieux-la-Pape", "Meyzieu"],
-    chantiers: [S("feuillete-44-2", 870 / 1300, "Vaulx-en-Velin : remise aux normes, vitrage de 8 mm remplacé par un feuilleté 44.2")],
+    chantiers: [
+      S("feuillete-44-2", 870 / 1300, "Vaulx-en-Velin : remise aux normes, vitrage de 8 mm remplacé par un feuilleté 44.2"),
+      R(13, 980 / 1000, "Vaulx-en-Velin : vitrage armé de porte d'immeuble remplacé"),
+    ],
   },
   {
     slug: "decines-charpieu",
@@ -126,6 +130,16 @@ export const VILLES: Ville[] = [
       "Au nord de Lyon, j'interviens à Rillieux-la-Pape, y compris pour les grands vitrages qui demandent plusieurs poseurs et un équipement à ventouses, comme les vitrages fixes de hall d'immeuble.",
     voisines: ["Caluire-et-Cuire", "Sathonay-Camp", "Vaulx-en-Velin", "Neuville-sur-Saône", "Montluel"],
     chantiers: [R(11, 1, "Rillieux-la-Pape : grand vitrage fixe de hall d'immeuble remplacé")],
+  },
+  {
+    slug: "caluire-et-cuire",
+    nom: "Caluire-et-Cuire",
+    cp: "69300",
+    publie: true,
+    intro:
+      "Juste au nord de Lyon, j'interviens à Caluire-et-Cuire pour les copropriétés et les particuliers. Je remplace les vitrages cassés à l'identique, y compris sur les menuiseries en bois avec parclose, sans changer la fenêtre : en moins de 2 heures pour un simple vitrage en urgence.",
+    voisines: ["Lyon 4e", "Rillieux-la-Pape", "Sathonay-Camp", "Fontaines-sur-Saône", "Villeurbanne"],
+    chantiers: [R(14, 875 / 1000, "Caluire-et-Cuire : vitrage 4 mm remplacé avec parclose en bois sur la fenêtre d'un local poubelle")],
   },
   {
     slug: "tassin-la-demi-lune",

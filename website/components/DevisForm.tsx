@@ -19,7 +19,7 @@ const MAX_SENT_BYTES = 1.3 * 1024 * 1024; // par photo, après compression
 
 export const VILLES_SUGGEREES = [
   "Lyon 1er", "Lyon 2e", "Lyon 3e", "Lyon 4e", "Lyon 5e", "Lyon 6e", "Lyon 7e", "Lyon 8e", "Lyon 9e",
-  "Villeurbanne", "Vaulx-en-Velin", "Bron", "Décines-Charpieu", "Meyzieu", "Rillieux-la-Pape",
+  "Villeurbanne", "Vaulx-en-Velin", "Bron", "Décines-Charpieu", "Meyzieu", "Rillieux-la-Pape", "Caluire-et-Cuire",
   "Tassin-la-Demi-Lune", "Craponne", "Francheville", "Saint-Genis-les-Ollières", "Montluel", "Bourgoin-Jallieu", "Autre",
 ];
 const TYPES = ["Vitre / fenêtre", "Double vitrage", "Vitrine", "Miroir", "Porte vitrée", "Autre"];

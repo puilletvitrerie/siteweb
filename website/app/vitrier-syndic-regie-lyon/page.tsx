@@ -71,7 +71,7 @@ export default function Page() {
         {
           h2: "Où j'interviens",
           p: [
-            "Dans tous les arrondissements de Lyon et jusqu'à environ 60 km autour : Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, Rillieux-la-Pape, Tassin-la-Demi-Lune, Craponne, Francheville, Saint-Genis-les-Ollières, Montluel, Bourgoin-Jallieu et les communes voisines.",
+            "Dans tous les arrondissements de Lyon et jusqu'à environ 60 km autour : Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, Rillieux-la-Pape, Caluire-et-Cuire, Tassin-la-Demi-Lune, Craponne, Francheville, Saint-Genis-les-Ollières, Montluel, Bourgoin-Jallieu et les communes voisines.",
           ],
         },
       ]}

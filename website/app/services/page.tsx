@@ -45,7 +45,7 @@ export default function ServicesPage() {
           before: "/assets/realisations/14-avant.jpg",
           after: "/assets/realisations/14-apres.jpg",
           ratio: 875 / 1000,
-          caption: "Vitrage 4 mm remplacé avec parclose en bois sur la fenêtre d'un local poubelle",
+          caption: "Vitrage 4 mm remplacé avec parclose en bois sur la fenêtre d'un local poubelle à Caluire-et-Cuire",
         },
       ],
       details: [

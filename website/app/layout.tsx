@@ -67,7 +67,7 @@ const LOCAL_BUSINESS = {
   },
   geo: { "@type": "GeoCoordinates", latitude: 45.7439321, longitude: 4.7706419 },
   areaServed: [
-    "Lyon", "Villeurbanne", "Vaulx-en-Velin", "Bron", "Décines-Charpieu", "Meyzieu", "Rillieux-la-Pape",
+    "Lyon", "Villeurbanne", "Vaulx-en-Velin", "Bron", "Décines-Charpieu", "Meyzieu", "Rillieux-la-Pape", "Caluire-et-Cuire",
     "Tassin-la-Demi-Lune", "Craponne", "Francheville", "Saint-Genis-les-Ollières", "Montluel", "Bourgoin-Jallieu",
   ].map((name) => ({ "@type": "City", name })),
   logo: "https://www.puilletvitrerie.fr/icon-192.png",
