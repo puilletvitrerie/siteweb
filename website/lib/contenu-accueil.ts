@@ -1,6 +1,7 @@
 // Contenus déplacés de l'ancienne page d'accueil : réalisations (page /realisations) et FAQ (page /faq).
 
 export const REALISATIONS = [
+  { n: "14", title: "Fenêtre de local poubelle", meta: "Vitrage 4 mm remplacé, parclose en bois", tag: "Copropriété", ratio: 875 / 1000 },
   { n: "13", title: "Porte d'immeuble à Vaulx-en-Velin", meta: "Remplacement du vitrage armé", tag: "Copropriété", ratio: 980 / 1000 },
   { n: "12", title: "Poêle à bois à la Croix-Rousse", meta: "Remplacement du verre de cheminée", tag: "Particulier", ratio: 1 },
   { n: "06", title: "Porte d'entrée de résidence", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 711 / 1300 },

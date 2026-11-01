@@ -41,6 +41,12 @@ export default function ServicesPage() {
           ratio: 980 / 1000,
           caption: "Remplacement d'un vitrage armé sur une porte d'immeuble à Vaulx-en-Velin",
         },
+        {
+          before: "/assets/realisations/14-avant.jpg",
+          after: "/assets/realisations/14-apres.jpg",
+          ratio: 875 / 1000,
+          caption: "Vitrage 4 mm remplacé avec parclose en bois sur la fenêtre d'un local poubelle",
+        },
       ],
       details: [
         "Vitres simples (3mm, 4mm)",
