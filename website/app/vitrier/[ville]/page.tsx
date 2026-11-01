@@ -101,6 +101,7 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
                 Déplacement pour le devis gratuit<br />
                 Devis sans engagement<br />
                 Lundi au samedi · 7h à 20h<br />
+                Dimanche · 8h à 19h<br />
                 Dépannage 7j/7<br />
                 Assuré RC pro et décennale MAAF
               </div>

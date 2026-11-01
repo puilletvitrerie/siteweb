@@ -121,7 +121,7 @@ export default function Footer() {
           }}
           className="md:flex-row md:justify-between"
         >
-          <div>Puillet Vitrerie · Lyon &amp; métropole (60 km) · Lun–Sam 7h–20h · urgences 7j/7 · SIRET 995 238 169 00016</div>
+          <div>Puillet Vitrerie · Lyon &amp; métropole (60 km) · Lun–Sam 7h–20h · Dim 8h–19h · urgences 7j/7 · SIRET 995 238 169 00016</div>
           <Link href="/mentions-legales" style={{ color: "#a8a39a", textDecoration: "underline" }} className="hover:text-white">
             Mentions légales
           </Link>

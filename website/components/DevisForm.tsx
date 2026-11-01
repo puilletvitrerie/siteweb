@@ -198,7 +198,7 @@ export default function DevisForm() {
         <div style={{ fontSize: 44, lineHeight: 1 }} aria-hidden>✓</div>
         <h2 style={{ fontSize: 28, fontWeight: 800, letterSpacing: "-0.02em", margin: "12px 0 10px" }}>C&rsquo;est envoyé !</h2>
         <p style={{ fontSize: 17, lineHeight: 1.55, color: C.inkSoft, margin: "0 0 22px" }}>
-          Léo vous rappelle très vite (Lun–Sam 7h–20h, urgences 7j/7).
+          Léo vous rappelle très vite (Lun–Sam 7h–20h, Dim 8h–19h, urgences 7j/7).
         </p>
         <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: 56, borderRadius: 999, background: "#1F1D1B", color: "#fff", fontWeight: 700, fontSize: 16 }}>
           Une urgence ? Écrivez-lui directement

@@ -87,6 +87,12 @@ const LOCAL_BUSINESS = {
       opens: "07:00",
       closes: "20:00",
     },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Sunday"],
+      opens: "08:00",
+      closes: "19:00",
+    },
   ],
   priceRange: "Devis gratuit",
 };

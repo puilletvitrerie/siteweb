@@ -11,7 +11,7 @@ const TEXT = `# Puillet Vitrerie
 - Téléphone : 06 50 44 06 73 (+33 6 50 44 06 73), WhatsApp au même numéro
 - E-mail : puilletvitrerie@gmail.com
 - Adresse : 42 avenue du Chater, 69340 Francheville
-- Horaires : du lundi au samedi de 7 h à 20 h, urgences 7j/7
+- Horaires : du lundi au samedi de 7 h à 20 h, le dimanche de 8 h à 19 h, urgences 7j/7
 - SARL, SIRET 995 238 169 00016 · assurance responsabilité civile professionnelle et décennale MAAF
 - Avis : 4,9/5 sur Google (29 avis)
 
