@@ -135,7 +135,7 @@ export default function ServicesPage() {
     {
       icon: Flame,
       title: "Verre de cheminée",
-      description: "Remplacement sur mesure de vitres de cheminée pour une utilisation en toute sécurité.",
+      description: "Remplacement des vitres de poêle, d'insert et de cheminée par un verre néocéramique résistant aux hautes températures, pour une utilisation en toute sécurité.",
       beforeAfter: [
         {
           before: "/assets/realisations/12-avant.jpg",
@@ -145,8 +145,8 @@ export default function ServicesPage() {
         },
       ],
       details: [
-        "Verre haute température",
-        "Découpe aux dimensions exactes",
+        "Verre néocéramique résistant aux hautes températures",
+        "Aux dimensions exactes de votre poêle ou insert",
         "Respect des normes de sécurité",
         "Installation rapide",
         "Conseils personnalisés",
