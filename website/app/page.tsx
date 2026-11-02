@@ -171,7 +171,7 @@ function Hero() {
 const ENGAGEMENTS = [
   "Un seul interlocuteur, du premier appel à la pose de votre vitrage.",
   "Verre en stock dans le camion : un simple vitrage est coupé et posé sur place.",
-  "Devis gratuit : le prix du devis est le prix que vous payez.",
+  "Devis gratuit et sans engagement, déplacement pour le devis gratuit : le prix du devis est le prix que vous payez.",
 ];
 
 function QuiVient() {
