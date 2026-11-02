@@ -218,7 +218,8 @@ function QuiVient() {
 }
 
 // ─── 4b. Réalisations (3 derniers chantiers) ─────────────────────────────────
-const DERNIERS_CHANTIERS = ["14", "13", "12"]
+// Les 3 premiers chantiers de la page Réalisations (choisis par Léo).
+const DERNIERS_CHANTIERS = ["06", "03", "10"]
   .map((n) => REALISATIONS.find((r) => r.n === n))
   .filter((r): r is (typeof REALISATIONS)[number] => Boolean(r));
 
@@ -230,7 +231,7 @@ function Realisations() {
           <div>
             <Label>Réalisations</Label>
             <h2 style={{ ...h2Style, marginBottom: 0 }}>
-              Mes derniers chantiers, <Serif>avant / après.</Serif>
+              Mes chantiers, <Serif>avant / après.</Serif>
             </h2>
           </div>
           <Link
