@@ -9,11 +9,23 @@ export const metadata = {
 };
 
 export default function AProposPage() {
-  const values = [
+  type Value = {
+    icon: typeof Wrench;
+    title: string;
+    description: string;
+    photos?: { src: string; alt: string }[];
+    avis?: { text: string; name: string }[];
+  };
+
+  const values: Value[] = [
     {
       icon: Wrench,
       title: "Savoir-faire artisanal",
       description: "Techniques traditionnelles de pose au mastic, respect du cachet ancien des menuiseries.",
+      photos: [
+        { src: "/assets/services/mastic-atelier.jpg", alt: "Léo Puillet pose du mastic sur un cadre vitré" },
+        { src: "/assets/services/decoupe-1.jpg", alt: "Léo Puillet coupe un vitrage sur place" },
+      ],
     },
     {
       icon: Shield,
@@ -24,6 +36,10 @@ export default function AProposPage() {
       icon: Clock,
       title: "Réactivité",
       description: "Intervention en moins de 2 heures pour les urgences, 24h/24 et 7j/7.",
+      avis: [
+        { text: "Sa réactivité est tout simplement impressionnante : demande de devis envoyée à 15h, reçu en 1h !", name: "Nawelle C." },
+        { text: "Service impeccable ! Intervention ultra rapide et travail très soigné.", name: "Florian R." },
+      ],
     },
     {
       icon: Award,
@@ -56,24 +72,14 @@ export default function AProposPage() {
       {/* Hero Section */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="text-center md:text-left">
-              <div className="inline-block px-4 py-2 bg-gray-100 text-gray-900 rounded-full font-bold text-sm mb-6">
-                DEVIS GRATUIT
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">À Propos</h1>
-              <p className="text-xl text-gray-600">
-                Artisan spécialisé dans le remplacement à l'identique de tous types de vitrages
-              </p>
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-block px-4 py-2 bg-gray-100 text-gray-900 rounded-full font-bold text-sm mb-6">
+              DEVIS GRATUIT
             </div>
-            <div className="mx-auto w-full max-w-sm rounded-3xl overflow-hidden bg-gray-100" style={{ aspectRatio: "3 / 4" }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/assets/artisan-camion-900.webp"
-                alt="Léo Puillet, artisan vitrier, devant son camion Puillet Vitrerie"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">À Propos</h1>
+            <p className="text-xl text-gray-600">
+              Artisan spécialisé dans le remplacement à l'identique de tous types de vitrages
+            </p>
           </div>
         </div>
       </section>
@@ -92,17 +98,14 @@ export default function AProposPage() {
               savoir-faire artisanal au service des particuliers, des professionnels et des régies immobilières.
             </p>
           </div>
-          <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
-            {[
-              { src: "/assets/services/decoupe-1.jpg", alt: "Léo Puillet découpe une vitre sur place devant un immeuble à Lyon" },
-              { src: "/assets/services/autonomie-2.jpg", alt: "Léo Puillet remplace le vitrage d'une fenêtre ancienne en bois" },
-              { src: "/assets/services/mastic-atelier.jpg", alt: "Léo Puillet prépare un cadre vitré à l'arrière de son camion-atelier" },
-            ].map((photo) => (
-              <div key={photo.src} className="rounded-3xl overflow-hidden bg-gray-100" style={{ aspectRatio: "3 / 4" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={photo.src} alt={photo.alt} loading="lazy" className="w-full h-full object-cover" />
-              </div>
-            ))}
+          <div className="mx-auto w-full max-w-md rounded-3xl overflow-hidden bg-gray-100 mt-12" style={{ aspectRatio: "3 / 4" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/artisan-camion-900.webp"
+              alt="Léo Puillet, artisan vitrier, devant son camion Puillet Vitrerie"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -120,6 +123,27 @@ export default function AProposPage() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
+                  {value.photos && (
+                    <div className="grid grid-cols-2 gap-2 mt-5">
+                      {value.photos.map((photo) => (
+                        <div key={photo.src} className="rounded-2xl overflow-hidden bg-gray-100" style={{ aspectRatio: "3 / 4" }}>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={photo.src} alt={photo.alt} loading="lazy" className="w-full h-full object-cover" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {value.avis && (
+                    <div className="mt-5 space-y-3 text-left">
+                      {value.avis.map((a) => (
+                        <figure key={a.name} className="bg-gray-50 rounded-2xl p-4 m-0">
+                          <div className="text-[#3B8FD4] text-sm mb-1" aria-label="5 étoiles sur 5">★★★★★</div>
+                          <blockquote className="text-gray-800 text-sm m-0">« {a.text} »</blockquote>
+                          <figcaption className="text-gray-500 text-xs mt-2">{a.name} · avis Google</figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
