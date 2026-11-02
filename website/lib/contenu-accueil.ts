@@ -1,20 +1,21 @@
 // Contenus déplacés de l'ancienne page d'accueil : réalisations (page /realisations) et FAQ (page /faq).
 
+// Ordre d'affichage de la page Réalisations (le 1er est montré en premier).
 export const REALISATIONS = [
-  { n: "14", title: "Local poubelle à Caluire-et-Cuire", meta: "Vitrage 4 mm remplacé, parclose en bois", tag: "Copropriété", ratio: 875 / 1000 },
-  { n: "13", title: "Porte d'immeuble à Vaulx-en-Velin", meta: "Remplacement du vitrage armé", tag: "Copropriété", ratio: 980 / 1000 },
-  { n: "12", title: "Poêle à bois à la Croix-Rousse", meta: "Remplacement du verre de cheminée", tag: "Particulier", ratio: 1 },
   { n: "06", title: "Porte d'entrée de résidence", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 711 / 1300 },
+  { n: "03", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage après vandalisme", tag: "Dépannage", ratio: 590 / 1300 },
+  { n: "10", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 1100 / 1109 },
   { n: "01", title: "Garde-corps vitré de balcon", meta: "Remplacement du panneau en verre opale", tag: "Copropriété", ratio: 1100 / 852 },
   { n: "02", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 708 / 1300 },
-  { n: "03", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage après vandalisme", tag: "Dépannage", ratio: 590 / 1300 },
   { n: "04", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 890 / 1300 },
   { n: "05", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 609 / 1300 },
   { n: "07", title: "Porte vitrée de hall", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 874 / 1300 },
   { n: "08", title: "Fenêtre PVC", meta: "Remplacement du vitrage", tag: "Particulier", ratio: 1100 / 1099 },
   { n: "09", title: "Fenêtre ancienne de cage d'escalier", meta: "Vitrage imprimé posé à l'identique", tag: "Copropriété", ratio: 1091 / 1300 },
-  { n: "10", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 1100 / 1109 },
   { n: "11", title: "Vitrine de hall d'immeuble", meta: "Remplacement du grand vitrage fixe", tag: "Copropriété", ratio: 1 },
+  { n: "14", title: "Local poubelle à Caluire-et-Cuire", meta: "Vitrage 4 mm remplacé, parclose en bois", tag: "Copropriété", ratio: 875 / 1000 },
+  { n: "13", title: "Porte d'immeuble à Vaulx-en-Velin", meta: "Remplacement du vitrage armé", tag: "Copropriété", ratio: 980 / 1000 },
+  { n: "12", title: "Poêle à bois à la Croix-Rousse", meta: "Remplacement du verre de cheminée", tag: "Particulier", ratio: 1 },
 ].map((r) => ({ ...r, before: `/assets/realisations/${r.n}-avant.jpg`, after: `/assets/realisations/${r.n}-apres.jpg` }));
 
 export const FAQ_ITEMS = [
