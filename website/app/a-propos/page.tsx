@@ -57,7 +57,7 @@ function Photo({ src, alt, ratio = "3 / 4" }: { src: string; alt: string; ratio?
 const ENGAGEMENTS = [
   { titre: "Un seul interlocuteur", texte: "C'est moi qui réponds au téléphone, qui fais le devis et qui pose le vitrage. Pas de standard, pas de sous-traitance." },
   { titre: "Spécialisé dans le verre", texte: "Je ne fais pas de menuiserie : je remplace le vitrage en gardant votre fenêtre, votre porte ou votre vitrine." },
-  { titre: "Réactif", texte: "Moins de 2 h pour un simple vitrage en urgence, 24 à 72 h pour le feuilleté, le double vitrage et les miroirs." },
+  { titre: "Réactif", texte: "Moins de 2 h pour un simple vitrage en urgence, sous 24 h pour le feuilleté, le double vitrage et les miroirs." },
   { titre: "Assuré", texte: "Responsabilité civile professionnelle et décennale MAAF, attestation envoyée sur demande." },
 ];
 

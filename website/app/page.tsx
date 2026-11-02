@@ -279,7 +279,7 @@ function Realisations() {
 const SERVICES_CARTES = [
   { titre: "Vitre cassée en urgence", texte: "Simple vitrage remplacé en moins de 2 h. Mise en sécurité le jour même, 7j/7.", href: "/vitrier-urgence-lyon" },
   { titre: "Remplacement de vitrage", texte: "Fenêtres, portes, vitrines : je change le verre en gardant votre menuiserie.", href: "/remplacement-vitre-lyon" },
-  { titre: "Double vitrage", texte: "Double vitrage cassé ou plein de buée, fabriqué sur mesure et posé sous 24 à 72 h.", href: "/double-vitrage-lyon" },
+  { titre: "Double vitrage", texte: "Double vitrage cassé ou plein de buée, fabriqué sur mesure et posé sous 24 h.", href: "/double-vitrage-lyon" },
   { titre: "Verre feuilleté & sécurité", texte: "Feuilleté 44.2 pour portes d'immeuble, vitrines et garde-corps.", href: "/services" },
   { titre: "Miroiterie sur mesure", texte: "Miroirs de salle de bain, de dressing ou de hall, mesurés et posés chez vous.", href: "/services" },
   { titre: "Syndics & régies", texte: "Parties communes : intervention en autonomie, devis détaillé HT/TTC.", href: "/vitrier-syndic-regie-lyon" },
