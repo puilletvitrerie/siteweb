@@ -24,7 +24,7 @@ export default function AProposPage() {
       description: "Techniques traditionnelles de pose au mastic, respect du cachet ancien des menuiseries.",
       photos: [
         { src: "/assets/services/mastic-atelier.jpg", alt: "Léo Puillet pose du mastic sur un cadre vitré" },
-        { src: "/assets/services/decoupe-1.jpg", alt: "Léo Puillet coupe un vitrage sur place" },
+        { src: "/assets/services/mastic-fenetre.jpg", alt: "Léo Puillet refait le masticage d'une fenêtre ancienne à petits carreaux" },
       ],
     },
     {
