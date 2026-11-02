@@ -89,17 +89,17 @@ export default function SeoPage(p: SeoPageProps) {
           ))}
         </ul>
 
-        <div className="flex flex-col sm:flex-row gap-3" style={{ marginBottom: 12 }}>
-          <a href="tel:+33650440673" style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.blue, color: "#fff", fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3" style={{ marginBottom: 12 }}>
+          <a href="tel:+33650440673" style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.blue, color: "#fff", fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center", whiteSpace: "nowrap" }}>
             Appeler · 06 50 44 06 73
           </a>
-          <a href="https://wa.me/33650440673" target="_blank" rel="noopener noreferrer" style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.card, color: C.ink, border: `1.5px solid ${C.line}`, fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+          <a href="https://wa.me/33650440673" target="_blank" rel="noopener noreferrer" style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.card, color: C.ink, border: `1.5px solid ${C.line}`, fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center", whiteSpace: "nowrap" }}>
             Envoyer une photo sur WhatsApp
           </a>
           {p.email && (
             <a
               href={`mailto:puilletvitrerie@gmail.com?subject=${encodeURIComponent(p.email.subject)}&body=${encodeURIComponent(p.email.body)}`}
-              style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.card, color: C.ink, border: `1.5px solid ${C.line}`, fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center" }}
+              style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.card, color: C.ink, border: `1.5px solid ${C.line}`, fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center", whiteSpace: "nowrap" }}
             >
               {p.email.label}
             </a>
