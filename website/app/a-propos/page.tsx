@@ -50,6 +50,10 @@ export default function AProposPage() {
       icon: Heart,
       title: "Autonomie",
       description: "Travail en totale autonomie de A à Z, sans sous-traitance.",
+      photos: [
+        { src: "/assets/services/autonomie-1.jpg", alt: "Léo Puillet sonne à l'interphone d'un immeuble pour accéder au chantier" },
+        { src: "/assets/services/autonomie-2.jpg", alt: "Léo Puillet prend les dimensions d'une fenêtre ancienne" },
+      ],
     },
     {
       icon: MapPin,
