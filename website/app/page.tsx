@@ -198,7 +198,7 @@ function QuiVient() {
           </ul>
           <p style={{ fontSize: 14, fontWeight: 600, color: C.inkSoft, margin: "0 0 18px" }}>RC Pro &amp; décennale MAAF · Vitrage sécurité SP10 / 44.2</p>
           <Link href="/a-propos" style={{ fontSize: 15, fontWeight: 700, color: C.ink, textDecoration: "underline", textUnderlineOffset: 4 }}>
-            Mon parcours →
+            En savoir plus sur moi →
           </Link>
         </div>
         <div className="mx-auto w-full" style={{ maxWidth: 440, borderRadius: 20, overflow: "hidden", aspectRatio: "3 / 4", background: C.line }}>
