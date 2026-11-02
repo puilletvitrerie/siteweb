@@ -170,7 +170,7 @@ function Hero() {
 // <VideoPresentation src="/videos/presentation.mp4" poster="/assets/artisan-camion-900.webp" title="…" /> (composant conservé).
 const ENGAGEMENTS = [
   "Un seul interlocuteur, du premier appel à la pose de votre vitrage.",
-  "Verre en stock dans le camion : un simple vitrage est coupé et posé sur place.",
+  "Vitrage en stock dans mon camion : un simple vitrage est recoupé et posé sur place.",
   "Devis gratuit et sans engagement, déplacement pour le devis gratuit : le prix du devis est le prix que vous payez.",
 ];
 
