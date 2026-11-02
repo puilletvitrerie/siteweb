@@ -27,6 +27,10 @@ export type SeoPageProps = {
   updated: string; // AAAA-MM-JJ
   related: { href: string; label: string }[];
   service?: { name: string; description: string };
+  // Optionnel : chantiers avant / après affichés sous les boutons d'appel.
+  gallery?: { title: string; before: string; after: string }[];
+  // Optionnel : bouton e-mail (ex. ordre de service des gestionnaires).
+  email?: { label: string; subject: string; body: string };
 };
 
 const fmt = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
@@ -92,7 +96,42 @@ export default function SeoPage(p: SeoPageProps) {
           <a href="https://wa.me/33650440673" target="_blank" rel="noopener noreferrer" style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.card, color: C.ink, border: `1.5px solid ${C.line}`, fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
             Envoyer une photo sur WhatsApp
           </a>
+          {p.email && (
+            <a
+              href={`mailto:puilletvitrerie@gmail.com?subject=${encodeURIComponent(p.email.subject)}&body=${encodeURIComponent(p.email.body)}`}
+              style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.card, color: C.ink, border: `1.5px solid ${C.line}`, fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center" }}
+            >
+              {p.email.label}
+            </a>
+          )}
         </div>
+
+        {p.gallery && p.gallery.length > 0 && (
+          <section aria-label="Chantiers avant / après" style={{ marginTop: 32 }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {p.gallery.map((g) => (
+                <figure key={g.title} style={{ margin: 0, background: C.card, border: `1px solid ${C.line}`, borderRadius: 18, overflow: "hidden" }}>
+                  <div className="grid grid-cols-2" style={{ gap: 2, background: C.line }}>
+                    {[
+                      { src: g.before, label: "Avant" },
+                      { src: g.after, label: "Après" },
+                    ].map((img) => (
+                      <div key={img.label} style={{ position: "relative", aspectRatio: "4 / 5" }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={img.src} alt={`${g.title} : ${img.label.toLowerCase()} l'intervention`} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                        <span style={{ position: "absolute", top: 8, left: 8, background: img.label === "Après" ? C.blue : "rgba(15,15,15,.75)", color: "#fff", fontSize: 12, fontWeight: 700, padding: "3px 9px", borderRadius: 999 }}>{img.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <figcaption style={{ padding: "12px 14px", fontSize: 15, fontWeight: 700 }}>{g.title}</figcaption>
+                </figure>
+              ))}
+            </div>
+            <p style={{ fontSize: 15, margin: "12px 0 0" }}>
+              <Link href="/realisations" style={{ color: C.blueDark, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>Voir tous mes chantiers en photos →</Link>
+            </p>
+          </section>
+        )}
 
         {p.sections.map((s) => (
           <section key={s.h2}>

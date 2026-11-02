@@ -89,6 +89,17 @@ export default function Page() {
         { href: "/realisations", label: "Mes chantiers en photos, avant / après" },
       ]}
       service={{ name: "Remplacement de vitrage pour syndics et régies", description: "Remplacement de vitrages de portes d'immeuble et de parties communes pour les syndics de copropriété et les régies immobilières à Lyon." }}
+      email={{
+        label: "Envoyer un ordre de service",
+        subject: "Ordre de service - remplacement de vitrage",
+        body: "Bonjour,\n\nAdresse de l'immeuble :\nEmplacement du vitrage (porte de hall, cage d'escalier...) :\nContact sur place (facultatif) :\nN° d'ordre de service (si besoin) :\n\nPhoto en pièce jointe si possible.\n\nMerci,",
+      }}
+      gallery={[
+        { title: "Porte d'immeuble à Vaulx-en-Velin, vitrage armé", before: "/assets/realisations/13-avant.jpg", after: "/assets/realisations/13-apres.jpg" },
+        { title: "Local poubelle à Caluire-et-Cuire", before: "/assets/realisations/14-avant.jpg", after: "/assets/realisations/14-apres.jpg" },
+        { title: "Porte d'entrée d'immeuble après vandalisme", before: "/assets/realisations/03-avant.jpg", after: "/assets/realisations/03-apres.jpg" },
+        { title: "Vitrine de hall d'immeuble", before: "/assets/realisations/11-avant.jpg", after: "/assets/realisations/11-apres.jpg" },
+      ]}
     />
   );
 }
