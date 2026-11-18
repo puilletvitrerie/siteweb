@@ -391,7 +391,7 @@ function Zones() {
         <ul style={{ display: "flex", flexWrap: "wrap", gap: 8, listStyle: "none", padding: 0, margin: "0 0 10px" }}>
           {ARRONDISSEMENTS.map((a) => (
             <li key={a}>
-              <Link href="/vitrier/lyon" style={{ ...tag, background: C.ink, color: "#fff" }}>{a}</Link>
+              <Link href={villeHref(a) ?? "/vitrier/lyon"} style={{ ...tag, background: C.ink, color: "#fff" }}>{a}</Link>
             </li>
           ))}
         </ul>
