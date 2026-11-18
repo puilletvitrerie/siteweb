@@ -63,6 +63,21 @@ export const VILLES: Ville[] = [
     ],
   },
   {
+    slug: "lyon-7",
+    nom: "Lyon 7e",
+    cp: "69007",
+    publie: true,
+    intro:
+      "J'interviens dans tout le 7e arrondissement de Lyon, de la Guillotière à Jean Macé et Gerland. Portes d'immeuble vandalisées, vitrines de commerce, miroirs de hall, fenêtres de particuliers : je remplace le vitrage sans changer la menuiserie, en moins de 2 heures pour un simple vitrage en urgence, sous 24 à 72 heures pour un vitrage sur mesure. Voici des chantiers que j'ai réalisés dans le 7e.",
+    voisines: ["Lyon 2e", "Lyon 3e", "Lyon 8e", "Saint-Fons", "Vénissieux", "Oullins"],
+    chantiers: [
+      S("vitrine-facade", 757 / 1300, "Lyon 7e : vitrine de commerce, sécurisation en OSB puis pose du nouveau vitrage"),
+      R(3, 590 / 1300, "Lyon 7e : vitrage de porte d'immeuble remplacé après vandalisme"),
+      R(10, 1100 / 1109, "Lyon 7e : vitrage de porte d'immeuble remplacé"),
+      S("miroir-hall", 661 / 1300, "Lyon 7e : miroir remplacé à l'identique dans un hall de copropriété"),
+    ],
+  },
+  {
     slug: "villeurbanne",
     nom: "Villeurbanne",
     cp: "69100",
