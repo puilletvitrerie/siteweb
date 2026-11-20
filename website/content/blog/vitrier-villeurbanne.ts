@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "vitrier-villeurbanne",
   "title": "Vitrier à Villeurbanne : interventions et conseils",
   "description": "Artisan vitrier intervenant à Villeurbanne : vitre cassée, double vitrage, porte d'immeuble, vitrine, miroir. Dépannage rapide et devis gratuit.",
-  "date": "2027-08-03",
+  "date": "2027-03-02",
   "publie": false,
   "image": "/assets/realisations/07-apres.jpg",
   "imageAlt": "Porte vitrée de hall d'immeuble après remplacement du vitrage",

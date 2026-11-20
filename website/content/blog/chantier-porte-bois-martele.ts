@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "chantier-porte-bois-martele",
   "title": "Chantier : porte ancienne en bois, vitrage martelé remplacé à l'identique",
   "description": "Récit d'un chantier : sur une porte de copropriété en bois, un carreau de verre martelé manquant, remplacé à l'identique avec ses parcloses. Avant/après.",
-  "date": "2027-08-31",
+  "date": "2027-03-16",
   "publie": false,
   "image": "/assets/services/martele-parclose-bois-avant.jpg",
   "imageAlt": "Porte ancienne en bois avec un carreau de verre manquant",

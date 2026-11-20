@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "miroir-convexe-remplacement",
   "title": "Miroir convexe de parking ou de copropriété : remplacement et sécurité",
   "description": "Miroir convexe cassé à la sortie d'un parking ou d'une résidence ? Pourquoi le remplacer vite et comment se passe le remplacement à l'identique.",
-  "date": "2027-07-20",
+  "date": "2027-02-23",
   "publie": false,
   "image": "/assets/services/miroir-convexe-apres.jpg",
   "imageAlt": "Miroir convexe neuf posé sur un mur de résidence",

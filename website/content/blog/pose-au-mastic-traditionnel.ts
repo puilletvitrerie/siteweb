@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "pose-au-mastic-traditionnel",
   "title": "La pose au mastic traditionnel sur les fenêtres anciennes",
   "description": "Comment un vitrier remplace une vitre sur une fenêtre ancienne en bois avec du mastic traditionnel, et pourquoi cette technique respecte le cachet de vos menuiseries.",
-  "date": "2027-01-19",
+  "date": "2026-11-24",
   "publie": false,
   "image": "/assets/services/mastic-atelier.jpg",
   "imageAlt": "Application du mastic traditionnel sur un châssis de fenêtre ancienne",

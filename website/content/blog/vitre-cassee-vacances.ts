@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "vitre-cassee-vacances",
   "title": "Vitre cassée pendant les vacances : comment je sécurise votre logement",
   "description": "Une vitre cassée pendant votre absence, un voisin qui vous prévient : comment organiser la sécurisation de votre logement à distance avec un vitrier à Lyon.",
-  "date": "2027-09-14",
+  "date": "2027-03-23",
   "publie": false,
   "image": "/assets/services/vitrine-interieur-avant.jpg",
   "imageAlt": "Ouverture fermée par une plaque OSB en attendant le vitrage",

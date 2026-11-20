@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "vitre-fissuree-changer",
   "title": "Vitre fissurée mais pas cassée : faut-il la changer tout de suite ?",
   "description": "Une fissure sur une vitre peut sembler sans gravité. Pourquoi elle s'agrandit, quand c'est dangereux et quand la faire remplacer.",
-  "date": "2027-07-06",
+  "date": "2027-02-16",
   "publie": false,
   "image": "/assets/services/mastic-avant.jpg",
   "imageAlt": "Vitre fendue sur une fenêtre en bois avant remplacement",

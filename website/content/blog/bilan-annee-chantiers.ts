@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "bilan-annee-chantiers",
   "title": "Bilan de l'année : mes chantiers les plus marquants en images",
   "description": "Retour en images sur une année de chantiers de vitrerie à Lyon : portes d'immeuble, vitrines, miroirs, fenêtres anciennes. Merci à mes clients pour leur confiance.",
-  "date": "2027-09-28",
+  "date": "2027-03-30",
   "publie": false,
   "image": "/assets/realisations/01-apres.jpg",
   "imageAlt": "Garde-corps vitré de balcon après remplacement du panneau",

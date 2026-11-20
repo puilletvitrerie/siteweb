@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "verre-arme-remplacement",
   "title": "Verre armé : où on le trouve encore et par quoi le remplacer",
   "description": "Le verre armé, avec son grillage métallique, équipe encore de nombreux immeubles anciens. Ce qu'il faut savoir avant de le remplacer et les alternatives possibles.",
-  "date": "2027-03-30",
+  "date": "2026-12-29",
   "publie": false,
   "body": [
     {

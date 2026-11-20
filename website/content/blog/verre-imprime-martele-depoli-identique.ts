@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "verre-imprime-martele-depoli-identique",
   "title": "Verre imprimé, martelé, dépoli : remplacer un vitrage à l'identique",
   "description": "Vitrage décoratif cassé sur une porte ou une fenêtre ancienne ? Comment je retrouve le même motif (imprimé, martelé, dépoli) pour un remplacement à l'identique.",
-  "date": "2027-01-05",
+  "date": "2026-11-20",
   "publie": true,
   "image": "/assets/services/martele-parclose-bois-apres.jpg",
   "imageAlt": "Porte en bois avec vitrage martelé remplacé à l'identique",

@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "vitrine-magasin-cassee",
   "title": "Vitrine de magasin cassée : sécuriser et rouvrir rapidement",
   "description": "Vitrine brisée la nuit ou après un choc ? Comment je sécurise votre commerce le jour même et comment se passe le remplacement d'un grand vitrage à Lyon.",
-  "date": "2026-12-22",
+  "date": "2026-11-20",
   "publie": true,
   "image": "/assets/services/vitrine-facade-avant.jpg",
   "imageAlt": "Vitrine de magasin sécurisée par un panneau OSB avant la pose du vitrage",
