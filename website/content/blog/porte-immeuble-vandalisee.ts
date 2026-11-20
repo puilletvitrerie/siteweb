@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "porte-immeuble-vandalisee",
   "title": "Porte vitrée d'immeuble vandalisée : les étapes de la remise en état",
   "description": "Porte de hall vandalisée, vitrage sorti de son cadre : comment je sécurise l'entrée de l'immeuble et remplace le vitrage, étape par étape.",
-  "date": "2027-01-05",
+  "date": "2027-02-16",
   "publie": false,
   "image": "/assets/realisations/03-avant.jpg",
   "imageAlt": "Porte vitrée d'immeuble vandalisée avant remplacement",

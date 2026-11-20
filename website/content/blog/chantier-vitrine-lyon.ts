@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "chantier-vitrine-lyon",
   "title": "Chantier : remplacement d'une vitrine, de la sécurisation à la pose",
   "description": "Récit d'un chantier : une vitrine de commerce brisée, sécurisée en OSB puis remplacée par un grand vitrage neuf. Photos avant/après.",
-  "date": "2027-01-26",
+  "date": "2027-03-30",
   "publie": false,
   "image": "/assets/services/vitrine-interieur-apres.jpg",
   "imageAlt": "Vitrine de commerce neuve vue de l'intérieur après la pose",

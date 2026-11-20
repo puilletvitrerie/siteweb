@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "remplacer-vitrage-sans-changer-fenetre",
   "title": "Remplacer un vitrage sans changer la fenêtre : c'est possible ?",
   "description": "Vitre cassée ou double vitrage abîmé : dans la plupart des cas, inutile de changer toute la fenêtre. Quand remplacer seulement le vitrage et pourquoi c'est plus économique.",
-  "date": "2027-01-12",
+  "date": "2027-03-02",
   "publie": false,
   "image": "/assets/realisations/08-avant.jpg",
   "imageAlt": "Double vitrage cassé sur une fenêtre PVC avant remplacement du vitrage seul",

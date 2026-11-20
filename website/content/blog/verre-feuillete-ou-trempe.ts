@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "verre-feuillete-ou-trempe",
   "title": "Vitrage feuilleté ou trempé : quelle différence ?",
   "description": "Feuilleté ou trempé : deux verres de sécurité qui se comportent très différemment quand ils cassent. Lequel choisir pour une porte, une vitrine ou une table ?",
-  "date": "2027-01-19",
+  "date": "2027-03-16",
   "publie": false,
   "image": "/assets/realisations/11-avant.jpg",
   "imageAlt": "Vitrage feuilleté fissuré après un impact, resté en place dans son cadre",

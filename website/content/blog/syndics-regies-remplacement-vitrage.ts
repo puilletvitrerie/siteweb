@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "syndics-regies-remplacement-vitrage",
   "title": "Syndics et régies : comment je gère un remplacement de vitrage",
   "description": "Gestionnaires de copropriété, syndics, régies : comment se passe une intervention de vitrerie dans vos immeubles, du signalement à la facture.",
-  "date": "2027-02-09",
+  "date": "2027-04-27",
   "publie": false,
   "image": "/assets/services/autonomie-1.jpg",
   "imageAlt": "L'artisan vitrier sonne à l'interphone d'un immeuble pour accéder au chantier",

@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "chantier-vitrage-150-kg-hall",
   "title": "Chantier : remplacement d'un vitrage de 150 kg dans un hall d'immeuble",
   "description": "Récit d'un chantier : le remplacement d'un grand vitrage fixe de 150 kg dans le hall d'un immeuble, de la sécurisation à la pose, avec photos avant/après.",
-  "date": "2026-12-08",
+  "date": "2026-12-22",
   "publie": false,
   "image": "/assets/realisations/11-avant.jpg",
   "imageAlt": "Grand vitrage fixe brisé dans un hall d'immeuble",

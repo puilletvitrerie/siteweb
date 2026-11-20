@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "delais-remplacement-vitrage",
   "title": "Combien de temps pour remplacer un vitrage ? Les délais expliqués",
   "description": "Simple vitrage, double vitrage, feuilleté, miroir : les délais réels pour remplacer un vitrage à Lyon, et comment je sécurise en attendant.",
-  "date": "2026-12-15",
+  "date": "2027-01-05",
   "publie": false,
   "image": "/assets/blog/decoupe-simple-vitrage.jpg",
   "imageAlt": "L'artisan vitrier recoupe un simple vitrage sur place pour une pose en moins de deux heures",
