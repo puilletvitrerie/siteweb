@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "miroir-sur-mesure",
   "title": "Miroir sur mesure : salle de bain, dressing, hall d'immeuble",
   "description": "Miroir de salle de bain, de dressing ou de hall d'immeuble : comment se passe la prise de mesures, la fabrication et la pose d'un miroir sur mesure à Lyon.",
-  "date": "2026-12-08",
+  "date": "2026-12-01",
   "publie": false,
   "image": "/assets/services/miroir-hall-apres.jpg",
   "imageAlt": "Miroir sur mesure posé dans un hall d'entrée de copropriété",

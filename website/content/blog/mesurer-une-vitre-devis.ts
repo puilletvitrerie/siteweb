@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "mesurer-une-vitre-devis",
   "title": "Comment mesurer une vitre pour demander un devis",
   "description": "Quelques conseils simples pour mesurer une vitre et envoyer une demande de devis complète à votre vitrier : dimensions, photos, type de verre.",
-  "date": "2027-04-13",
+  "date": "2027-02-02",
   "publie": false,
   "image": "/assets/services/autonomie-2.jpg",
   "imageAlt": "L'artisan vitrier prend les mesures d'un vitrage sur une porte",

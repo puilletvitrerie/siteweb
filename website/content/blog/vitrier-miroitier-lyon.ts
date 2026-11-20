@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "vitrier-miroitier-lyon",
   "title": "Vitrier miroitier à Lyon",
   "description": "Vitrier miroitier à Lyon et dans toute la métropole, notamment l'Est lyonnais : vitres cassées, doubles vitrages, portes d'immeuble, vitrines, miroirs. Devis gratuit.",
-  "date": "2027-01-19",
+  "date": "2026-12-22",
   "publie": false,
   "image": "/assets/camion-paysage.jpeg",
   "imageAlt": "Camion de l'artisan vitrier Puillet Vitrerie",
