@@ -1,7 +1,10 @@
 // /llms.txt : résumé de l'entreprise pour les assistants IA (ChatGPT, Claude, Perplexity, Gemini…).
 // N'y mettre que des informations vérifiées.
 
+import { getAvisGoogle, formatNote } from "@/lib/avis-google";
+
 export const dynamic = "force-static";
+export const revalidate = 86400;
 
 const TEXT = `# Puillet Vitrerie
 
@@ -13,7 +16,7 @@ const TEXT = `# Puillet Vitrerie
 - Adresse : 42 avenue du Chater, 69340 Francheville
 - Horaires : du lundi au samedi de 7 h à 20 h, le dimanche de 8 h à 19 h, urgences 7j/7
 - SARL, SIRET 995 238 169 00016 · assurance responsabilité civile professionnelle et décennale MAAF
-- Avis : 4,9/5 sur Google (29 avis)
+- Avis : __AVIS__
 
 ## Services
 - Remplacement de vitrage à l'identique, sans changer la menuiserie : simple vitrage, imprimé, martelé, dépoli
@@ -52,6 +55,8 @@ Lyon 1er à 9e, Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, 
 - [Contact](https://www.puilletvitrerie.fr/contact)
 `;
 
-export function GET() {
-  return new Response(TEXT, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
+export async function GET() {
+  const { note, nombre } = await getAvisGoogle();
+  const text = TEXT.replace("__AVIS__", `${formatNote(note)}/5 sur Google (${nombre} avis)`);
+  return new Response(text, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
 }

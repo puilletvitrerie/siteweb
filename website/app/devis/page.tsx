@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DevisForm from "@/components/DevisForm";
+import { getAvisGoogle, formatNote } from "@/lib/avis-google";
+
+export const revalidate = 86400;
 
 // Lien en bio Instagram / TikTok. Page de conversion : pas de menu, pas de pied de page, pas d'indexation.
 export const metadata: Metadata = {
@@ -26,7 +29,8 @@ const btn: React.CSSProperties = {
   padding: "0 14px",
 };
 
-export default function DevisPage() {
+export default async function DevisPage() {
+  const avisGoogle = await getAvisGoogle();
   return (
     <div style={{ background: C.bg, color: C.ink, fontFamily: F.sans, minHeight: "100vh" }}>
       <div style={{ maxWidth: 520, margin: "0 auto", padding: "18px 20px 48px" }}>
@@ -59,7 +63,7 @@ export default function DevisPage() {
 
         <div style={{ marginTop: 30, paddingTop: 20, borderTop: `1px solid ${C.line}`, textAlign: "center" }}>
           <div style={{ fontWeight: 800, fontSize: 16 }}>
-            <span style={{ color: C.blue }} aria-hidden>★★★★★</span> 4,9/5 sur Google · 29 avis
+            <span style={{ color: C.blue }} aria-hidden>★★★★★</span> {formatNote(avisGoogle.note)}/5 sur Google · {avisGoogle.nombre} avis
           </div>
           <p style={{ fontFamily: F.serif, fontStyle: "italic", fontSize: 19, color: C.ink, margin: "8px 0 0" }}>
             « Demande de devis envoyée à 15h, reçu en 1h ! » <span style={{ fontFamily: F.sans, fontStyle: "normal", fontSize: 14, color: C.inkSoft }}>— Nawelle C.</span>

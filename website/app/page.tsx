@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { VILLES } from "@/lib/villes";
 import { REALISATIONS } from "@/lib/contenu-accueil";
+import { getAvisGoogle, formatNote } from "@/lib/avis-google";
+
+// Note et avis Google rafraîchis automatiquement une fois par jour.
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: { absolute: "Vitrier à Lyon · Intervention sous 24h | Puillet Vitrerie" },
@@ -314,13 +318,8 @@ function Services() {
 }
 
 // ─── 5. Avis Google ──────────────────────────────────────────────────────────
-const AVIS = [
-  { text: "Sa réactivité est tout simplement impressionnante : demande de devis envoyée à 15h, reçu en 1h !", name: "Nawelle C.", date: "avril 2026" },
-  { text: "Service impeccable ! Intervention ultra rapide et travail très soigné.", name: "Florian R.", date: "avril 2026" },
-  { text: "Nous sommes très satisfaits du travail réalisé par cet artisan.", name: "Anna M.", date: "juillet 2026" },
-];
-
-function Avis() {
+async function Avis() {
+  const { note, nombre, avis: AVIS } = await getAvisGoogle();
   return (
     <section id="avis" className="px-5 md:px-10" style={{ background: C.bg, paddingTop: 64, paddingBottom: 64 }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -328,7 +327,7 @@ function Avis() {
           <div>
             <Label>Avis Google</Label>
             <h2 style={{ ...h2Style, marginBottom: 0 }}>
-              4,9/5 <Serif>sur 29 avis.</Serif>
+              {formatNote(note)}/5 <Serif>sur {nombre} avis.</Serif>
             </h2>
           </div>
           <a
@@ -342,7 +341,7 @@ function Avis() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {AVIS.map((a) => (
-            <figure key={a.name} style={{ margin: 0, background: C.card, border: `1px solid ${C.line}`, borderRadius: 18, padding: "24px 22px", display: "flex", flexDirection: "column", gap: 14 }}>
+            <figure key={a.name + a.date} style={{ margin: 0, background: C.card, border: `1px solid ${C.line}`, borderRadius: 18, padding: "24px 22px", display: "flex", flexDirection: "column", gap: 14 }}>
               <div style={{ display: "flex", gap: 2, color: C.blue }} aria-label="5 étoiles sur 5" role="img">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <svg key={i} width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -352,7 +351,7 @@ function Avis() {
               </div>
               <blockquote style={{ margin: 0, fontSize: 18, lineHeight: 1.45, color: C.ink, fontWeight: 500 }}>« {a.text} »</blockquote>
               <figcaption style={{ marginTop: "auto", paddingTop: 14, borderTop: `1px solid ${C.line}`, fontSize: 14, color: C.inkSoft }}>
-                <strong style={{ color: C.ink }}>{a.name}</strong> · {a.date}
+                <strong style={{ color: C.ink }}>{a.name}</strong>{a.date ? ` · ${a.date}` : ""}
               </figcaption>
             </figure>
           ))}
