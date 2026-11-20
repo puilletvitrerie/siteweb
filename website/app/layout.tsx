@@ -78,7 +78,7 @@ const LOCAL_BUSINESS = {
     "https://www.pagesjaunes.fr/pros/64775103",
     "https://www.instagram.com/puilletvitrerie",
     "https://www.tiktok.com/@puilletvitrerie",
-    "https://www.linkedin.com/in/leo-puillet",
+    "https://www.linkedin.com/in/leopuilletvitrerie",
   ],
   openingHoursSpecification: [
     {
