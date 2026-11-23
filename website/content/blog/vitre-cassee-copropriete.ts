@@ -16,19 +16,19 @@ const post: Post = {
       "p": "Sur la photo, une porte de hall en feuilleté imprimé 200 : ce verre empêche de voir à l'intérieur du hall depuis la rue. En cas de casse, je le remplace à l'identique."
     },
     {
-      "h2": "Les parties communes : le syndic ou la régie"
+      "h2": "Les parties communes : le syndic"
     },
     {
-      "p": "Les vitrages des parties communes relèvent de la copropriété. Ce sont les copropriétaires qui préviennent le syndic ou la régie, avec une photo si possible. Le gestionnaire de copropriété me mandate ensuite pour un devis ou une intervention."
+      "p": "Les vitrages des parties communes relèvent de la copropriété. Ce sont les copropriétaires ou les locataires qui préviennent le syndic, avec une photo si possible. Le gestionnaire de copropriété me mandate ensuite pour un devis ou une intervention."
     },
     {
-      "p": "Vous êtes copropriétaire ? Vous pouvez me recommander auprès de votre gestionnaire de copropriété."
+      "p": "Vous êtes copropriétaire ou locataire ? Vous pouvez me recommander auprès de votre gestionnaire de copropriété."
     },
     {
       "h2": "Les parties privatives : l'occupant"
     },
     {
-      "p": "La fenêtre de votre appartement, la porte-fenêtre de votre balcon ou le garde-corps vitré de votre terrasse peuvent relever de vos parties privatives selon le règlement de copropriété. En cas de doute, le syndic saura vous répondre. Dans les deux cas, parties communes ou privatives, je peux intervenir."
+      "p": "La fenêtre de votre appartement, la porte-fenêtre de votre balcon ou le garde-corps vitré de votre terrasse peuvent relever de vos parties privatives selon le règlement de copropriété. En cas de doute, votre gestionnaire de copropriété saura vous répondre. Dans les deux cas, parties communes ou privatives, je peux intervenir."
     },
     {
       "h2": "Comment j'interviens dans un immeuble"
@@ -38,7 +38,7 @@ const post: Post = {
         "Dès réception de la demande, je me rends sur place dans les meilleurs délais.",
         "Je suis autonome pour accéder à l'immeuble : si personne n'est disponible pour m'accueillir, je sonne chez un copropriétaire pour me faire ouvrir.",
         "Je prends les mesures et je relève le type de vitrage (feuilleté, imprimé, armé…), pour remplacer à l'identique.",
-        "J'envoie un devis clair et détaillé à la régie."
+        "J'envoie un devis clair et détaillé au gestionnaire de copropriété."
       ]
     },
     {
