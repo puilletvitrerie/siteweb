@@ -29,7 +29,7 @@ export default function VideoPresentation({ src, embedUrl, poster, title, aspect
       {!playing && (
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={poster} alt="" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: hasVideo ? 0.85 : 0.55 }} />
+          <img src={poster} alt="" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: hasVideo ? 1 : 0.55 }} />
           <button
             type="button"
             onClick={() => hasVideo && setPlaying(true)}
