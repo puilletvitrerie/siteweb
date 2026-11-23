@@ -27,6 +27,13 @@ const S = (k: string, ratio: number, caption: string) => ({
   caption,
 });
 
+const V = (k: string, ratio: number, caption: string) => ({
+  avant: `/assets/villes/${k}-avant.jpg`,
+  apres: `/assets/villes/${k}-apres.jpg`,
+  ratio,
+  caption,
+});
+
 export const VILLES: Ville[] = [
   {
     slug: "meyzieu",
@@ -54,6 +61,8 @@ export const VILLES: Ville[] = [
       "J'interviens dans tous les arrondissements de Lyon pour remplacer des vitrages cassés, sans changer la menuiserie : portes d'immeuble, fenêtres, vitrines de commerce, miroirs. Un simple vitrage est remplacé en moins de 2 heures en urgence ; un vitrage sur mesure (feuilleté, double vitrage, miroir) sous 24 à 72 heures. Voici quelques chantiers réalisés à Lyon.",
     voisines: ["Villeurbanne", "Caluire-et-Cuire", "Vénissieux", "Bron", "Oullins", "Tassin-la-Demi-Lune", "Sainte-Foy-lès-Lyon", "Écully"],
     chantiers: [
+      V("lyon4-verre-arme", 987 / 1300, "Lyon 4e : verre armé de porte d'immeuble cassé un vendredi soir, recoupé sur place et remplacé en moins de 2 h"),
+      V("lyon6-martele", 1113 / 1300, "Lyon 6e : vitrage martelé de la porte du local poubelle d'une copropriété, recoupé sur place et posé au mastic traditionnel en moins de 2 h"),
       S("vitrine-facade", 757 / 1300, "Lyon 7e : vitrine de commerce, sécurisation en OSB puis pose du nouveau vitrage"),
       R(3, 590 / 1300, "Lyon 7e : vitrage de porte d'immeuble remplacé après vandalisme"),
       R(10, 1100 / 1109, "Lyon 7e : vitrage de porte d'immeuble remplacé"),
@@ -134,7 +143,10 @@ export const VILLES: Ville[] = [
     intro:
       "J'interviens à Bron chez les particuliers et dans les résidences : vitres cassées, doubles vitrages, portes vitrées, mais aussi garde-corps vitrés de balcon. Le vitrage est remplacé sans changer la structure existante.",
     voisines: ["Lyon 8e", "Vénissieux", "Saint-Priest", "Chassieu", "Villeurbanne"],
-    chantiers: [R(1, 1100 / 852, "Bron : panneau en verre opale de garde-corps de balcon remplacé")],
+    chantiers: [
+      V("bron-hall", 839 / 1300, "Bron : mise aux normes dans le hall d'une résidence, l'ancien simple vitrage de 4 mm remplacé par un vitrage feuilleté de sécurité"),
+      R(1, 1100 / 852, "Bron : panneau en verre opale de garde-corps de balcon remplacé"),
+    ],
   },
   {
     slug: "rillieux-la-pape",
@@ -295,6 +307,9 @@ export const VILLES: Ville[] = [
     intro:
       "À Saint-Priest, dans l'Est lyonnais, je remplace les vitrages cassés des logements, des immeubles et des locaux d'activité. Un simple vitrage est remplacé en moins de 2 heures en urgence ; un double vitrage ou un feuilleté, fabriqué sur mesure, est posé sous 24 à 72 heures.",
     voisines: ["Bron", "Vénissieux", "Chassieu", "Mions", "Corbas", "Genas"],
+    chantiers: [
+      V("saint-priest-opale", 1024 / 1300, "Saint-Priest : vitrage feuilleté opale de clôture fissuré dans une résidence, remplacé à l'identique"),
+    ],
   },
   {
     slug: "saint-fons",
