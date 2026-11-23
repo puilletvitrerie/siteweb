@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import VideoPresentation from "@/components/VideoPresentation";
 import Link from "next/link";
 import { VILLES } from "@/lib/villes";
 import { REALISATIONS } from "@/lib/contenu-accueil";
@@ -170,8 +171,6 @@ function Hero() {
 }
 
 // ─── 4. Qui vient chez vous ──────────────────────────────────────────────────
-// Quand la vidéo de présentation sera tournée, la remettre ici avec
-// <VideoPresentation src="/videos/presentation.mp4" poster="/assets/artisan-camion-900.webp" title="…" /> (composant conservé).
 const ENGAGEMENTS = [
   "Un seul interlocuteur, du premier appel à la pose de votre vitrage.",
   "Vitrage en stock dans mon camion : un simple vitrage est recoupé et posé sur place.",
@@ -205,15 +204,12 @@ function QuiVient() {
             En savoir plus sur moi →
           </Link>
         </div>
-        <div className="mx-auto w-full" style={{ maxWidth: 440, borderRadius: 20, overflow: "hidden", aspectRatio: "3 / 4", background: C.line }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/assets/camion-paysage-900.webp"
-            alt="Camion de Puillet Vitrerie, vitrier à Lyon"
-            loading="lazy"
-            width={900}
-            height={675}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        <div className="mx-auto w-full" style={{ maxWidth: 360 }}>
+          <VideoPresentation
+            src="/videos/presentation.mp4"
+            poster="/assets/video-presentation-poster.webp"
+            title="Léo Puillet, votre vitrier à Lyon"
+            aspectRatio="9 / 16"
           />
         </div>
       </div>
