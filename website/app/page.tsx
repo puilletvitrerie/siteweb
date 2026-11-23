@@ -145,7 +145,8 @@ function Hero() {
             src="/assets/artisan-camion.jpeg"
             alt="Léo Puillet, artisan vitrier, devant son camion Puillet Vitrerie"
             fetchPriority="high"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 30%" }}
+            className="object-[50%_45%] md:object-[50%_30%]"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
           />
         </picture>
         <div
