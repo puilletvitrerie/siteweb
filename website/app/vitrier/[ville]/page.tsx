@@ -86,7 +86,7 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
             {v.chantiers && v.chantiers.length > 0 && (
               <div>
                 <div style={{ fontWeight: 800, marginBottom: 10 }}>
-                  {v.chantiers.length > 1 ? `Chantiers réalisés à ${v.nom}` : `Chantier réalisé à ${v.nom}`}
+                  {v.chantiers.length > 1 ? `Interventions réalisées à ${v.nom}` : `Intervention réalisée à ${v.nom}`}
                 </div>
                 <BeforeAfterGallery items={v.chantiers.map((c) => ({ before: c.avant, after: c.apres, ratio: c.ratio, caption: c.caption }))} />
               </div>

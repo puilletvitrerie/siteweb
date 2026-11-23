@@ -384,8 +384,8 @@ function Zones() {
           Tous les arrondissements de Lyon et jusqu&rsquo;à 60 km autour, Est lyonnais compris.
         </p>
         <p style={{ fontSize: 17, lineHeight: 1.6, color: C.inkSoft, maxWidth: 640, margin: "0 0 10px" }}>
-          Derniers chantiers à Lyon : verre armé d&rsquo;une porte d&rsquo;immeuble dans le 4e, recoupé sur place un vendredi soir ; vitrage martelé posé au mastic traditionnel dans le 6e ; vitrine de commerce et portes d&rsquo;immeuble dans le 7e ; vitrage imprimé de cage d&rsquo;escalier dans le 2e.{" "}
-          <Link href="/vitrier/lyon" style={{ color: C.blue, fontWeight: 600 }}>Voir mes chantiers de vitrier à Lyon →</Link>
+          Dernières interventions à Lyon : verre armé d&rsquo;une porte d&rsquo;immeuble dans le 4e, recoupé sur place un vendredi soir ; vitrage martelé posé au mastic traditionnel dans le 6e ; vitrine de commerce et portes d&rsquo;immeuble dans le 7e ; vitrage imprimé de cage d&rsquo;escalier dans le 2e.{" "}
+          <Link href="/vitrier/lyon" style={{ color: C.blue, fontWeight: 600 }}>Voir mes interventions de vitrier à Lyon →</Link>
         </p>
         <div style={{ height: 16 }} />
         <ul style={{ display: "flex", flexWrap: "wrap", gap: 8, listStyle: "none", padding: 0, margin: "0 0 10px" }}>
