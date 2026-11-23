@@ -163,7 +163,7 @@ function Hero() {
       </div>
       {/* Mobile : sous la photo. Ordinateur : posé en bas de la photo. */}
       <div className="md:absolute md:inset-x-0 md:bottom-0">
-        <div className="px-5 pt-7 pb-9 md:px-10 md:pt-0 md:pb-14" style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div className="px-5 pt-7 pb-9 md:px-10 md:pt-0 md:pb-28" style={{ maxWidth: 1200, margin: "0 auto" }}>
           <HeroText />
         </div>
       </div>
