@@ -21,7 +21,7 @@ Règles de rédaction :
 | 5 | 2026-11-20 | Verre imprimé, martelé, dépoli : remplacer un vitrage à l'identique | Publié |
 | 6 | 2026-11-20 | Vitre cassée en copropriété : qui appelle le vitrier et comment ça se passe ? | Publié |
 | 7 | 2026-11-20 | Vitrine de magasin cassée : sécuriser et rouvrir rapidement | Publié |
-| 8 | 2026-11-24 | La pose au mastic traditionnel sur les fenêtres anciennes | Brouillon prêt, à relire |
+| 8 | 2026-11-24 | La pose au mastic traditionnel sur les fenêtres anciennes | Validé (en ligne le 24/11) |
 | 9 | 2026-12-01 | Miroir sur mesure : salle de bain, dressing, hall d'immeuble | Brouillon prêt, à relire |
 | 10 | 2026-12-08 | Chantier : remplacement d'un vitrage de 150 kg dans un hall d'immeuble | Brouillon prêt, à relire (ville à confirmer) |
 | 11 | 2026-12-15 | Combien de temps pour remplacer un vitrage ? Les délais expliqués | Brouillon prêt, à relire |
