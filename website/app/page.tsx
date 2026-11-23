@@ -122,7 +122,7 @@ function HeroText() {
       <p style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.55, color: "rgba(255,255,255,.88)", maxWidth: 560, margin: "0 0 26px" }}>
         Intervention en moins de 24h, en moins de 2h pour une urgence simple vitrage. Devis gratuit, et le prix du devis est le prix final.
       </p>
-      <div className="flex flex-col sm:flex-row gap-3">
+      <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 md:items-start">
         <CallButton />
         <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" style={{ ...pill, background: "#fff", color: C.ink }}>
           <CameraIcon />
