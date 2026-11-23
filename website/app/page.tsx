@@ -137,26 +137,23 @@ function Hero() {
   return (
     <section aria-label="Puillet Vitrerie, vitrier à Lyon" className="relative" style={{ background: C.ink }}>
       <div className="relative h-[300px] md:h-[680px]" style={{ width: "100%", overflow: "hidden" }}>
-        {/* Mobile : photo pleine largeur. Ordinateur : photo sur la droite, texte sur fond sombre à gauche (le lettrage du camion ne passe plus derrière le titre). */}
-        <div className="absolute inset-0 md:left-auto md:w-[45%]">
-          <picture>
-            <source media="(max-width: 767px)" srcSet="/assets/artisan-camion-900.webp" type="image/webp" />
-            <source srcSet="/assets/artisan-camion.webp" type="image/webp" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/assets/artisan-camion.jpeg"
-              alt="Léo Puillet, artisan vitrier, devant son camion Puillet Vitrerie"
-              fetchPriority="high"
-              className="object-[50%_45%] md:object-[85%_40%]"
-              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </picture>
-          <div
-            aria-hidden
-            className="hidden md:block"
-            style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(20,18,16,1) 0%, rgba(20,18,16,0) 30%)" }}
+        <picture>
+          <source media="(max-width: 767px)" srcSet="/assets/artisan-camion-900.webp" type="image/webp" />
+          <source srcSet="/assets/artisan-camion.webp" type="image/webp" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/artisan-camion.jpeg"
+            alt="Léo Puillet, artisan vitrier, devant son camion Puillet Vitrerie"
+            fetchPriority="high"
+            className="object-[50%_45%] md:object-[50%_30%]"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
           />
-        </div>
+        </picture>
+        <div
+          aria-hidden
+          className="hidden md:block"
+          style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(20,18,16,.82) 0%, rgba(20,18,16,.6) 45%, rgba(20,18,16,.05) 75%), linear-gradient(to top, rgba(20,18,16,.6) 0%, rgba(20,18,16,0) 50%)" }}
+        />
         <div
           style={{ position: "absolute", top: 20, left: 20, display: "flex", alignItems: "center", gap: 8, background: "rgba(15,15,15,0.78)", color: "#fff", borderRadius: 999, padding: "9px 14px", fontSize: 13, fontWeight: 700 }}
         >
@@ -164,12 +161,10 @@ function Hero() {
           Disponible aujourd&rsquo;hui
         </div>
       </div>
-      {/* Mobile : sous la photo. Ordinateur : à gauche de la photo. */}
-      <div className="md:absolute md:inset-0 md:flex md:items-center">
-        <div className="w-full px-5 pt-7 pb-9 md:px-10 md:pt-16 md:pb-0" style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div className="md:max-w-[55%]">
-            <HeroText />
-          </div>
+      {/* Mobile : sous la photo. Ordinateur : posé en bas de la photo. */}
+      <div className="md:absolute md:inset-x-0 md:bottom-0">
+        <div className="px-5 pt-7 pb-9 md:px-10 md:pt-0 md:pb-14" style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <HeroText />
         </div>
       </div>
     </section>
