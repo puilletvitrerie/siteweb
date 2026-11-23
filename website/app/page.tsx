@@ -137,20 +137,20 @@ function Hero() {
     <section aria-label="Puillet Vitrerie, vitrier à Lyon" className="relative" style={{ background: C.ink }}>
       <div className="relative h-[300px] md:h-[680px]" style={{ width: "100%", overflow: "hidden" }}>
         <picture>
-          <source media="(max-width: 767px)" srcSet="/assets/camion-paysage-900.webp" type="image/webp" />
-          <source srcSet="/assets/camion-paysage.webp" type="image/webp" />
+          <source media="(max-width: 767px)" srcSet="/assets/artisan-camion-900.webp" type="image/webp" />
+          <source srcSet="/assets/artisan-camion.webp" type="image/webp" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/assets/camion-paysage.jpeg"
-            alt="Camion de Puillet Vitrerie, vitrier à Lyon"
+            src="/assets/artisan-camion.jpeg"
+            alt="Léo Puillet, artisan vitrier, devant son camion Puillet Vitrerie"
             fetchPriority="high"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 55%" }}
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 30%" }}
           />
         </picture>
         <div
           aria-hidden
           className="hidden md:block"
-          style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(20,18,16,.88) 0%, rgba(20,18,16,.55) 45%, rgba(20,18,16,.25) 100%)" }}
+          style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(20,18,16,.82) 0%, rgba(20,18,16,.6) 45%, rgba(20,18,16,.05) 75%), linear-gradient(to top, rgba(20,18,16,.6) 0%, rgba(20,18,16,0) 50%)" }}
         />
         <div
           style={{ position: "absolute", top: 20, left: 20, display: "flex", alignItems: "center", gap: 8, background: "rgba(15,15,15,0.78)", color: "#fff", borderRadius: 999, padding: "9px 14px", fontSize: 13, fontWeight: 700 }}
@@ -208,11 +208,11 @@ function QuiVient() {
         <div className="mx-auto w-full" style={{ maxWidth: 440, borderRadius: 20, overflow: "hidden", aspectRatio: "3 / 4", background: C.line }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/assets/artisan-camion-900.webp"
-            alt="Léo Puillet, artisan vitrier, devant son camion Puillet Vitrerie"
+            src="/assets/camion-paysage-900.webp"
+            alt="Camion de Puillet Vitrerie, vitrier à Lyon"
             loading="lazy"
             width={900}
-            height={1200}
+            height={675}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
