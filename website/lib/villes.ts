@@ -87,6 +87,31 @@ export const VILLES: Ville[] = [
     ],
   },
   {
+    slug: "lyon-4",
+    nom: "Lyon 4e",
+    cp: "69004",
+    publie: true,
+    intro:
+      "J'interviens dans tout le 4e arrondissement de Lyon, sur le plateau de la Croix-Rousse comme dans les immeubles anciens du quartier : portes d'immeuble en verre armé, fenêtres et vitrages de cage d'escalier, verres de poêle à bois, vitrines de commerce. Je remplace le vitrage sans changer la menuiserie : en moins de 2 heures pour un simple vitrage en urgence, grâce au verre que je recoupe sur place dans le camion, et sous 24 à 72 heures pour un vitrage sur mesure. Voici des interventions que j'ai réalisées dans le 4e.",
+    voisines: ["Lyon 1er", "Lyon 9e", "Caluire-et-Cuire", "Lyon 6e", "Rillieux-la-Pape"],
+    chantiers: [
+      V("lyon4-verre-arme", 987 / 1300, "Lyon 4e : verre armé de porte d'immeuble cassé un vendredi soir, recoupé sur place et remplacé en moins de 2 h"),
+      R(12, 1, "Lyon 4e (Croix-Rousse) : verre de poêle à bois remplacé sur mesure"),
+    ],
+  },
+  {
+    slug: "lyon-6",
+    nom: "Lyon 6e",
+    cp: "69006",
+    publie: true,
+    intro:
+      "J'interviens dans tout le 6e arrondissement de Lyon, des Brotteaux au parc de la Tête d'Or et à Masséna. Dans les immeubles anciens du quartier, je remplace à l'identique les vitrages imprimés, martelés ou armés des portes et des parties communes, avec une pose au mastic traditionnel sur les menuiseries en bois. Simple vitrage recoupé sur place et remplacé en moins de 2 heures en urgence ; vitrage sur mesure (feuilleté, double vitrage, miroir) sous 24 à 72 heures. Voici une intervention réalisée dans le 6e.",
+    voisines: ["Lyon 3e", "Lyon 4e", "Villeurbanne", "Caluire-et-Cuire", "Lyon 1er"],
+    chantiers: [
+      V("lyon6-martele", 1113 / 1300, "Lyon 6e : vitrage martelé de la porte du local poubelle d'une copropriété, recoupé sur place et posé au mastic traditionnel en moins de 2 h"),
+    ],
+  },
+  {
     slug: "villeurbanne",
     nom: "Villeurbanne",
     cp: "69100",
