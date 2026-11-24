@@ -66,6 +66,7 @@ export default function Page() {
         { href: "/remplacement-vitre-lyon", label: "Remplacement de vitre à Lyon" },
         { href: "/vitrier-urgence-lyon", label: "Vitrier en urgence à Lyon" },
         { href: "/prix-vitrier-lyon", label: "Comment est calculé le prix d'un double vitrage" },
+        { href: "/survitrage-lyon", label: "Passer du simple au double vitrage (au lieu du survitrage)" },
       ]}
       service={{ name: "Remplacement de double vitrage", description: "Remplacement de doubles vitrages cassés ou embués sans changer la fenêtre, à Lyon et dans la métropole." }}
     />

@@ -43,6 +43,7 @@ Lyon 1er à 9e, Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, 
 - [Vitrier en urgence à Lyon](https://www.puilletvitrerie.fr/vitrier-urgence-lyon)
 - [Remplacement de vitre à Lyon](https://www.puilletvitrerie.fr/remplacement-vitre-lyon)
 - [Double vitrage à Lyon](https://www.puilletvitrerie.fr/double-vitrage-lyon)
+- [Survitrage à Lyon : passer du simple au double vitrage](https://www.puilletvitrerie.fr/survitrage-lyon)
 - [Miroir sur mesure à Lyon](https://www.puilletvitrerie.fr/miroir-sur-mesure-lyon)
 - [Verre feuilleté de sécurité à Lyon](https://www.puilletvitrerie.fr/verre-feuillete-lyon)
 - [Prix et devis](https://www.puilletvitrerie.fr/prix-vitrier-lyon)
