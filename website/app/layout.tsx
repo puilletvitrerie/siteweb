@@ -79,6 +79,7 @@ const LOCAL_BUSINESS = {
     "https://www.instagram.com/puilletvitrerie",
     "https://www.tiktok.com/@puilletvitrerie",
     "https://www.linkedin.com/in/leopuilletvitrerie",
+    "https://www.facebook.com/61584527427933",
   ],
   openingHoursSpecification: [
     {
