@@ -112,6 +112,18 @@ export const VILLES: Ville[] = [
     ],
   },
   {
+    slug: "lyon-2",
+    nom: "Lyon 2e",
+    cp: "69002",
+    publie: false,
+    intro:
+      "J'interviens dans tout le 2e arrondissement de Lyon, des Cordeliers à Bellecour, Ainay, Perrache et la Confluence. Dans les immeubles anciens de la Presqu'île, je remplace à l'identique les vitrages imprimés, martelés ou armés des fenêtres de cage d'escalier et des portes d'immeuble, avec une pose au mastic traditionnel sur les menuiseries en bois. Je remplace aussi les vitrines de commerce et les miroirs. Simple vitrage recoupé sur place et remplacé en moins de 2 heures en urgence ; vitrage sur mesure (feuilleté, double vitrage, miroir) sous 24 à 72 heures. Voici une intervention réalisée dans le 2e.",
+    voisines: ["Lyon 1er", "Lyon 5e", "Lyon 7e", "Lyon 3e", "Lyon 6e", "La Mulatière"],
+    chantiers: [
+      R(9, 1091 / 1300, "Lyon 2e : vitrage imprimé d'une fenêtre de cage d'escalier remplacé à l'identique"),
+    ],
+  },
+  {
     slug: "villeurbanne",
     nom: "Villeurbanne",
     cp: "69100",
