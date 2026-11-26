@@ -54,6 +54,11 @@ export default function Confidentialite() {
 
         <h2 style={h2}>Cookies</h2>
         <p style={p}>Ce site n&rsquo;utilise pas de cookies de suivi ni de publicité.</p>
+        <p style={p}>
+          Pour savoir comment les clients trouvent Puillet Vitrerie, le site compte de façon anonyme les clics sur le numéro de téléphone et sur WhatsApp :
+          seuls la page, le type de clic et le site d&rsquo;où vient la visite (par exemple Google ou Instagram) sont enregistrés, sans votre nom, votre numéro ni votre adresse IP.
+          Cette information est gardée dans votre navigateur le temps de la visite (stockage de session), puis effacée à la fermeture de l&rsquo;onglet.
+        </p>
       </div>
     </div>
   );

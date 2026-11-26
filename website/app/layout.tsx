@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 import HideOnDevis from "@/components/HideOnDevis";
+import SuiviContacts from "@/components/SuiviContacts";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -119,6 +120,7 @@ export default function RootLayout({
           </div>
         </HideOnDevis>
         <main className="flex-1">{children}</main>
+        <SuiviContacts />
         <HideOnDevis>
           <Footer />
           <MobileStickyCTA />

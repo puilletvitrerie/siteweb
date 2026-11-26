@@ -33,6 +33,19 @@ function installer() {
   Logger.log("Google Sheet : " + SpreadsheetApp.openById(props.getProperty("SHEET_ID")).getUrl());
 }
 
+// Onglet « Contacts site » : un clic téléphone, un clic WhatsApp ou une demande de devis = une ligne.
+// Anonyme : ni nom, ni numéro, ni adresse IP. Sert à savoir d'où viennent les contacts.
+function noterContact(props, type, page, provenance) {
+  var ss = SpreadsheetApp.openById(props.getProperty("SHEET_ID"));
+  var onglet = ss.getSheetByName("Contacts site");
+  if (!onglet) {
+    onglet = ss.insertSheet("Contacts site");
+    onglet.appendRow(["Date", "Type", "Page", "Provenance"]).setFrozenRows(1);
+  }
+  var date = Utilities.formatDate(new Date(), "Europe/Paris", "dd/MM/yyyy HH:mm");
+  onglet.appendRow([date, String(type || "").slice(0, 20), String(page || "").slice(0, 200), String(provenance || "direct").slice(0, 60)]);
+}
+
 function reponse(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
 }
@@ -50,6 +63,12 @@ function doPost(e) {
     return reponse({ ok: false, error: "json" });
   }
   if (!d.secret || d.secret !== props.getProperty("SECRET")) return reponse({ ok: false, error: "secret" });
+
+  // Clic sur le téléphone ou WhatsApp depuis le site : une ligne dans l'onglet « Contacts site », pas d'e-mail.
+  if (d.kind === "clic") {
+    noterContact(props, d.type, d.page, d.provenance);
+    return reponse({ ok: true });
+  }
 
   var lock = LockService.getScriptLock();
   lock.waitLock(20000);
@@ -72,6 +91,8 @@ function doPost(e) {
       d.source, d.utm_source, d.utm_medium, d.utm_campaign,
       d.ok_contact ? "oui" : "non", d.ok_marketing ? "oui" : "non", maintenant,
     ]);
+
+    noterContact(props, "devis", d.page || "/devis", d.source);
 
     // E-mail à Léo : arrive en notification Gmail sur son téléphone.
     var tel = String(d.telephone || "").replace(/[^\d+]/g, "");

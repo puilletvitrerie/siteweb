@@ -63,6 +63,7 @@ export async function POST(request: Request) {
     utm_medium: clean(form.get("utm_medium"), 60),
     utm_campaign: clean(form.get("utm_campaign"), 100),
     referrer: clean(form.get("referrer"), 300),
+    provenance: clean(form.get("provenance"), 60),
   };
 
   if (!data.prenom) return json({ error: "Indiquez votre prénom." }, 400);
@@ -87,7 +88,7 @@ export async function POST(request: Request) {
     return json({ error: "Le formulaire n'est pas encore branché." }, 503);
   }
 
-  const source = data.utm_source || (/instagram/i.test(data.referrer) ? "instagram" : /tiktok/i.test(data.referrer) ? "tiktok" : "site");
+  const source = data.utm_source || data.provenance || (/instagram/i.test(data.referrer) ? "instagram" : /tiktok/i.test(data.referrer) ? "tiktok" : "site");
   try {
     const r = await fetch(url, {
       method: "POST",
