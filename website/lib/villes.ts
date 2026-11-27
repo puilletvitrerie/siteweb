@@ -289,7 +289,7 @@ export const VILLES: Ville[] = [
       texte: [
         "Puillet Vitrerie a son siège à Francheville. De Francheville-le-Haut à Francheville-Bel-Air, le trajet est court : pour un simple vitrage cassé, j'arrive très vite, bien souvent avant même le délai de 2 heures.",
         "Dans les maisons et les résidences de Francheville, je remplace les vitres cassées, les doubles vitrages fissurés ou embués et les verres de portes anciennes. Sur les fenêtres en bois, je pose le vitrage au mastic traditionnel, comme à l'origine, pour garder le cachet de la menuiserie.",
-        "Mon camion transporte toujours du verre en stock : un simple vitrage est recoupé sur mesure devant chez vous et posé dans la foulée. Les vitrages sur mesure (feuilleté, double vitrage, miroir) sont fabriqués chez mon fournisseur à Vaulx-en-Velin, puis posés sous 24 à 72 heures.",
+        "Mon camion transporte toujours du verre en stock : un simple vitrage est recoupé sur mesure devant chez vous et posé dans la foulée. Les vitrages sur mesure (feuilleté, double vitrage, miroir) sont posés sous 24 à 72 heures.",
       ],
     },
     faq: [
