@@ -292,6 +292,19 @@ export const VILLES: Ville[] = [
     voisines: ["Oullins", "Saint-Fons", "Irigny", "Saint-Genis-Laval", "Lyon 7e"],
   },
   {
+    slug: "irigny",
+    nom: "Irigny",
+    cp: "69540",
+    publie: true,
+    intro:
+      "Au sud de Lyon, j'interviens à Irigny pour les particuliers, les commerces et les copropriétés. Dans les immeubles, je remplace à l'identique les vitrages armés des parties communes, sans changer la menuiserie. Voici une intervention réalisée à Irigny.",
+    voisines: ["Pierre-Bénite", "Oullins", "Saint-Genis-Laval", "Vernaison", "Charly", "Feyzin"],
+    chantiers: [
+      V("irigny-arme-1", 975 / 1300, "Irigny : remplacement d'un vitrage armé grande maille"),
+      V("irigny-arme-2", 975 / 1300, "Irigny : remplacement d'un vitrage armé grande maille"),
+    ],
+  },
+  {
     slug: "charbonnieres-les-bains",
     nom: "Charbonnières-les-Bains",
     cp: "69260",
