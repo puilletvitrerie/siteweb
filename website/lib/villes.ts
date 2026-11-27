@@ -223,7 +223,7 @@ export const VILLES: Ville[] = [
       texte: [
         "Tassin-la-Demi-Lune touche Francheville, où est installée Puillet Vitrerie. Du centre de la Demi-Lune au Bourg et au quartier d'Alaï, j'arrive vite, que ce soit chez un particulier, dans une résidence ou dans un commerce.",
         "Pour les portes d'entrée d'immeuble, je remplace uniquement le verre, sans toucher à la porte. Quand l'ancien vitrage n'est plus aux normes, je propose de passer au feuilleté 44.2 : en cas de choc, le verre reste maintenu par son film et ne tombe pas en morceaux.",
-        "Je travaille aussi pour les gestionnaires de copropriété : je me rends sur place seul, je prends les mesures et j'envoie un devis détaillé HT/TTC. Personne n'a besoin de se déplacer pour m'ouvrir ou m'accompagner, tant que l'accès au vitrage est possible.",
+        "Je travaille aussi pour les gestionnaires de copropriété : je me rends sur place seul, je prends les mesures et j'envoie un devis détaillé HT/TTC. Personne n'a besoin de m'accompagner : si je n'ai pas de code d'accès, je sonne.",
       ],
     },
     faq: [
