@@ -12,6 +12,10 @@ export type Ville = {
   photo?: { src: string; alt: string };
   // Chantiers réellement réalisés dans cette ville (photos avant/après).
   chantiers?: { avant: string; apres: string; ratio: number; caption: string }[];
+  // Texte propre à la ville (rend la page unique pour Google).
+  local?: { titre: string; texte: string[] };
+  // Questions fréquentes propres à la ville (affichées + balisage FAQPage).
+  faq?: { q: string; r: string }[];
 };
 
 const R = (n: number, ratio: number, caption: string) => ({
@@ -214,6 +218,19 @@ export const VILLES: Ville[] = [
       "Tout proche de Francheville, Tassin-la-Demi-Lune fait partie de mon secteur d'intervention quotidien. J'y remplace les vitrages cassés des portes d'immeuble et des fenêtres, sans toucher à la menuiserie.",
     voisines: ["Francheville", "Craponne", "Écully", "Charbonnières-les-Bains", "Lyon 5e", "Lyon 9e"],
     chantiers: [R(4, 890 / 1300, "Tassin-la-Demi-Lune : vitrage de porte d'entrée d'immeuble remplacé")],
+    local: {
+      titre: "Un vitrier à deux pas de Tassin",
+      texte: [
+        "Tassin-la-Demi-Lune touche Francheville, où est installée Puillet Vitrerie. Du centre de la Demi-Lune au Bourg et au quartier d'Alaï, j'arrive vite, que ce soit chez un particulier, dans une résidence ou dans un commerce.",
+        "Pour les portes d'entrée d'immeuble, je remplace uniquement le verre, sans toucher à la porte. Quand l'ancien vitrage n'est plus aux normes, je propose de passer au feuilleté 44.2 : en cas de choc, le verre reste maintenu par son film et ne tombe pas en morceaux.",
+        "Je travaille aussi pour les gestionnaires de copropriété : je me rends sur place seul, je prends les mesures et j'envoie un devis détaillé HT/TTC. Personne n'a besoin de se déplacer pour m'ouvrir ou m'accompagner, tant que l'accès au vitrage est possible.",
+      ],
+    },
+    faq: [
+      { q: "En combien de temps pouvez-vous venir à Tassin-la-Demi-Lune ?", r: "Pour un simple vitrage cassé, j'interviens en urgence en moins de 2 heures : j'ai du verre en stock dans le camion et je le recoupe sur place. Un feuilleté, un double vitrage ou un miroir est fabriqué sur mesure et posé sous 24 à 72 heures. En attendant, je peux sécuriser l'ouverture le jour même avec un panneau OSB." },
+      { q: "Pouvez-vous remplacer le vitrage d'une porte d'immeuble sans changer la porte ?", r: "Oui, c'est mon métier : je ne change que le verre et la menuiserie reste en place. Pour une porte d'immeuble, je pose du verre feuilleté 44.2, plus sûr qu'un simple vitrage." },
+      { q: "Intervenez-vous le dimanche ?", r: "Oui. Je suis joignable du lundi au samedi de 7h à 20h et le dimanche de 8h à 19h, avec un dépannage 7j/7." },
+    ],
   },
   {
     slug: "montluel",
@@ -244,6 +261,19 @@ export const VILLES: Ville[] = [
       "J'interviens à Craponne pour les vitrages et les miroirs, y compris les miroirs convexes de sortie de parking ou de résidence, remplacés à l'identique pour retrouver une bonne visibilité.",
     voisines: ["Francheville", "Tassin-la-Demi-Lune", "Saint-Genis-les-Ollières", "Brindas", "Grézieu-la-Varenne"],
     chantiers: [S("miroir-convexe", 960 / 1150, "Craponne : miroir convexe remplacé à l'identique")],
+    local: {
+      titre: "Votre vitrier de Craponne",
+      texte: [
+        "J'habite à Craponne et Puillet Vitrerie est installée juste à côté, à Francheville. Pour une vitre cassée à Craponne, je suis chez vous en quelques minutes.",
+        "Dans les maisons et les résidences de la commune, je remplace les vitres cassées, les doubles vitrages fissurés ou embués et les verres décoratifs des portes anciennes (imprimés, martelés), à l'identique. Je remplace aussi les miroirs, y compris les miroirs convexes de sortie de parking ou de résidence.",
+        "J'ai toujours du verre en stock dans le camion : un simple vitrage est recoupé sur mesure devant chez vous et posé dans la foulée. Je travaille seul et sans sous-traitance, donc c'est moi qui prends les mesures, fais le devis et pose le vitrage.",
+      ],
+    },
+    faq: [
+      { q: "Mon double vitrage est embué à l'intérieur, faut-il changer la fenêtre ?", r: "Non. Quand la buée se forme entre les deux verres, c'est que le vitrage n'est plus étanche : je remplace uniquement le double vitrage, la fenêtre reste en place. Il est fabriqué sur mesure et posé sous 24 à 72 heures." },
+      { q: "Pouvez-vous remplacer un miroir convexe de parking ?", r: "Oui. Je remplace le miroir à l'identique pour retrouver une bonne visibilité à la sortie du parking ou de la résidence. Je passe prendre les dimensions et j'envoie un devis gratuit." },
+      { q: "Le devis est-il payant ?", r: "Non. Le déplacement pour le devis est gratuit et le devis est sans engagement. Le prix indiqué sur le devis est le prix final." },
+    ],
   },
   {
     slug: "francheville",
@@ -254,6 +284,19 @@ export const VILLES: Ville[] = [
       "Puillet Vitrerie est installée à Francheville : j'y interviens très rapidement. Je remplace tous types de vitrages, y compris sur les fenêtres anciennes en bois, avec une pose au mastic traditionnel.",
     voisines: ["Tassin-la-Demi-Lune", "Craponne", "Sainte-Foy-lès-Lyon", "Chaponost", "Lyon 5e"],
     chantiers: [S("mastic", 1100 / 1183, "Francheville : vitre fendue remplacée et posée au mastic traditionnel")],
+    local: {
+      titre: "Votre vitrier installé à Francheville",
+      texte: [
+        "Puillet Vitrerie a son siège à Francheville. De Francheville-le-Haut à Francheville-Bel-Air, le trajet est court : pour un simple vitrage cassé, j'arrive très vite, bien souvent avant même le délai de 2 heures.",
+        "Dans les maisons et les résidences de Francheville, je remplace les vitres cassées, les doubles vitrages fissurés ou embués et les verres de portes anciennes. Sur les fenêtres en bois, je pose le vitrage au mastic traditionnel, comme à l'origine, pour garder le cachet de la menuiserie.",
+        "Mon camion transporte toujours du verre en stock : un simple vitrage est recoupé sur mesure devant chez vous et posé dans la foulée. Les vitrages sur mesure (feuilleté, double vitrage, miroir) sont fabriqués chez mon fournisseur à Vaulx-en-Velin, puis posés sous 24 à 72 heures.",
+      ],
+    },
+    faq: [
+      { q: "Pouvez-vous venir le jour même à Francheville ?", r: "Oui. Pour un simple vitrage cassé, j'interviens en urgence en moins de 2 heures, 7j/7 : du lundi au samedi de 7h à 20h, le dimanche de 8h à 19h. Si le vitrage doit être fabriqué sur mesure, je sécurise l'ouverture le jour même avec un panneau OSB." },
+      { q: "Pouvez-vous passer mes fenêtres du simple au double vitrage ?", r: "Sur une fenêtre prévue pour du simple vitrage, la feuillure est trop fine pour recevoir un double vitrage : il faut changer l'ouvrant. Je passe prendre les dimensions, j'établis moi-même un devis gratuit et sans engagement, et je m'occupe de la suite." },
+      { q: "Qui vient faire l'intervention ?", r: "Moi. Je travaille seul et sans sous-traitance : la personne qui prend les mesures et fait le devis est celle qui pose le vitrage." },
+    ],
   },
   {
     slug: "ecully",
@@ -263,6 +306,19 @@ export const VILLES: Ville[] = [
     intro:
       "Écully est à quelques minutes de Francheville, où je suis installé, dans l'ouest lyonnais. J'y remplace les vitres cassées, les doubles vitrages embués et les vitrages de portes de résidence, sans changer la menuiserie. Mon camion transporte du verre en stock : un simple vitrage est recoupé et posé sur place, en moins de 2 heures en urgence.",
     voisines: ["Tassin-la-Demi-Lune", "Dardilly", "Champagne-au-Mont-d'Or", "Charbonnières-les-Bains", "Lyon 9e", "Lyon 5e"],
+    local: {
+      titre: "Maisons, résidences et bureaux à Écully",
+      texte: [
+        "À Écully, j'interviens aussi bien chez les particuliers que dans les résidences, les bureaux et les commerces. Je suis installé dans l'ouest lyonnais, à quelques minutes, ce qui me permet de venir rapidement.",
+        "Dans les maisons, je remplace les doubles vitrages fissurés ou embués sans changer la menuiserie. Dans les résidences, je m'occupe des vitrages des portes d'entrée et des parties communes, avec du verre feuilleté 44.2 pour les portes d'immeuble.",
+        "Pour un bureau ou un commerce, une vitre ou une vitrine cassée peut être sécurisée le jour même avec un panneau OSB. Je pose ensuite le vitrage définitif, fabriqué sur mesure, sous 24 à 72 heures, et j'envoie un devis détaillé HT/TTC.",
+      ],
+    },
+    faq: [
+      { q: "Intervenez-vous pour les entreprises et les commerces à Écully ?", r: "Oui. Je peux sécuriser une vitre ou une vitrine cassée le jour même avec un panneau OSB, puis poser le vitrage définitif sous 24 à 72 heures. Le devis est détaillé HT/TTC." },
+      { q: "Comment se passe le devis ?", r: "Je me déplace gratuitement pour prendre les mesures, puis je vous envoie un devis clair et détaillé, sans engagement. Le prix indiqué sur le devis est le prix final." },
+      { q: "Mon assurance peut-elle prendre en charge la vitre cassée ?", r: "Souvent, oui : avec la garantie bris de glace de votre assurance habitation, seule la franchise reste généralement à votre charge. Appelez-moi, je vous indique les démarches." },
+    ],
   },
   {
     slug: "sainte-foy-les-lyon",
@@ -272,6 +328,19 @@ export const VILLES: Ville[] = [
     intro:
       "Voisine directe de Francheville, Sainte-Foy-lès-Lyon fait partie de mon secteur de tous les jours. Maisons, copropriétés, commerces : je remplace le vitrage à l'identique en conservant vos fenêtres et vos portes, y compris les verres imprimés ou martelés des portes anciennes.",
     voisines: ["Francheville", "Lyon 5e", "Oullins", "La Mulatière", "Tassin-la-Demi-Lune", "Chaponost"],
+    local: {
+      titre: "Sainte-Foy-lès-Lyon, juste à côté de chez moi",
+      texte: [
+        "Sainte-Foy-lès-Lyon touche Francheville, où est installée Puillet Vitrerie. Du centre au Plan du Loup et jusqu'à Beaunant, j'interviens en moins de 2 heures pour un simple vitrage cassé en urgence.",
+        "Sur les portes anciennes à verres imprimés ou martelés, je retrouve le même motif et je remplace le verre à l'identique. Sur les menuiseries en bois, je pose au mastic traditionnel pour garder l'aspect d'origine.",
+        "Pour les copropriétés, je travaille directement avec le gestionnaire : je me rends sur place, je prends les mesures et j'envoie un devis détaillé HT/TTC. Je travaille seul et sans sous-traitance, du devis à la pose.",
+      ],
+    },
+    faq: [
+      { q: "Pouvez-vous retrouver le même verre décoratif que l'ancien ?", r: "Dans la plupart des cas, oui : verres imprimés (77, 200, 2004), martelés, armés ou dépolis. Je retrouve le même motif et je pose le nouveau verre à l'identique, sans changer la porte ou la fenêtre." },
+      { q: "Intervenez-vous le week-end à Sainte-Foy-lès-Lyon ?", r: "Oui. Je suis joignable du lundi au samedi de 7h à 20h et le dimanche de 8h à 19h. Pour une urgence, un simple vitrage est remplacé en moins de 2 heures." },
+      { q: "Ma vitre ne peut pas être remplacée tout de suite, que faire ?", r: "Si le vitrage doit être fabriqué sur mesure (feuilleté, double vitrage), je pose le jour même un panneau OSB pour sécuriser l'ouverture, y compris le week-end. Le vitrage définitif est posé sous 24 à 72 heures." },
+    ],
   },
   {
     slug: "oullins",

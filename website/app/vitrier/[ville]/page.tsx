@@ -36,10 +36,16 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
     provider: { "@id": "https://www.puilletvitrerie.fr/#entreprise" },
     areaServed: { "@type": "City", name: v.nom, postalCode: v.cp },
   };
+  const faqLd = v.faq && v.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: v.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.r } })),
+  } : null;
 
   return (
     <div style={{ background: "var(--color-bg)", color: "var(--color-ink)" }} className="px-5 md:px-14 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       <div className="max-w-4xl mx-auto">
         {SHOW_DRAFTS_VILLES && !v.publie && (
           <div style={{ background: "#fff4d6", border: "1px solid #f0d58a", color: "#6b5200", borderRadius: 12, padding: "10px 14px", fontSize: 14, marginBottom: 16 }}>
@@ -81,6 +87,14 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
             <p style={{ margin: "0 0 20px" }}>
               J&apos;interviens chez les particuliers, dans les immeubles pour le compte des syndics et des régies, et dans les commerces. Je me rends sur place en toute autonomie, je prends les mesures et j&apos;envoie un devis clair et détaillé.
             </p>
+            {v.local && (
+              <>
+                <h2 style={{ fontSize: 24, fontWeight: 800, margin: "0 0 10px" }}>{v.local.titre}</h2>
+                {v.local.texte.map((t, i) => (
+                  <p key={i} style={{ margin: "0 0 12px" }}>{t}</p>
+                ))}
+              </>
+            )}
           </div>
           <div className="grid gap-4">
             {v.chantiers && v.chantiers.length > 0 && (
@@ -128,6 +142,20 @@ export default async function VillePage({ params }: { params: Promise<{ ville: s
             </div>
           </div>
         </div>
+
+        {v.faq && v.faq.length > 0 && (
+          <div style={{ marginTop: 32 }}>
+            <h2 style={{ fontSize: 24, fontWeight: 800, margin: "0 0 14px" }}>Questions fréquentes à {v.nom}</h2>
+            <div className="grid gap-3">
+              {v.faq.map((f) => (
+                <div key={f.q} style={card}>
+                  <h3 style={{ fontSize: 17, fontWeight: 800, margin: "0 0 6px" }}>{f.q}</h3>
+                  <p style={{ fontSize: 16, color: "var(--color-ink-soft)", lineHeight: 1.6, margin: 0 }}>{f.r}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Liens vers toutes les autres pages de villes : aide Google à les découvrir et à les relier entre elles. */}
         <div style={{ ...card, marginTop: 32 }}>
