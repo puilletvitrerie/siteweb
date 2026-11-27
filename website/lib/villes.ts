@@ -262,9 +262,9 @@ export const VILLES: Ville[] = [
     voisines: ["Francheville", "Tassin-la-Demi-Lune", "Saint-Genis-les-Ollières", "Brindas", "Grézieu-la-Varenne"],
     chantiers: [S("miroir-convexe", 960 / 1150, "Craponne : miroir convexe remplacé à l'identique")],
     local: {
-      titre: "Votre vitrier de Craponne",
+      titre: "Un vitrier tout proche de Craponne",
       texte: [
-        "J'habite à Craponne et Puillet Vitrerie est installée juste à côté, à Francheville. Pour une vitre cassée à Craponne, je suis chez vous en quelques minutes.",
+        "Puillet Vitrerie est installée à Francheville, juste à côté de Craponne. Pour une vitre cassée à Craponne, je suis chez vous en quelques minutes.",
         "Dans les maisons et les résidences de la commune, je remplace les vitres cassées, les doubles vitrages fissurés ou embués et les verres décoratifs des portes anciennes (imprimés, martelés), à l'identique. Je remplace aussi les miroirs, y compris les miroirs convexes de sortie de parking ou de résidence.",
         "J'ai toujours du verre en stock dans le camion : un simple vitrage est recoupé sur mesure devant chez vous et posé dans la foulée. Je travaille seul et sans sous-traitance, donc c'est moi qui prends les mesures, fais le devis et pose le vitrage.",
       ],
