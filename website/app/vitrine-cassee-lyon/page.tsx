@@ -27,8 +27,8 @@ export default function Page() {
       photos={{
         h2: "Avant / après : vitrines remplacées",
         items: [
-          { before: "/assets/services/vitrine-facade-avant.jpg", after: "/assets/services/vitrine-facade-apres.jpg", ratio: 757 / 1300, caption: "Lyon 7e : vitrine de commerce sécurisée en OSB, puis pose du nouveau vitrage." },
           { before: "/assets/realisations/11-avant.jpg", after: "/assets/realisations/11-apres.jpg", ratio: 1, caption: "Rillieux-la-Pape : grande vitrine fixe de hall d'immeuble remplacée." },
+          { before: "/assets/services/vitrine-facade-avant.jpg", after: "/assets/services/vitrine-facade-apres.jpg", ratio: 757 / 1300, caption: "Lyon 7e : vitrine de commerce sécurisée en OSB, puis pose du nouveau vitrage." },
         ],
       }}
       sections={[
