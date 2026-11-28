@@ -1,7 +1,10 @@
 // /llms.txt : résumé de l'entreprise pour les assistants IA (ChatGPT, Claude, Perplexity, Gemini…).
 // N'y mettre que des informations vérifiées.
 
+import { getAvisGoogle, formatNote } from "@/lib/avis-google";
+
 export const dynamic = "force-static";
+export const revalidate = 86400;
 
 const TEXT = `# Puillet Vitrerie
 
@@ -13,7 +16,7 @@ const TEXT = `# Puillet Vitrerie
 - Adresse : 42 avenue du Chater, 69340 Francheville
 - Horaires : du lundi au samedi de 7 h à 20 h, le dimanche de 8 h à 19 h, urgences 7j/7
 - SARL, SIRET 995 238 169 00016 · assurance responsabilité civile professionnelle et décennale MAAF
-- Avis : 4,9/5 sur Google (29 avis)
+- Avis : __AVIS__
 
 ## Services
 - Remplacement de vitrage à l'identique, sans changer la menuiserie : simple vitrage, imprimé, martelé, dépoli
@@ -33,13 +36,16 @@ const TEXT = `# Puillet Vitrerie
 Pas de prix fixe : le prix dépend du type de verre, de l'épaisseur, des dimensions et de l'accès. Devis gratuit sur photo et dimensions (WhatsApp) ou après un déplacement gratuit pour les mesures. Le prix du devis est le prix final. Garantie bris de glace de l'assurance habitation : seule la franchise reste généralement à la charge du client.
 
 ## Zone d'intervention
-Lyon 1er à 9e, Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, Rillieux-la-Pape, Caluire-et-Cuire, Tassin-la-Demi-Lune, Craponne, Francheville, Saint-Genis-les-Ollières, Montluel, Bourgoin-Jallieu et communes voisines.
+Lyon 1er à 9e, Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, Rillieux-la-Pape, Caluire-et-Cuire, Tassin-la-Demi-Lune, Craponne, Francheville, Saint-Genis-les-Ollières, Écully, Sainte-Foy-lès-Lyon, Charbonnières-les-Bains, Dardilly, Limonest, Champagne-au-Mont-d'Or, Oullins, Pierre-Bénite, Saint-Fons, Vénissieux, Saint-Priest, Neuville-sur-Saône, Villefranche-sur-Saône, Montluel, Bourgoin-Jallieu et communes voisines.
 
 ## Pages principales
 - [Accueil](https://www.puilletvitrerie.fr/)
 - [Vitrier en urgence à Lyon](https://www.puilletvitrerie.fr/vitrier-urgence-lyon)
 - [Remplacement de vitre à Lyon](https://www.puilletvitrerie.fr/remplacement-vitre-lyon)
 - [Double vitrage à Lyon](https://www.puilletvitrerie.fr/double-vitrage-lyon)
+- [Survitrage à Lyon : passer du simple au double vitrage](https://www.puilletvitrerie.fr/survitrage-lyon)
+- [Miroir sur mesure à Lyon](https://www.puilletvitrerie.fr/miroir-sur-mesure-lyon)
+- [Verre feuilleté de sécurité à Lyon](https://www.puilletvitrerie.fr/verre-feuillete-lyon)
 - [Prix et devis](https://www.puilletvitrerie.fr/prix-vitrier-lyon)
 - [Vitrine de magasin cassée à Lyon](https://www.puilletvitrerie.fr/vitrine-cassee-lyon)
 - [Syndics et régies : vitrier pour les copropriétés](https://www.puilletvitrerie.fr/vitrier-syndic-regie-lyon)
@@ -51,6 +57,8 @@ Lyon 1er à 9e, Villeurbanne, Vaulx-en-Velin, Bron, Décines-Charpieu, Meyzieu, 
 - [Contact](https://www.puilletvitrerie.fr/contact)
 `;
 
-export function GET() {
-  return new Response(TEXT, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
+export async function GET() {
+  const { note, nombre } = await getAvisGoogle();
+  const text = TEXT.replace("__AVIS__", `${formatNote(note)}/5 sur Google (${nombre} avis)`);
+  return new Response(text, { headers: { "Content-Type": "text/plain; charset=utf-8" } });
 }

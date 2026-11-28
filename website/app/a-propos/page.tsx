@@ -9,11 +9,23 @@ export const metadata = {
 };
 
 export default function AProposPage() {
-  const values = [
+  type Value = {
+    icon: typeof Wrench;
+    title: string;
+    description: string;
+    photos?: { src: string; alt: string }[];
+    avis?: { text: string; name: string }[];
+  };
+
+  const values: Value[] = [
     {
       icon: Wrench,
       title: "Savoir-faire artisanal",
       description: "Techniques traditionnelles de pose au mastic, respect du cachet ancien des menuiseries.",
+      photos: [
+        { src: "/assets/services/mastic-atelier.jpg", alt: "Léo Puillet pose du mastic sur un cadre vitré" },
+        { src: "/assets/services/mastic-fenetre.jpg", alt: "Léo Puillet refait le masticage d'une fenêtre ancienne à petits carreaux" },
+      ],
     },
     {
       icon: Shield,
@@ -24,6 +36,10 @@ export default function AProposPage() {
       icon: Clock,
       title: "Réactivité",
       description: "Intervention en moins de 2 heures pour les urgences, 24h/24 et 7j/7.",
+      avis: [
+        { text: "Sa réactivité est tout simplement impressionnante : demande de devis envoyée à 15h, reçu en 1h !", name: "Nawelle C." },
+        { text: "Service impeccable ! Intervention ultra rapide et travail très soigné.", name: "Florian R." },
+      ],
     },
     {
       icon: Award,
@@ -34,6 +50,10 @@ export default function AProposPage() {
       icon: Heart,
       title: "Autonomie",
       description: "Travail en totale autonomie de A à Z, sans sous-traitance.",
+      photos: [
+        { src: "/assets/services/autonomie-1.jpg", alt: "Léo Puillet sonne à l'interphone d'un immeuble pour accéder au chantier" },
+        { src: "/assets/services/autonomie-2.jpg", alt: "Léo Puillet prend les dimensions d'une fenêtre ancienne" },
+      ],
     },
     {
       icon: MapPin,
@@ -74,13 +94,22 @@ export default function AProposPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Un artisan à votre service</h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-6">
-              Basé à Francheville (69340), Puillet Vitrerie intervient sur Lyon et toute l'agglomération lyonnaise 
+              Basé à Francheville (69340), Puillet Vitrerie intervient sur Lyon et toute l'agglomération lyonnaise
               pour tous vos besoins en vitrerie.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Spécialisé dans le remplacement à l'identique de tous types de vitrages, nous mettons notre 
+              Spécialisé dans le remplacement à l'identique de tous types de vitrages, nous mettons notre
               savoir-faire artisanal au service des particuliers, des professionnels et des régies immobilières.
             </p>
+          </div>
+          <div className="mx-auto w-full max-w-md rounded-3xl overflow-hidden bg-gray-100 mt-12" style={{ aspectRatio: "3 / 4" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/artisan-camion-900.webp"
+              alt="Léo Puillet, artisan vitrier, devant son camion Puillet Vitrerie"
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -98,6 +127,27 @@ export default function AProposPage() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
+                  {value.photos && (
+                    <div className="grid grid-cols-2 gap-2 mt-5">
+                      {value.photos.map((photo) => (
+                        <div key={photo.src} className="rounded-2xl overflow-hidden bg-gray-100" style={{ aspectRatio: "3 / 4" }}>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={photo.src} alt={photo.alt} loading="lazy" className="w-full h-full object-cover" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {value.avis && (
+                    <div className="mt-5 space-y-3 text-left">
+                      {value.avis.map((a) => (
+                        <figure key={a.name} className="bg-gray-50 rounded-2xl p-4 m-0">
+                          <div className="text-[#3B8FD4] text-sm mb-1" aria-label="5 étoiles sur 5">★★★★★</div>
+                          <blockquote className="text-gray-800 text-sm m-0">« {a.text} »</blockquote>
+                          <figcaption className="text-gray-500 text-xs mt-2">{a.name} · avis Google</figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

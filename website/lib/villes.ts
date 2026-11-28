@@ -27,6 +27,13 @@ const S = (k: string, ratio: number, caption: string) => ({
   caption,
 });
 
+const V = (k: string, ratio: number, caption: string) => ({
+  avant: `/assets/villes/${k}-avant.jpg`,
+  apres: `/assets/villes/${k}-apres.jpg`,
+  ratio,
+  caption,
+});
+
 export const VILLES: Ville[] = [
   {
     slug: "meyzieu",
@@ -54,12 +61,66 @@ export const VILLES: Ville[] = [
       "J'interviens dans tous les arrondissements de Lyon pour remplacer des vitrages cassés, sans changer la menuiserie : portes d'immeuble, fenêtres, vitrines de commerce, miroirs. Un simple vitrage est remplacé en moins de 2 heures en urgence ; un vitrage sur mesure (feuilleté, double vitrage, miroir) sous 24 à 72 heures. Voici quelques chantiers réalisés à Lyon.",
     voisines: ["Villeurbanne", "Caluire-et-Cuire", "Vénissieux", "Bron", "Oullins", "Tassin-la-Demi-Lune", "Sainte-Foy-lès-Lyon", "Écully"],
     chantiers: [
-      S("vitrine-facade", 757 / 1300, "Lyon 7e : vitrine de commerce, sécurisation en OSB puis pose du nouveau vitrage"),
       R(3, 590 / 1300, "Lyon 7e : vitrage de porte d'immeuble remplacé après vandalisme"),
+      V("lyon4-verre-arme", 987 / 1300, "Lyon 4e : verre armé de porte d'immeuble cassé un vendredi soir, recoupé sur place et remplacé en moins de 2 h"),
+      V("lyon6-martele", 1113 / 1300, "Lyon 6e : vitrage martelé de la porte du local poubelle d'une copropriété, recoupé sur place et posé au mastic traditionnel en moins de 2 h"),
+      S("vitrine-facade", 757 / 1300, "Lyon 7e : vitrine de commerce, sécurisation en OSB puis pose du nouveau vitrage"),
       R(10, 1100 / 1109, "Lyon 7e : vitrage de porte d'immeuble remplacé"),
       S("miroir-hall", 661 / 1300, "Lyon 7e : miroir remplacé à l'identique dans un hall de copropriété"),
       R(9, 1091 / 1300, "Lyon 2e : remplacement du vitrage imprimé d'une fenêtre de cage d'escalier, à l'identique"),
       R(12, 1, "Lyon 4e (Croix-Rousse) : verre de poêle à bois remplacé sur mesure"),
+    ],
+  },
+  {
+    slug: "lyon-7",
+    nom: "Lyon 7e",
+    cp: "69007",
+    publie: true,
+    intro:
+      "J'interviens dans tout le 7e arrondissement de Lyon, de la Guillotière à Jean Macé et Gerland. Portes d'immeuble vandalisées, vitrines de commerce, miroirs de hall, fenêtres de particuliers : je remplace le vitrage sans changer la menuiserie, en moins de 2 heures pour un simple vitrage en urgence, sous 24 à 72 heures pour un vitrage sur mesure. Voici des chantiers que j'ai réalisés dans le 7e.",
+    voisines: ["Lyon 2e", "Lyon 3e", "Lyon 8e", "Saint-Fons", "Vénissieux", "Oullins"],
+    chantiers: [
+      S("vitrine-facade", 757 / 1300, "Lyon 7e : vitrine de commerce, sécurisation en OSB puis pose du nouveau vitrage"),
+      R(3, 590 / 1300, "Lyon 7e : vitrage de porte d'immeuble remplacé après vandalisme"),
+      R(10, 1100 / 1109, "Lyon 7e : vitrage de porte d'immeuble remplacé"),
+      S("miroir-hall", 661 / 1300, "Lyon 7e : miroir remplacé à l'identique dans un hall de copropriété"),
+    ],
+  },
+  {
+    slug: "lyon-4",
+    nom: "Lyon 4e",
+    cp: "69004",
+    publie: true,
+    intro:
+      "J'interviens dans tout le 4e arrondissement de Lyon, sur le plateau de la Croix-Rousse comme dans les immeubles anciens du quartier : portes d'immeuble en verre armé, fenêtres et vitrages de cage d'escalier, verres de poêle à bois, vitrines de commerce. Je remplace le vitrage sans changer la menuiserie : en moins de 2 heures pour un simple vitrage en urgence, grâce au verre que je recoupe sur place dans le camion, et sous 24 à 72 heures pour un vitrage sur mesure. Voici des interventions que j'ai réalisées dans le 4e.",
+    voisines: ["Lyon 1er", "Lyon 9e", "Caluire-et-Cuire", "Lyon 6e", "Rillieux-la-Pape"],
+    chantiers: [
+      V("lyon4-verre-arme", 987 / 1300, "Lyon 4e : verre armé de porte d'immeuble cassé un vendredi soir, recoupé sur place et remplacé en moins de 2 h"),
+      R(12, 1, "Lyon 4e (Croix-Rousse) : verre de poêle à bois remplacé sur mesure"),
+    ],
+  },
+  {
+    slug: "lyon-6",
+    nom: "Lyon 6e",
+    cp: "69006",
+    publie: true,
+    intro:
+      "J'interviens dans tout le 6e arrondissement de Lyon, des Brotteaux au parc de la Tête d'Or et à Masséna. Dans les immeubles anciens du quartier, je remplace à l'identique les vitrages imprimés, martelés ou armés des portes et des parties communes, avec une pose au mastic traditionnel sur les menuiseries en bois. Simple vitrage recoupé sur place et remplacé en moins de 2 heures en urgence ; vitrage sur mesure (feuilleté, double vitrage, miroir) sous 24 à 72 heures. Voici une intervention réalisée dans le 6e.",
+    voisines: ["Lyon 3e", "Lyon 4e", "Villeurbanne", "Caluire-et-Cuire", "Lyon 1er"],
+    chantiers: [
+      V("lyon6-martele", 1113 / 1300, "Lyon 6e : vitrage martelé de la porte du local poubelle d'une copropriété, recoupé sur place et posé au mastic traditionnel en moins de 2 h"),
+    ],
+  },
+  {
+    slug: "lyon-2",
+    nom: "Lyon 2e",
+    cp: "69002",
+    publie: true,
+    intro:
+      "J'interviens dans tout le 2e arrondissement de Lyon, des Cordeliers à Bellecour, Ainay, Perrache et la Confluence. Dans les immeubles anciens de la Presqu'île, je remplace à l'identique les vitrages imprimés, martelés ou armés des fenêtres de cage d'escalier et des portes d'immeuble, avec une pose au mastic traditionnel sur les menuiseries en bois. Je remplace aussi les vitrines de commerce et les miroirs. Simple vitrage recoupé sur place et remplacé en moins de 2 heures en urgence ; vitrage sur mesure (feuilleté, double vitrage, miroir) sous 24 à 72 heures. Voici une intervention réalisée dans le 2e.",
+    voisines: ["Lyon 1er", "Lyon 5e", "Lyon 7e", "Lyon 3e", "Lyon 6e", "La Mulatière"],
+    chantiers: [
+      R(9, 1091 / 1300, "Lyon 2e : vitrage imprimé d'une fenêtre de cage d'escalier remplacé à l'identique"),
     ],
   },
   {
@@ -119,7 +180,10 @@ export const VILLES: Ville[] = [
     intro:
       "J'interviens à Bron chez les particuliers et dans les résidences : vitres cassées, doubles vitrages, portes vitrées, mais aussi garde-corps vitrés de balcon. Le vitrage est remplacé sans changer la structure existante.",
     voisines: ["Lyon 8e", "Vénissieux", "Saint-Priest", "Chassieu", "Villeurbanne"],
-    chantiers: [R(1, 1100 / 852, "Bron : panneau en verre opale de garde-corps de balcon remplacé")],
+    chantiers: [
+      V("bron-hall", 839 / 1300, "Bron : mise aux normes dans le hall d'une résidence, l'ancien simple vitrage de 4 mm remplacé par un vitrage feuilleté de sécurité"),
+      R(1, 1100 / 852, "Bron : panneau en verre opale de garde-corps de balcon remplacé"),
+    ],
   },
   {
     slug: "rillieux-la-pape",
@@ -190,6 +254,139 @@ export const VILLES: Ville[] = [
       "Puillet Vitrerie est installée à Francheville : j'y interviens très rapidement. Je remplace tous types de vitrages, y compris sur les fenêtres anciennes en bois, avec une pose au mastic traditionnel.",
     voisines: ["Tassin-la-Demi-Lune", "Craponne", "Sainte-Foy-lès-Lyon", "Chaponost", "Lyon 5e"],
     chantiers: [S("mastic", 1100 / 1183, "Francheville : vitre fendue remplacée et posée au mastic traditionnel")],
+  },
+  {
+    slug: "ecully",
+    nom: "Écully",
+    cp: "69130",
+    publie: true,
+    intro:
+      "Écully est à quelques minutes de Francheville, où je suis installé, dans l'ouest lyonnais. J'y remplace les vitres cassées, les doubles vitrages embués et les vitrages de portes de résidence, sans changer la menuiserie. Mon camion transporte du verre en stock : un simple vitrage est recoupé et posé sur place, en moins de 2 heures en urgence.",
+    voisines: ["Tassin-la-Demi-Lune", "Dardilly", "Champagne-au-Mont-d'Or", "Charbonnières-les-Bains", "Lyon 9e", "Lyon 5e"],
+  },
+  {
+    slug: "sainte-foy-les-lyon",
+    nom: "Sainte-Foy-lès-Lyon",
+    cp: "69110",
+    publie: true,
+    intro:
+      "Voisine directe de Francheville, Sainte-Foy-lès-Lyon fait partie de mon secteur de tous les jours. Maisons, copropriétés, commerces : je remplace le vitrage à l'identique en conservant vos fenêtres et vos portes, y compris les verres imprimés ou martelés des portes anciennes.",
+    voisines: ["Francheville", "Lyon 5e", "Oullins", "La Mulatière", "Tassin-la-Demi-Lune", "Chaponost"],
+  },
+  {
+    slug: "oullins",
+    nom: "Oullins",
+    cp: "69600",
+    publie: true,
+    intro:
+      "J'interviens à Oullins (aujourd'hui Oullins-Pierre-Bénite) pour les particuliers, les commerces du centre-ville et les copropriétés. Vitre cassée, double vitrage fissuré ou embué, vitrage de porte d'immeuble : je prends les mesures sur place et j'envoie un devis gratuit, dont le prix est le prix final.",
+    voisines: ["Pierre-Bénite", "Sainte-Foy-lès-Lyon", "La Mulatière", "Saint-Genis-Laval", "Lyon 7e", "Francheville"],
+  },
+  {
+    slug: "pierre-benite",
+    nom: "Pierre-Bénite",
+    cp: "69310",
+    publie: true,
+    intro:
+      "Au sud de Lyon, j'interviens à Pierre-Bénite (commune d'Oullins-Pierre-Bénite) pour remplacer les vitrages cassés des logements, des parties communes et des locaux professionnels. Pour les portes d'immeuble, je pose du verre feuilleté 44.2, conforme aux exigences de sécurité.",
+    voisines: ["Oullins", "Saint-Fons", "Irigny", "Saint-Genis-Laval", "Lyon 7e"],
+  },
+  {
+    slug: "irigny",
+    nom: "Irigny",
+    cp: "69540",
+    publie: true,
+    intro:
+      "Au sud de Lyon, j'interviens à Irigny pour les particuliers, les commerces et les copropriétés. Dans les immeubles, je remplace à l'identique les vitrages armés des parties communes, sans changer la menuiserie. Voici une intervention réalisée dans le local vélo d'un immeuble à Irigny.",
+    voisines: ["Pierre-Bénite", "Oullins", "Saint-Genis-Laval", "Vernaison", "Charly", "Feyzin"],
+    chantiers: [
+      V("irigny-arme-1", 975 / 1300, "Irigny : remplacement d'un vitrage armé grande maille dans le local vélo d'un immeuble"),
+      V("irigny-arme-2", 975 / 1300, "Irigny : remplacement d'un vitrage armé grande maille dans le local vélo d'un immeuble"),
+    ],
+  },
+  {
+    slug: "charbonnieres-les-bains",
+    nom: "Charbonnières-les-Bains",
+    cp: "69260",
+    publie: true,
+    intro:
+      "À Charbonnières-les-Bains, dans l'ouest lyonnais, je remplace les vitrages de maisons et de résidences : doubles vitrages embués, baies vitrées, portes vitrées, miroirs sur mesure. La menuiserie reste en place, seul le verre est changé.",
+    voisines: ["Tassin-la-Demi-Lune", "Écully", "Saint-Genis-les-Ollières", "Marcy-l'Étoile", "La Tour-de-Salvagny", "Dardilly"],
+  },
+  {
+    slug: "dardilly",
+    nom: "Dardilly",
+    cp: "69570",
+    publie: true,
+    intro:
+      "J'interviens à Dardilly chez les particuliers comme dans les entreprises et commerces de la zone d'activité. Vitre cassée à sécuriser, double vitrage à remplacer, vitrine endommagée : je peux poser un panneau OSB le jour même, puis le vitrage définitif sous 24 à 72 heures.",
+    voisines: ["Écully", "Limonest", "Champagne-au-Mont-d'Or", "Charbonnières-les-Bains", "La Tour-de-Salvagny"],
+  },
+  {
+    slug: "limonest",
+    nom: "Limonest",
+    cp: "69760",
+    publie: true,
+    intro:
+      "Au nord-ouest de Lyon, j'interviens à Limonest pour les maisons, les bureaux et les commerces : remplacement de vitrages cassés, doubles vitrages, vitrines et miroirs. Je me déplace gratuitement pour le devis, et un seul interlocuteur suit votre chantier du premier appel à la pose.",
+    voisines: ["Dardilly", "Champagne-au-Mont-d'Or", "Saint-Didier-au-Mont-d'Or", "Lissieu", "Écully"],
+  },
+  {
+    slug: "champagne-au-mont-d-or",
+    nom: "Champagne-au-Mont-d'Or",
+    cp: "69410",
+    publie: true,
+    intro:
+      "J'interviens à Champagne-au-Mont-d'Or, entre Écully et les Monts d'Or, pour les particuliers et les copropriétés. Je remplace les vitres cassées et les doubles vitrages sans changer la fenêtre, et je réalise des miroirs sur mesure pour salle de bain, dressing ou hall d'entrée.",
+    voisines: ["Écully", "Dardilly", "Limonest", "Saint-Didier-au-Mont-d'Or", "Lyon 9e"],
+  },
+  {
+    slug: "venissieux",
+    nom: "Vénissieux",
+    cp: "69200",
+    publie: true,
+    intro:
+      "J'interviens à Vénissieux pour les particuliers, les commerces et les copropriétés, notamment pour les syndics et les régies : portes d'immeuble vandalisées, vitrages de parties communes, vitrines. Je me rends sur place en autonomie et j'envoie un devis détaillé HT/TTC.",
+    voisines: ["Lyon 8e", "Saint-Fons", "Saint-Priest", "Bron", "Corbas", "Feyzin"],
+  },
+  {
+    slug: "saint-priest",
+    nom: "Saint-Priest",
+    cp: "69800",
+    publie: true,
+    intro:
+      "À Saint-Priest, dans l'Est lyonnais, je remplace les vitrages cassés des logements, des immeubles et des locaux d'activité. Un simple vitrage est remplacé en moins de 2 heures en urgence ; un double vitrage ou un feuilleté, fabriqué sur mesure, est posé sous 24 à 72 heures.",
+    voisines: ["Bron", "Vénissieux", "Chassieu", "Mions", "Corbas", "Genas"],
+    chantiers: [
+      V("saint-priest-opale", 1024 / 1300, "Saint-Priest : vitrage feuilleté opale de clôture fissuré dans une résidence, remplacé à l'identique"),
+    ],
+  },
+  {
+    slug: "saint-fons",
+    nom: "Saint-Fons",
+    cp: "69190",
+    publie: true,
+    intro:
+      "J'interviens à Saint-Fons pour remplacer les vitres cassées des particuliers, des commerces et des immeubles. Pour les portes d'entrée de résidence, je remets aux normes les anciens vitrages en passant au feuilleté 44.2, en conservant la menuiserie.",
+    voisines: ["Vénissieux", "Pierre-Bénite", "Feyzin", "Lyon 7e", "Lyon 8e"],
+  },
+  {
+    slug: "neuville-sur-saone",
+    nom: "Neuville-sur-Saône",
+    cp: "69250",
+    publie: true,
+    intro:
+      "Au nord de Lyon, au bord de la Saône, j'interviens à Neuville-sur-Saône pour les maisons, les commerces et les copropriétés : vitres cassées, doubles vitrages embués, verres de portes anciennes remplacés à l'identique, miroirs sur mesure.",
+    voisines: ["Rillieux-la-Pape", "Fontaines-sur-Saône", "Genay", "Montanay", "Albigny-sur-Saône"],
+  },
+  {
+    slug: "villefranche-sur-saone",
+    nom: "Villefranche-sur-Saône",
+    cp: "69400",
+    publie: true,
+    intro:
+      "J'interviens jusqu'à Villefranche-sur-Saône, dans le Beaujolais, pour les particuliers, les commerces et les copropriétés. Je me déplace pour prendre les mesures, j'envoie un devis gratuit et je remplace le vitrage sans changer votre menuiserie : vitrines, portes d'immeuble, doubles vitrages, miroirs.",
+    voisines: ["Gleizé", "Limas", "Arnas", "Anse", "Jassans-Riottier"],
   },
 ];
 

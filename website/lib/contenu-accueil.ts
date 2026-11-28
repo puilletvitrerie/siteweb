@@ -1,20 +1,21 @@
 // Contenus déplacés de l'ancienne page d'accueil : réalisations (page /realisations) et FAQ (page /faq).
 
+// Ordre d'affichage de la page Réalisations (le 1er est montré en premier).
 export const REALISATIONS = [
-  { n: "14", title: "Local poubelle à Caluire-et-Cuire", meta: "Vitrage 4 mm remplacé, parclose en bois", tag: "Copropriété", ratio: 875 / 1000 },
-  { n: "13", title: "Porte d'immeuble à Vaulx-en-Velin", meta: "Remplacement du vitrage armé", tag: "Copropriété", ratio: 980 / 1000 },
-  { n: "12", title: "Poêle à bois à la Croix-Rousse", meta: "Remplacement du verre de cheminée", tag: "Particulier", ratio: 1 },
   { n: "06", title: "Porte d'entrée de résidence", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 711 / 1300 },
+  { n: "03", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage après vandalisme", tag: "Dépannage", ratio: 590 / 1300 },
+  { n: "10", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 1100 / 1109 },
   { n: "01", title: "Garde-corps vitré de balcon", meta: "Remplacement du panneau en verre opale", tag: "Copropriété", ratio: 1100 / 852 },
   { n: "02", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 708 / 1300 },
-  { n: "03", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage après vandalisme", tag: "Dépannage", ratio: 590 / 1300 },
   { n: "04", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 890 / 1300 },
   { n: "05", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 609 / 1300 },
   { n: "07", title: "Porte vitrée de hall", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 874 / 1300 },
   { n: "08", title: "Fenêtre PVC", meta: "Remplacement du vitrage", tag: "Particulier", ratio: 1100 / 1099 },
   { n: "09", title: "Fenêtre ancienne de cage d'escalier", meta: "Vitrage imprimé posé à l'identique", tag: "Copropriété", ratio: 1091 / 1300 },
-  { n: "10", title: "Porte d'entrée d'immeuble", meta: "Remplacement du vitrage de porte", tag: "Copropriété", ratio: 1100 / 1109 },
   { n: "11", title: "Vitrine de hall d'immeuble", meta: "Remplacement du grand vitrage fixe", tag: "Copropriété", ratio: 1 },
+  { n: "14", title: "Local poubelle à Caluire-et-Cuire", meta: "Vitrage 4 mm remplacé, parclose en bois", tag: "Copropriété", ratio: 875 / 1000 },
+  { n: "13", title: "Porte d'immeuble à Vaulx-en-Velin", meta: "Remplacement du vitrage armé", tag: "Copropriété", ratio: 980 / 1000 },
+  { n: "12", title: "Poêle à bois à la Croix-Rousse", meta: "Remplacement du verre de cheminée", tag: "Particulier", ratio: 1 },
 ].map((r) => ({ ...r, before: `/assets/realisations/${r.n}-avant.jpg`, after: `/assets/realisations/${r.n}-apres.jpg` }));
 
 export const FAQ_ITEMS = [
@@ -29,7 +30,7 @@ export const FAQ_ITEMS = [
   { q: "Comment vous joindre le plus rapidement ?", a: "Par téléphone ou par SMS au 06 50 44 06 73. Je suis artisan indépendant : c'est moi qui réponds, sans standard ni plateforme. Vous pouvez aussi m'envoyer une photo de la vitre cassée par SMS pour gagner du temps." },
   { q: "Pouvez-vous faire un devis sans vous déplacer ?", a: "Oui, pour un simple vitrage : envoyez-moi une photo de la vitre et ses dimensions (largeur × hauteur), par SMS ou via la page Devis du site, et je vous réponds rapidement. Pour un double vitrage, un verre feuilleté ou un verre spécifique, je passe prendre les mesures sur place pour que le vitrage soit fabriqué exactement à la bonne taille : ce déplacement pour le devis est gratuit." },
   { q: "Le déplacement est-il facturé ?", a: "Le déplacement pour établir le devis est gratuit. Le déplacement le jour de l'intervention est facturé, et il est indiqué clairement sur le devis : vous connaissez le prix total avant d'accepter." },
-  { q: "Dans quelles villes autour de Lyon intervenez-vous ?", a: "J'interviens dans tout Lyon et sa métropole, notamment à Villeurbanne, Bron, Vaulx-en-Velin, Décines-Charpieu, Meyzieu, Rillieux-la-Pape, Caluire-et-Cuire, Tassin-la-Demi-Lune, Francheville, Craponne et Saint-Genis-les-Ollières, ainsi que dans l'Est lyonnais jusqu'à Montluel et Bourgoin-Jallieu." },
+  { q: "Dans quelles villes autour de Lyon intervenez-vous ?", a: "J'interviens dans tout Lyon (1er au 9e arrondissement) et sa métropole. À l'ouest : Francheville, Tassin-la-Demi-Lune, Craponne, Saint-Genis-les-Ollières, Écully, Sainte-Foy-lès-Lyon, Charbonnières-les-Bains, Dardilly, Limonest et Champagne-au-Mont-d'Or. Au sud et à l'est : Oullins, Pierre-Bénite, Saint-Fons, Vénissieux, Saint-Priest, Bron, Villeurbanne, Vaulx-en-Velin, Décines-Charpieu et Meyzieu. Au nord : Caluire-et-Cuire, Rillieux-la-Pape, Neuville-sur-Saône et Villefranche-sur-Saône. Et jusqu'à Montluel et Bourgoin-Jallieu, dans un rayon d'environ 60 km." },
   { q: "Copropriété : comment vous faire intervenir dans mon immeuble ?", a: "Si vous êtes copropriétaire ou membre du conseil syndical, vous pouvez demander au gestionnaire de copropriété de votre régie de faire appel à moi en me recommandant : il me contacte et j'interviens dans les meilleurs délais. Si vous êtes gestionnaire, envoyez-moi directement l'adresse de l'immeuble, une photo et le contact sur place. Je traite les vitrages des parties communes (porte d'entrée, hall, cage d'escalier) et des logements, et j'envoie le devis à la régie." },
   { q: "Remplacez-vous un double vitrage sans changer toute la fenêtre ?", a: "Oui. Je remplace uniquement le vitrage, à l'identique, en gardant votre menuiserie : double vitrage cassé, fendu ou avec de la buée entre les vitres. C'est beaucoup moins cher que de changer la fenêtre. Le double vitrage est fabriqué sur mesure et posé sous 24 à 72h, et je sécurise l'ouverture en attendant si besoin." },
 ];

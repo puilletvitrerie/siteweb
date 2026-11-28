@@ -18,6 +18,7 @@ import p_miroir_sur_mesure from "@/content/blog/miroir-sur-mesure";
 import p_porte_immeuble_vandalisee from "@/content/blog/porte-immeuble-vandalisee";
 import p_pose_au_mastic_traditionnel from "@/content/blog/pose-au-mastic-traditionnel";
 import p_remplacer_vitrage_sans_changer_fenetre from "@/content/blog/remplacer-vitrage-sans-changer-fenetre";
+import p_simple_vers_double_vitrage_ouvrant from "@/content/blog/simple-vers-double-vitrage-ouvrant";
 import p_simple_ou_double_vitrage_fenetre_ancienne from "@/content/blog/simple-ou-double-vitrage-fenetre-ancienne";
 import p_syndics_regies_remplacement_vitrage from "@/content/blog/syndics-regies-remplacement-vitrage";
 import p_verre_arme_remplacement from "@/content/blog/verre-arme-remplacement";
@@ -54,6 +55,7 @@ export type Post = {
 };
 
 const POSTS: Post[] = [
+  p_simple_vers_double_vitrage_ouvrant,
   p_bilan_annee_chantiers,
   p_bruit_de_la_rue_vitrage,
   p_buee_entre_les_vitres_double_vitrage,

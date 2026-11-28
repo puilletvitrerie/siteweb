@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import VideoPresentation from "@/components/VideoPresentation";
+import Link from "next/link";
 import { VILLES } from "@/lib/villes";
+import { REALISATIONS } from "@/lib/contenu-accueil";
+import { getAvisGoogle, formatNote } from "@/lib/avis-google";
+
+// Note et avis Google rafraîchis automatiquement une fois par jour.
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: { absolute: "Vitrier à Lyon · Intervention sous 24h | Puillet Vitrerie" },
@@ -133,20 +138,21 @@ function Hero() {
     <section aria-label="Puillet Vitrerie, vitrier à Lyon" className="relative" style={{ background: C.ink }}>
       <div className="relative h-[300px] md:h-[680px]" style={{ width: "100%", overflow: "hidden" }}>
         <picture>
-          <source media="(max-width: 767px)" srcSet="/assets/camion-paysage-900.webp" type="image/webp" />
-          <source srcSet="/assets/camion-paysage.webp" type="image/webp" />
+          <source media="(max-width: 767px)" srcSet="/assets/artisan-camion-900.webp" type="image/webp" />
+          <source srcSet="/assets/artisan-camion.webp" type="image/webp" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/assets/camion-paysage.jpeg"
-            alt="Camion de Puillet Vitrerie, vitrier à Lyon"
+            src="/assets/artisan-camion.jpeg"
+            alt="Léo Puillet, artisan vitrier, devant son camion Puillet Vitrerie"
             fetchPriority="high"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 55%" }}
+            className="object-[50%_45%] md:object-[50%_30%]"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
           />
         </picture>
         <div
           aria-hidden
           className="hidden md:block"
-          style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(20,18,16,.88) 0%, rgba(20,18,16,.55) 45%, rgba(20,18,16,.25) 100%)" }}
+          style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(20,18,16,.82) 0%, rgba(20,18,16,.6) 45%, rgba(20,18,16,.05) 75%), linear-gradient(to top, rgba(20,18,16,.6) 0%, rgba(20,18,16,0) 50%)" }}
         />
         <div
           style={{ position: "absolute", top: 20, left: 20, display: "flex", alignItems: "center", gap: 8, background: "rgba(15,15,15,0.78)", color: "#fff", borderRadius: 999, padding: "9px 14px", fontSize: 13, fontWeight: 700 }}
@@ -165,8 +171,14 @@ function Hero() {
   );
 }
 
-// ─── 4. Vidéo de présentation ────────────────────────────────────────────────
-function Video() {
+// ─── 4. Qui vient chez vous ──────────────────────────────────────────────────
+const ENGAGEMENTS = [
+  "Un seul interlocuteur, du premier appel à la pose de votre vitrage.",
+  "Vitrage en stock dans mon camion : un simple vitrage est recoupé et posé sur place.",
+  "Devis gratuit et sans engagement, déplacement pour le devis gratuit : le prix du devis est le prix que vous payez.",
+];
+
+function QuiVient() {
   return (
     <section className="px-5 md:px-10" style={{ background: C.bgAlt, paddingTop: 64, paddingBottom: 64 }}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center" style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -175,27 +187,136 @@ function Video() {
           <h2 style={h2Style}>
             Léo Puillet,
             <br />
-            <Serif>votre vitrier, en 1 minute.</Serif>
+            <Serif>votre vitrier à Lyon.</Serif>
           </h2>
-          <p style={{ fontSize: 17, lineHeight: 1.6, color: C.inkSoft, maxWidth: 480, margin: "0 0 16px" }}>
-            Des interventions filmées, comment se passe la prise en charge par votre assurance, et son parcours d&rsquo;artisan indépendant.
+          <p style={{ fontSize: 17, lineHeight: 1.6, color: C.inkSoft, maxWidth: 480, margin: "0 0 18px" }}>
+            Artisan vitrier diplômé et indépendant, j&rsquo;interviens dans tout Lyon et la métropole, chez les particuliers, dans les copropriétés et les commerces.
           </p>
-          <p style={{ fontSize: 14, fontWeight: 600, color: C.inkSoft, margin: 0 }}>RC Pro &amp; décennale MAAF · Vitrage sécurité SP10 / 44.2</p>
+          <ul style={{ listStyle: "none", padding: 0, margin: "0 0 20px", display: "grid", gap: 10, maxWidth: 480 }}>
+            {ENGAGEMENTS.map((e) => (
+              <li key={e} style={{ display: "flex", gap: 10, fontSize: 16, lineHeight: 1.5, color: C.ink }}>
+                <span aria-hidden style={{ color: C.blue, fontWeight: 800 }}>✓</span>
+                {e}
+              </li>
+            ))}
+          </ul>
+          <p style={{ fontSize: 14, fontWeight: 600, color: C.inkSoft, margin: "0 0 18px" }}>RC Pro &amp; décennale MAAF · Vitrage sécurité SP10 / 44.2</p>
+          <Link href="/a-propos" style={{ fontSize: 15, fontWeight: 700, color: C.ink, textDecoration: "underline", textUnderlineOffset: 4 }}>
+            En savoir plus sur moi →
+          </Link>
         </div>
-        <VideoPresentation poster="/assets/camion-paysage-900.webp" title="Léo Puillet, votre vitrier à Lyon" />
+        <div className="mx-auto w-full" style={{ maxWidth: 360 }}>
+          <VideoPresentation
+            src="/videos/presentation.mp4"
+            poster="/assets/video-presentation-poster.webp"
+            title="Léo Puillet, votre vitrier à Lyon"
+            aspectRatio="9 / 16"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── 4b. Réalisations (3 derniers chantiers) ─────────────────────────────────
+// Les 3 premiers chantiers de la page Réalisations (choisis par Léo).
+const DERNIERS_CHANTIERS = ["06", "03", "10"]
+  .map((n) => REALISATIONS.find((r) => r.n === n))
+  .filter((r): r is (typeof REALISATIONS)[number] => Boolean(r));
+
+function Realisations() {
+  return (
+    <section className="px-5 md:px-10" style={{ background: C.card, paddingTop: 64, paddingBottom: 64 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4" style={{ marginBottom: 28 }}>
+          <div>
+            <Label>Réalisations</Label>
+            <h2 style={{ ...h2Style, marginBottom: 0 }}>
+              Mes chantiers, <Serif>avant / après.</Serif>
+            </h2>
+          </div>
+          <Link
+            href="/realisations"
+            style={{ display: "inline-flex", alignItems: "center", minHeight: 44, fontSize: 15, fontWeight: 700, color: C.ink, textDecoration: "underline", textUnderlineOffset: 4 }}
+          >
+            Voir tous mes chantiers →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {DERNIERS_CHANTIERS.map((r) => (
+            <figure key={r.n} style={{ margin: 0, background: C.bg, border: `1px solid ${C.line}`, borderRadius: 18, overflow: "hidden" }}>
+              <div className="grid grid-cols-2" style={{ gap: 2, background: C.line }}>
+                {[
+                  { src: r.before, label: "Avant" },
+                  { src: r.after, label: "Après" },
+                ].map((img) => (
+                  <div key={img.label} style={{ position: "relative", aspectRatio: "4 / 5", background: C.line }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={img.src}
+                      alt={`${r.title} : ${img.label.toLowerCase()} l'intervention`}
+                      loading="lazy"
+                      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                    <span style={{ position: "absolute", top: 10, left: 10, background: img.label === "Après" ? C.blue : "rgba(15,15,15,.75)", color: "#fff", fontSize: 12, fontWeight: 700, padding: "4px 10px", borderRadius: 999 }}>
+                      {img.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <figcaption style={{ padding: "16px 18px" }}>
+                <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: C.blueDark }}>{r.tag}</div>
+                <div style={{ fontSize: 17, fontWeight: 800, margin: "6px 0 4px" }}>{r.title}</div>
+                <div style={{ fontSize: 14, color: C.inkSoft }}>{r.meta}</div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─── 4c. Services ────────────────────────────────────────────────────────────
+const SERVICES_CARTES = [
+  { titre: "Vitre cassée en urgence", texte: "Simple vitrage remplacé en moins de 2 h. Mise en sécurité le jour même, 7j/7.", href: "/vitrier-urgence-lyon" },
+  { titre: "Remplacement de vitrage", texte: "Fenêtres, portes, vitrines : je change le verre en gardant votre menuiserie.", href: "/remplacement-vitre-lyon" },
+  { titre: "Double vitrage", texte: "Double vitrage cassé ou plein de buée, fabriqué sur mesure et posé sous 24 h.", href: "/double-vitrage-lyon" },
+  { titre: "Verre feuilleté & sécurité", texte: "Feuilleté 44.2 pour portes d'immeuble, vitrines et garde-corps.", href: "/verre-feuillete-lyon" },
+  { titre: "Miroiterie sur mesure", texte: "Miroirs de salle de bain, de dressing ou de hall, mesurés et posés chez vous.", href: "/miroir-sur-mesure-lyon" },
+  { titre: "Syndics & régies", texte: "Parties communes : intervention en autonomie, devis détaillé HT/TTC.", href: "/vitrier-syndic-regie-lyon" },
+];
+
+function Services() {
+  return (
+    <section className="px-5 md:px-10" style={{ background: C.bgAlt, paddingTop: 64, paddingBottom: 64 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <Label>Mes services</Label>
+        <h2 style={h2Style}>
+          Vitrerie et miroiterie, <Serif>du dépannage au sur-mesure.</Serif>
+        </h2>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" style={{ listStyle: "none", padding: 0, margin: "26px 0 0" }}>
+          {SERVICES_CARTES.map((s) => (
+            <li key={s.titre}>
+              <Link
+                href={s.href}
+                style={{ display: "flex", flexDirection: "column", gap: 8, height: "100%", background: C.card, border: `1px solid ${C.line}`, borderRadius: 18, padding: "22px 22px 20px", color: C.ink }}
+              >
+                <span style={{ fontSize: 19, fontWeight: 800, letterSpacing: "-0.01em" }}>{s.titre}</span>
+                <span style={{ fontSize: 15, lineHeight: 1.55, color: C.inkSoft }}>{s.texte}</span>
+                <span style={{ marginTop: "auto", paddingTop: 8, fontSize: 14, fontWeight: 700, color: C.blueDark }}>En savoir plus →</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
 }
 
 // ─── 5. Avis Google ──────────────────────────────────────────────────────────
-const AVIS = [
-  { text: "Sa réactivité est tout simplement impressionnante : demande de devis envoyée à 15h, reçu en 1h !", name: "Nawelle C.", date: "avril 2026" },
-  { text: "Service impeccable ! Intervention ultra rapide et travail très soigné.", name: "Florian R.", date: "avril 2026" },
-  { text: "Nous sommes très satisfaits du travail réalisé par cet artisan.", name: "Anna M.", date: "juillet 2026" },
-];
-
-function Avis() {
+async function Avis() {
+  const { note, nombre, avis: AVIS } = await getAvisGoogle();
   return (
     <section id="avis" className="px-5 md:px-10" style={{ background: C.bg, paddingTop: 64, paddingBottom: 64 }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -203,7 +324,7 @@ function Avis() {
           <div>
             <Label>Avis Google</Label>
             <h2 style={{ ...h2Style, marginBottom: 0 }}>
-              4,9/5 <Serif>sur 29 avis.</Serif>
+              {formatNote(note)}/5 <Serif>sur {nombre} avis.</Serif>
             </h2>
           </div>
           <a
@@ -217,7 +338,7 @@ function Avis() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {AVIS.map((a) => (
-            <figure key={a.name} style={{ margin: 0, background: C.card, border: `1px solid ${C.line}`, borderRadius: 18, padding: "24px 22px", display: "flex", flexDirection: "column", gap: 14 }}>
+            <figure key={a.name + a.date} style={{ margin: 0, background: C.card, border: `1px solid ${C.line}`, borderRadius: 18, padding: "24px 22px", display: "flex", flexDirection: "column", gap: 14 }}>
               <div style={{ display: "flex", gap: 2, color: C.blue }} aria-label="5 étoiles sur 5" role="img">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <svg key={i} width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
@@ -227,7 +348,7 @@ function Avis() {
               </div>
               <blockquote style={{ margin: 0, fontSize: 18, lineHeight: 1.45, color: C.ink, fontWeight: 500 }}>« {a.text} »</blockquote>
               <figcaption style={{ marginTop: "auto", paddingTop: 14, borderTop: `1px solid ${C.line}`, fontSize: 14, color: C.inkSoft }}>
-                <strong style={{ color: C.ink }}>{a.name}</strong> · {a.date}
+                <strong style={{ color: C.ink }}>{a.name}</strong>{a.date ? ` · ${a.date}` : ""}
               </figcaption>
             </figure>
           ))}
@@ -238,18 +359,12 @@ function Avis() {
 }
 
 // ─── 6. Zone d'intervention + services ───────────────────────────────────────
-const SERVICES: [string, string][] = [
-  ["remplacement de vitrage", "/remplacement-vitre-lyon"],
-  ["double vitrage isolant", "/double-vitrage-lyon"],
-  ["vitrage feuilleté & sécurité", "/services"],
-  ["miroiterie sur mesure", "/services"],
-  ["portes d'entrée vitrées", "/remplacement-vitre-lyon"],
-  ["dépannage 7j/7", "/vitrier-urgence-lyon"],
-];
 const ARRONDISSEMENTS = ["Lyon 1er", "Lyon 2e", "Lyon 3e", "Lyon 4e", "Lyon 5e", "Lyon 6e", "Lyon 7e", "Lyon 8e", "Lyon 9e"];
 const COMMUNES = [
   "Villeurbanne", "Vaulx-en-Velin", "Bron", "Décines-Charpieu", "Meyzieu", "Rillieux-la-Pape", "Caluire-et-Cuire",
-  "Tassin-la-Demi-Lune", "Craponne", "Francheville", "Saint-Genis-les-Ollières", "Montluel", "Bourgoin-Jallieu",
+  "Tassin-la-Demi-Lune", "Craponne", "Francheville", "Saint-Genis-les-Ollières", "Écully", "Sainte-Foy-lès-Lyon",
+  "Charbonnières-les-Bains", "Dardilly", "Limonest", "Champagne-au-Mont-d'Or", "Oullins", "Pierre-Bénite", "Saint-Fons",
+  "Vénissieux", "Saint-Priest", "Neuville-sur-Saône", "Villefranche-sur-Saône", "Montluel", "Bourgoin-Jallieu",
 ];
 const villeHref = (nom: string) => {
   const v = VILLES.find((x) => x.publie && x.nom === nom);
@@ -268,20 +383,15 @@ function Zones() {
         <p style={{ fontSize: 17, lineHeight: 1.6, color: C.inkSoft, maxWidth: 640, margin: "0 0 10px" }}>
           Tous les arrondissements de Lyon et jusqu&rsquo;à 60 km autour, Est lyonnais compris.
         </p>
-        <p style={{ fontSize: 15, lineHeight: 1.6, color: C.inkSoft, maxWidth: 760, margin: "0 0 26px" }}>
-          <Link href="/services" style={{ color: C.ink, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>Mes services</Link> :{" "}
-          {SERVICES.map(([label, href], i) => (
-            <span key={label}>
-              {i > 0 && " · "}
-              <Link href={href} style={{ color: C.inkSoft, textDecoration: "underline", textUnderlineOffset: 3 }}>{label}</Link>
-            </span>
-          ))}
-          .
+        <p style={{ fontSize: 17, lineHeight: 1.6, color: C.inkSoft, maxWidth: 640, margin: "0 0 10px" }}>
+          Dernières interventions à Lyon : verre armé d&rsquo;une porte d&rsquo;immeuble dans le 4e, recoupé sur place un vendredi soir ; vitrage martelé posé au mastic traditionnel dans le 6e ; vitrine de commerce et portes d&rsquo;immeuble dans le 7e ; vitrage imprimé de cage d&rsquo;escalier dans le 2e.{" "}
+          <Link href="/vitrier/lyon" style={{ color: C.blue, fontWeight: 600 }}>Voir mes interventions de vitrier à Lyon →</Link>
         </p>
+        <div style={{ height: 16 }} />
         <ul style={{ display: "flex", flexWrap: "wrap", gap: 8, listStyle: "none", padding: 0, margin: "0 0 10px" }}>
           {ARRONDISSEMENTS.map((a) => (
             <li key={a}>
-              <Link href="/vitrier/lyon" style={{ ...tag, background: C.ink, color: "#fff" }}>{a}</Link>
+              <Link href={villeHref(a) ?? "/vitrier/lyon"} style={{ ...tag, background: C.ink, color: "#fff" }}>{a}</Link>
             </li>
           ))}
         </ul>
@@ -321,8 +431,10 @@ export default function Home() {
   return (
     <div style={{ background: C.bg, color: C.ink, fontFamily: F.sans, WebkitFontSmoothing: "antialiased" }}>
       <Hero />
-      <Video />
+      <QuiVient />
+      <Realisations />
       <Avis />
+      <Services />
       <Zones />
       <AppelFinal />
     </div>

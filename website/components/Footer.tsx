@@ -13,8 +13,8 @@ export default function Footer() {
         { label: "Prix et devis", href: "/prix-vitrier-lyon" },
         { label: "Vitrine cassée", href: "/vitrine-cassee-lyon" },
         { label: "Syndics et régies", href: "/vitrier-syndic-regie-lyon" },
-        { label: "Vitrage feuilleté", href: "/services" },
-        { label: "Miroiterie", href: "/services" },
+        { label: "Vitrage feuilleté", href: "/verre-feuillete-lyon" },
+        { label: "Miroiterie", href: "/miroir-sur-mesure-lyon" },
         { label: "Portes vitrées", href: "/services" },
       ],
     },
@@ -66,6 +66,34 @@ export default function Footer() {
             </svg>
             06 50 44 06 73
           </a>
+          {/* Réseaux sociaux */}
+          <nav aria-label="Réseaux sociaux de Puillet Vitrerie" style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 20 }}>
+            {[
+              { label: "Instagram", href: "https://www.instagram.com/puilletvitrerie" },
+              { label: "TikTok", href: "https://www.tiktok.com/@puilletvitrerie" },
+              { label: "LinkedIn", href: "https://www.linkedin.com/in/leopuilletvitrerie" },
+              { label: "Facebook", href: "https://www.facebook.com/61584527427933" },
+            ].map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer me"
+                aria-label={`Puillet Vitrerie sur ${s.label}`}
+                className="hover:text-white transition-colors"
+                style={{
+                  color: "#a8a39a",
+                  border: "1px solid rgba(255,255,255,.15)",
+                  borderRadius: 999,
+                  padding: "8px 14px",
+                  fontSize: 13,
+                  fontWeight: 600,
+                }}
+              >
+                {s.label}
+              </a>
+            ))}
+          </nav>
         </div>
 
         {/* Link columns — 2 cols on mobile, 3 cols (with Contact) on desktop */}

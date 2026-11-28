@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "verre-feuillete-44-2-porte-immeuble",
   "title": "Verre feuilleté 44.2 : pourquoi on l'utilise sur les portes d'immeuble",
   "description": "Que veut dire « 44.2 » ? Pourquoi le verre feuilleté protège mieux qu'un vitrage classique sur une porte d'immeuble ou une partie basse. Explications d'un vitrier à Lyon.",
-  "date": "2026-12-08",
+  "date": "2026-11-20",
   "publie": true,
   "image": "/assets/services/feuillete-44-2-apres.jpg",
   "imageAlt": "Porte vitrée d'immeuble équipée d'un vitrage feuilleté 44.2 après remise aux normes",

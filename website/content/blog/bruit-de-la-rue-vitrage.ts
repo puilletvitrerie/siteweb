@@ -4,7 +4,7 @@ const post: Post = {
   "slug": "bruit-de-la-rue-vitrage",
   "title": "Bruit de la rue : le vitrage peut-il vraiment aider ?",
   "description": "Trafic, tramway, voisinage bruyant : ce que le choix du vitrage peut changer pour le confort acoustique d'un logement à Lyon, et ses limites.",
-  "date": "2027-08-17",
+  "date": "2027-03-09",
   "publie": false,
   "image": "/assets/realisations/04-apres.jpg",
   "imageAlt": "Porte vitrée d'immeuble avec vitrage neuf",

@@ -6,14 +6,14 @@ import { useState } from "react";
 // - fichier MP4 : <VideoPresentation src="/videos/presentation.mp4" poster="..." />
 // - YouTube ou Vimeo : <VideoPresentation embedUrl="https://www.youtube-nocookie.com/embed/ID" poster="..." />
 // Rien n'est chargé avant le clic, et la vidéo ne démarre jamais seule avec le son.
-type Props = { src?: string; embedUrl?: string; poster: string; title: string };
+type Props = { src?: string; embedUrl?: string; poster: string; title: string; aspectRatio?: string };
 
-export default function VideoPresentation({ src, embedUrl, poster, title }: Props) {
+export default function VideoPresentation({ src, embedUrl, poster, title, aspectRatio = "16 / 9" }: Props) {
   const [playing, setPlaying] = useState(false);
   const hasVideo = Boolean(src || embedUrl);
 
   return (
-    <div style={{ position: "relative", aspectRatio: "16 / 9", borderRadius: 20, overflow: "hidden", background: "#1f1d1b" }}>
+    <div style={{ position: "relative", aspectRatio, borderRadius: 20, overflow: "hidden", background: "#1f1d1b" }}>
       {playing && src && (
         <video src={src} poster={poster} controls autoPlay preload="none" playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }} />
       )}
@@ -29,7 +29,7 @@ export default function VideoPresentation({ src, embedUrl, poster, title }: Prop
       {!playing && (
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={poster} alt="" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.55 }} />
+          <img src={poster} alt="" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", opacity: hasVideo ? 1 : 0.55 }} />
           <button
             type="button"
             onClick={() => hasVideo && setPlaying(true)}

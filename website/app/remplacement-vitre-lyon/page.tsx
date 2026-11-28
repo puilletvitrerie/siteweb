@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import SeoPage from "@/components/SeoPage";
 
 export const metadata: Metadata = {
-  title: "Remplacement de vitre à Lyon",
+  title: "Vitre sur mesure à Lyon · Remplacement de vitre cassée",
   description:
-    "Remplacement de vitre cassée à Lyon : simple vitrage, feuilleté 44.2, imprimé, martelé, vitrine, porte d'immeuble. Sans changer la menuiserie. 06 50 44 06 73",
+    "Vitre sur mesure à Lyon et dans la métropole : coupe sur place dans le camion, simple vitrage, feuilleté, imprimé, martelé. Sans changer la menuiserie. Devis gratuit : 06 50 44 06 73",
   alternates: { canonical: "/remplacement-vitre-lyon" },
 };
 

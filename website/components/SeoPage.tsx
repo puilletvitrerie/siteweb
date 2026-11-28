@@ -1,5 +1,4 @@
 import Link from "next/link";
-import BeforeAfterGallery from "@/components/BeforeAfterGallery";
 
 // Modèle commun des pages de services (urgence, remplacement, double vitrage, prix) :
 // fil d'Ariane, phrase-réponse en tête (lue par Google et les assistants IA), sections, FAQ, date de mise à jour, appel.
@@ -28,7 +27,10 @@ export type SeoPageProps = {
   updated: string; // AAAA-MM-JJ
   related: { href: string; label: string }[];
   service?: { name: string; description: string };
-  photos?: { h2: string; items: { before: string; after: string; ratio: number; caption: string }[] };
+  // Optionnel : chantiers avant / après affichés sous les boutons d'appel.
+  gallery?: { title: string; before: string; after: string }[];
+  // Optionnel : bouton e-mail (ex. ordre de service des gestionnaires).
+  email?: { label: string; subject: string; body: string };
 };
 
 const fmt = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
@@ -87,19 +89,47 @@ export default function SeoPage(p: SeoPageProps) {
           ))}
         </ul>
 
-        <div className="flex flex-col sm:flex-row gap-3" style={{ marginBottom: 12 }}>
-          <a href="tel:+33650440673" style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.blue, color: "#fff", fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3" style={{ marginBottom: 12 }}>
+          <a href="tel:+33650440673" style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.blue, color: "#fff", fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center", whiteSpace: "nowrap" }}>
             Appeler · 06 50 44 06 73
           </a>
-          <a href="https://wa.me/33650440673" target="_blank" rel="noopener noreferrer" style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.card, color: C.ink, border: `1.5px solid ${C.line}`, fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+          <a href="https://wa.me/33650440673" target="_blank" rel="noopener noreferrer" style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.card, color: C.ink, border: `1.5px solid ${C.line}`, fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center", whiteSpace: "nowrap" }}>
             Envoyer une photo sur WhatsApp
           </a>
+          {p.email && (
+            <a
+              href={`mailto:puilletvitrerie@gmail.com?subject=${encodeURIComponent(p.email.subject)}&body=${encodeURIComponent(p.email.body)}`}
+              style={{ minHeight: 56, padding: "0 26px", borderRadius: 999, background: C.card, color: C.ink, border: `1.5px solid ${C.line}`, fontWeight: 700, fontSize: 16, display: "inline-flex", alignItems: "center", justifyContent: "center", whiteSpace: "nowrap" }}
+            >
+              {p.email.label}
+            </a>
+          )}
         </div>
 
-        {p.photos && (
-          <section>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 800, letterSpacing: "-0.02em", margin: "40px 0 16px" }}>{p.photos.h2}</h2>
-            <BeforeAfterGallery size={85} maxWidth={640} items={p.photos.items} />
+        {p.gallery && p.gallery.length > 0 && (
+          <section aria-label="Chantiers avant / après" style={{ marginTop: 32 }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {p.gallery.map((g) => (
+                <figure key={g.title} style={{ margin: 0, background: C.card, border: `1px solid ${C.line}`, borderRadius: 18, overflow: "hidden" }}>
+                  <div className="grid grid-cols-2" style={{ gap: 2, background: C.line }}>
+                    {[
+                      { src: g.before, label: "Avant" },
+                      { src: g.after, label: "Après" },
+                    ].map((img) => (
+                      <div key={img.label} style={{ position: "relative", aspectRatio: "4 / 5" }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={img.src} alt={`${g.title} : ${img.label.toLowerCase()} l'intervention`} loading="lazy" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+                        <span style={{ position: "absolute", top: 8, left: 8, background: img.label === "Après" ? C.blue : "rgba(15,15,15,.75)", color: "#fff", fontSize: 12, fontWeight: 700, padding: "3px 9px", borderRadius: 999 }}>{img.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <figcaption style={{ padding: "12px 14px", fontSize: 15, fontWeight: 700 }}>{g.title}</figcaption>
+                </figure>
+              ))}
+            </div>
+            <p style={{ fontSize: 15, margin: "12px 0 0" }}>
+              <Link href="/realisations" style={{ color: C.blueDark, fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>Voir tous mes chantiers en photos →</Link>
+            </p>
           </section>
         )}
 

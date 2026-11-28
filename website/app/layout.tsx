@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 import HideOnDevis from "@/components/HideOnDevis";
+import SuiviContacts from "@/components/SuiviContacts";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -78,7 +79,8 @@ const LOCAL_BUSINESS = {
     "https://www.pagesjaunes.fr/pros/64775103",
     "https://www.instagram.com/puilletvitrerie",
     "https://www.tiktok.com/@puilletvitrerie",
-    "https://www.linkedin.com/in/leo-puillet",
+    "https://www.linkedin.com/in/leopuilletvitrerie",
+    "https://www.facebook.com/61584527427933",
   ],
   openingHoursSpecification: [
     {
@@ -118,6 +120,7 @@ export default function RootLayout({
           </div>
         </HideOnDevis>
         <main className="flex-1">{children}</main>
+        <SuiviContacts />
         <HideOnDevis>
           <Footer />
           <MobileStickyCTA />
