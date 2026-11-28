@@ -20,7 +20,7 @@ export default function Page() {
       facts={[
         "Mise en sécurité de la vitrine le jour même avec un panneau OSB, y compris le week-end.",
         "Vitrage de vitrine fabriqué sur mesure et posé sous 24 à 72 h après accord.",
-        "Verre feuilleté de sécurité (44.2, SP10 anti-effraction) ou verre trempé selon la vitrine.",
+        "Verre feuilleté de sécurité (44.2, SP10 anti-effraction) selon la vitrine.",
         "Devis gratuit, et le prix du devis est le prix final.",
         "Assuré en responsabilité civile professionnelle et décennale (MAAF).",
       ]}
@@ -47,7 +47,6 @@ export default function Page() {
           ul: [
             "Verre feuilleté 44.2 : en cas de choc, il se fissure mais reste en place grâce à son film, la vitrine reste fermée.",
             "Verre feuilleté anti-effraction (SP10) : retarde l'intrusion, pour les commerces exposés.",
-            "Verre trempé : plus résistant aux chocs, utilisé sur certaines vitrines et portes vitrées.",
           ],
         },
         {
@@ -63,7 +62,7 @@ export default function Page() {
             rows: [
               ["Mise en sécurité (panneau OSB)", "Le jour même, 7j/7"],
               ["Devis", "Gratuit, après relevé des mesures"],
-              ["Vitrage feuilleté ou trempé sur mesure", "24 à 72 h après accord (fabrication)"],
+              ["Vitrage feuilleté sur mesure", "24 à 72 h après accord (fabrication)"],
             ],
           },
         },
@@ -78,7 +77,7 @@ export default function Page() {
       faq={[
         { q: "Ma vitrine a été cassée cette nuit, que faire ?", a: "Appelez-moi ou envoyez une photo sur WhatsApp. Je viens mettre la façade en sécurité le jour même avec un panneau OSB, puis je prends les mesures pour le nouveau vitrage." },
         { q: "Combien de temps pour remplacer une vitrine ?", a: "La mise en sécurité se fait le jour même. Le vitrage d'une vitrine est fabriqué sur mesure : il est posé en général sous 24 à 72 heures après l'accord sur le devis." },
-        { q: "Combien coûte le remplacement d'une vitrine cassée ?", a: "Le prix dépend des dimensions, de l'épaisseur et du type de verre (feuilleté, trempé, anti-effraction), et des moyens nécessaires à la pose. Le devis est gratuit et le prix indiqué est celui que vous payez." },
+        { q: "Combien coûte le remplacement d'une vitrine cassée ?", a: "Le prix dépend des dimensions, de l'épaisseur et du type de verre (feuilleté, anti-effraction), et des moyens nécessaires à la pose. Le devis est gratuit et le prix indiqué est celui que vous payez." },
         { q: "Mon assurance peut-elle payer le remplacement ?", a: "Si votre contrat d'assurance professionnelle comprend la garantie bris de glace, le remplacement peut être pris en charge ; une franchise reste généralement à votre charge. Je vous fournis un devis et une facture détaillés." },
       ]}
       updated="2026-11-28"
