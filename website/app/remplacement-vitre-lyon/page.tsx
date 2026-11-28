@@ -65,6 +65,7 @@ export default function Page() {
       ]}
       updated="2026-10-18"
       related={[
+        { href: "/vitrine-cassee-lyon", label: "Vitrine de magasin cassée à Lyon" },
         { href: "/vitrier-urgence-lyon", label: "Vitrier en urgence à Lyon, 7j/7" },
         { href: "/double-vitrage-lyon", label: "Remplacement de double vitrage à Lyon" },
         { href: "/prix-vitrier-lyon", label: "Comment est calculé le prix d'un remplacement de vitre" },

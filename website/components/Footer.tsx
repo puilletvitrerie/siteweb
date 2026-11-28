@@ -11,6 +11,7 @@ export default function Footer() {
         { label: "Remplacement de vitre", href: "/remplacement-vitre-lyon" },
         { label: "Double vitrage", href: "/double-vitrage-lyon" },
         { label: "Prix et devis", href: "/prix-vitrier-lyon" },
+        { label: "Vitrine cassée", href: "/vitrine-cassee-lyon" },
         { label: "Syndics et régies", href: "/vitrier-syndic-regie-lyon" },
         { label: "Vitrage feuilleté", href: "/services" },
         { label: "Miroiterie", href: "/services" },

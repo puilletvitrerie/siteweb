@@ -89,6 +89,7 @@ export default function ServicesPage() {
       icon: Building2,
       title: "Vitrines de magasin",
       description: "Sécurisation immédiate après sinistre, puis remplacement organisé selon les moyens nécessaires : plusieurs vitrages de grande dimension demandent plusieurs poseurs et/ou un équipement à ventouses.",
+      lien: { href: "/vitrine-cassee-lyon", label: "Vitrine cassée : comment se passe le remplacement" },
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
       beforeAfter: [
         {
@@ -204,7 +205,15 @@ export default function ServicesPage() {
                     <service.icon className="h-6 w-6 text-white" />
                   </div>
                   <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">{service.title}</h2>
-                  <p className="text-lg text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-lg text-gray-600 mb-6">
+                    {service.description}
+                    {"lien" in service && service.lien && (
+                      <>
+                        {" "}
+                        <Link href={service.lien.href} className="font-semibold text-gray-900 underline underline-offset-4">{service.lien.label}</Link>
+                      </>
+                    )}
+                  </p>
                   <div className="grid gap-3">
                     {service.details.map((detail, idx) => (
                       <div key={idx} className="flex items-start gap-3">
