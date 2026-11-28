@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BeforeAfterGallery from "@/components/BeforeAfterGallery";
 
 // Modèle commun des pages de services (urgence, remplacement, double vitrage, prix) :
 // fil d'Ariane, phrase-réponse en tête (lue par Google et les assistants IA), sections, FAQ, date de mise à jour, appel.
@@ -27,6 +28,7 @@ export type SeoPageProps = {
   updated: string; // AAAA-MM-JJ
   related: { href: string; label: string }[];
   service?: { name: string; description: string };
+  photos?: { h2: string; items: { before: string; after: string; ratio: number; caption: string }[] };
 };
 
 const fmt = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
@@ -93,6 +95,13 @@ export default function SeoPage(p: SeoPageProps) {
             Envoyer une photo sur WhatsApp
           </a>
         </div>
+
+        {p.photos && (
+          <section>
+            <h2 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 800, letterSpacing: "-0.02em", margin: "40px 0 16px" }}>{p.photos.h2}</h2>
+            <BeforeAfterGallery size={85} maxWidth={640} items={p.photos.items} />
+          </section>
+        )}
 
         {p.sections.map((s) => (
           <section key={s.h2}>

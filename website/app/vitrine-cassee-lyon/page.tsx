@@ -24,6 +24,13 @@ export default function Page() {
         "Devis gratuit, et le prix du devis est le prix final.",
         "Assuré en responsabilité civile professionnelle et décennale (MAAF).",
       ]}
+      photos={{
+        h2: "Avant / après : vitrines remplacées",
+        items: [
+          { before: "/assets/services/vitrine-facade-avant.jpg", after: "/assets/services/vitrine-facade-apres.jpg", ratio: 757 / 1300, caption: "Lyon 7e : vitrine de commerce sécurisée en OSB, puis pose du nouveau vitrage." },
+          { before: "/assets/services/vitrine-interieur-avant.jpg", after: "/assets/services/vitrine-interieur-apres.jpg", ratio: 1071 / 1300, caption: "Vue de l'intérieur : de la plaque OSB au vitrage neuf." },
+        ],
+      }}
       sections={[
         {
           h2: "Comment se passe le remplacement d'une vitrine cassée",
